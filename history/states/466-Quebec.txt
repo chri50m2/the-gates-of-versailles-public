@@ -1,0 +1,29 @@
+
+state={
+	id=466
+	name="STATE_466"
+	resources={
+		aluminium=4.000
+	}
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+			490= {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = ENG
+
+	}
+
+	provinces={
+		490 3208 3911 4666 6740 7364 10176 11682 11902 12147 12600 13166 13181 13184 13196 
+	}
+	manpower=318860
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

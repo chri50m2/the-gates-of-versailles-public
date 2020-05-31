@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_GER_Region_Disunited_Germany"
+		texturefile = "gfx/interface/ideas/idea_german_generic_disunited_germany.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WST_Franco_Westphalian_Program"
+		texturefile = "gfx/interface/ideas/WST_francowestphalian_militaryprogram.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WST_Liberal_Sentiment"
+		texturefile = "gfx/interface/ideas/WST_liberalsentiment.dds"
+	}
+}

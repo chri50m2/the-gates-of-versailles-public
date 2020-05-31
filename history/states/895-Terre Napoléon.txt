@@ -1,0 +1,20 @@
+state={
+	id=895
+	name="STATE_895"
+	manpower = 740214
+	
+	state_category = rural
+
+	history={
+		owner = NHO
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = NHO
+	}
+
+	provinces={
+        8165 5183 10927 8220 2219 8186 5225 10925 7567 13172 13170 13169 13171 2205 5211 1773 2130 2155 4791 12910 12918 12924 12932 13282 13287
+	}
+}

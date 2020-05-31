@@ -1,0 +1,22 @@
+
+state={
+	id=823
+	name="STATE_823"
+
+	history={
+		owner = MEX
+		add_core_of = MEX
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1738 2055 2102 4586 9908 10642 12624 12627 
+	}
+	manpower=86493
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

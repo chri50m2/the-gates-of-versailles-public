@@ -1,0 +1,35 @@
+﻿capital = 541
+
+oob = "GEX_1936"
+
+set_research_slots = 2
+
+
+set_country_flag = can_replace_minister
+
+
+
+set_politics = {
+	ruling_party = monarchist
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 25
+	monarchist = 75
+}
+
+create_country_leader = {
+	name = "Wilhelm II"
+	desc = ""
+	picture = "Portrait_GER_Wilhelm_II.dds"
+	expire = "1938.1.1"
+	ideology = absolutism
+	traits = {
+		#
+	}
+}

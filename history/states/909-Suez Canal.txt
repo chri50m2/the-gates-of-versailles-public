@@ -1,0 +1,18 @@
+state={
+	id=909
+	name="STATE_909"
+	provinces={
+		1155 4073 9947 12049 
+	}
+	manpower=150471
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	history={
+		add_core_of = SUE
+		owner = SUE
+		buildings = {
+			infrastructure = 3
+
+		}
+	}
+}

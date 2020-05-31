@@ -1,0 +1,20 @@
+state={
+	id=872
+	name="STATE_872"
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 3
+
+		}
+
+	}
+	provinces={
+		10904 
+	}
+	manpower=30000
+	state_category=city
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,21 @@
+state={
+	id=900
+	name="STATE_900"
+
+	history={
+		owner = AFG
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = AFG
+
+	}
+
+	provinces={
+        5075 8013
+	}
+	manpower=1632860
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

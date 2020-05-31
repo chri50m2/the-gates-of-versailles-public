@@ -1,0 +1,28 @@
+
+state={
+	id=380
+	name="STATE_380"
+	resources={
+		tungsten=76.000
+	}
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = MEX
+		victory_points = {
+			4865 1 
+		}
+
+	}
+
+	provinces={
+		1740 1756 4668 4742 4865 7764 7818 7888 10582 10662 13153 
+	}
+	manpower=47846
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

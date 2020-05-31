@@ -1,0 +1,126 @@
+﻿capital = 41
+
+oob = "SPR_1936"
+
+set_research_slots = 3
+
+load_focus_tree = generic_focus
+
+add_ideas = {
+	franco_sanjurjo_rivalry
+	alfonso_xiii
+	large_anti_french_british_sentiment
+}
+
+set_country_flag = can_replace_minister
+
+623 = {
+    start_resistance = yes
+    set_compliance = 10
+    set_resistance = 10
+    set_garrison_strength = 1.0
+}
+
+627 = {
+    start_resistance = yes
+    set_compliance = 10
+    set_resistance = 10
+    set_garrison_strength = 1.0
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	early_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	basic_heavy_cruiser = 1
+	early_battleship = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.2.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 21
+	communism = 9
+	social_democratic = 2
+	liberal = 3
+	neutrality = 65
+}
+
+set_convoys = 150
+set_stability = 0.7
+
+create_country_leader = {
+	name = "Francisco Franco"
+	desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+	picture = "Portrait_Spain_Francisco_Franco_Versailles.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Spanish Military Council"
+	desc = "POLITICS_SPANISH_MILITARY_COUNCIL_DESC"
+	picture = "Portrait_Spain_Military_Council.dds"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "José Asensio Torrado"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { defensive_doctrine }
+	skill = 2
+    attack_skill = 1
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+
+### Ship Variants ###
+
+create_equipment_variant = {
+	name = "C Class"
+	type = submarine_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		sub_engine_upgrade = 1
+		sub_stealth_upgrade = 1
+		sub_torpedo_upgrade = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Príncipe Alfonso Class"
+	type = light_cruiser_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		ship_engine_upgrade = 1
+		ship_gun_upgrade = 1
+		ship_anti_air_upgrade = 1
+	}
+}

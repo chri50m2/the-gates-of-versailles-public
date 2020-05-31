@@ -1,0 +1,56 @@
+﻿capital = 59
+
+OOB = "HAN_1936"
+
+add_ideas = {
+	GER_REGION_Disunited_Germany
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+set_politics = {
+	ruling_party = monarchist
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 8
+	fascism = 15
+	communism = 9
+	monarchist = 65
+	social_democratic = 3
+	liberal = 0
+}
+
+
+set_country_flag = can_replace_minister
+
+
+
+set_convoys = 0
+
+create_country_leader = {
+	name = "Ernest Augustus"
+	desc = "POLITICS_ERNEST_AUGUSTUS_DESC"
+	picture = "Portrait_Hanover_Ernest_Augustus.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_monarchy
+	traits = {
+	}
+}
+
+create_corps_commander = {
+	name = "Ernst-Eberhard Hell"
+	picture = "Portrait_Germany_Ernst-Eberhard_Hell.dds"
+	traits = { winter_specialist trait_engineer war_hero }
+	skill = 3
+	id = 1476
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}

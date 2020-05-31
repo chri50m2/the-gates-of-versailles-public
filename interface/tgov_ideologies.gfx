@@ -1,0 +1,35 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_ideology_POL_neutrality_group"
+		texturefile = "gfx/interface/ideologies/POL/pol_bbwr.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_POL_monarchist_group"
+		texturefile = "gfx/interface/ideologies/POL/pol_house_of_anders.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ITA_fascism_group"
+		texturefile = "gfx/interface/ideologies/ITA/ita_partito_nazional_fascista.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_FRA_neutrality_group"
+		texturefile = "gfx/interface/ideologies/FRA/fra_house_of_bonaparte.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_AUS_fascism_group"
+		texturefile = "gfx/interface/ideologies/AUS/aus_nsdap.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_AFG_monarchist_group"
+		texturefile = "gfx/interface/ideologies/AFG/afg_musahiban_royal_family.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_AFG_democratic_group"
+		texturefile = "gfx/interface/ideologies/AFG/AFG_amanullah_democracy.dds"
+}

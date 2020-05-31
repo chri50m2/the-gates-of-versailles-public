@@ -1,0 +1,94 @@
+﻿division_template = {
+	name = "Shaahee Rakhavaalee"
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Royal Gaireesan"		
+	division_names_group = RAJ_GAR_01
+										
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+
+####### OOB #######
+units = {
+	#Assam Division
+	division= {	
+		name = "Jayapur Ka Shaahee Rakshak"	
+		location = 2054
+		division_template = "Shaahee Rakhavaalee"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	
+	division= {	
+		name = "Maunt Aaboo Ke Royal Gaard"	
+		location = 12829
+		division_template = "Shaahee Rakhavaalee"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	
+	division= {	
+		name = "1 Royal Gaireesan"	
+		location = 10866
+		division_template = "Royal Gaireesan"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		name = "2 Royal Gaireesan"	
+		location = 12041
+		division_template = "Royal Gaireesan"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		name = "3 Royal Gaireesan"	
+		location = 7905
+		division_template = "Royal Gaireesan"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		name = "4 Royal Gaireesan"	
+		location = 12743
+		division_template = "Royal Gaireesan"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		name = "5 Royal Gaireesan"	
+		location = 4984
+		division_template = "Royal Gaireesan"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "RJS"
+		}
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
+	}
+}

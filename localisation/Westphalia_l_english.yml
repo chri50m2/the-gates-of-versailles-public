@@ -1,0 +1,34 @@
+﻿l_english:
+ WST_fascism:0 "Westphalia"
+ WST_fascism_DEF:0 "Westphalia"
+ WST_democratic:0 "Westphalia"
+ WST_democratic_DEF:0 "Westphalia"
+ WST_liberal:0 "Westphalia"
+ WST_liberal_DEF:0 "Westphalia"
+ WST_social_democratic:0 "Westphalia"
+ WST_social_democratic_DEF:0 "Westphalia"
+ WST_neutrality:0 "Westphalia"
+ WST_neutrality_DEF:0 "Westphalia"
+ WST_monarchist:0 "Westphalia"
+ WST_monarchist_DEF:0 "Westphalia"
+ WST_communism:0 "Westphalia"
+ WST_communism_DEF:0 "Westphalia"
+ WST_fascism_ADJ:0 "Westphalian"
+ WST_democratic_ADJ:0 "Westphalian"
+ WST_liberal_ADJ:0 "Westphalian"
+ WST_social_democratic_ADJ:0 "Westphalian"
+ WST_neutrality_ADJ:0 "Westphalian"
+ WST_monarchist_ADJ:0 "Westphalian"
+ WST_communism_ADJ:0 "Westphalian"
+
+
+#Ideas
+GER_REGION_Disunited_Germany:0 "Fractured Germany"
+GER_REGION_Disunited_Germany_desc:0 "Germany never truly managed to unite into an ethnostate, like the rest of Europe. Outside powers dictated the borders of Germany, in an attempt to stop a menace from growing. It finally seems like the eagle is awoken. The eternal fracture of Germany has finally awoken the Germans from their slumber. More and more Germans are moving to radical ideologies. Germany is waking up, to the avail of the rest of Europe"
+WST_Franco_Westphalian_Military_Cooperation:0 "Franco-Westphalian Military Cooperation Program"
+WST_Franco_Westphalian_Military_Cooperation_desc:0 "After the Great War, the duchies of Oldenburg and Rhineland were unified. Not to simplify bureaucratic measures, but to create a nation that could boast a capable military to aid France. The rest of France' allies were utterly incompetent in the Great War. \n\nThis has given us one of the largest militaries in the world. Though this means that our civilian industrial sector and domestic politics have been left unchanged and left to decay. Our great military is something to be great of, but our professionalism is not. Many officers have not seen combat in the Great War, and are not experienced enough to lead a great army. We have had to substitute with French officers, which is utterly embarrassing."
+WST_Liberal_Sentiment:0 "Liberal Sentiment"
+WST_Liberal_Sentiment_desc:0 "Westphalia is no exception to the growing radicality of Germany. But weirdly, Westphalia is not going the ultra-radical way. There is a growing Liberal sentiment.Westphalia has never seen the modernity and industrialisation that the rest of Germany has. France has also has its dirty hands on Westphalia for too long. Westphalian citizens are looking to Britain for aid. Their great leader, Archibald Sinclair, has spoken greatly about the Westphalian people and their struggles against the French oppression. Only the future will tell what will happen to the Westphalian society..."
+
+#Leader description:
+POLITICS_HEINRICH_TRETTNER_DESC:0 "Heinrich Trettner was never destined to lead a country like Westphalia. He never participated in the Great War, and neither did he participate in the wars of the 20's or 30's. He graduated from the Luftkriegsschule with top grades. He joined the Westphalian airforce, hoping he could earn some money. But he quickly gained the liking of his higher-ups, and was promoted to leader of a squadron. But the air was not enough. The ground and air combined was to his liking, and he went on to command several paratrooper divisions. Napoleon got notice of this man, and he knew that this man was what Westphalia needed. He was to succeed Wilhelm Heye, and become the leader of Westphalia. But this was not good luck. The position was a nightmare. But Trettner is a brave man, managing to keep it all together."

@@ -1,0 +1,19 @@
+state={
+	id=904
+	name="STATE_904"
+	manpower=30732
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	history={
+		add_core_of = ENG
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+
+		}
+	}
+
+	provinces={
+		13293
+	}
+}

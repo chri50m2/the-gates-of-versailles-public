@@ -1,0 +1,25 @@
+
+state={
+	id=520
+	name="STATE_520"
+	resources={
+		steel=22.000
+	}
+
+	history={
+		owner = NHO
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+		}
+		add_core_of = NHO
+
+	}
+
+	provinces={
+		2201 5125 5207 8152 8155 8209 8247 10937 10958 11016 12904 12993 13132 13133 
+	}
+	manpower=15442
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

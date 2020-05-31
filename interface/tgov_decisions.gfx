@@ -1,0 +1,20 @@
+spriteTypes = {	
+
+	### categories
+	
+
+	spriteType = {
+		name = "GFX_decision_picture_poland_sejm"
+		texturefile = "gfx/interface/decisions/decision_picture_poland_sejm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_SOV_decision_picture_liberate_motherland"
+		texturefile = "gfx/interface/decisions/SOV_decision_picture_liberate_motherland.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_generic_castles"
+		texturefile = "gfx/interface/decisions/decision_generic_castles.dds"
+	}
+}

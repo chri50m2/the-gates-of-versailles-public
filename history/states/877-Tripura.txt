@@ -1,0 +1,17 @@
+state={
+	id=877
+	name="STATE_877"
+	history = {
+		owner = RAJ
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		1075 7634 
+	}
+	manpower=498000
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+}

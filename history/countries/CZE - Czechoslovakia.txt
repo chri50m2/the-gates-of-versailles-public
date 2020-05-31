@@ -1,0 +1,46 @@
+﻿capital = 9
+
+oob = "CZE_1936"
+
+set_country_flag = can_replace_minister
+
+load_focus_tree = generic_focus
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = liberal
+	last_election = "1935.5.19"
+	election_frequency = 60
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	liberal = 68
+	fascism = 12
+	neutrality = 0
+}
+
+create_country_leader = {
+	name = "Alois Rašín"
+	desc =  "POLITICS_ALOIS_RASIN_DESC"
+	picture = "Portrait_Czechia_Rasin_Alois.dds"
+	expire = "1965.1.1"
+	ideology = social_liberal
+}

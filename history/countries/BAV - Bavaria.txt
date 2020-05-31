@@ -1,0 +1,126 @@
+﻿capital = 52
+
+OOB = "BAV_1936"
+
+add_ideas = {
+	GER_REGION_Disunited_Germany
+}
+
+set_country_flag = can_replace_minister
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 5
+	communism = 10
+	neutrality = 65
+}
+
+set_convoys = 0
+
+create_country_leader = {
+	name = "Franz Ritter von Epp"
+	desc = ""
+	picture = "franz-ritter-von-epp.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_corps_commander = {
+	name = "Albert Kesselring"
+	picture = "Portrait_Germany_Albert_Kesselring.dds"
+	traits = { brilliant_strategist trait_cautious war_hero }
+	skill = 4
+	id = 1401
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Sepp Dietrich"
+	picture = "Portrait_Germany_Josef_Dietrich.dds"
+	traits = { armor_officer politically_connected brilliant_strategist trait_reckless }
+	skill = 4
+	id = 1402
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Alfred Jodl"
+	picture = "Portrait_Germany_Alfred_Jodl.dds"
+	traits = { politically_connected career_officer }
+	skill = 3
+	id = 1403
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Georg von Küchler"
+	picture = "Portrait_Germany_Georg_von_Kuchler.dds"
+	traits = {  }
+	skill = 4
+	id = 1404
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Wilhelm Ritter von Leeb"
+	picture = "Portrait_Germany_Wilhelm_Ritter_von_Leeb.dds"
+	traits = { old_guard infantry_officer }
+	skill = 3
+	id = 1405
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ferdinand Schörner"
+	picture = "Ferdinand_Schorner.dds"
+	id = 1406
+	traits = {
+		harsh_leader
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Franz Halder"
+	picture = "Franz_Halder.dds"
+	traits = { organizer }
+	id = 1407
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}

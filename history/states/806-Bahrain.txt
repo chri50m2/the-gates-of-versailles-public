@@ -1,0 +1,21 @@
+
+state={
+	id=806
+	name="STATE_806"
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		13309 
+	}
+	manpower=9010
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

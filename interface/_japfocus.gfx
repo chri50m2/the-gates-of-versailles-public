@@ -1,0 +1,87 @@
+spriteTypes = {
+    
+	SpriteType = {
+	    name = "GFX_JAP_strengthen_the_monarchists"
+		texturefile = "gfx/interface/goals/JAP_strengthen_the_monarchists.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_focus_on_china"
+		texturefile = "gfx/interface/goals/JAP_focus_on_china.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_focus_on_south_east_asia"
+		texturefile = "gfx/interface/goals/JAP_focus_on_south_east_asia.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_invest_in_asia"
+		texturefile = "gfx/interface/goals/JAP_invest_in_asia.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_invest_in_infrastructure"
+		texturefile = "gfx/interface/goals/JAP_invest_in_infrastructure.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_invest_in_ourselves"
+		texturefile = "gfx/interface/goals/JAP_invest_in_ourselves.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_modernize_chinese_infrastructure"
+		texturefile = "gfx/interface/goals/JAP_modernize_chinese_infrastructure.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_modernize_korean_infrastructure"
+		texturefile = "gfx/interface/goals/JAP_modernize_korean_infrastructure.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_modernize_the_industry"
+		texturefile = "gfx/interface/goals/JAP_modernize_the_industry.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_operation_kankoku_o_mamoru"
+		texturefile = "gfx/interface/goals/JAP_operation_kankoku_o_mamoru.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_operation_chugoku_o_mamoru"
+		texturefile = "gfx/interface/goals/JAP_operation_chugoku_o_mamoru.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_revamp_the_army"
+		texturefile = "gfx/interface/goals/JAP_revamp_the_army.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_favor_the_ijn"
+		texturefile = "gfx/interface/goals/JAP_favor_the_ijn.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_favor_the_ija"
+		texturefile = "gfx/interface/goals/JAP_favor_the_ija.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_begin_army_drills"
+		texturefile = "gfx/interface/goals/JAP_begin_army_drills.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_recruiting_propaganda"
+		texturefile = "gfx/interface/goals/JAP_recruiting_propaganda.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_revamp_the_air_force"
+		texturefile = "gfx/interface/goals/JAP_revamp_the_air_force.dds"
+	}
+}

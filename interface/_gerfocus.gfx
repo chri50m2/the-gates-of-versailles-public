@@ -1,0 +1,72 @@
+spriteTypes = {
+    
+	SpriteType = {
+	    name = "GFX_goal_doenitz"
+		texturefile = "gfx/interface/goals/goal_doenitz.dds"
+	}
+	SpriteType = {
+	    name = "GFX_goal_raeder"
+		texturefile = "gfx/interface/goals/goal_raeder.dds"
+	}
+		spriteType = {
+		name = "GFX_focus_German_Abwhere"
+		texturefile = "gfx/interface/goals/German_Abwhere.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_Engima"
+		texturefile = "gfx/interface/goals/Engima.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_Install_Canaris"
+		texturefile = "gfx/interface/goals/Install_Canaris.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_Prussia_Radio2"
+		texturefile = "gfx/interface/goals/Prussia_Radio2.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_Fortify_Dresden"
+		texturefile = "gfx/interface/goals/Fortify_Dresden.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_Pan_Germania"
+		texturefile = "gfx/interface/goals/Pan_Germania.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_Bomb_boyage_Trettner"
+		texturefile = "gfx/interface/goals/Bomb_boyage_Trettner.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_Integreate_Hannover"
+		texturefile = "gfx/interface/goals/GER_Integreate_Hannover.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_WorkwithSaxony"
+		texturefile = "gfx/interface/goals/GER_WorkwithSaxony.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_compromiseprussians"
+		texturefile = "gfx/interface/goals/GER_compromiseprussians.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_three_hurrahs_for_germany"
+		texturefile = "gfx/interface/goals/GER_three_hurrahs_for_germany.dds"
+	}
+
+	spriteType = {
+		name = "GFX_focus_PRS_Rhine_Steel"
+		texturefile = "gfx/interface/goals/PRS_Rhine_Steel.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_PRS_Bavarian_Steel"
+		texturefile = "gfx/interface/goals/PRS_Bavarian_Steel.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_PRS_Silesian_Steel"
+		texturefile = "gfx/interface/goals/PRS_Silesian_Steel.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_GER_Subsidize_Krupp"
+		texturefile = "gfx/interface/goals/GER_Subsidize_Krupp.dds"
+	}
+}

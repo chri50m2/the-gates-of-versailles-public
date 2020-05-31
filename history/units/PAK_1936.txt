@@ -1,0 +1,94 @@
+﻿division_template = {
+	name = "Regular Conscripts of Punjab"
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Border Protection Guards"		
+	division_names_group = RAJ_GAR_01
+										
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+
+
+####### OOB #######
+units = {
+	#Assam Division
+	division= {	
+		name = "Lahore Protection Division"	
+		location = 10887
+		division_template = "Regular Conscripts of Punjab"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	
+	division= {	
+		name = "Kotli Protection Division"	
+		location = 1910
+		division_template = "Regular Conscripts of Punjab"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	
+	division= {	
+		name = "1st Division of Punjab"	
+		location = 8007
+		division_template = "Regular Conscripts of Punjab"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+
+	division= {	
+		name = "1st Border Protection Guards"	
+		location = 12792
+		division_template = "Border Protection Guards"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		name = "2nd Border Protection Guards"	
+		location = 12884
+		division_template = "Border Protection Guards"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		name = "2nd Border Protection Guards"	
+		location = 12884
+		division_template = "Border Protection Guards"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	division= {	
+		name = "3rd Border Protection Guards"	
+		location = 10821
+		division_template = "Border Protection Guards"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "RJS"
+		}
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
+	}
+}

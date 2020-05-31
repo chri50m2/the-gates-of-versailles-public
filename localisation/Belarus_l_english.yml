@@ -1,0 +1,31 @@
+﻿l_english:
+ BLR_fascism:0 "Belarus"
+ BLR_fascism_DEF:0 "Belarus"
+ BLR_democratic:0 "Belarusian Democratic Republic"
+ BLR_democratic_DEF:0 "the Belarusian Democratic Republic"
+ BLR_liberal:0 "Belarusian Democratic Republic"
+ BLR_liberal_DEF:0 "the Belarusian Democratic Republic"
+ BLR_social_democratic:0 "Belarusian Democratic Republic"
+ BLR_social_democratic_DEF:0 "the Belarusian Democratic Republic"
+ BLR_neutrality:0 "Belarus"
+ BLR_neutrality_DEF:0 "Belarus"
+ BLR_monarchist:0 "Belarus"
+ BLR_monarchist_DEF:0 "Belarus"
+ BLR_communism:0 "Belarus"
+ BLR_communism_DEF:0 "Belarus"
+
+ BLR_fascism_ADJ:0 "Belarussian"
+ BLR_democratic_ADJ:0 "Belarussian"
+ BLR_liberal_ADJ:0 "Belarussian"
+ BLR_social_democratic_ADJ:0 "Belarussian"
+ BLR_neutrality_ADJ:0 "Belarussian"
+ BLR_monarchist_ADJ:0 "Belarussian"
+ BLR_communism_ADJ:0 "Belarussian"
+
+ #Ministers
+ BLR_michal_vituska_int:0 "Michał Vituška"
+ BLR_vaclau_lastouski_hos:0 "Vacłaŭ Łastoŭski"
+ BLR_branislaw_tarashkyevich_for:0 "Branisłaŭ Taraškievič"
+ BLR_anton_luckievich_eco:0 "Anton Łuckievič"
+
+#Parties

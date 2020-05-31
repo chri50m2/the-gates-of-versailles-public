@@ -1,0 +1,102 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Kalkhani Brigades"		
+	division_names_group = AFG_ARM_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {	
+		name = "Afghan Infantry" 
+		location = 1995
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	
+	division= {	
+		name = "Afghan Infantry" 
+		location = 1995
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	
+	division= {	
+		name = "Afghan Infantry" 
+		location = 12788
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 12788
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 2017
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 1948
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 2101
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 8053
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 10896
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 10896
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 10476
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 10476
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Afghan Infantry" 
+		location = 8053
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		name = "Personal Guard" 
+		location = 4893
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.5
+	}
+}

@@ -1,0 +1,19 @@
+spriteTypes = {
+    
+	SpriteType = {
+	    name = "GFX_goal_ENG_rule_britannia"
+		texturefile = "gfx/interface/goals/goal_ENG_rule_britannia.dds"
+	}
+	SpriteType = {
+	    name = "GFX_goal_ENG_purge_jacobites"
+		texturefile = "gfx/interface/goals/goal_ENG_purge_jacobites.dds"
+	}
+	SpriteType = {
+	    name = "GFX_goal_ENG_mission_to_civilize"
+		texturefile = "gfx/interface/goals/ENG_mission_to_civilize.dds"
+	}
+	SpriteType = {
+	    name = "GFX_goal_ENG_bsa_icon"
+		texturefile = "gfx/interface/goals/ENG_bsa_icon.dds"
+	}
+}

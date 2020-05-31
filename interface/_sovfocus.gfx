@@ -1,0 +1,15 @@
+spriteTypes = {
+    
+	SpriteType = {
+	    name = "GFX_focus_SOV_remembering_the_man_himself"
+		texturefile = "gfx/interface/goals/SOV_remembering_the_man_himself.dds"
+	}
+	SpriteType = {
+	    name = "GFX_focus_SOV_lock_up_tukhachevsky"
+		texturefile = "gfx/interface/goals/SOV_lock_up_tukhachevsky.dds"
+	}
+		spriteType = {
+		name = "GFX_focus_SOV_katyusha_rocket_tubes"
+		texturefile = "gfx/interface/goals/SOV_katyusha_rocket_tubes.dds"
+	}
+}

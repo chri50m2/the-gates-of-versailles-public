@@ -1,0 +1,64 @@
+﻿capital = 70
+
+oob = "SLO_1939"
+
+set_technology = {
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	infantry_weapons2 = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	tech_engineers = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+set_country_flag = can_replace_minister
+
+
+give_guarantee = CZE
+
+set_politics = {
+	ruling_party = social_democratic
+	last_election = "1934.3.26"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	social_democratic = 72
+	fascism = 12
+	democratic = 16
+}
+
+create_country_leader = {
+	name = "Jozef Tiso"
+	desc = "POLITICS_JOZEF_TISO_DESC"
+	picture = "Portrait_Slovakia_Jozef_Tiso.dds"
+	expire = "1965.1.1"
+	ideology = catholic_theocracts
+}
+
+create_country_leader = {
+	name = "Andrej Hlinka"
+	desc = ""
+	picture = "Portrait_SLO_Andrej_Hlinka.dds"
+	expire = "1965.1.1"
+	ideology = egalitarianism
+}
+
+create_country_leader = {
+	name = "Vojtech Tuka"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = traditional_fascism
+}

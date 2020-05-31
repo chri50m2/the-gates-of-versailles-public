@@ -1,0 +1,17 @@
+state={
+	id=864
+	name="STATE_864"
+	history = {
+		owner = BEA
+		add_core_of = BEA
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		11014 12941 
+	}
+	manpower=45000
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+}

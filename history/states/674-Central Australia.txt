@@ -1,0 +1,21 @@
+
+state={
+	id=674
+	name="STATE_674"
+	manpower = 9084
+	
+	state_category = wasteland
+
+	history={
+		owner = NHO
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = NHO
+	}
+
+	provinces={
+		4645 5170 10950 10971 12323 13284  
+	}
+}

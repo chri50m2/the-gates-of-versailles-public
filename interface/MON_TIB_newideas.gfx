@@ -1,0 +1,42 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_generic_russian_bastard"
+		texturefile = "gfx/interface/ideas/idea_russian_bastard.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_dalai_lama"
+		texturefile = "gfx/interface/ideas/idea_dalai_lama.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_three_brothers"
+		texturefile = "gfx/interface/ideas/idea_three_brothers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_communist_junta"
+		texturefile = "gfx/interface/ideas/idea_communist_junta.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_unstable_government"
+		texturefile = "gfx/interface/ideas/idea_unstable_government.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_asian_revolutionary"
+		texturefile = "gfx/interface/ideas/idea_asian_revolutionary.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_poor_industry"
+		texturefile = "gfx/interface/ideas/idea_poor_industry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_traitor_of_the_empire"
+		texturefile = "gfx/interface/ideas/idea_traitor_of_the_empire.dds"
+	}
+}

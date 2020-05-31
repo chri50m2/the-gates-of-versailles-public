@@ -1,0 +1,55 @@
+units = {
+
+	### Naval OOB ###
+	fleet = {				
+		name = "Leoni di Napoli"			
+		naval_base = 819 
+		task_force = {
+			name = "Leoni di Napoli"			
+			location = 819 # Naples
+			
+			ship = { name = "MRN Arancione" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Caesar" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Amedeo" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Savoia-Aosta" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Messina" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Neapoli" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Sicilia" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Vittorio" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Leonardo da Vinci" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Giuseppe" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Taranto" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Palermo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Napoleon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Vesuvio" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Pizza" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Adriatico" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Conte di Cavour" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Garibaldi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Sardegna" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Tripolitania" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Malta" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Repubblica di Venezia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Due Sicilie" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Amicizia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Il Terribile" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "MRN Franco-Napoletano" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+		}
+	}
+	fleet = {				
+		name = "Comando Navale Sicilia"			
+		naval_base = 4159 
+		task_force = {
+			name = "Comando Navale Sicilia"			
+			location = 4159 # Messina Sicily
+			ship = { name = "RCT Palestro" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Confienza" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT San Martino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Solferino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Giuseppe La Farina" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Simone Schiaffino" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Giuseppe Dezza" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+			ship = { name = "RCT Giuseppe Cesare Abba" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = NAP } } }
+		}
+	}
+}

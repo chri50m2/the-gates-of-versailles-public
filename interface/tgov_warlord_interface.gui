@@ -1,0 +1,57 @@
+
+guiTypes = {
+	containerWindowType = {
+		name = "tgov_warlord_state_view_container"
+		position = {x=450 y=520}
+		size = { width=270 height=400 }
+
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+		
+		iconType = {
+			name = "tgov_warlord_state_view_pic"
+			position = { x = 55 y = 20 }
+		}
+
+		instantTextboxType = {
+			name = "tgov_warlord_state_view_name"
+			position = {x=10 y=250}
+			font = "hoi_18mbs"
+			text = "This state is controlled by the warlord [get_warlord_name]"
+
+			maxWidth = 240
+			maxHeight = 23
+			format = center
+		}
+		
+		buttonType = {
+			name = "tgov_warlord_appease_warlord"
+			spriteType = "GFX_sort_button_100x29_2"
+			frame = 2
+			font = "hoi_18mbs"
+			text = "Appease"
+			position = { x = 80 y = 300}
+			clicksound = click_ok
+			oversound = ui_menu_over
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextboxType = {
+			name = "tgov_warlord_state_view_anger"
+			position = {x=10 y=350}
+			font = "hoi_18mbs"
+			text = "[tgov_warlord_status]"
+
+			maxWidth = 240
+			maxHeight = 23
+			format = center
+		}
+		
+	}
+}

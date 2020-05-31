@@ -1,0 +1,57 @@
+﻿capital = 687
+
+OOB = "WIN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 100
+}
+
+set_country_flag = can_replace_minister
+
+
+set_convoys = 25
+
+add_ideas = {
+	NSW_imperial_federation_ALL 
+}
+
+create_country_leader = {
+	name = "Bede Clifford"
+	desc = "POLITICS_BEDE_CLIFFORD_DESC"
+	picture = "Portrait_WIN_Bede_Clifford.dds"
+	expire = "1965.1.1"
+	ideology = colonial_government
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Tubal Uriah Butler"
+	desc = "POLITICS_TUBAL_URIAH_BUTLER_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = syndicalism
+	traits = {
+		#
+	}
+}
+
+
+
+

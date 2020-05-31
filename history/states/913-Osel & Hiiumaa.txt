@@ -1,0 +1,17 @@
+state={
+	id=913
+	name="STATE_913"
+	provinces={
+		185 6201 
+	}
+	manpower=20567
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	history={
+		owner = EST
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = EST
+	}
+}

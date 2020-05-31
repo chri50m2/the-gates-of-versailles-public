@@ -1,0 +1,55 @@
+﻿capital = 3
+
+oob = "SWI_1936"
+
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	early_fighter = 1
+	CAS1 = 1
+}
+
+set_country_flag = can_replace_minister
+
+give_guarantee = LIC
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.10.27"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 1
+	fascism = 2
+	communism = 0
+	neutrality = 97
+}
+
+create_country_leader = {
+	name = "Henri Guisan"
+	desc = "POLITICS_FEDERAL_COUNCIL_DESC"
+	picture = "Portrait_Switzerland_Henri_Guisan.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Henri Guisan"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = {  winter_specialist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}

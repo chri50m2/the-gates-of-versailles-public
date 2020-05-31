@@ -1,0 +1,247 @@
+spriteTypes = {
+
+	#####focus icons for poland######
+
+	SpriteType = {
+	name = "GFX_ursus"
+	texturefile = "gfx/interface/goals/ursus.dds"			
+	}	
+
+	SpriteType = {
+	name = "GFX_polandtrain"
+	texturefile = "gfx/interface/goals/polandtrain.dds"	
+	}
+
+	SpriteType = {
+	name = "GFX_poland_labor_lottery"
+	texturefile = "gfx/interface/goals/poland_labor_lottery.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_battle_of_the_officers"
+	texturefile = "gfx/interface/goals/poland_battle_of_the_officers.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_find_a_compromise"
+	texturefile = "gfx/interface/goals/poland_find_a_compromise.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_best_of_both_worlds"
+	texturefile = "gfx/interface/goals/poland_best_of_both_worlds.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_the_past"
+	texturefile = "gfx/interface/goals/poland_the_past.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_old_generals"
+	texturefile = "gfx/interface/goals/poland_old_generals.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_experienced_minds"
+	texturefile = "gfx/interface/goals/poland_experienced_minds.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_new_officers"
+	texturefile = "gfx/interface/goals/poland_new_officers.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_bright_minds"
+	texturefile = "gfx/interface/goals/poland_bright_minds.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_new_ideas"
+	texturefile = "gfx/interface/goals/poland_new_ideas.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_the_future"
+	texturefile = "gfx/interface/goals/poland_the_future.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_the_new_military"
+	texturefile = "gfx/interface/goals/poland_the_new_military.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_polish_paratroopers"
+	texturefile = "gfx/interface/goals/poland_polish_paratroopers.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_great_polish_forts"
+	texturefile = "gfx/interface/goals/poland_great_polish_forts.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_polish_tanks"
+	texturefile = "gfx/interface/goals/poland_polish_tanks.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_slovak_forts"
+	texturefile = "gfx/interface/goals/poland_slovak_forts.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_bukowina_forts"
+	texturefile = "gfx/interface/goals/poland_bukowina_forts.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_eastern_forts"
+	texturefile = "gfx/interface/goals/poland_eastern_forts.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_northern_forts"
+	texturefile = "gfx/interface/goals/poland_northern_forts.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_modern_artillery"
+	texturefile = "gfx/interface/goals/poland_modern_artillery.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_new_guns"
+	texturefile = "gfx/interface/goals/poland_new_guns.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_crossing_the_carpathians"
+	texturefile = "gfx/interface/goals/poland_crossing_the_carpathians.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_the_military_reborn"
+	texturefile = "gfx/interface/goals/poland_the_military_reborn.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_finish_the_project"
+	texturefile = "gfx/interface/goals/poland_finish_the_project.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_traditional_warfare"
+	texturefile = "gfx/interface/goals/poland_traditional_warfare.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_modern_warfare"
+	texturefile = "gfx/interface/goals/poland_modern_warfare.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_bullets_not_men"
+	texturefile = "gfx/interface/goals/poland_bullets_not_men.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_poland_polish_armed_forces"
+	texturefile = "gfx/interface/goals/poland_polish_armed_forces.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_king_anders"
+	texturefile = "gfx/interface/goals/pol_king_anders.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_marshal_anders"
+	texturefile = "gfx/interface/goals/focus_pol_marshal_anders.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_strengthen_the_junta"
+	texturefile = "gfx/interface/goals/focus_generic_strengthen_military_government.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_the_rise_of_anders"
+	texturefile = "gfx/interface/goals/focus_poland_the_rise_of_anders.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_revolutionary_monarch"
+	texturefile = "gfx/interface/goals/focus_generic_enlightened_monarch.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_ban_left_wing_parties"
+	texturefile = "gfx/interface/goals/focus_generic_destroy_communism.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_enforce_catholicism"
+	texturefile = "gfx/interface/goals/focus_generic_catholic_resurgence.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_religious_tolerance"
+	texturefile = "gfx/interface/goals/generic_freedom_of_religon.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_slavic_alliance"
+	texturefile = "gfx/interface/goals/slavic_cooperation.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_jail_opponents_of_the_king"
+	texturefile = "gfx/interface/goals/focus_generic_imprison_democracy.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_campaign_in_scandanavia"
+	texturefile = "gfx/interface/goals/focus_campaign_in_scandanavia.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_lithuanian_referendum"
+	texturefile = "gfx/interface/goals/focus_poland_lithuanian_referendum.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_poland_future_invasions"
+	texturefile = "gfx/interface/goals/focus_pol_future_invasions.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_poland_new_spirit"
+	texturefile = "gfx/interface/goals/focus_poland_new_spirit.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_poland_franco_polish_army"
+	texturefile = "gfx/interface/goals/focus_poland_franco_polish_army.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_poland_returns_to_vienna"
+	texturefile = "gfx/interface/goals/focus_poland_returns_to_vienna.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_poland_grand_military"
+	texturefile = "gfx/interface/goals/focus_poland_grand_military.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_poland_generic_guard"
+	texturefile = "gfx/interface/goals/focus_poland_generic_guard.dds"			
+	}
+}
+
+
+

@@ -1,0 +1,13 @@
+﻿l_english:
+ QUE_fascism:0 "État national du Québec"
+ QUE_fascism_DEF:0 "the État national du Québec"
+ QUE_democratic:0 "République du Canada"
+ QUE_democratic_DEF:0 "the République du Canada"
+ QUE_neutrality:1 "République du Canada"
+ QUE_neutrality_DEF:1 "the République du Canada"
+ QUE_communism:0 "République populaire du Canada"
+ QUE_communism_DEF:0 "the République populaire du Canada"
+ QUE_fascism_ADJ:0 "Canadien"
+ QUE_democratic_ADJ:0 "Canadien"
+ QUE_neutrality_ADJ:0 "Canadien"
+ QUE_communism_ADJ:0 "Canadien"

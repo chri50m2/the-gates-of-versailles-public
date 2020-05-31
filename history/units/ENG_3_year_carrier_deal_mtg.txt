@@ -1,0 +1,18 @@
+﻿
+units= {
+
+	##### HMS Cornwall#####
+	fleet = {
+		name = "HMS Cornwall"
+		naval_base = 9458 # Portsmouth
+		task_force = {				
+			name = "HMS Cornwall"
+			location = 9458 # Portsmouth
+			ship = { name = "HMS Cornwall" definition = carrier equipment = { carrier_1 = { amount = 1 owner = ENG } } 
+				air_wings = {
+							
+				}
+			}
+		}	
+	}
+}

@@ -1,0 +1,83 @@
+﻿####### Division Templates #######
+division_template = { 
+	name = "Divisione di Fanteria" 
+	division_names_group = ITA_INF_01 
+
+	# Represents nearly all infantry divisions
+	# In later years, CC.NN. Brigade added to INF Division (1x2 MIL/INF regiments)
+	# Also represent semi-mountain divisions (1st, 2nd, 3rd, 4th, 6th Divisions)
+	regiments = { 
+		infantry = { x = 0 y = 0 } 
+		infantry = { x = 0 y = 1 } 
+		infantry = { x = 0 y = 2 } 
+		infantry = { x = 1 y = 0 } 
+		infantry = { x = 1 y = 1 } 
+		infantry = { x = 1 y = 2 } 
+	} 
+}
+
+##### OOB #####
+units = {
+	division= {	
+		name = "1. Guardia del sardismo" 
+		location = 11773
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.4
+	}
+	
+	division= {	
+		name = "2. Guardia del sardismo" 
+		location = 11773
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.4
+	}
+	
+	division= {	
+		name = "3. Guardia del sardismo" 
+		location = 902
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Guardia sarda dei socialisti" 
+		location = 11824
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "2. Guardia sarda dei socialisti" 
+		location = 11824
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "3. Guardia sarda dei socialisti" 
+		location = 6891
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "4. Guardia sarda dei socialisti" 
+		location = 6891
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "1. popolazione locale" 
+		location = 6891
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = "2. popolazione locale" 
+		location = 6891
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.1
+	}
+}

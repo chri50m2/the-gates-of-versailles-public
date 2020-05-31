@@ -1,0 +1,20 @@
+
+state={
+	id=911
+	name="STATE_911" # Western Dauphiné
+	manpower = 272698
+	state_category = city
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		3770 6786 9728 9732 11716
+	}
+}

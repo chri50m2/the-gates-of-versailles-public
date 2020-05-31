@@ -1,0 +1,20 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_AFG_islamic_kingdom"
+		texturefile = "gfx/interface/ideas/AFG/AFG_islamic_kingdom.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_AFG_low_litteracy"
+		texturefile = "gfx/interface/ideas/AFG/AFG_low_litteracy.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_AFG_bad_military"
+		texturefile = "gfx/interface/ideas/AFG/AFG_bad_military.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_idea_generic_corrupt_bureaucracy"
+		texturefile = "gfx/interface/ideas/idea_generic_corrupt_bureaucracy.dds"
+	}
+}

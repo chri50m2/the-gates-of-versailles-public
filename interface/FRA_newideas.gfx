@@ -1,0 +1,53 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_FRA_Fear_Of_Democratic_Coup"
+		texturefile = "gfx/interface/ideas/FRA_fearofdemocraticcoup.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_FRA_German_Ethnicity_Problems"
+		texturefile = "gfx/interface/ideas/FRA_germanethnicityproblems.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_FRA_Naval_Competition_Boost"
+		texturefile = "gfx/interface/ideas/FRA_navalcompetitionboost.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_FRA_Preparing_For_War"
+		texturefile = "gfx/interface/ideas/FRA_preparingforwar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_Undecided_Way_Ruling"
+		texturefile = "gfx/interface/ideas/FRA_undecidedwayofruling.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_Iron_Fist_Rule"
+		texturefile = "gfx/interface/ideas/FRA_ironfistrule.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_Parliamentary_Rule"
+		texturefile = "gfx/interface/ideas/FRA_parliamentary_rule.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEL_Flemish_Famine_1"
+		texturefile = "gfx/interface/ideas/BEL_flemishfamine1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEL_Flemish_Famine_2"
+		texturefile = "gfx/interface/ideas/BEL_flemishfamine2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BEL_Flemish_Famine_3"
+		texturefile = "gfx/interface/ideas/BEL_flemishfamine3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_france_pay_catalonia"
+		texturefile = "gfx/interface/ideas/FRA_paycatalonia.dds"
+	}
+}

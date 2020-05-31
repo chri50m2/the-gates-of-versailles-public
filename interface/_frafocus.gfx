@@ -1,0 +1,11 @@
+spriteTypes = {
+    
+	SpriteType = {
+	    name = "GFX_FRA_the_great_campaign"
+		texturefile = "gfx/interface/goals/FRA_the_great_campaign.dds"
+	}
+	SpriteType = {
+	    name = "GFX_FRA_vive_empire_france"
+		texturefile = "gfx/interface/goals/FRA_vive_empire_france.dds"
+	}
+}

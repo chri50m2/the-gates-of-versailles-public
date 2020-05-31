@@ -1,0 +1,523 @@
+spriteTypes = {
+
+	#GATES OF VERSAIlLES#
+	spriteType = {
+		name = "GFX_idea_promoted_government"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_giorgio_amendola"
+		texturefile = "gfx/interface/ideas/giorgio_amendola.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_costantino_lazzari"
+		texturefile = "gfx/interface/ideas/costantino_lazzari.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pietro_badoglio_versailles"
+		texturefile = "gfx/interface/ideas/pietro_badoglio_versailles.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_umberto_ii"
+		texturefile = "gfx/interface/ideas/umberto_ii.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_novus_imperium_romanum"
+		texturefile = "gfx/interface/ideas/Idea_Novus_Imperium_Romanum.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_radical_socialist_influence"
+		texturefile = "gfx/interface/ideas/radical_socialist_influence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_workers_propaganda"
+		texturefile = "gfx/interface/ideas/generic_production_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mussolini_propaganda"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mussolini_legions"
+		texturefile = "gfx/interface/ideas/mussolini_legions_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_keep_loyalists"
+		texturefile = "gfx/interface/ideas/idea_generic_deal_with_the_devil.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rid_loyalists"
+		texturefile = "gfx/interface/ideas/idea_generic_purge.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_northern_italy_support"
+		texturefile = "gfx/interface/ideas/generic_pp_unity_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_central_italy_support"
+		texturefile = "gfx/interface/ideas/generic_pp_unity_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_focus_on_western_europe"
+		texturefile = "gfx/interface/ideas/generic_spy_intel.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_revolutionary_activity"
+		texturefile = "gfx/interface/ideas/generic_communism_drift_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_french_commune_supported"
+		texturefile = "gfx/interface/ideas/french_commune_supported.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_the_polish_spirit"
+		texturefile = "gfx/interface/ideas/polish_nationalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_catholic_influence"
+		texturefile = "gfx/interface/ideas/poland_catholic_influence.dds"
+	}
+	spriteType = {
+	    name = "GFX_idea_unpopular_army"
+		texturefile = "gfx/interface/ideas/JAP_unpopular_army.dds"
+	}
+	spriteType = {
+	    name = "GFX_idea_unmodernized_industry"
+		texturefile = "gfx/interface/ideas/JAP_unmodernized_industry.dds"
+	}
+	spriteType = {
+	    name = "GFX_idea_modernized_industry"
+		texturefile = "gfx/interface/ideas/JAP_modernized_industry.dds"
+	}
+		#GATES OF VERSAIlLES#
+	spriteType = {
+		name = "GFX_idea_giorgio_amendola"
+		texturefile = "gfx/interface/ideas/giorgio_amendola.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_costantino_lazzari"
+		texturefile = "gfx/interface/ideas/costantino_lazzari.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pietro_badoglio_versailles"
+		texturefile = "gfx/interface/ideas/pietro_badoglio_versailles.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_umberto_ii"
+		texturefile = "gfx/interface/ideas/umberto_ii.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_novus_imperium_romanum"
+		texturefile = "gfx/interface/ideas/Idea_Novus_Imperium_Romanum.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_confused_government"
+		texturefile = "gfx/interface/ideas/ita_unstable_government.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_workers_propaganda"
+		texturefile = "gfx/interface/ideas/generic_production_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mussolini_propaganda"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mussolini_legions"
+		texturefile = "gfx/interface/ideas/mussolini_legions_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_keep_loyalists"
+		texturefile = "gfx/interface/ideas/idea_generic_deal_with_the_devil.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rid_loyalists"
+		texturefile = "gfx/interface/ideas/idea_generic_purge.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_plan_one"
+		texturefile = "gfx/interface/ideas/FRA_national_mobilization_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_trained_workers"
+		texturefile = "gfx/interface/ideas/ITA_trained_workers_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military_based_economy_ita"
+		texturefile = "gfx/interface/ideas/ITA_mil_based_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_civilian_based_economy_ita"
+		texturefile = "gfx/interface/ideas/ITA_civ_based_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_modern_dockyards"
+		texturefile = "gfx/interface/ideas/modern_dockyards.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_improved_grain_production"
+		texturefile = "gfx/interface/ideas/idea_generic_agrarian_reform.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_incompetent_generals_fired"
+		texturefile = "gfx/interface/ideas/incompetent_generals_fired.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_maintained_general_staff"
+		texturefile = "gfx/interface/ideas/idea_generic_deal_with_the_devil.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_improved_officer_classes"
+		texturefile = "gfx/interface/ideas/generic_victors_of_ww1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_napoleonic_strategy_taught"
+		texturefile = "gfx/interface/ideas/napoleonic_strategy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_reformed_army"
+		texturefile = "gfx/interface/ideas/ita_reformed_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_modernized_trains_idea"
+		texturefile = "gfx/interface/ideas/generic_uprade_train.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_global_navy"
+		texturefile = "gfx/interface/ideas/ita_global_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_mediterranean_fleet"
+		texturefile = "gfx/interface/ideas/idea_yug_federal_defense_council.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_amphibous_invasion_bonus"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_keep_loyalists"
+		texturefile = "gfx/interface/ideas/ita_kept_loyalists.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_got_rid_of_loyalists"
+		texturefile = "gfx/interface/ideas/ita_rid_loyalists.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_banished_royalists"
+		texturefile = "gfx/interface/ideas/ita_executed_garibaldis.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_committe_disbanded"
+		texturefile = "gfx/interface/ideas/ita_disbanded_fascist_comittee.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_fascist_legions"
+		texturefile = "gfx/interface/ideas/il_duce_legion.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_silence_mafia"
+		texturefile = "gfx/interface/ideas/ita_silent_mafia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_pregnancy_support"
+		texturefile = "gfx/interface/ideas/ita_promote_pregnancy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_italian_movies"
+		texturefile = "gfx/interface/ideas/italian_movies.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_nation_reborn"
+		texturefile = "gfx/interface/ideas/ita_nation_reborn.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_nap_ita_war"
+		texturefile = "gfx/interface/ideas/third_italian_war_of_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_nap_war"
+		texturefile = "gfx/interface/ideas/third_italian_war_of_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_confused_government_1"
+		texturefile = "gfx/interface/ideas/ita_chaotic_government.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_democratic_government"
+		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_payments_for_south_tyrol"
+		texturefile = "gfx/interface/ideas/ita_payments_for_south_tyrol.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_right_to_bear_arms"
+		texturefile = "gfx/interface/ideas/generic_right_to_bear_arms.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_lower_business_tax"
+		texturefile = "gfx/interface/ideas/generic_lower_business_tax.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_increased_individual_freedoms"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_social_welfare"
+		texturefile = "gfx/interface/ideas/ita_social_welfare.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_business_regulations_increase"
+		texturefile = "gfx/interface/ideas/FRA_factory_strikes.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_equal_rights"
+		texturefile = "gfx/interface/ideas/generic_volunteer_expedition_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_abolished_private_property"
+		texturefile = "gfx/interface/ideas/FRA_matignon_agreements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_government_controlled_economy"
+		texturefile = "gfx/interface/ideas/ita_government_controlled_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_high_taxes_rich"
+		texturefile = "gfx/interface/ideas/idea_eng_tackle_capitalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_empowered_king"
+		texturefile = "gfx/interface/ideas/ita_empowered_king.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_kings_guard"
+		texturefile = "gfx/interface/ideas/ita_kings_guard.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_royal_family_rivalries"
+		texturefile = "gfx/interface/ideas/FRA_matignon_agreements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_kings_constitution"
+		texturefile = "gfx/interface/ideas/ita_monarch_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_royal_family_rivalries_1"
+		texturefile = "gfx/interface/ideas/FRA_matignon_agreements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_royal_family_rivalries_umberto"
+		texturefile = "gfx/interface/ideas/FRA_matignon_agreements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_royal_family_rivalries_prince_aimone"
+		texturefile = "gfx/interface/ideas/FRA_matignon_agreements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_industrilization_help"
+		texturefile = "gfx/interface/ideas/ita_industrilization_aid_monarchist.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_seized_british_assets"
+		texturefile = "gfx/interface/ideas/generic_seize_assets.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_recognized_naples_minority"
+		texturefile = "gfx/interface/ideas/generic_recognize_citizens.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_banned_fascism"
+		texturefile = "gfx/interface/ideas/generic_ban_fascism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_freedom_of_religon"
+		texturefile = "gfx/interface/ideas/idea_generic_freedom_of_religon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ansaldo"
+		texturefile = "gfx/interface/ideas/company_ansaldo.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_agip"
+		texturefile = "gfx/interface/ideas/company_agip.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_benetti"
+		texturefile = "gfx/interface/ideas/company_benetti.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_achille_lauro"
+		texturefile = "gfx/interface/ideas/idea_achille_lauro_monarchist_fanatic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_catholic_influence"
+		texturefile = "gfx/interface/ideas/poland_catholic_influence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_polish_civil_code"
+		texturefile = "gfx/interface/ideas/ita_monarch_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_religious_tolerance"
+		texturefile = "gfx/interface/ideas/idea_generic_freedom_of_religon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_modern_winter_equipment"
+		texturefile = "gfx/interface/ideas/idea_prc_the_long_march.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_the_skis"
+		texturefile = "gfx/interface/ideas/sisu.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_efficient_supply_transportation"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_polish_spirit_reborn"
+		texturefile = "gfx/interface/ideas/idea_polish_spirit_reborn.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_industry2"
+		texturefile = "gfx/interface/ideas/ita_government_controlled_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_industry"
+		texturefile = "gfx/interface/ideas/ita_government_controlled_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_military_in_charge"
+		texturefile = "gfx/interface/ideas/idea_generic_military_in_power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_increased_funding_for_military_stanislaw_leader"
+		texturefile = "gfx/interface/ideas/idea_generic_army_funding.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_increased_funding_for_military_jozef_haller_von_hallenburg"
+		texturefile = "gfx/interface/ideas/idea_generic_army_funding.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_increased_funding_for_military_edward_smigly_leader"
+		texturefile = "gfx/interface/ideas/idea_generic_army_funding.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_teachings_of_the_defence"
+		texturefile = "gfx/interface/ideas/idea_poland_protect_poland.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_teachings_of_the_offensive"
+		texturefile = "gfx/interface/ideas/idea_poland_attacking_outwards.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_the_necessity_of_speed"
+		texturefile = "gfx/interface/ideas/idea_poland_the_necessity_of_speed.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_palaces_to_military_acadamies"
+		texturefile = "gfx/interface/ideas/idea_poland_converted_palaces_to_military_acadamies.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_agrarian_policies"
+		texturefile = "gfx/interface/ideas/idea_poland_agrarian_policies.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_research_grants"
+		texturefile = "gfx/interface/ideas/idea_poland_research_grants.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_construction_company_investments"
+		texturefile = "gfx/interface/ideas/idea_poland_invest_in_construction_companies.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_polish_eagle_award"
+		texturefile = "gfx/interface/ideas/idea_poland_polish_eagle_award.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_poor_farmer_strength"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_republicans_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pol_business_takeover"
+		texturefile = "gfx/interface/ideas/idea_eng_spirit_of_the_industrial_revolution.dds"
+	}
+	#Nouvelle Hollande
+	spriteType = {
+		name = "GFX_idea_NHO_animal_exhibits"
+		texturefile = "gfx/interface/ideas/idea_NVH_animal_zoos.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NHO_illegal_hotbed"
+		texturefile = "gfx/interface/ideas/idea_generic_gun_spies.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NHO_reliance_on_france"
+		texturefile = "gfx/interface/ideas/idea_usa_great_depression_2.dds"
+	}
+	#Austria
+	spriteType = {
+		name = "GFX_idea_AUS_paying_italy"
+		texturefile = "gfx/interface/ideas/aus_paying_italy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_italian_aid"
+		texturefile = "gfx/interface/ideas/aus_italian_aid.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_aus_payments_for_south_tyrol_recieve"
+		texturefile = "gfx/interface/ideas/aus_payments_for_south_tyrol_recieve.dds"
+	}
+	#Spain
+	spriteType = {
+		name = "GFX_idea_franco_sanjurjo_rivalry"
+		texturefile = "gfx/interface/ideas/spr_franco_sanjurjo_rivalry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_alfonso_xiii"
+		texturefile = "gfx/interface/ideas/spr_alfonso_xiii.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_large_anti_french_british_sentiment"
+		texturefile = "gfx/interface/ideas/spr_anti_french_british_sentiment.dds"
+	}
+	#State Modifiers
+	spriteType = {
+		name = "GFX_modifiers_naval_support"
+		texturefile = "gfx/interface/ideas/modifiers_naval_support.dds"
+	}
+	#New South Wales
+	spriteType = {
+		name = "GFX_idea_NSW_memories_of_monash"
+		texturefile = "gfx/interface/ideas/NSW/NSW_memories_of_monash.dds"
+	}
+	#England
+	spriteType = {
+		name = "GFX_idea_ENG_imperial_federation"
+		texturefile = "gfx/interface/ideas/ENG/ENG_imperial_federation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_Rule_Britannia"
+		texturefile = "gfx/interface/ideas/ENG/ENG_Rule_Britannia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_shame_of_quebec"
+		texturefile = "gfx/interface/ideas/ENG/ENG_shame_of_quebec.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_the_louche_prince"
+		texturefile = "gfx/interface/ideas/ENG/ENG_the_louche_prince.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_disease_fighting"
+		texturefile = "gfx/interface/ideas/modifiers_disease_fighting.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_church_support"
+		texturefile = "gfx/interface/ideas/modifiers_church_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_Victor_Emmanuel_III"
+		texturefile = "gfx/interface/ideas/ITA/ITA_Victor_Emmanuel_III.dds"
+	}
+}

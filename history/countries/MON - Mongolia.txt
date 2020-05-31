@@ -1,0 +1,54 @@
+﻿capital = 330
+
+oob = "MON_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	MON_bastard_of_russia
+	MON_communist_junta
+	MON_unstable_government
+	MON_revolutionary
+	MON_poor_industry
+}
+
+set_country_flag = can_replace_minister
+
+set_popularities = {
+	democratic = 0
+	fascism = 8
+	communism = 70
+	neutrality = 22
+	liberal = 0
+}
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Tseren-Ochiryn Dambadorji"
+	#desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "gfx/leaders/MON/Portrait_Tseren-Ochiryn_Dambadorji.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Bogd Khan"
+	#desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "gfx/leaders/MON/Portrait_Bogd_Khan.dds"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		imperial_connections
+	}
+}

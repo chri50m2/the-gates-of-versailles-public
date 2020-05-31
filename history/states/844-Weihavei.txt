@@ -1,0 +1,27 @@
+
+state={
+	id=844
+	name="STATE_844"
+
+	history={
+		owner = WEI
+		add_core_of = CHI
+		add_core_of = WEI
+		buildings = {
+			infrastructure = 2
+			13250 = {
+				naval_base = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1104 1200 4205 10018 13250 
+	}
+	manpower=765005
+	buildings_max_level_factor=1.000
+	state_category=town
+}

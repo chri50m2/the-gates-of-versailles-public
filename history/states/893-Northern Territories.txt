@@ -1,0 +1,20 @@
+state={
+	id=893
+	name="STATE_893"
+	manpower = 5361
+	
+	state_category = rural
+
+	history={
+		owner = NSW
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = NSW
+	}
+
+	provinces={
+		11013 12992 2223 8237 12936 10979 12915 12311 2139 4487 1478 7481 4462 4441 1454 12326 1431 12104 12339 10518 7457 12499 1217 10316 4415 7669 12246 10288 12290 1422 1410 10276
+	}
+}

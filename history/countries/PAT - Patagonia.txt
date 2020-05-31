@@ -1,0 +1,30 @@
+﻿capital = 512
+
+set_research_slots = 2
+
+set_politics = {
+	ruling_party = monarchist
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 10
+	fascism = 0
+	communism = 10
+	neutrality = 0
+	monarchist = 80
+}
+
+set_country_flag = can_replace_minister
+
+create_country_leader = {
+	name = "Jérôme Napoleon Bonaparte III"
+	desc = ""
+	picture = "PAT_Jerome_Napoleon_Bonaparte_III.dds"
+	expire = "1948.1.1"
+	ideology = constitutional_monarchy
+	traits = {
+		#
+	}
+}

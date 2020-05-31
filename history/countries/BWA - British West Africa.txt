@@ -1,0 +1,33 @@
+﻿capital = 558
+
+set_research_slots = 2
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 100
+}
+
+set_country_flag = can_replace_minister
+
+add_ideas = {
+	NSW_imperial_federation_ALL 
+}
+
+create_country_leader = {
+	name = "Sir Bernard Henry Bourdillon"
+	desc = ""
+	picture = "Sir_Bernard_Henry_Bourdillon.dds"
+	expire = "1948.1.1"
+	ideology = colonial_government
+	traits = {
+		#
+	}
+}

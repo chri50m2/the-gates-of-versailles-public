@@ -1,0 +1,43 @@
+﻿capital = 61
+
+OOB = "MEK_1936"
+
+add_ideas = {
+	GER_REGION_Disunited_Germany
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+set_country_flag = can_replace_minister
+
+
+set_politics = {
+	ruling_party = social_democratic
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 10
+	fascism = 5
+	communism = 10
+	neutrality = 5
+	social_democratic = 55
+	liberal = 15
+}
+
+set_convoys = 40
+
+create_country_leader = {
+	name = "Johannes Stelling"
+	desc = "POLITICS_JOHANNES_STELLING_DESC"
+	picture = "Portrait_MEK_Johannes_Stelling.dds"
+	expire = "1965.1.1"
+	ideology = reformist_socialist
+	traits = {
+	}
+}

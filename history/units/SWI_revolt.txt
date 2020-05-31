@@ -1,0 +1,117 @@
+﻿division_template = {
+	name = "Nationalist Guard"  
+	division_names_group = SWI_INF_01
+	# Note: Swiss Infantry Divisions included both attached regiments and 
+	#	border/mtn. brigades in their TO&E. This represents all but the 
+	#	attached brigades
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon bn mix of cav recon, ACs, and tankettes
+	}
+}
+
+##### OOB #####
+units = {
+	division= {	
+		name = "1. National Guard" 
+		location = 9620
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "2. National Guard" 
+		location = 9620
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Free Swiss Forces" 
+		location = 9587
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.4
+
+
+    division= {	
+		name = "2. Free Swiss Forces" 
+		location = 9587
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.7
+	}
+	
+	division= {	
+		name = "3. Free Swiss Forces" 
+		location = 11604
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "4. Free Swiss Forces" 
+		location = 11604
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "5. Free Swiss Forces" 
+		location = 11604
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "1. Corps of Berne" 
+		location = 11604
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "1. Corps of Berne" 
+		location = 11590
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "2. Corps of Berne" 
+		location = 11590
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.5
+	}
+	
+	division= {	
+		name = "1. Zurich Volunteer Militia" 
+		location = 663
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.1
+	}
+	
+	division= {	
+		name = "1. Public Force Brigade of Police" 
+		location = 663
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "2. Public Force Brigade of Police" 
+		location = 663
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.2
+	}
+	
+	division= {	
+		name = "1. Trained Huntsman" 
+		location = 11601
+		division_template = "Nationalist Guard"
+		start_experience_factor = 0.1
+	}
+}

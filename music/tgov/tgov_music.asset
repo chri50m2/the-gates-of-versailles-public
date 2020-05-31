@@ -1,0 +1,76 @@
+
+# MAIN THEME
+music = {
+	name = "maintheme"
+	file = "mainthemechantdepart.ogg"
+	volume = 0.65
+}
+
+# General Peace:
+music = {
+	name = "ussranthem"
+	file = "ussranthem.ogg"
+	volume = 0.65
+}
+music = {
+	name = "chantognion"
+	file = "chantognion.ogg"
+	volume = 0.65
+}
+music = {
+	name = "lavictoireestanous"
+	file = "lavictoireestanous.ogg"
+	volume = 0.65
+}
+music = {
+	name = "vivatvivatinaeternumfornapoleonscoronation"
+	file = "vivatvivatinaeternumfornapoleonscoronation.ogg"
+	volume = 0.65
+}
+music = {
+	name = "mypierwszabrygada"
+	file = "mypierwszabrygada.ogg"
+	volume = 0.75
+}
+
+music = {
+	name = "polishlithuaniancommonwealthsong"
+	file = "polishlithuaniancommonwealthsong.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "marchedelagardeconsulaireamarengo"
+	file = "marchedelagardeconsulaireamarengo.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "fascistitalyanthemgiovenizza"
+	file = "fascistitalyanthemgiovenizza.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "ignacydygasmazurekdabrowskiego"
+	file = "ignacydygasmazurekdabrowskiego.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "pourlempereur"
+	file = "pourlempereur.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "edwardsmiglygettinghismarshalsbatonsmusic"
+	file = "edwardsmiglygettinghismarshalsbatonsmusic.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "lamarchefunebredenapoleon"
+	file = "lamarchefunebredenapoleon.ogg"
+	volume = 0.65
+}

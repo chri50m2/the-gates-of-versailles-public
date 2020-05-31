@@ -1,0 +1,17 @@
+state={
+	id=910
+	name="STATE_910"
+	provinces={
+		521 11516 
+	}
+	manpower=104956
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	history={
+		add_core_of = FRA
+		owner = FRA
+		buildings = {
+			infrastructure = 3
+		}
+	}
+}

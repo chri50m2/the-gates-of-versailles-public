@@ -1,0 +1,182 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Pikhotna dyviziya" # Infantry Division
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Hirs'ka Dyviziya" # Mountain Division
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+
+division_template = {
+	name = "Kavaleriys'ka Dyviziya" # Cavalry Division
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {	
+		name = "Kyyivs'ka Elitna Hvardiya"
+		location = 525
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	
+	division= {	
+		name = "Dnipropetrovs'ka Dyviziya"
+		location = 11437
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.55
+	}
+	
+	division= {	
+		name = "Odes'ka Dyviziya"
+		location = 11670
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.55
+	}
+	
+	division= {	
+		name = "Kryvyy Rih Dyviziya"
+		location = 11561
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.55
+	}
+	
+	division= {	
+		name = "1-y Pikhotna Dyviziya"
+		location = 9433
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "2-y Pikhotna Dyviziya"
+		location = 3755
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "3-y Pikhotna Dyviziya"
+		location = 9568
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "4-y Pikhotna Dyviziya"
+		location = 11454
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "5-y Pikhotna Dyviziya"
+		location = 6478
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "6-y Pikhotna Dyviziya"
+		location = 11715
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "7-y Pikhotna Dyviziya"
+		location = 488
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "8-y Pikhotna Dyviziya"
+		location = 6509
+		division_template = "Pikhotna dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "1-y Kavaleriys'ka Dyviziya"
+		location = 11441
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.55
+	}
+	
+	division= {	
+		name = "2-y Kavaleriys'ka Dyviziya"
+		location = 6579
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "3-y Kavaleriys'ka Dyviziya"
+		location = 9576
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division= {	
+		name = "4-y Kavaleriys'ka Dyviziya"
+		location = 3543
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+}		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "UKR"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+}

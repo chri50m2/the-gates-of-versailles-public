@@ -1,0 +1,161 @@
+
+music_station = "tgov"
+
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 0.5
+			tag = FRA
+		}
+	}
+}
+
+music = {
+	song = "ussranthem"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "chantognion"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_government = neutrality
+			TAG = FRA
+		}		
+	}	
+}
+
+music = {
+	song = "lavictoireestanous"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_government = neutrality
+			TAG = FRA
+		}		
+	}	
+}
+
+music = {
+	song = "vivatvivatinaeternumfornapoleonscoronation"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_government = neutrality
+			TAG = FRA
+		}		
+	}	
+}
+
+music = {
+	song = "mypierwszabrygada"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_government = neutrality
+			TAG = POL
+		}		
+	}	
+}
+
+music = {
+	song = "polishlithuaniancommonwealthsong"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_government = monarchist
+			TAG = POL
+		}		
+	}	
+}
+
+music = {
+	song = "marchedelagardeconsulaireamarengo"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			TAG = FRA
+		}		
+	}	
+}
+
+music = {
+	song = "fascistitalyanthemgiovenizza"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_government = fascism
+			TAG = ITA
+		}		
+	}	
+}
+
+music = {
+	song = "ignacydygasmazurekdabrowskiego"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			TAG = POL
+		}		
+	}	
+}
+
+music = {
+	song = "edwardsmiglygettinghismarshalsbatonsmusic"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			TAG = POL
+		}		
+	}	
+}
+
+music = {
+	song = "pourlempereur"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			TAG = FRA
+		}		
+	}	
+}
+
+music = {
+	song = "lamarchefunebredenapoleon"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			
+			TAG = FRA
+		}		
+	}	
+}

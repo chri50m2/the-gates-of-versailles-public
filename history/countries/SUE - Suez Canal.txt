@@ -1,0 +1,67 @@
+﻿capital = 453
+
+set_research_slots = 2
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.2.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 100
+}
+
+add_ideas = {
+	free_trade
+	disarmed_nation
+}
+
+create_country_leader = {
+	name = "Edmund Allenby"
+	desc = ""
+	picture = "Suez_Edmund_Allenby.dds"
+	expire = "1965.1.1"
+	ideology = colonial_government
+	traits = {
+		#
+	}
+}
+
+set_country_flag = can_replace_minister
+
+FRA = {
+	give_guarantee = SUE
+}
+ENG = {
+	give_guarantee = SUE
+}
+USA = {
+	give_guarantee = SUE
+}
+SOV = {
+	give_guarantee = SUE
+}
+SPR = {
+	give_guarantee = SUE
+}
+SAF = {
+	give_guarantee = SUE
+}
+RAJ = {
+	give_guarantee = SUE
+}
+ITA = {
+	give_guarantee = SUE
+}
+NSW = {
+	give_guarantee = SUE
+}
+SUE = {
+	give_military_access = ENG
+	give_military_access = FRA
+	give_military_access = SYR
+}

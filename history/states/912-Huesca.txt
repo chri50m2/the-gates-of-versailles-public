@@ -1,0 +1,18 @@
+state={
+	id=912
+	name="STATE_912"
+	provinces={
+		790 899 915 6901 9813 9840 9842 11793 11819 11821 11838 13225
+	}
+	manpower=130634
+	buildings_max_level_factor=1.000
+	state_category=rural
+	history={
+		owner = SPR
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = SPR
+
+	}
+}

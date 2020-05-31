@@ -1,0 +1,211 @@
+spriteTypes = {
+##### FOCUS ICONS FOR AFGHANISTAN
+    SpriteType = {
+        name = "GFX_AFG_increase_farming_in_peshawar"
+        texturefile = "gfx/interface/goals/AFG_increase_farming_in_peshawar.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_mine_for_aluminum_in_peshawar"
+        texturefile = "gfx/interface/goals/AFG_mine_for_aluminum_in_peshawar.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_modernize_electronics"
+        texturefile = "gfx/interface/goals/AFG_modernize_electronics.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_push_for_education_1"
+        texturefile = "gfx/interface/goals/AFG_push_for_education_1.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_revitalize_oil_industry_in_Herat"
+        texturefile = "gfx/interface/goals/AFG_revitalize_oil_industry_in_Herat.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_solve_the_education_problem"
+        texturefile = "gfx/interface/goals/AFG_solve_the_education_problem.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_focus_on_education"
+        texturefile = "gfx/interface/goals/AFG_focus_on_education.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_develop_northern_provinces"
+        texturefile = "gfx/interface/goals/AFG_develop_northern_provinces.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_focus_on_internal_matter"
+        texturefile = "gfx/interface/goals/AFG_focus_on_internal_matter.tga"
+    }
+    SpriteType = {
+        name = "GFX_AFG_attempt_to_reform_the_military"
+        texturefile = "gfx/interface/goals/AFG_attempt_to_reform_the_military.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_military_reform_success"
+        texturefile = "gfx/interface/goals/AFG_military_reform_success.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_invite_russian_military_advisors"
+        texturefile = "gfx/interface/goals/AFG_invite_russian_military_advisors.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_invite_german_military_advisors"
+        texturefile = "gfx/interface/goals/AFG_invite_german_military_advisors.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_start_improving_military_weapons"
+        texturefile = "gfx/interface/goals/AFG_start_improving_military_weapons.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_afghan_artilery"
+        texturefile = "gfx/interface/goals/AFG_afghan_artilery.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_afghan_support_equipment"
+        texturefile = "gfx/interface/goals/AFG_afghan_support_equipment.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_afghan_tanks"
+        texturefile = "gfx/interface/goals/AFG_afghan_tanks.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_a_new_military"
+        texturefile = "gfx/interface/goals/AFG_a_new_military.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_found_the_afghan_bank"
+        texturefile = "gfx/interface/goals/AFG_found_the_afghan_bank.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_failed_military_reforms"
+        texturefile = "gfx/interface/goals/AFG_failed_military_reforms.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_emergency_reforms"
+        texturefile = "gfx/interface/goals/AFG_emergency_reforms.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_crack_down_on_non_reformists"
+        texturefile = "gfx/interface/goals/AFG_crack_down_on_non_reformists.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_advances_in_artillery"
+        texturefile = "gfx/interface/goals/AFG_advances_in_artillery.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_import_french_new_weapons"
+        texturefile = "gfx/interface/goals/AFG_import_french_new_weapons.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_develop_the_industry"
+        texturefile = "gfx/interface/goals/AFG_develop_the_industry.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_develop_southern_provinces"
+        texturefile = "gfx/interface/goals/AFG_develop_southern_provinces.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_expand_iron_mines_bamyan"
+        texturefile = "gfx/interface/goals/AFG_expand_iron_mines_bamyan.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_train_general_staff"
+        texturefile = "gfx/interface/goals/AFG_train_general_staff.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_revitalized_industry"
+        texturefile = "gfx/interface/goals/AFG_revitalized_industry.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_send_girls_to_school"
+        texturefile = "gfx/interface/goals/AFG_send_girls_to_school.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_encourage_education_for_all"
+        texturefile = "gfx/interface/goals/AFG_encourage_education_for_all.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_push_for_education_2"
+        texturefile = "gfx/interface/goals/AFG_push_for_education_2.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_found_the_university_of_kabul"
+        texturefile = "gfx/interface/goals/AFG_found_the_university_of_kabul.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_found_the_university_of_herat"
+        texturefile = "gfx/interface/goals/AFG_found_the_university_of_herat.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_finalize_education_reforms"
+        texturefile = "gfx/interface/goals/AFG_finalize_education_reforms.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_finish_the_reform"
+        texturefile = "gfx/interface/goals/AFG_finish_the_reform.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_advances_in_doctrines"
+        texturefile = "gfx/interface/goals/AFG_advances_in_doctrines.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_advance_in_nuclear_technology"
+        texturefile = "gfx/interface/goals/AFG_advance_in_nuclear_technology.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_experimental_rocketery"
+        texturefile = "gfx/interface/goals/AFG_experimental_rocketery.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_nadir_assassination"
+        texturefile = "gfx/interface/goals/AFG_nadir_assassination.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_king_zahir"
+        texturefile = "gfx/interface/goals/AFG_king_zahir.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_Amanullah_coup"
+        texturefile = "gfx/interface/goals/AFG_Amanullah_coup.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_habibullah"
+        texturefile = "gfx/interface/goals/AFG_habibullah.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_crown_habibulla"
+        texturefile = "gfx/interface/goals/AFG_crown_habibulla.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_deal_with_ethnic_tensions"
+        texturefile = "gfx/interface/goals/AFG_deal_with_ethnic_tensions.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_compromise_with_minorities"
+        texturefile = "gfx/interface/goals/AFG_compromise_with_minorities.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_no_comprimise_with_minorities"
+        texturefile = "gfx/interface/goals/AFG_no_comprimise_with_minorities.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_stabilize_afghanistan"
+        texturefile = "gfx/interface/goals/AFG_stabilize_afghanistan.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_assassinate_daoud"
+        texturefile = "gfx/interface/goals/AFG_assassinate_daoud.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_a_new_emirate"
+        texturefile = "gfx/interface/goals/AFG_a_new_emirate.dds"
+    }
+	SpriteType = {
+        name = "GFX_focus_afghanistan_rule_with_iron_fist"
+        texturefile = "gfx/interface/goals/focus_afghanistan_rule_with_iron_fist.dds"
+    }
+	SpriteType = {
+        name = "GFX_focus_afghanistan_abolish_loya_jirga"
+        texturefile = "gfx/interface/goals/focus_afghanistan_abolish_loya_jirga.dds"
+    }
+}

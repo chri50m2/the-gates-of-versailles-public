@@ -1,0 +1,134 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Russko-Belorusskiye Brigada" # Russo-Belarussian Brigade Division
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Pekhotnaya Diviziya" # Infantry Division
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya" # Cavalry Division
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {	
+		name = "Minskaya Brigada"
+		location = 11370
+		division_template = "Russko-Belorusskiye Brigada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+}
+
+units = {
+	division= {	
+		name = "Vitebskaya Diviziya"
+		location = 11241
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+}
+
+units = {
+	division= {	
+		name = "Maladechna Divizion"
+		location = 406
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75
+	}
+}
+
+units = {
+	division= {	
+		name = "1-ya Rossiysko-Belorusskaya Brigada"
+		location = 215
+		division_template = "Russko-Belorusskiye Brigada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.45
+	}
+}
+
+units = {
+	division= {	
+		name = "2-ya Rossiysko-Belorusskaya Brigada"
+		location = 9323
+		division_template = "Russko-Belorusskiye Brigada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.45
+	}
+}
+
+units = {
+	division= {	
+		name = "1-ya Pekhotnaya Diviziya"
+		location = 6340
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.45
+	}
+}
+
+units = {
+	division= {	
+		name = "2-ya Pekhotnaya Diviziya"
+		location = 9359
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.45
+	}
+}
+
+units = {
+	division= {	
+		name = "3-ya Pekhotnaya Diviziya"
+		location = 11322
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.45
+	}
+}		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BLR"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+}

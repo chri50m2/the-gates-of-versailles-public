@@ -1,0 +1,339 @@
+spriteTypes = {
+
+		###### Focus icons for the Italian Confederation
+
+	SpriteType = {
+	name = "GFX_ITA_mussolini_legions_1"
+	texturefile = "gfx/interface/goals/mussolini_legions_1.dds"			
+	}
+
+    SpriteType = {
+	name = "GFX_ITA_possibily_of_french_commune"
+	texturefile = "gfx/interface/goals/possibily_of_french_commune.dds"			
+	}
+
+    SpriteType = {
+	name = "GFX_ITA_rebuild_economy"
+	texturefile = "gfx/interface/goals/italian_rebuild_economy.dds"			
+	}
+
+    SpriteType = {
+	name = "GFX_goal_ita_economic_research_college"
+	texturefile = "gfx/interface/goals/goal_ita_economic_research_college.dds"			
+	}	
+
+    SpriteType = {
+	name = "GFX_goal_ita_a_deal_with_austria"
+	texturefile = "gfx/interface/goals/ITA_a_deal_with_austria.dds"			
+	}	
+
+    SpriteType = {
+	name = "GFX_goal_ita_italian_electronics"
+	texturefile = "gfx/interface/goals/ITA_italian_electronics.dds"			
+	}	
+
+    SpriteType = {
+	name = "GFX_goal_ita_grain_improvement"
+	texturefile = "gfx/interface/goals/ITA_grain_production.dds"			
+	}
+    
+    SpriteType = {
+	name = "GFX_goal_generic_relinquish_commanders"
+	texturefile = "gfx/interface/goals/generic_relinquish_commanders.dds"			
+	}	
+    
+    SpriteType = {
+	name = "GFX_goal_italian_paratroopers"
+	texturefile = "gfx/interface/goals/ITA_paratroopers.dds"			
+	}	
+	
+	SpriteType = {
+	name = "GFX_goal_focus_italian_trains"
+	texturefile = "gfx/interface/goals/focus_italian_trains.dds"			
+	}
+
+    SpriteType = {
+	name = "GFX_goal_ita_mediterranean"
+	texturefile = "gfx/interface/goals/ITA_seize_mediterranean.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_global_fleet"
+	texturefile = "gfx/interface/goals/ita_global_fleet.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_battleship"
+	texturefile = "gfx/interface/goals/ita_battleship_supreme.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_support_mussolini"
+	texturefile = "gfx/interface/goals/ITA_support_mussolini.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_fate_of_loyalists"
+	texturefile = "gfx/interface/goals/ITA_fate_of_loyalists.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_stick_with_austria"
+	texturefile = "gfx/interface/goals/ita_stick_with_austria.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_invade_austria"
+	texturefile = "gfx/interface/goals/ita_end_nazi_alliance.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_partition_croatia"
+	texturefile = "gfx/interface/goals/ita_partition_croatia.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_execute_royalists"
+	texturefile = "gfx/interface/goals/ita_banish_garibaldis.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_new_duce"
+	texturefile = "gfx/interface/goals/ita_choose_new_duce.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_keep_mussolini"
+	texturefile = "gfx/interface/goals/ita_keep_mussolini.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_abolish_comittee"
+	texturefile = "gfx/interface/goals/ita_banish_the_comittee.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_alliance_with_croatia"
+	texturefile = "gfx/interface/goals/ita_alliance_with_croatia.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_il_duce_legions"
+	texturefile = "gfx/interface/goals/il_duce_legions.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_il_duce_right"
+	texturefile = "gfx/interface/goals/ita_il_duces_right.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_invade_serbia"
+	texturefile = "gfx/interface/goals/ita_invade_serbia.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_occupy_albania"
+	texturefile = "gfx/interface/goals/Italy_Demand_Albanian_Subjugation.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_parition_switzerland"
+	texturefile = "gfx/interface/goals/ita_partition_switzerland.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_spanish_alliance"
+	texturefile = "gfx/interface/goals/ita_spanish_alliance.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_turkish_alliance"
+	texturefile = "gfx/interface/goals/ita_turkish_alliance.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_seize_istria"
+	texturefile = "gfx/interface/goals/ita_seize_istria.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_silence_the_mafia"
+	texturefile = "gfx/interface/goals/ita_silence_the_mafia.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_promote_pregnancy"
+	texturefile = "gfx/interface/goals/ita_promote_pregnancy.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_savoy_claims"
+	texturefile = "gfx/interface/goals/ita_claims_on_savoy.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_expand_colonial_empire"
+	texturefile = "gfx/interface/goals/ita_expand_colonial_empire.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_invade_ethiopia"
+	texturefile = "gfx/interface/goals/ita_invade_ethiopia.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_treaty_of_aden"
+	texturefile = "gfx/interface/goals/ita_treaty_of_aden.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_invade_oman"
+	texturefile = "gfx/interface/goals/ita_invade_oman.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_invade_saudi_arabia"
+	texturefile = "gfx/interface/goals/ita_invade_saudi_arabia.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_invade_iraq"
+	texturefile = "gfx/interface/goals/ita_invade_iraq.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_middle_east"
+	texturefile = "gfx/interface/goals/ita_middle_east.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_promote_italian_movies"
+	texturefile = "gfx/interface/goals/ita_promote_italian_movies.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_eliminate_political_opponents"
+	texturefile = "gfx/interface/goals/ita_eliminate_political_opponents.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_reborn_nation"
+	texturefile = "gfx/interface/goals/ita_nation_reborn.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_unification"
+	texturefile = "gfx/interface/goals/ita_unification_versailles.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_conference_of_naples"
+	texturefile = "gfx/interface/goals/ita_naples_conference.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_sardinian_uprising"
+	texturefile = "gfx/interface/goals/ita_sardinian_uprising.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_annexation_of_naples"
+	texturefile = "gfx/interface/goals/ita_annexation_of_naples.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_pay_for_south_tyrol"
+	texturefile = "gfx/interface/goals/ita_pay_for_south_tyrol.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_unification_completed"
+	texturefile = "gfx/interface/goals/ita_unification_complete.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_relive_the_first_republic"
+	texturefile = "gfx/interface/goals/ita_relive_the_first_republic.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_national_elections"
+	texturefile = "gfx/interface/goals/ita_national_elections.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_right_to_bear_arms"
+	texturefile = "gfx/interface/goals/ita_right_to_bare_arms.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_increase_individual_rights"
+	texturefile = "gfx/interface/goals/ita_increase_individual_freedom.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_equal_rights_for_all_citizens"
+	texturefile = "gfx/interface/goals/ita_equal_rights_for_all_citizens.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_the_kings_coup"
+	texturefile = "gfx/interface/goals/ita_the_kings_coup.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_empower_the_king"
+	texturefile = "gfx/interface/goals/ita_empower_the_king.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_monarch_propaganda"
+	texturefile = "gfx/interface/goals/ita_monarch_propaganda.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_implement_royal_family_into_the_army"
+	texturefile = "gfx/interface/goals/ita_implement_royal_family_into_the_army.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_kings_constitution"
+	texturefile = "gfx/interface/goals/ita_kings_constitution.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_balkan_guarantee_alliance"
+	texturefile = "gfx/interface/goals/ita_balkan_guarantee_alliance.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_a_united_slavic_state"
+	texturefile = "gfx/interface/goals/slavic_cooperation.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_invite_amedeo_duke_of_aosta"
+	texturefile = "gfx/interface/goals/ita_invite_amedeo_duke_of_aosta.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_a_new_national_spirit"
+	texturefile = "gfx/interface/goals/ita_new_national_spirit.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_invite_badoglio_back_to_italy"
+	texturefile = "gfx/interface/goals/ita_invite_badoglio_back_to_italy.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_reformed_military"
+	texturefile = "gfx/interface/goals/ita_reformed_military.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_improve_allied_industry"
+	texturefile = "gfx/interface/goals/ita_improved_allied_industry.dds"			
+	}
+}

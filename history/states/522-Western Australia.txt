@@ -1,0 +1,29 @@
+
+state={
+	id=522
+	name="STATE_522"
+	
+	manpower = 363360
+	state_category = rural
+
+	history={
+		owner = NHO
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 1
+			1652 = {
+				naval_base = 1
+				coastal_bunker = 1
+			}
+		}
+		victory_points = {
+			1652 3 
+		}
+		add_core_of = NHO
+	}
+
+	provinces={
+		1526 1652 2157 5175 7453 8200 8228 10949 10983 
+	}
+}

@@ -1,0 +1,56 @@
+﻿division_template = {
+	name = "Defense Force"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+division= {	
+		name = "Jamaican Defense Force" 
+		location = 12304
+		division_template = "Defense Force"
+		start_experience_factor = 0.2
+	}
+
+division= {	
+		name = "British Honduran Defense Force" 
+		location = 2077
+		division_template = "Defense Force"
+		start_experience_factor = 0.2
+	}
+
+division= {	
+		name = "Guyana Defense Force" 
+		location = 4982
+		division_template = "Defense Force"
+		start_experience_factor = 0.2
+	}
+
+division= {	
+		name = "Suriname Defense Force" 
+		location = 12828
+		division_template = "Defense Force"
+		start_experience_factor = 0.2
+	}
+
+division= {	
+		name = "Cayenne Defense Force" 
+		location = 12885
+		division_template = "Defense Force"
+		start_experience_factor = 0.2
+	}
+
+division= {	
+		name = "Bahamas Defense Force" 
+		location = 10254
+		division_template = "Defense Force"
+		start_experience_factor = 0.2
+	}

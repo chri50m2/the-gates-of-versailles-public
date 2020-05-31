@@ -1,0 +1,77 @@
+﻿division_template = {
+	name = "Tamilakam Kutiyaracu Pirivukal"		
+	division_names_group = RAJ_GAR_01
+										
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Tamilakam Milittiya"		
+	division_names_group = RAJ_GAR_01
+										
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+
+
+####### OOB #######
+units = {
+	division= {	
+		name = "Metras Rānuvam"	
+		location = 10278
+		division_template = "Tamilakam Kutiyaracu Pirivukal"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+
+	division= {	
+		name = "Tamilakam Kutiyaracin 1 Vatu Milittiya"	
+		location = 4315
+		division_template = "Tamilakam Kutiyaracu Pirivukal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+
+	division= {	
+		name = "Tamilakam Kutiyaracin 2 Vatu Milittiya"	
+		location = 7402
+		division_template = "Tamilakam Kutiyaracu Pirivukal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+
+	division= {	
+		name = "Tamilakam Kutiyaracin 3 Vatu Milittiya"	
+		location = 4416
+		division_template = "Tamilakam Kutiyaracu Pirivukal"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+}
+}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "TRA"
+		}
+		requested_factories = 1
+		progress = 0.12
+		efficiency = 100
+	}
+}

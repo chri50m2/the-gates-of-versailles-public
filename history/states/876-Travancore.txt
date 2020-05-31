@@ -1,0 +1,22 @@
+state={
+	id=876
+	name="STATE_876"
+
+	history={
+		owner = TRA
+		add_core_of = TRA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+		}
+
+	}
+
+	provinces={
+		1238 1321 7391 7447 
+	}
+	manpower=7140000
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

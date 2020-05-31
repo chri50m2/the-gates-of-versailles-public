@@ -1,0 +1,18 @@
+units = {
+
+	### Naval OOB ###
+	fleet = {				
+		name = "Myanmar Hkyin Sae Ray Yarin Hcu"			
+		naval_base = 819 
+		task_force = {
+			name = "Myanmar Hkyin Sae Ray Yarin Hcu"			
+			location = 1330
+			
+			ship = { name = "MTY Hkyin Sae Sai" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BRM } } }
+			ship = { name = "MTY Rangoon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BRM } } }
+			ship = { name = "MTY Mandalay" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BRM } } }
+			ship = { name = "MTY Assam" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BRM } } }
+			ship = { name = "MTY Lwatlauthkyinn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = BRM } } }
+		}
+	}
+}

@@ -1,0 +1,95 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Kalkhani Brigades"		
+	division_names_group = AFG_ARM_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Guard Cavalry"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = AFG_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+##### OOB #####
+units = {
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 10737
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 12877
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 12877
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 7448
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 7984
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 10852
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 10852
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 12877
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+	
+	division= {	
+		name = "Afghan Monarchist Infantry" 
+		location = 12831
+		division_template = "Kalkhani Brigades"
+		start_experience_factor = 0.3
+	}
+}
+	

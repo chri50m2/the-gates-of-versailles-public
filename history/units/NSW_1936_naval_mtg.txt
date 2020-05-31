@@ -1,0 +1,88 @@
+﻿units = {
+
+	### Naval OOB ###
+	fleet = {
+		name = "1st New South Wales Squadron"			
+		naval_base = 12406 
+		task_force = {
+			name = "1st New South Wales Squadron"			
+			location = 12406 # Sydney
+			ship = { name = "HMNSWS Sydney" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = NSW version_name = "Hope Class" } } 
+				air_wings = {
+					cv_fighter_equipment_0 =  { owner = "NSW" amount = 9 }
+					cv_nav_bomber_equipment_1 =  { owner = "NSW" amount = 24 }
+				}
+			}
+			ship = { name = "HMNSWS New Zealand" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = NSW version_name = "Asquith Class" } } }
+			ship = { name = "HMNSWS Macquarie" definition = battle_cruiser start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = NSW version_name = "Augustus Class" } } }
+			ship = { name = "HMMSWS New South Wales" pride_of_the_fleet = yes definition = battle_cruiser start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = NSW version_name = "Augustus Class" } } }
+			ship = { name = "HMNSWS Port Phillip" definition = battle_cruiser start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = NSW version_name = "Augustus Class" } } }
+			ship = { name = "HMNSWS Cook" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Beauchamp Class" } } }
+			ship = { name = "HMNSWS Brisbane" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Beauchamp Class" } } }
+			ship = { name = "HMNSWS Newcastle" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Beauchamp Class" } } }
+			ship = { name = "HMNSWS Cairns" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Blaxland Class" } } }
+			ship = { name = "HMNSWS Albury" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Blaxland Class" } } }
+			ship = { name = "HMNSWS Albertland" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Blaxland Class" } } }
+			ship = { name = "HMNSWS Hercules" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Blaxland Class" } } }
+			ship = { name = "HMNSWS Brunswick" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Blaxland Class" } } }
+			ship = { name = "HMNSWS Darwin" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Blaxland Class" } } }
+			ship = { name = "HMNSWS Vampire" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Valiant" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Murray" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Stuart" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Revenge" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Jarvis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Fulda" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Celestial" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Talisman" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Unmistakable" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Foxhound" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Glacier" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Flinders" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Clarkson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Resistant" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Tasman" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Botany Bay" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS George" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Glory" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Serpent" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Dolphin" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Zebra" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Crocodile" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Repent" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Amnesty" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Emu" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+		}
+	}
+
+	fleet = {
+		name = "Scouting Squadron"			
+		naval_base = 4543
+		task_force = {
+			name = "Scouting Squadron"			
+			location = 4543 # Melbourne
+			ship = { name = "HMNSWS Saracen" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = NSW version_name = "Blaxland Class" } } }
+			ship = { name = "HMNSWS Vicious" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }	
+			ship = { name = "HMNSWS Archer" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Robinson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+			ship = { name = "HMNSWS Patrol" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = NSW version_name = "Arthur Class"} } }
+		}
+	}
+
+	fleet = {
+		name = "1st NSW Submarine Service"			
+		naval_base = 7798 
+		task_force = {
+			name = "1st NSW Submarine Service"			
+			location = 7798 # Macquarie
+			ship = { name = "HMNSWS Adept" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = NSW version_name = "Hercules Class" } } }	
+			ship = { name = "HMNSWS Andrews" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = NSW version_name = "Hercules Class" } } }	
+			ship = { name = "HMNSWS Oxley" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = NSW version_name = "Hercules Class" } } }	
+			ship = { name = "HMNSWS Onslow" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = NSW version_name = "Hercules Class" } } }
+			ship = { name = "HMNSWS Howe" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = NSW version_name = "Hercules Class" } } }	
+			ship = { name = "HMNSWS Victoria" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = NSW version_name = "Hercules Class" } } }	
+			ship = { name = "HMNSWS Monarchy" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = NSW version_name = "Hercules Class" } } }	
+			ship = { name = "HMNSWS Governor" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = NSW version_name = "Hercules Class" } } }	
+		}
+	}
+}

@@ -1,0 +1,47 @@
+﻿capital = 554
+
+oob = "SYR_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	transport = 1
+	CAS1 = 1
+}
+
+set_country_flag = can_replace_minister
+
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 10
+		fascism = 8
+		communism = 16
+		theocracy = 2			
+		neutrality = 54	
+		social_democratic = 2				
+		liberal = 8
+		monarchist = 0	
+}
+
+
+create_country_leader = {
+	name = "Georges Catroux"
+	picture = "Georges_Catroux.dds"
+	expire = "1960.1.1"
+	ideology = military_junta
+	traits = {
+	}
+}

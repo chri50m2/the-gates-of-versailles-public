@@ -1,0 +1,21 @@
+state={
+	id=918
+	name="STATE_918"
+	history = {
+		owner = LIC
+		add_core_of = LIC
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		victory_points = {
+			13238 5
+		}
+	}
+	provinces={
+		13238
+	}
+	manpower=3210
+	state_category=rural
+	buildings_max_level_factor=1.000
+}
