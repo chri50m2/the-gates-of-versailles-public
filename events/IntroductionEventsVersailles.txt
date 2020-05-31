@@ -1,0 +1,86 @@
+﻿###############################
+###intro events by Ismand2508##
+###############################
+
+add_namespace = intro
+
+country_event = { #Welcome
+	id = intro.1
+	title = intro.1.t
+	desc = intro.1.d
+	picture = GFX_none
+
+	is_triggered_only = yes
+
+	option = {
+		name = intro.1.a #Let's get started
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = intro.1.b #I wanna know more
+		ai_chance = { factor = 1 }
+		country_event = { hours = 0 id = intro.2 }
+	}
+}
+
+country_event = { #I wanna know more
+	id = intro.2
+	title = intro.2.t
+	desc = intro.2.d
+	picture = GFX_none
+
+	is_triggered_only = yes
+
+	option = {
+		name = intro.2.a #What is the overall lore
+		ai_chance = { factor = 1 }
+		country_event = { hours = 0 id = intro.3 }
+	}
+	option = {
+		name = intro.2.b #I have more questions
+		ai_chance = { factor = 1 }
+		country_event = { hours = 0 id = intro.4 }
+	}
+	option = {
+		name = intro.2.c #Let me play the game
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { #Lore of the mod
+	id = intro.3
+	title = intro.3.t
+	desc = intro.3.d
+	picture = GFX_none
+
+	is_triggered_only = yes
+
+	option = {
+		name = intro.3.a #I want to return
+		ai_chance = { factor = 1 }
+		country_event = { hours = 0 id = intro.2 }
+	}
+	option = {
+		name = intro.3.b #Let's get started
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { #You have even more questions
+	id = intro.4
+	title = intro.4.t
+	desc = intro.4.d
+	picture = GFX_none
+
+	is_triggered_only = yes
+
+	option = {
+		name = intro.4.a #I wanna know more
+		ai_chance = { factor = 1 }
+		country_event = { hours = 0 id = intro.2 }
+	}
+	option = {
+		name = intro.4.b #Let's get started
+		ai_chance = { factor = 100 }
+	}
+}

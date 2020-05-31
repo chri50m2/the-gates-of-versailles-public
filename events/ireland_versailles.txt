@@ -1,0 +1,31 @@
+###############################################
+# Ireland Events - Gates to Versailles Edition#
+###############################################
+
+add_namespace = ireland
+
+country_event = { #French Visit to Dublin
+	id = ireland.1
+	title = ireland.1.t
+	desc = ireland.1.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = ireland.1.a
+			IRE = {
+				add_opinion_modifier = {
+				target = FRA
+				modifier = FRA_IRE_positive_relations
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+				target = IRE
+				modifier = IRE_FRA_positive_relations
+				}
+			}
+		}
+	}

@@ -1,0 +1,103 @@
+FRA_franco_spannish_war = {
+
+     FRA_guerre_eclair_mission = {
+
+          icon = generic_tank
+
+          allowed = { tag = FRA }
+
+          available = {
+               controls_state = 165
+               controls_state = 912
+               controls_state = 166
+               controls_state = 794
+               controls_state = 172
+               controls_state = 792
+               controls_state = 176
+          }
+
+          activation = {
+               has_war_with = SPR
+          }
+
+          is_good = no
+          days_mission_timeout = 120
+
+          timeout_effect = {
+               hidden_effect = {
+                    SPR = {
+                         country_event = { id = spain.versailles.5 hours = 1 }
+                    }
+               }
+          custom_effect_tooltip = FRA_FSW_Spain_wins
+          }
+
+          complete_effect = {
+               hidden_effect = {
+                    country_event = { id = france.44 hours = 1 }
+               }
+          custom_effect_tooltip = FRA_FSW_France_wins
+          }
+     }
+
+     FRA_harsh_repression_policy = {
+
+          icon = GFX_decision_oppression
+
+          allowed = { tag = FRA }
+
+          cost = 50
+
+          available = {
+               num_occupied_states > 1
+               NOT = {
+                    has_country_flag = FRA_small_scale_pol
+               }
+          }
+
+          fire_only_once = yes
+          days_remove = 60
+
+          modifier = {
+               stability_weekly = -0.03
+               resistance_growth = -0.5
+               weekly_manpower = -3000
+               war_support_weekly = 0.03
+          }
+
+          complete_effect = {
+               set_country_flag = FRA_harsh_pol
+          }
+
+     }
+
+     FRA_small_scale_repression_policy = {
+
+          icon = GFX_decision_oppression
+
+          allowed = { tag = FRA }
+
+          cost = 50
+
+          available = {
+               num_occupied_states > 1
+               NOT = {
+                    has_country_flag = FRA_harsh_pol
+               } 
+          }
+
+          fire_only_once = yes
+          days_remove = 60
+
+          modifier = {
+               stability_weekly = -0.01
+               resistance_growth = -0.25
+               weekly_manpower = -1000
+               war_support_weekly = 0.01
+          }
+
+          complete_effect = {
+               set_country_flag = FRA_small_scale_pol
+          }
+     }
+}

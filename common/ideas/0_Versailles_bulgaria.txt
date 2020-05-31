@@ -1,0 +1,25 @@
+ideas = {
+    
+	country = {
+	    BUL_treaty_of_neuilly = {
+
+		    picture = HUN_treaty_of_triannon
+			
+			allowed = {
+			    always = yes
+			}
+			
+			allowed_civil_war = {
+			    always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.85
+				army_morale_factor = -0.2
+				training_time_army_factor = 0.5
+			}
+		}
+	}
+}

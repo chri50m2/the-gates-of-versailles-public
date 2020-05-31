@@ -1,0 +1,1418 @@
+SOV_klochak_cult = {
+	SOV_take_stock_of_kolchaks_influence = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_command_power = -40
+		}
+		remove_effect = {
+               unlock_decision_tooltip = SOV_gather_intelligence
+               unlock_decision_tooltip = SOV_recruit_government_sympathizer
+               unlock_decision_tooltip = SOV_inflitrate_the_outside_cult
+               hidden_effect = {
+               	set_country_flag = SOV_kolchak_decisions_1_flag
+               }
+          }
+	}
+
+	SOV_gather_intelligence = {
+		available = {
+			original_tag = SOV
+			hidden_trigger = {
+    			has_country_flag = SOV_kolchak_decisions_1_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_kolchak_decisions_1_flag	
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_manpower = -500
+		}
+		remove_effect = {
+               hidden_effect = {
+               	set_country_flag = SOV_monthly_status_reports_flag
+               }
+          }
+	}
+
+	SOV_monthly_status_reports = {
+		available = {
+			original_tag = SOV
+			hidden_trigger = {
+    			has_country_flag = SOV_monthly_status_reports_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_monthly_status_reports_flag	
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = { id = russia.13 days = 30 }
+		}
+		remove_effect = {
+               hidden_effect = {
+               	set_country_flag = SOV_cyanide_capsules_flag
+               }
+                hidden_effect = {
+               	set_country_flag = SOV_guards_on_capitals_flag
+               }
+          }
+	}
+
+	SOV_cyanide_capsules_for_agents = {
+		available = {
+			original_tag = SOV
+			hidden_trigger = {
+    			has_country_flag = SOV_cyanide_capsules_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_cyanide_capsules_flag	
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = SOV_agents_suicide_tt
+			hidden_effect = {
+				country_event = { id = russia.9 days = 30 }
+			}
+		}
+		remove_effect = {
+               hidden_effect = {
+               	set_country_flag = SOV_prepare_arms_flag4
+               }
+          }
+	}
+
+	SOV_loyalist_guards_on_capitalist_ships = {
+		available = {
+			original_tag = SOV
+			hidden_trigger = {
+    			has_country_flag = SOV_guards_on_capitals_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_guards_on_capitals_flag	
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = SOV_guards_on_capital_ships_tt
+			add_manpower = -10000
+			hidden_effect = {
+				country_event = { id = russia.10 days = 45 }
+			}
+		}
+		remove_effect = {
+            hidden_effect = {
+               	set_country_flag = SOV_prepare_arms_flag3
+               }
+          }
+	}
+
+	SOV_recruit_government_sympathizer = {
+		available = {
+			original_tag = SOV
+			hidden_trigger = {
+    			has_country_flag = SOV_kolchak_decisions_1_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_kolchak_decisions_1_flag	
+			}
+		}
+
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = -50
+			add_command_power = -25
+			country_event = { id = russia.8 days = 1 }
+		}
+		remove_effect = {
+               hidden_effect = {
+               	set_country_flag = SOV_loop_in_ensigns_flag
+               }
+          }
+	}
+
+	SOV_loop_in_ensigns = {
+		available = {
+			original_tag = SOV
+			hidden_trigger = {
+    			has_country_flag = SOV_loop_in_ensigns_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_loop_in_ensigns_flag	
+			}
+		}
+
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			army_experience = 50
+		}
+		remove_effect = {
+                hidden_effect = {
+               	set_country_flag = SOV_confront_abassov_flag1
+               }
+          }
+	}
+
+	SOV_secure_the_enlisted_support = {
+		available = {
+			original_tag = SOV
+			hidden_trigger = {
+    			has_country_flag = SOV_loop_in_ensigns_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_loop_in_ensigns_flag	
+			}
+		}
+
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_war_support = 0.05
+		}
+		remove_effect = {
+                hidden_effect = {
+               	set_country_flag = SOV_confront_abassov_flag2
+               }
+          }
+	}
+
+	SOV_confront_admiral_abassov = {
+		available = {
+			original_tag = SOV
+			hidden_trigger = {
+    			has_country_flag = SOV_confront_abassov_flag1
+    			has_country_flag = SOV_confront_abassov_flag2
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_confront_abassov_flag1
+    			has_country_flag = SOV_confront_abassov_flag2
+			}
+		}
+
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = { id = russia.11 days = 30 }
+		}
+		remove_effect = {
+               hidden_effect = {
+               	set_country_flag = SOV_prepare_arms_flag2
+               }
+          }
+	}
+
+	SOV_inflitrate_the_outside_cult = {
+		available = {
+			original_tag = SOV
+				
+			hidden_trigger = {
+    			has_country_flag = SOV_kolchak_decisions_1_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_kolchak_decisions_1_flag	
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = SOV_low_soldiers_tt
+			add_manpower = -5000
+		}
+		remove_effect = {
+               hidden_effect = {
+               	set_country_flag = SOV_spy_ring_flag
+               }
+          }
+	}
+
+	SOV_set_up_a_spy_ring = {
+		available = {
+			original_tag = SOV
+				
+			hidden_trigger = {
+    			has_country_flag = SOV_spy_ring_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_spy_ring_flag	
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_tech_bonus = {
+       			bonus = 0.5
+       			uses = 1
+        		category = decryption_tech
+			}
+			add_manpower = -50
+		}
+		remove_effect = {
+		hidden_effect = {
+               	set_country_flag = SOV_kolchak_outside_influence_flag
+               }
+          }
+	}
+
+	SOV_restrict_kolchaks_outside_influence = {
+		available = {
+			original_tag = SOV
+				
+			hidden_trigger = {
+    			has_country_flag = SOV_kolchak_outside_influence_flag	
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_kolchak_outside_influence_flag	
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			custom_effect_tooltip = SOV_kolchak_no_recruiting_tt
+		}
+		remove_effect = {
+		hidden_effect = {
+               	set_country_flag = SOV_prepare_arms_flag1
+               }
+          }
+	}
+
+	SOV_prepare_arms_for_the_arrest = {
+		available = {
+			original_tag = SOV
+				
+			hidden_trigger = {
+    			has_country_flag = SOV_prepare_arms_flag1
+    			has_country_flag = SOV_prepare_arms_flag2
+    			has_country_flag = SOV_prepare_arms_flag3
+    			has_country_flag = SOV_prepare_arms_flag4
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_prepare_arms_flag1
+    			has_country_flag = SOV_prepare_arms_flag2
+    			has_country_flag = SOV_prepare_arms_flag3
+    			has_country_flag = SOV_prepare_arms_flag4
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment_1
+    			amount = 5000
+    			producer = SOV
+				}
+		}
+		remove_effect = {
+		hidden_effect = {
+               	set_country_flag = SOV_arrest_kolchak1
+               }
+          }
+	}
+
+	SOV_send_the_fleet_out_for_exercises = {
+		available = {
+			original_tag = SOV
+				
+			hidden_trigger = {
+    			has_country_flag = SOV_prepare_arms_flag1
+    			has_country_flag = SOV_prepare_arms_flag2
+    			has_country_flag = SOV_prepare_arms_flag3
+    			has_country_flag = SOV_prepare_arms_flag4
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_prepare_arms_flag1
+    			has_country_flag = SOV_prepare_arms_flag2
+    			has_country_flag = SOV_prepare_arms_flag3
+    			has_country_flag = SOV_prepare_arms_flag4
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			navy_experience = 25
+		}
+		remove_effect = {
+		hidden_effect = {
+               	set_country_flag = SOV_arrest_kolchak2
+               }
+          }
+	}
+
+	SOV_arresting_kolchak = {
+		available = {
+			original_tag = SOV
+				
+			hidden_trigger = {
+    			has_country_flag = SOV_arrest_kolchak1
+    			has_country_flag = SOV_arrest_kolchak2
+				OR = {
+    				has_completed_focus = SOV_arrest_kolchak
+    				has_completed_focus = SOV_investigate_the_kolchak_cult
+    			}
+			}
+		}
+		allowed = {
+			tag = SOV
+		}
+		visible = {
+			hidden_trigger = {
+    			has_country_flag = SOV_arrest_kolchak1
+    			has_country_flag = SOV_arrest_kolchak2
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = { id = russia.15 days = 30 }
+		}
+		remove_effect = {
+		hidden_effect = {
+               	set_country_flag = SOV_kolchak_dead_flag
+               }
+          }
+	}
+}
+
+SOV_eastern_europe_intervention = {
+	SOV_intervene_in_ukraine = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			UKR = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_war = yes
+				}
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			declare_war_on = {
+    			target = UKR
+    			type = annex_everything
+			}
+		}
+	}
+	SOV_intervene_in_belarus = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			BLR = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_war = yes
+				}
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			declare_war_on = {
+    			target = BLR
+    			type = annex_everything
+			}
+		}
+	}
+
+	SOV_declare_war_on_estonia = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			EST = {
+				exists = yes
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			declare_war_on = {
+    			target = EST
+    			type = annex_everything
+			}
+			ENG = {
+				add_to_war = { 
+    				targeted_alliance = SOV 
+    				enemy = EST
+				}
+			}
+		}
+	}
+
+	SOV_declare_war_on_latvia = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			LAT = {
+				exists = yes
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			declare_war_on = {
+    			target = LAT
+    			type = annex_everything
+			}
+			ENG = {
+				add_to_war = { 
+    				targeted_alliance = SOV 
+    				enemy = LAT
+				}
+			}
+		}
+	}
+}
+
+SOV_liberal_reforms = {
+	SOV_facilite_peasant_land_purchase = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	SOV_legalize_unions = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = SOV_legalized_unions
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.03
+				}
+			hidden_effect = {
+				unlock_decision_tooltip = SOV_work_day_rationing
+			}
+		}
+	}
+
+	SOV_work_day_rationing = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			swap_ideas = {
+    				remove_idea = SOV_legalized_unions
+    				add_idea = SOV_workers_rights
+				}
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.03
+				}
+			hidden_effect = {
+				unlock_decision_tooltip = SOV_minimum_wage_act
+			}
+		}
+	}
+
+	SOV_minimum_wage_act = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			swap_ideas = {
+    				remove_idea = SOV_workers_rights
+    				add_idea = SOV_workers_rights1
+				}
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.03
+				}
+			hidden_effect = {
+				
+			}
+		}
+	}
+}
+
+SOV_liberate_the_motherland = {
+		SOV_move_to_leningrad = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 10000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+
+			246 = {
+				set_demilitarized_zone = no
+			}
+			210 = {
+				set_demilitarized_zone = no
+			}
+			263 = {
+				set_demilitarized_zone = no
+			}
+			209 = {
+				set_demilitarized_zone = no
+			}
+			208 = {
+				set_demilitarized_zone = no
+			}
+			816 = {
+				set_demilitarized_zone = no
+			}
+			244 = {
+				set_demilitarized_zone = no
+			}
+			195 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -10000
+		}
+
+		days_remove = 30
+	}
+
+	SOV_secure_the_north = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 10000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+
+			247 = {
+				set_demilitarized_zone = no
+			}
+			264 = {
+				set_demilitarized_zone = no
+			}
+			216 = {
+				set_demilitarized_zone = no
+			}
+			215 = {
+				set_demilitarized_zone = no
+			}
+			213 = {
+				set_demilitarized_zone = no
+			}
+			722 = {
+				set_demilitarized_zone = no
+			}
+			214 = {
+				set_demilitarized_zone = no
+			}
+			262 = {
+				set_demilitarized_zone = no
+			}
+			351 = {
+				set_demilitarized_zone = no
+			}
+			280 = {
+				set_demilitarized_zone = no
+			}
+			248 = {
+				set_demilitarized_zone = no
+			}
+			253 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -10000
+		}
+
+		days_remove = 30
+	}
+
+	SOV_capture_smolensk = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 10000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+
+			223 = {
+				set_demilitarized_zone = no
+			}
+			222 = {
+				set_demilitarized_zone = no
+			}
+			220 = {
+				set_demilitarized_zone = no
+			}
+			240 = {
+				set_demilitarized_zone = no
+			}
+			205 = {
+				set_demilitarized_zone = no
+			}
+			242 = {
+				set_demilitarized_zone = no
+			}
+			243 = {
+				set_demilitarized_zone = no
+			}
+			224 = {
+				set_demilitarized_zone = no
+			}
+			241 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -10000
+
+			hidden_effect = {
+					set_country_flag = SOV_move_into_eastern_ukraine_FLAG
+			}
+		}
+
+		days_remove = 30
+	}
+
+	SOV_move_into_eastern_ukraine = {
+		available = {
+			original_tag = SOV
+		}
+		visible = {
+			has_country_flag = SOV_move_into_eastern_ukraine_FLAG
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 7500
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+
+			137 = {
+				set_demilitarized_zone = no
+			}
+			196 = {
+				set_demilitarized_zone = no
+			}
+			200 = {
+				set_demilitarized_zone = no
+			}
+			227 = {
+				set_demilitarized_zone = no
+			}
+			228 = {
+				set_demilitarized_zone = no
+			}
+			221 = {
+				set_demilitarized_zone = no
+			}
+			259 = {
+				set_demilitarized_zone = no
+			}
+			225 = {
+				set_demilitarized_zone = no
+			}
+			193 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -7500
+			hidden_effect = {
+				set_country_flag = SOV_capturing_the_cossacks_FLAG
+			}
+		}
+
+		days_remove = 30
+	}
+
+	SOV_capturing_the_cossacks = {
+		available = {
+			original_tag = SOV
+		}
+		visible = {
+			has_country_flag = SOV_capturing_the_cossacks_FLAG
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 15000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+
+			218 = {
+				set_demilitarized_zone = no
+			}
+			234 = {
+				set_demilitarized_zone = no
+			}
+			233 = {
+				set_demilitarized_zone = no
+			}
+			907 = {
+				set_demilitarized_zone = no
+			}
+			232 = {
+				set_demilitarized_zone = no
+			}
+			235 = {
+				set_demilitarized_zone = no
+			}
+			238 = {
+				set_demilitarized_zone = no
+			}
+			237 = {
+				set_demilitarized_zone = no
+			}
+			236 = {
+				set_demilitarized_zone = no
+			}
+			245 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -15000
+		}
+
+		days_remove = 30
+	}
+
+	SOV_crossing_the_volga = {
+		available = {
+			original_tag = SOV
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 8000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		complete_effect = {
+
+			254 = {
+				set_demilitarized_zone = no
+			}
+			258 = {
+				set_demilitarized_zone = no
+			}
+			260 = {
+				set_demilitarized_zone = no
+			}
+			265 = {
+				set_demilitarized_zone = no
+			}
+			257 = {
+				set_demilitarized_zone = no
+			}
+			252 = {
+				set_demilitarized_zone = no
+			}
+			256 = {
+				set_demilitarized_zone = no
+			}
+			249 = {
+				set_demilitarized_zone = no
+			}
+			255 = {
+				set_demilitarized_zone = no
+			}
+			250 = {
+				set_demilitarized_zone = no
+			}
+			251 = {
+				set_demilitarized_zone = no
+			}
+			239 = {
+				set_demilitarized_zone = no
+			}
+			401 = {
+				set_demilitarized_zone = no
+			}
+			217 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -8000
+			hidden_effect = {
+				set_country_flag = SOV_climbing_the_urals_FLAG
+			}
+		}
+	}
+
+	SOV_climbing_the_urals = {
+		available = {
+			original_tag = SOV
+		}
+		visible = {
+			has_country_flag = SOV_climbing_the_urals_FLAG
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 12000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		complete_effect = {
+
+			652 = {
+				set_demilitarized_zone = no
+			}
+			582 = {
+				set_demilitarized_zone = no
+			}
+			651 = {
+				set_demilitarized_zone = no
+			}
+			573 = {
+				set_demilitarized_zone = no
+			}
+			581 = {
+				set_demilitarized_zone = no
+			}
+			397 = {
+				set_demilitarized_zone = no
+			}
+			398 = {
+				set_demilitarized_zone = no
+			}
+			400 = {
+				set_demilitarized_zone = no
+			}
+			399 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -12000
+
+			hidden_effect = {
+				set_country_flag = SOV_securing_the_steppes_FLAG
+				set_country_flag = SOV_move_into_western_siberia_FLAG_2
+			}
+		}
+	}
+
+	SOV_securing_the_steppes = {
+		available = {
+			original_tag = SOV
+		}
+		visible = {
+			has_country_flag = SOV_securing_the_steppes_FLAG
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 8000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		complete_effect = {
+
+			407 = {
+				set_demilitarized_zone = no
+			}
+			406 = {
+				set_demilitarized_zone = no
+			}
+			587 = {
+				set_demilitarized_zone = no
+			}
+			584 = {
+				set_demilitarized_zone = no
+			}
+			405 = {
+				set_demilitarized_zone = no
+			}
+			742 = {
+				set_demilitarized_zone = no
+			}
+			732 = {
+				set_demilitarized_zone = no
+			}
+			585 = {
+				set_demilitarized_zone = no
+			}
+			586 = {
+				set_demilitarized_zone = no
+			}
+			589 = {
+				set_demilitarized_zone = no
+			}
+			404 = {
+				set_demilitarized_zone = no
+			}
+			402 = {
+				set_demilitarized_zone = no
+			}
+			583 = {
+				set_demilitarized_zone = no
+			}
+			590 = {
+				set_demilitarized_zone = no
+			}
+			588 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -8000
+			hidden_effect = {
+				set_country_flag = SOV_move_into_western_siberia_FLAG_1
+			}
+		}
+	}
+
+	SOV_move_into_western_siberia = {
+		available = {
+			original_tag = SOV
+		}
+		visible = {
+			has_country_flag = SOV_move_into_western_siberia_FLAG_1
+			has_country_flag = SOV_move_into_western_siberia_FLAG_2
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 9000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		complete_effect = {
+			566 = {
+				set_demilitarized_zone = no
+			}
+			575 = {
+				set_demilitarized_zone = no
+			}
+			516 = {
+				set_demilitarized_zone = no
+			}
+			567 = {
+				set_demilitarized_zone = no
+			}
+			576 = {
+				set_demilitarized_zone = no
+			}
+			568 = {
+				set_demilitarized_zone = no
+			}
+			579 = {
+				set_demilitarized_zone = no
+			}
+			580 = {
+				set_demilitarized_zone = no
+			}
+			653 = {
+				set_demilitarized_zone = no
+			}
+			572 = {
+				set_demilitarized_zone = no
+			}
+			403 = {
+				set_demilitarized_zone = no
+			}
+			577 = {
+				set_demilitarized_zone = no
+			}
+			571 = {
+				set_demilitarized_zone = no
+			}
+			570 = {
+				set_demilitarized_zone = no
+			}
+			40 = {
+				set_demilitarized_zone = no
+			}
+			654 = {
+				set_demilitarized_zone = no
+			}
+			569 = {
+				set_demilitarized_zone = no
+			}
+			578 = {
+				set_demilitarized_zone = no
+			}
+			577 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -9000
+			hidden_effect = {
+				set_country_flag = SOV_capture_vladivostok_FLAG
+			}
+		}
+	}
+
+	SOV_capture_vladivostok = {
+		available = {
+			original_tag = SOV
+		}
+		visible = {
+			has_country_flag = SOV_capture_vladivostok_FLAG
+		}
+		allowed = {
+			tag = SOV
+		}
+		available = {
+			has_manpower > 10000
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		complete_effect = {
+
+			564 = {
+				set_demilitarized_zone = no
+			}
+			563 = {
+				set_demilitarized_zone = no
+			}
+			565 = {
+				set_demilitarized_zone = no
+			}
+			574 = {
+				set_demilitarized_zone = no
+			}
+			644 = {
+				set_demilitarized_zone = no
+			}
+			637 = {
+				set_demilitarized_zone = no
+			}
+			562 = {
+				set_demilitarized_zone = no
+			}
+			561 = {
+				set_demilitarized_zone = no
+			}
+			560 = {
+				set_demilitarized_zone = no
+			}
+			657 = {
+				set_demilitarized_zone = no
+			}
+			655 = {
+				set_demilitarized_zone = no
+			}
+			537 = {
+				set_demilitarized_zone = no
+			}
+			409 = {
+				set_demilitarized_zone = no
+			}
+			408 = {
+				set_demilitarized_zone = no
+			}
+			add_manpower = -10000
+		}
+	}
+}
+
+SOV_rename_cities = {
+	SOV_rename_imperial_cities = {
+		available = {
+			original_tag = SOV
+			has_government = communism
+		}
+		allowed = {
+			tag = SOV
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 30
+
+		complete_effect = {
+
+		set_province_name = { id = 3151 name = "Leningrad"}
+
+		195 = {
+			set_state_name = "Leningrad"
+		}
+
+		set_province_name = { id = 3529 name = "Beriagrad"}
+
+		217 = {
+			set_state_name = "Beriagrad"
+		}
+
+		set_province_name = { id = 1821 name = "Yagoda"}
+
+		653 = {
+			set_state_name = "Yagoda"
+		}
+
+		set_province_name = { id = 11375 name = "Kropotkin"}
+
+		252 = {
+			set_state_name = "Kropotkin"
+		}
+
+		set_province_name = { id = 6502 name = "Engels"}
+
+		401 = {
+			set_state_name = "Engels"
+		}
+
+		}
+	}
+}

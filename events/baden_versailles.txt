@@ -1,0 +1,45 @@
+﻿#############################################
+# Baden Events - Gates to Versailles Edition#
+#############################################
+
+add_namespace = baden
+
+country_event = { #Baden seek a union with Wurtemburg
+	id = baden.1
+	title = baden.1.t
+	desc = batden.1.d
+#	picture = GFX_report_event_carol_meeting
+
+	trigger = {
+		tag = BAD
+		NOT =  { is_puppet_of = FRA }
+		AND = {
+			is_in_faction_with = FRA
+			}
+		date > 1937.1.1
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #Form the union now (very few chances for not fucked up France war with this union but still possible by AI)
+		name = baden.1.a
+			WUR = {
+			country_event = { days = 1 id = wurttemberg.1 }
+			}
+		}
+		
+	option = { #Quit France faction and form a temporary faction with Wurtemburg
+		name = baden.1.b
+			WUR = {
+			country_event = { days = 1 id = wurttemberg.2 }
+			}
+		}
+		
+	option = { #We won't do any of this bullshit (Side note: AI will never do this)
+		name = baden.1.c
+	}
+}

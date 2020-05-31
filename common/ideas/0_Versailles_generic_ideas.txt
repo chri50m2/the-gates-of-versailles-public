@@ -1,0 +1,112 @@
+ideas = {
+
+	country = {
+		generic_military_academy_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				max_planning = 0.1
+				max_command_power = 15
+			}
+		}
+		generic_military_academy_idea_motivation = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				max_planning = 0.1
+				max_command_power = 15
+				army_org_factor = 0.1
+			}
+		}
+
+		generic_military_academy_idea_motivation_and_fort = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_fortification_focus
+			
+			modifier = {
+				max_planning = 0.1
+				max_command_power = 15
+				army_org_factor = 0.1
+				production_speed_bunker_factor = 0.2
+			}
+		}
+
+		generic_military_academy_idea_fort = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_fortification_focus
+			
+			modifier = {
+				max_planning = 0.1
+				max_command_power = 15
+				production_speed_bunker_factor = 0.2
+			}
+		}
+
+		generic_new_minds_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			research_bonus = { land_doctrine = 0.1 }
+			
+			modifier = {
+				max_planning = 0.1
+				max_command_power = 15
+				army_org_factor = 0.1
+				production_speed_bunker_factor = 0.2
+
+			}
+		}
+	}
+}

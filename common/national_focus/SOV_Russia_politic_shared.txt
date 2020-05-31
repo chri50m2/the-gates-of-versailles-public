@@ -1,0 +1,4318 @@
+#	#shared_focus = {
+#		#id = SOV_
+#		#icon =#
+#		#prerequisite = { #focus =# }
+#		#mutually_exclusive = { #focus =  }
+#		#x = -3
+#		#y = 0
+#		#relative_position_id =#
+#
+#		#cost = 10
+#
+#		#ai_will_do = {
+#			#factor = 1
+#		#}
+#
+#		#available = {
+#
+#		#}
+#		
+#		#bypass = {
+#
+#		#}
+#
+#		#cancel_if_invalid = yes
+#		#continue_if_invalid = no
+#		#available_if_capitulated = no
+#
+#		#complete_tooltip = {
+#
+#		#}
+#
+#		#completion_reward = {
+#
+#		#}
+#	#}
+	shared_focus = {
+		id = SOV_the_first_free_elections
+		icon = GFX_generic_hold_elections
+		x = 22
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			country_event = { id = russia.6 days = 0 } 
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_free_and_fair_russia
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SOV_the_first_free_elections }
+		x = 28
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = SOV_free_elections
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = -100
+		}
+	}
+
+	shared_focus = {
+		id = SOV_konservativnyy_soyuz
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = SOV_a_free_and_fair_russia }
+		mutually_exclusive = { focus = SOV_the_rossiyskaya_liberalnaya_koalitsiya }
+		x = 32
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.1
+			}
+
+			clr_country_flag = SOV_alexei_khvostov_hos_flag
+			set_country_flag = SOV_conversative_win_election_flag
+
+			hidden_effect = {
+			add_ideas = {
+				SOV_stepan_petrovich_beletsky_int
+				SOV_pavel_ryabuchinsky_eco
+				SOV_vasily_vasilievich_kochubey_hos
+				SOV_pavel_galaktionovich_smelov_for
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_stabilizing_this_mess
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = SOV_konservativnyy_soyuz }
+		x = 32
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_senate_and_the_congress
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = SOV_stabilizing_this_mess }
+		mutually_exclusive = { focus = SOV_establishing_a_proper_system }
+		x = 34
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_senate_and_congress_tt
+			add_opinion_modifier = {
+				target = USA
+				modifier = followed_lead
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_once_a_conservative_always_a_conservative
+		icon = GFX_generic_conservative
+		prerequisite = { focus = SOV_the_senate_and_the_congress }
+		x = 34
+		y = 5
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.025
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_help_from_the_british
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = SOV_once_a_conservative_always_a_conservative }
+		x = 35
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = sought_help
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_establish_a_london_embassy
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = SOV_help_from_the_british }
+		x = 35
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = established_embassy
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_conservative_party_benefits
+		icon = GFX_generic_conservative
+		prerequisite = { focus = SOV_establish_a_london_embassy }
+		x = 35
+		y = 8
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.03
+				}
+
+		}
+	}
+
+	shared_focus = {
+		id = SOV_establishing_a_proper_system
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = SOV_stabilizing_this_mess }
+		mutually_exclusive = { focus = SOV_the_senate_and_the_congress }
+		x = 30
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_establishing_system_tt
+			add_stability = 0.025
+		}
+	}
+
+	shared_focus = {
+		id = SOV_advice_from_the_west
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		prerequisite = { focus = SOV_establishing_a_proper_system }
+		x = 30
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = sought_advice
+				}
+			add_opinion_modifier = {
+				target = PRS
+				modifier = sought_advice
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_support_from_the_monarchists
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = SOV_advice_from_the_west }
+		x = 29
+		y = 6
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+			ideology = monarchist
+			popularity = 0.03
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_talks_with_the_liberals
+		icon = GFX_generic_liberal
+		prerequisite = { focus = SOV_support_from_the_monarchists }
+		x = 29
+		y = 7
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+			ideology = liberal
+			popularity = 0.05
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_big_business_factory_investments
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SOV_talks_with_the_liberals }
+		x = 29
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		219 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 3
+    				instant_build = yes
+				}
+			}
+			add_popularity = { 
+			ideology = liberal
+			popularity = 0.01
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_relations_with_the_republican_party
+		icon = GFX_generic_liberal
+		prerequisite = { focus = SOV_once_a_conservative_always_a_conservative focus = SOV_advice_from_the_west }
+		x = 32
+		y = 6
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		add_popularity = { 
+			ideology = liberal
+			popularity = 0.015
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_securing_funds_with_the_country
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = SOV_relations_with_the_republican_party }
+		x = 31
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_expand_the_oilfields
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = SOV_securing_funds_with_the_country }
+		x = 31
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		add_resource = {
+   				type = oil
+    			amount = 32
+    			state = 237
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_an_american_economic_union
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = SOV_expand_the_oilfields }
+		prerequisite = { focus = SOV_big_business_factory_investments }
+		x = 30
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			create_faction = TGOV_NATO
+			add_to_faction = USA 
+		}
+	}
+
+	shared_focus = {
+		id = SOV_trading_mining_rights
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = SOV_an_american_economic_union }
+		x = 31
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+				give_resource_rights = { receiver = USA state = 401 }
+				give_resource_rights = { receiver = SOV state = 383 }
+		}
+	}
+
+	shared_focus = {
+		id = SOV_american_airplanes_for_russian_equipment
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SOV_an_american_economic_union }
+		x = 29
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+				add_equipment_to_stockpile = {
+   				type = fighter_equipment_0
+    			amount = 200
+   				producer = USA
+			}
+			USA = {
+				add_equipment_to_stockpile = {
+    			type = infantry_equipment_1
+    			amount = 5000
+    			producer = SOV
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_an_alliance_to_last_an_eternity
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = SOV_american_airplanes_for_russian_equipment focus = SOV_trading_mining_rights }
+		x = 29
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+				add_to_faction = MEX
+		}
+	}
+
+	shared_focus = {
+		id = SOV_invite_the_baltics_to_the_union
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = SOV_american_airplanes_for_russian_equipment focus = SOV_trading_mining_rights }
+		x = 31
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+				add_to_faction = EST
+				add_to_faction = LAT
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_defense_ministry
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = SOV_relations_with_the_republican_party }
+		x = 33
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_ideas = SOV_defense_ministry_IDEA
+		}
+	}
+
+	shared_focus = {
+		id = SOV_intervention_in_eastern_europe
+		icon = GFX_focus_usa_focus_on_europe
+		prerequisite = { focus = SOV_the_defense_ministry }
+		x = 33
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			unlock_decision_tooltip = SOV_intervene_in_ukraine
+			unlock_decision_tooltip = SOV_intervene_in_belarus
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_british_military_pact
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = SOV_intervention_in_eastern_europe }
+		prerequisite = { focus = SOV_conservative_party_benefits }
+		x = 34
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			ENG = {
+				add_to_faction = SOV
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_combined_military_manoeuvres
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SOV_a_british_military_pact }
+		x = 35
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_command_power = -50
+			army_experience = 25
+			add_tech_bonus = {
+       		bonus = 0.2
+       		uses = 1
+        	category = land_doctrine
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_anglo_russian_research_exchange
+		icon = GFX_focus_research2
+		prerequisite = { focus = SOV_a_british_military_pact }
+		x = 33
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			SOV = {
+				add_to_tech_sharing_group = commonwealth_research
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_carte_blanche_for_the_lost_territories
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SOV_the_anglo_russian_research_exchange focus = SOV_combined_military_manoeuvres }
+		x = 33
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			unlock_decision_tooltip = SOV_declare_war_on_estonia
+			unlock_decision_tooltip = SOV_declare_war_on_latvia
+			add_state_claim = 191
+			add_state_claim = 13
+			add_state_claim = 913
+			add_state_claim = 12
+			add_state_claim = 190
+		}
+	}
+
+	shared_focus = {
+		id = SOV_non_intervention_in_imperial_adventures
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = SOV_the_anglo_russian_research_exchange focus = SOV_combined_military_manoeuvres }
+		x = 35
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			declare_war_on = {
+    			target = PER
+    			type = annex_everything
+			}
+			ENG = {
+				add_to_war = { 
+    				targeted_alliance = SOV 
+    				enemy = PER
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_rossiyskaya_liberalnaya_koalitsiya
+		icon = GFX_generic_liberal
+		prerequisite = { focus = SOV_a_free_and_fair_russia }
+		mutually_exclusive = { focus = SOV_konservativnyy_soyuz }
+		x = 24
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = liberal
+				popularity = 0.1
+				}
+			set_politics = {
+				ruling_party = liberal
+				election_frequency = 50
+				elections_allowed = yes
+			}
+			custom_effect_tooltip = new_cabinet_tt
+
+			clr_country_flag = SOV_alexei_khvostov_hos_flag
+			set_country_flag = liberals_won_election
+			hidden_effect = {
+				add_ideas = {
+						SOV_alexander_nikolaevich_mortars_for
+						SOV_alexander_konovalov_eco
+						SOV_vasily_maklakov_int
+						SOV_mikhail_tereschenko_hog
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_secure_the_country
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SOV_the_rossiyskaya_liberalnaya_koalitsiya }
+		x = 24
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = SOV_starting_our_liberal_reforms
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = SOV_secure_the_country }
+		x = 24
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_unlock_libtard_decisions
+			hidden_effect = {
+				unlock_decision_tooltip = SOV_facilite_peasant_land_purchase
+				unlock_decision_tooltip = SOV_legalize_unions
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_silent_majority
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = SOV_starting_our_liberal_reforms }
+		x = 23
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+			ideology = liberal
+			popularity = 0.05
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_remembering_kerensky
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SOV_starting_our_liberal_reforms }
+		x = 25
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			country_event = { id = russia.18 days = 0 } 
+		}
+	}
+
+	shared_focus = {
+		id = SOV_establishing_diplomatic_relations_with_USA
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = SOV_remembering_kerensky }
+		x = 25
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = USA
+				modifier = established_embassy
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_negotiating_with_the_conservatives
+		icon = GFX_generic_conservative
+		prerequisite = { focus = SOV_establishing_diplomatic_relations_with_USA }
+		x = 26
+		y = 7
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = SOV_the_silent_majority
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.03
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_convincing_the_centrists
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = SOV_the_silent_majority }
+		prerequisite = { focus = SOV_establishing_diplomatic_relations_with_USA }
+		x = 24
+		y = 7
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.02
+				}
+			add_popularity = { 
+				ideology = liberal
+				popularity = 0.03
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_and_calming_the_radicals
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SOV_convincing_the_centrists }
+		x = 24
+		y = 8
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = social_democratic
+				popularity = 0.02
+				}
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.05
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_reshuffling_cabinet_positions
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = SOV_negotiating_with_the_conservatives }
+		x = 26
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_reshuffle_cabinet_tt
+			hidden_effect = {
+				add_ideas = {
+					SOV_mikhail_ivanovich_maslennikov_for
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_putting_pressure_on_the_lost_territories
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = { focus = SOV_reshuffling_cabinet_positions }
+		prerequisite = { focus = SOV_and_calming_the_radicals }
+		x = 25
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = UKR
+				modifier = applied_pressure
+				}
+			add_opinion_modifier = {
+				target = BLR
+				modifier = applied_pressure
+				}
+			add_opinion_modifier = {
+				target = EST
+				modifier = applied_pressure
+			}
+			add_opinion_modifier = {
+				target = LAT
+				modifier = applied_pressure
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_liberal_economy
+		icon = GFX_generic_liberal
+		prerequisite = { focus = SOV_putting_pressure_on_the_lost_territories }
+		x = 24
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = liberal
+				popularity = 0.05
+				}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_and_a_slavic_industry
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		prerequisite = { focus = SOV_putting_pressure_on_the_lost_territories }
+		x = 26
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			222 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 3
+    				instant_build = yes
+				}
+			}
+			264 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 3
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_fate_of_the_baltics
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SOV_a_liberal_economy }
+		prerequisite = { focus = SOV_and_a_slavic_industry }
+		x = 23
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			declare_war_on = {
+				target = EST
+    			type = annex_everything
+			}
+			declare_war_on = {
+				target = LAT
+    			type = annex_everything
+			}
+
+			add_state_claim = 191
+			add_state_claim = 13
+			add_state_claim = 913
+			add_state_claim = 12
+			add_state_claim = 190
+
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_byelorussian_referendum
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = SOV_a_liberal_economy }
+		prerequisite = { focus = SOV_and_a_slavic_industry }
+		x = 25
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			BLR = {
+				country_event = { id = russia.19 days = 0 } 
+			}		
+		}
+	}
+
+	shared_focus = {
+		id = SOV_supporting_the_ukrainian_liberals
+		icon = GFX_generic_liberal
+		prerequisite = { focus = SOV_a_liberal_economy }
+		prerequisite = { focus = SOV_and_a_slavic_industry }
+		x = 27
+		y = 11
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			UKR = {
+				add_popularity = { 
+					ideology = liberal
+					popularity = 0.25
+				}
+			}		
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_professional_military
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = SOV_a_byelorussian_referendum focus = SOV_the_fate_of_the_baltics }
+		x = 24
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_command_power = 50
+			army_experience = 50	
+		}
+	}
+
+	shared_focus = {
+		id = SOV_we_push_as_one
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = SOV_a_byelorussian_referendum focus = SOV_supporting_the_ukrainian_liberals }
+		x = 26
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 150
+		}
+	}
+
+	shared_focus = {
+		id = SOV_rigging_it_for_our_party
+		icon = GFX_focus_usa_voter_registration_act
+		prerequisite = { focus = SOV_the_first_free_elections }
+		x = 14
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = SOV_rig_elections
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = 100
+		}
+	}
+
+	shared_focus = {
+		id = SOV_by_the_skin_of_our_socialist_teeth
+		icon = GFX_generic_social_democratic
+		prerequisite = { focus = SOV_rigging_it_for_our_party }
+		mutually_exclusive = { focus = SOV_direct_rule_from_petrograd }
+		x = 20
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = social_democratic
+				popularity = 0.1
+				}
+			set_politics = {
+				ruling_party = social_democratic
+				election_frequency = 50
+				elections_allowed = yes
+			}
+
+			clr_country_flag = SOV_alexei_khvostov_hos_flag
+			set_country_flag = menshevik_in_charge
+
+			custom_effect_tooltip = new_cabinet_tt
+			hidden_effect = {
+				add_ideas = {
+					SOV_alexander_samoilovich_lokerman_eco
+					SOV_vladimir_dmitrivich_vilensky_sibiryakov_int
+					SOV_pyotr_lazarevich_voikov_for
+					SOV_julius_martov_hog
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_blessing_of_the_tsar
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = SOV_by_the_skin_of_our_socialist_teeth }
+		x = 20
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = social_democratic
+				popularity = -0.02
+				}
+			add_popularity = { 
+				ideology = monarchist
+				popularity = 0.05
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_approaching_the_radical_generals
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = SOV_the_blessing_of_the_tsar }
+		x = 20
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			country_event = { id = russia.21 days = 0 } 
+		}
+	}
+
+	shared_focus = {
+		id = SOV_printing_propaganda
+		icon = GFX_focus_por_workers_of_iberia
+		prerequisite = { focus = SOV_approaching_the_radical_generals }
+		x = 21
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.05
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_securing_arms_for_the_revolution
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_approaching_the_radical_generals }
+		x = 19
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = 2000
+    			producer = SOV
+			}
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = SOV_fire_imperial_generals
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = SOV_securing_arms_for_the_revolution }
+		x = 19
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			remove_unit_leader = 169
+			remove_unit_leader = 166
+			remove_unit_leader = 171
+			remove_unit_leader = 168
+				add_war_support = -0.075
+					add_manpower = -10000
+		}
+	}
+
+	shared_focus = {
+		id = SOV_starting_the_revolution
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = SOV_printing_propaganda }
+		prerequisite = { focus = SOV_fire_imperial_generals }
+		x = 20
+		y = 7
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			country_event = { id = russia.22 days = 0 } 
+
+			hidden_effect = {
+				every_owned_state = {
+					set_demilitarized_zone = yes
+				}
+				219 = {
+					set_demilitarized_zone = no
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_more_peasant_militia_batallions
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = SOV_starting_the_revolution }
+		x = 19
+		y = 8
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			load_oob = "SOV_peasant_militia_batallions"
+		}
+	}
+
+	shared_focus = {
+		id = SOV_capturing_reactionary_stockpiles
+		icon = GFX_focus_secret_rearmament
+		prerequisite = { focus = SOV_starting_the_revolution }
+		x = 21
+		y = 8
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment_1
+    			amount = 3000
+    			producer = SOV
+				}
+			add_equipment_to_stockpile = {
+    			type = artillery_equipment_1
+    			amount = 500
+    			producer = SOV
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_securing_the_last_strongholds
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = SOV_more_peasant_militia_batallions }
+		prerequisite = { focus = SOV_capturing_reactionary_stockpiles }
+		x = 18
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			unlock_decision_tooltip = SOV_move_to_leningrad
+		}
+	}
+
+	shared_focus = {
+		id = SOV_no_longer_the_failed_experiment
+		icon = GFX_focus_ger_great_red_menace
+		prerequisite = { focus = SOV_more_peasant_militia_batallions }
+		prerequisite = { focus = SOV_capturing_reactionary_stockpiles }
+		x = 22
+		y = 9
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.1
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_all_workers_equal
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SOV_securing_the_last_strongholds }
+		prerequisite = { focus = SOV_no_longer_the_failed_experiment }
+		x = 18
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_ideas = SOV_all_workers_equal1
+		}
+	}
+
+	shared_focus = {
+		id = SOV_from_agricultural_to_industrial
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = SOV_securing_the_last_strongholds }
+		prerequisite = { focus = SOV_no_longer_the_failed_experiment }
+		x = 20
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			401 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+			255 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+			257 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_redistributing_the_bourgeois_wealth
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = SOV_securing_the_last_strongholds }
+		prerequisite = { focus = SOV_no_longer_the_failed_experiment }
+		x = 22
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = SOV_all_workers_equal
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = SOV_all_workers_equal1
+				add_idea = SOV_all_workers_equal2
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_question_of_the_militia
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = SOV_all_workers_equal }
+		prerequisite = { focus = SOV_from_agricultural_to_industrial }
+		prerequisite = { focus = SOV_redistributing_the_bourgeois_wealth }
+		x = 19
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		country_event = { id = russia.23 days = 0 } 
+		}
+	}
+
+	shared_focus = {
+		id = SOV_forced_relocation
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SOV_all_workers_equal }
+		prerequisite = { focus = SOV_from_agricultural_to_industrial }
+		prerequisite = { focus = SOV_redistributing_the_bourgeois_wealth }
+		x = 21
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		137 = {
+			add_manpower = -600000
+			}
+		404 = {
+			add_manpower = 600000
+			}
+
+		239 = {
+			add_manpower = -600000
+			}
+		565 = {
+			add_manpower = 600000
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_retooling_the_farmers
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SOV_the_question_of_the_militia }
+		prerequisite = { focus = SOV_forced_relocation }
+		x = 22
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = industry
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_putting_down_the_protests
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = SOV_retooling_the_farmers }
+		x = 23
+		y = 13
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		219 = {
+			damage_building = {
+    				type = infrastructure
+    				damage = 3
+				}
+			}
+		195 = {
+			damage_building = {
+    				type = infrastructure
+    				damage = 3
+				}
+			}
+			add_stability = -0.1
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_truly_soviet_industry
+		icon = GFX_focus_spr_class_war
+		prerequisite = { focus = SOV_retooling_the_farmers }
+		x = 21
+		y = 13
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_workers_army
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = SOV_the_question_of_the_militia }
+		prerequisite = { focus = SOV_forced_relocation }
+		x = 18
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		army_experience = 50
+		add_command_power = 25
+		}
+	}
+
+	shared_focus = {
+		id = SOV_expanding_the_revolution
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		prerequisite = { focus = SOV_the_workers_army }
+		x = 17
+		y = 13
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
+		declare_war_on = {
+				target = BLR
+				type = annex_everything
+			}
+		declare_war_on = {
+				target = GEO
+				type = annex_everything
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_true_soviet_military_industrial_complex
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SOV_the_workers_army }
+		x = 19
+		y = 13
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = arms_factory
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_direct_rule_from_petrograd
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = SOV_rigging_it_for_our_party }
+		mutually_exclusive = { focus = SOV_by_the_skin_of_our_socialist_teeth }
+		x = 10
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+		completion_reward = {
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.1
+				}
+			set_politics = {
+				ruling_party = fascism
+				election_frequency = 50
+				elections_allowed = no
+			}
+			add_stability = -0.3
+
+			set_capital = 195
+
+			custom_effect_tooltip = new_cabinet_tt
+
+			clr_country_flag = SOV_alexei_khvostov_hos_flag
+			set_country_flag = russian_fascism_flag
+
+			hidden_effect = {
+				add_ideas = {
+					SOV_anastasy_vonsiatsky_int
+					SOV_boris_petrovich_tedley_hos
+					SOV_anna_nikolaevna_volkova_for
+					SOV_nikolai_ivanovich_nikiforov_eco
+				}
+				news_event = {
+    					id = news.360
+    					days = 1
+					}
+				add_popularity = { 
+					ideology = communism
+					popularity = 0.3
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_setting_aside_the_tsars_powers
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = SOV_direct_rule_from_petrograd }
+		x = 10
+		y = 3
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = monarchist
+				popularity = -0.1
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_absorbing_the_monarchsts
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = SOV_setting_aside_the_tsars_powers }
+		x = 9
+		y = 4
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.035
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_support_from_the_alt_right
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = SOV_setting_aside_the_tsars_powers }
+		x = 11
+		y = 4
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.035
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_shadow_of_our_former_selves
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SOV_setting_aside_the_tsars_powers }
+		x = 13
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = SOV_crusade_against_communism
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SOV_a_shadow_of_our_former_selves }
+		x = 13
+		y = 5
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_communist_crusade_tt
+			
+			add_popularity = {
+				ideology = communism
+				popularity = -0.5
+				}
+			add_stability = -0.05
+			add_manpower = -75000
+		}
+	}
+
+	shared_focus = {
+		id = SOV_lock_up_tukhachevsky
+		icon = GFX_focus_SOV_lock_up_tukhachevsky
+		prerequisite = { focus = SOV_crusade_against_communism }
+		x = 12
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			remove_unit_leader = 164
+
+			add_war_support = -0.075
+		}
+	}
+
+	shared_focus = {
+		id = SOV_find_the_remnants
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = SOV_crusade_against_communism }
+		x = 14
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = communism
+				popularity = -0.1
+				}
+			add_stability = -0.05
+		}
+	}
+
+	shared_focus = {
+		id = SOV_crushing_the_socialites
+		icon = GFX_focus_spr_crush_the_revolution
+		prerequisite = { focus = SOV_find_the_remnants }
+		x = 14
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = social_democratic
+				popularity = -0.5
+				}
+			add_stability = -0.015
+		}
+	}
+
+	shared_focus = {
+		id = SOV_enemies_at_every_turn
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		prerequisite = { focus = SOV_crushing_the_socialites }
+		x = 15
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = liberal
+				popularity = -0.5
+				}
+			add_popularity = { 
+				ideology = democratic
+				popularity = -0.5
+				}
+			add_stability = -0.025
+		}
+	}
+
+	shared_focus = {
+		id = SOV_rebuilding_our_economy
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SOV_crushing_the_socialites }
+		x = 13
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_russian_bear_roars_once_more
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		prerequisite = { focus = SOV_enemies_at_every_turn }
+		prerequisite = { focus = SOV_rebuilding_our_economy }
+		x = 14
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+
+	shared_focus = {
+		id = SOV_and_the_rebuilding_begins
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = SOV_setting_aside_the_tsars_powers }
+		x = 7
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = infrastructure
+   					level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = infrastructure
+   					level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = infrastructure
+   					level = 1
+    				instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+    				type = infrastructure
+   					level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_remembering_the_man_himself
+		icon = GFX_focus_SOV_remembering_the_man_himself
+		prerequisite = { focus = SOV_and_the_rebuilding_begins }
+		x = 7
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			country_event = { id = russia.24 days = 0 } 
+		}
+	}
+
+	shared_focus = {
+		id = SOV_never_another_pugachev
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = SOV_remembering_the_man_himself }
+		x = 8
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_pugachev_tt
+			add_manpower = -50000
+		}
+	}
+
+	shared_focus = {
+		id = SOV_nothing_but_a_figurehead
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = SOV_never_another_pugachev }
+		prerequisite = { focus = SOV_lock_up_tukhachevsky }
+		x = 10
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			country_event = { id = russia.25 days = 0 } 
+		}
+	}
+
+	shared_focus = {
+		id = SOV_national_security_law
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SOV_remembering_the_man_himself }
+		x = 6
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+		}
+	}
+
+	shared_focus = {
+		id = SOV_reviving_our_diplomatic_relations
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = SOV_national_security_law }
+		x = 6
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = SOV_remembering_the_coalition
+		icon = GFX_generic_deal_with_french
+		prerequisite = { focus = SOV_reviving_our_diplomatic_relations }
+		mutually_exclusive = { focus = SOV_our_old_french_allies }
+		x = 5
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = reestablished_relations
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_our_old_french_allies
+		icon = GFX_generic_deal_with_french
+		prerequisite = { focus = SOV_reviving_our_diplomatic_relations }
+		mutually_exclusive = { focus = SOV_remembering_the_coalition }
+		x = 7
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = FRA
+				modifier = reestablished_relations
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_revive_the_old_alliance
+		icon = GFX_generic_deal_with_french
+		prerequisite = { focus = SOV_our_old_french_allies }
+		x = 8
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			FRA = {
+				add_to_faction = SOV
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_establishing_relations_with_the_spanish
+		icon = GFX_focus_intervention_spain_nationalists
+		prerequisite = { focus = SOV_revive_the_old_alliance }
+		x = 8
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SPR
+				modifier = reestablished_relations
+				}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_war_against_britain
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = SOV_establishing_relations_with_the_spanish }
+		x = 8
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = ENG
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_an_alliance_with_the_british
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = SOV_remembering_the_coalition }
+		x = 4
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			ENG = {
+				add_to_faction = SOV
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_prepare_for_the_8th_coalition
+		icon = GFX_focus_eng_decolonization
+		prerequisite = { focus = SOV_an_alliance_with_the_british }
+		x = 4
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = SOV_dismantling_the_french
+		icon = GFX_focus_attack_france
+		prerequisite = { focus = SOV_prepare_for_the_8th_coalition }
+		x = 4
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = FRA
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_preparing_for_the_reclamation
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = SOV_remembering_the_coalition focus = SOV_our_old_french_allies }
+		x = 6
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = SOV_operation_bagration
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = SOV_preparing_for_the_reclamation }
+		x = 6
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			BLR = {
+				exists = yes
+			}
+			UKR = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			BLR = {
+				exists = no
+			}
+			UKR = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+
+			add_threat = 6
+
+			declare_war_on = {
+    			target = BLR
+    			type = annex_everything
+			}
+			declare_war_on = {
+    			target = UKR
+    			type = annex_everything
+			}
+			hidden_effect = {
+					news_event = {
+    					id = news.356
+    					days = 1
+					}
+		}
+	}
+}
+
+shared_focus = {
+		id = SOV_the_besserabian_question
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = SOV_operation_bagration }
+		x = 6
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			ROM = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			ROM = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+
+			add_threat = 2
+
+			create_wargoal = {
+    			type = annex_everything
+    			target = ROM
+			}
+			add_state_claim = 766
+			add_state_claim = 78
+	}
+}
+
+shared_focus = {
+		id = SOV_retake_the_caucasus
+		icon = GFX_focus_hol_war_on_pacifism
+		prerequisite = { focus = SOV_the_besserabian_question }
+		x = 5
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			AZR = {
+				exists = yes
+			}
+			ARM = {
+				exists = yes
+			}
+			GEO = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			AZR = {
+				exists = no
+			}
+			ARM = {
+				exists = no
+			}
+			GEO = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+
+			add_threat = 4
+
+			create_wargoal = {
+    			type = annex_everything
+    			target = GEO
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = ARM
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = AZR
+			}
+	}
+}
+
+shared_focus = {
+		id = SOV_retake_the_baltics
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = SOV_the_besserabian_question }
+		x = 7
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			EST = {
+				exists = yes
+			}
+			LAT = {
+				exists = yes
+			}
+			LIT = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			EST = {
+				exists = no
+			}
+			LAT = {
+				exists = no
+			}
+			LIT = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+
+			add_threat = 4
+
+			create_wargoal = {
+    			type = annex_everything
+    			target = EST
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = LAT
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = LIT
+			}
+	}
+}
+
+shared_focus = {
+		id = SOV_crossing_the_vitsula
+		icon = GFX_focus_usa_focus_on_europe
+		prerequisite = { focus = SOV_retake_the_caucasus }
+		prerequisite = { focus = SOV_retake_the_baltics }
+		x = 6
+		y = 13
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			POL = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			POL = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+        }
+search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+
+			add_threat = 3
+
+			create_wargoal = {
+    			type = annex_everything
+    			target = POL
+			}
+	}
+}

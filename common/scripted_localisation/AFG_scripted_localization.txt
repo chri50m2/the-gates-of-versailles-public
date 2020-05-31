@@ -1,0 +1,127 @@
+defined_text = { ####Conservative influence
+    name = GetConservativeInfluence
+    text = {
+        trigger = {
+            check_variable = {
+                var = conservative_influence
+                value = 0
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_1
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = conservative_influence
+                value = 10
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_2
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = conservative_influence
+                value = 25
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_3
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = conservative_influence
+                value = 50
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_4
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = conservative_influence
+                value = 75
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_5
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = conservative_influence
+                value = 100
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_6
+    }
+}
+
+defined_text = {
+    name = GetLiberalInfluence
+    text = {
+        trigger = {
+            check_variable = {
+                var = liberal_influence
+                value = 0
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = liberal_influence_1
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = liberal_influence
+                value = 10
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_2
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = liberal_influence
+                value = 25
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_3
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = liberal_influence
+                value = 50
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_4
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = liberal_influence
+                value = 75
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_5
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = liberal_influence
+                value = 100
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = conservative_influence_6
+    }
+}

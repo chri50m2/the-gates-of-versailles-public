@@ -1,0 +1,30 @@
+#####Prussia
+
+
+GER_occupation_decisions = {
+
+    allowed = {
+        original_tag = PRS
+    }
+
+    visible = {
+       OR = {
+       		AND = {
+       			FRA = {
+       				exists = no
+       			}
+       			16 = {
+       				is_owned_by = PRS
+       			}
+       		}
+       		AND = {
+       			ITA = {
+       				exists = no
+       			}
+       			2 = {
+       				is_owned_by = PRS
+       			}
+       		}
+       }
+    }
+}

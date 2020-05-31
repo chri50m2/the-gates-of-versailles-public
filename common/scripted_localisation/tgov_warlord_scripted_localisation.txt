@@ -1,0 +1,141 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { 
+	name = tgov_warlord_status
+	text = {
+		trigger = {
+			check_variable = {
+                var = warlord_status
+                value = 8
+                compare = greater_than_or_equals
+            }
+		}
+		localization_key = "Warlord Anger Very High"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+                var = warlord_status
+                value = 6
+                compare = greater_than_or_equals
+            }
+			check_variable = {
+                var = warlord_status
+                value = 8
+                compare = less_than 
+            }
+		}
+		localization_key = "Warlord Anger High"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+                var = warlord_status
+                value = 4
+                compare = greater_than_or_equals
+            }
+			check_variable = {
+                var = warlord_status
+                value = 6
+                compare = less_than 
+            }
+		}
+		localization_key = "Warlord Anger Moderate"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+                var = warlord_status
+                value = 2
+                compare = greater_than_or_equals
+            }
+			check_variable = {
+                var = warlord_status
+                value = 4
+                compare = less_than 
+            }
+		}
+		localization_key = "Warlord Anger Low"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+                var = warlord_status
+                value = 0
+                compare = greater_than_or_equals
+            }
+			check_variable = {
+                var = warlord_status
+                value = 2
+                compare = less_than 
+            }
+		}
+		localization_key = "Warlord Anger Very Low"
+	}
+}
+
+defined_text = {
+    name = get_warlord_name
+    
+	text = {
+        trigger = {
+			has_state_flag = tgov_warlord_state_owned_li_zongren
+        }
+        localization_key = "Li Zongren"
+    }
+    text = {
+        trigger = {
+            has_state_flag = tgov_warlord_state_owned_yan_xishan
+        }
+        localization_key = "Yan Xishan"
+    }
+    text = {
+        trigger = {
+			has_state_flag = tgov_warlord_state_owned_ma_hushan
+        }
+        localization_key = "Ma Hushan"
+    }
+	text = {
+        trigger = {
+			has_state_flag = tgov_warlord_state_owned_long_yun
+        }
+        localization_key = "Long Yun"
+    }
+}
+
+defined_text = {
+    name = get_warlord_pic
+    
+	text = {
+        trigger = {
+            has_state_flag = tgov_warlord_state_owned_li_zongren
+        }
+        localization_key = "GFX_portrait_li_zongren"
+    }
+    text = {
+        trigger = {
+            has_state_flag = tgov_warlord_state_owned_yan_xishan
+        }
+        localization_key = "GFX_portrait_yan_xishan"
+    }
+	text = {
+        trigger = {
+            has_state_flag = tgov_warlord_state_owned_ma_hushan
+        }
+        localization_key = "GFX_portrait_xsm_ma_bufang"
+    }
+	text = {
+        trigger = {
+            has_state_flag = tgov_warlord_state_owned_long_yun
+        }
+        localization_key = "GFX_portrait_yun_long_yun"
+    }
+}

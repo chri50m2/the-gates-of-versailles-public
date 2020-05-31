@@ -1,0 +1,66 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+russia_prepare_bagration = {
+	enable = {
+		original_tag = SOV
+	}
+	abort = {
+		BLR = {
+			exists = no
+		}
+		UKR = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "BLR"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "BLR"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "BLR"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "BLR"			
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "UKR"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "UKR"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "UKR"			
+		value = 1000
+	}
+}

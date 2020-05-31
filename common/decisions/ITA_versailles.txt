@@ -1,0 +1,375 @@
+ITA_general_academy = {
+
+    ITA_improve_officer_classes = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_hire_new_generals
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_hire_new_generals
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			add_ideas = improved_officer_classes
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ITA_teach_napoleonic_strategy = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_hire_new_generals
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_hire_new_generals
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			add_ideas = napoleonic_strategy_taught
+			army_experience = 25
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ITA_hire_vittorio_ambrosio = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_hire_new_generals
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_hire_new_generals
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			create_corps_commander = {
+	        name = "Vittorio Ambrosio"
+	        picture = "Portrait_ITA_Vittorio_Ambrosio.dds"
+	        traits = { career_officer brilliant_strategist cavalry_officer }
+	        skill = 3
+	        attack_skill = 2
+	        defense_skill = 2
+	        planning_skill = 3
+	        logistics_skill = 2
+        }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ITA_hire_mario_roatta = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_hire_new_generals
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_hire_new_generals
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			create_corps_commander = {
+	        name = "Mario Roatta"
+	        picture = "Portrait_Italy_Mario_Roatta.dds"
+	        traits = { career_officer infantry_officer }
+	        skill = 4
+	        attack_skill = 3
+	        defense_skill = 3
+	        planning_skill = 2
+	        logistics_skill = 1
+        }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+ITA_teach_general_staff = {
+
+    ITA_train_corp_commanders = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_maintain_general_staff
+		}
+
+		cost = 85
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_maintain_general_staff
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			custom_effect_tooltip = generals_trained_tt
+			hidden_effect = {
+			remove_unit_leader = 503
+			remove_unit_leader = 505
+		    remove_unit_leader = 506
+		    remove_unit_leader = 507
+			create_corps_commander = {
+	        name = "Ugo Cavallero"
+	        picture = "Portrait_Italy_Ugo_Cavallero.dds"
+	        traits = { infantry_officer career_officer }
+	        skill = 4
+	        rank = 1
+	        attack_skill = 3
+	        defense_skill = 2
+	        planning_skill = 2
+	        logistics_skill = 2
+        }
+		    create_corps_commander = {
+	        name = "Sebastiano Visconti Prasca"
+	        picture = "Portrait_Italy_Sebastiano_Visconti_Prasca.dds"
+	        traits = { career_officer bearer_of_artillery }
+	        skill = 3
+	        rank = 1
+	        attack_skill = 3
+	        defense_skill = 2
+	        planning_skill = 1
+	        logistics_skill = 1
+        } 
+            create_corps_commander = {
+	        name = "Ubaldo Soddu"
+	        picture = "Portrait_Italy_Ubaldo_Soddu.dds"
+	        traits = { career_officer trait_cautious }
+	        skill = 3
+	        rank = 1
+	        attack_skill = 2
+	        defense_skill = 1
+	        planning_skill = 3
+	        logistics_skill = 1
+        }	
+            create_corps_commander = {
+	        name = "Italo Balbo"
+	        picture = "portrait_italy_italo_balbo.dds"
+	        traits = { career_officer politically_connected media_personality inflexible_strategist }
+	        skill = 3
+	        rank = 2
+	        attack_skill = 3
+	        defense_skill = 2
+	        planning_skill = 1
+	        logistics_skill = 2
+        }				
+		}
+		
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}
+
+ITA_develop_italian_middle_east = {
+
+	ITA_improve_oil_production_in_iraq = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+		    MIT = { owns_state = 291 }
+			MIT = { owns_state = 863 }
+			MIT = { is_puppet_of = ITA }
+			has_completed_focus = ITA_form_the_italian_middle_east
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_form_the_italian_middle_east
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+		add_resource = {
+            type = oil
+            amount = 35
+            state = 291
+        }
+		add_resource = {
+            type = oil
+            amount = 15
+            state = 863
+        }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ITA_omani_tungsten_mines = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+		    MIT = { owns_state = 294 }
+			MIT = { is_puppet_of = ITA }
+			has_completed_focus = ITA_form_the_italian_middle_east
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_form_the_italian_middle_east
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+		add_resource = {
+            type = tungsten
+            amount = 21
+            state = 294
+        }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ITA_send_off_ugo_cavallero = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+		    MIT = { has_capitulated = no }
+			MIT = { is_puppet_of = ITA }
+			has_completed_focus = ITA_form_the_italian_middle_east
+			NOT = { has_completed_focus = ITA_fire_incompetent_generals }
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_form_the_italian_middle_east
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+		remove_unit_leader = 503
+		MIT = {
+		create_corps_commander = {
+	        name = "Ugo Cavallero"
+	        picture = "Portrait_ITA_Ugo_Cavallero.dds"
+	        traits = { old_guard trait_cautious career_officer }
+	        skill = 2
+	        attack_skill = 1
+	        defense_skill = 1
+	        planning_skill = 2
+	        logistics_skill = 1
+        }
+		}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}	

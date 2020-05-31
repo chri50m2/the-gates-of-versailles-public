@@ -1,0 +1,14 @@
+effect = {
+		POL = {
+			set_variable = {
+			var = militarists_power
+			value = 0
+				}
+			}
+		POL = {
+			set_variable = {
+			var = republicans_power
+			value = 25
+				}
+			}
+	   }

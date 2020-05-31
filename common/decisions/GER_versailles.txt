@@ -1,0 +1,179 @@
+GER_occupation_decisions = {
+	PRS_occupation_of_italy = {
+		available = {
+		}
+		allowed = {
+			original_tag = PRS
+		}
+		available = {
+               ITA = {
+				exists = no
+			}
+			2 = {
+				is_owned_by = PRS
+			}
+        }
+     	visible = {
+               ITA = {
+				exists = no
+			}
+			2 = {
+				is_owned_by = PRS
+			}
+        }
+
+		cost = 25
+
+		fire_only_once = yes
+
+		complete_effect = {
+			release_puppet = ITA
+
+		}
+	}
+
+	GER_occupy_venedig_and_lombardei = {
+		allowed = {
+			original_tag = PRS
+		}
+		available = {
+               ITA = {
+				exists = no
+			}
+			2 = {
+				is_owned_by = PRS
+			}
+			159 = {
+				is_owned_by = PRS
+			}
+			160 = {
+				is_owned_by = PRS
+			}
+        }
+     	visible = {
+               ITA = {
+				exists = no
+			}
+			2 = {
+				is_owned_by = PRS
+			}
+			159 = {
+				is_owned_by = PRS
+			}
+			160 = {
+				is_owned_by = PRS
+			}
+        }
+
+		cost = 25
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_state_core = 159
+			add_state_core = 160
+			set_province_name = { id = 11584 name = "Venedig"}
+			set_province_name = { id = 3780 name = "Mailand"}
+			159 = {
+				set_state_name = "Lombardei"
+			}
+			160 = {
+				set_state_name = "Venedig"
+			}
+			hidden_effect = {
+				ITA = {
+					remove_state_core = 159
+					remove_state_core = 160
+					remove_state_core = 39
+				}
+			}
+		}
+	}
+
+	GER_occupation_of_france = {
+		allowed = {
+			original_tag = PRS
+		}
+		available = {
+               FRA = {
+				exists = no
+			}
+			16 = {
+				is_owned_by = PRS
+			}
+        }
+     	visible = {
+               FRA = {
+				exists = no
+			}
+			16 = {
+				is_owned_by = PRS
+			}
+        }
+
+		cost = 25
+
+		fire_only_once = yes
+
+		complete_effect = {
+
+			add_state_core = 42
+			add_state_core = 848
+			add_state_core = 28
+			add_state_core = 910
+			add_state_core = 51
+			add_state_core = 851
+
+			set_province_name = { id = 9503 name = "Strassburg"}
+			set_province_name = { id = 11516 name = "Nanzig"}
+			set_province_name = { id = 678 name = "Mülhausen im Elsass"}
+
+			28 = {
+				set_state_name = "Elsass-Lothringen"
+			}
+			910 = {
+				set_state_name = "Nanzig"
+			}
+
+			FRA = {
+				remove_state_core = 42
+				remove_state_core = 848
+				remove_state_core = 28
+				remove_state_core = 910
+				remove_state_core = 51
+				remove_state_core = 851
+			}
+
+			release_puppet = FRA
+
+			hidden_effect = {
+			FRA = {
+				set_politics = {
+				ruling_party = neutrality
+				election_frequency = 50
+				elections_allowed = no
+			}
+				create_country_leader = {
+					name = "Dietrich von Choltitz"
+					desc = "POLITICS_DIETRICH_VON_CHOLITZ_DESC"
+					picture = "GER_Dietrich_von_Cholitz.dds"
+					expire = "1965.1.1"
+					ideology = military_junta
+					traits = {
+						}
+					}
+					set_cosmetic_tag = FRA_GER_Occupied_France
+					set_party_name = { 
+						ideology = neutrality 
+						long_name = FRA_GER_Occupied_France_neutrality_party_long 
+						name = FRA_GER_Occupied_France_neutrality_party 
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

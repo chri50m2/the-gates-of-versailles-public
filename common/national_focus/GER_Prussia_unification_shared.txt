@@ -1,0 +1,1817 @@
+#	#shared_focus = {
+#		#id = GER_
+#		#icon =#
+#		#prerequisite = { #focus =# }
+#		#mutually_exclusive = { #focus =  }
+#		#x = -3
+#		#y = 0
+#		#relative_position_id =#
+#
+#		#cost = 10
+#
+#		#ai_will_do = {
+#			#factor = 1
+#		#}
+#
+#		#available = {
+#
+#		#}
+#		
+#		#bypass = {
+#
+#		#}
+#
+#		#cancel_if_invalid = yes
+#		#continue_if_invalid = no
+#		#available_if_capitulated = no
+#
+#		#complete_tooltip = {
+#
+#		#}
+#
+#		#completion_reward = {
+#
+#		#}
+#	#}
+
+	shared_focus = {
+		id = GER_the_dream_of_pan_germania
+		icon = GFX_focus_Pan_Germania
+		x = 8
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			has_country_flag = GER_Election_1936
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = GER_dealing_with_mecklenburg
+		prerequisite = { focus = GER_the_dream_of_pan_germania }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 7
+		y = 9
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			is_neighbor_of = MEK
+		}
+		
+		bypass = {
+			MEK = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+
+	shared_focus = {
+		id = GER_MEK_hold_a_referendum
+		prerequisite = { focus = GER_dealing_with_mecklenburg }
+		icon = GFX_generic_hold_elections
+		x = 7
+		y = 10
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			MEK = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			MEK = { 
+				country_event = { id = prussia.2 days = 0 } 
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_convice_the_grand_duke
+		prerequisite = { focus = GER_MEK_hold_a_referendum }
+		icon = GFX_AUS_restore_monarchy
+		x = 7
+		y = 11
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			MEK = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = MEK
+				modifier = met_with_the_king
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_full_integration
+		prerequisite = { focus = GER_convice_the_grand_duke }
+		icon = GFX_goal_generic_alliance
+		x = 7
+		y = 12
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			MEK = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_threat = 1
+			annex_country = {
+    			target = MEK
+    			transfer_troops = yes
+			}
+			MEK = {
+				every_unit_leader = {
+					set_nationality = PRS
+				}
+			}
+			61 = {
+				remove_core_of = MEK
+				add_core_of = PRS
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_win_over_saxony
+		prerequisite = { focus = GER_the_dream_of_pan_germania }
+		icon = GFX_focus_GER_WorkwithSaxony
+		x = 9
+		y = 9
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		available = {
+			is_neighbor_of = SAX
+		}
+		
+		bypass = {
+			SAX = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+
+	shared_focus = {
+		id = GER_talk_with_thuringinian_sympathizers
+		prerequisite = { focus = GER_win_over_saxony }
+		icon = GFX_goal_generic_improve_relations
+		x = 9
+		y = 10
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			SAX = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			SAX = {
+				add_popularity = { 
+					ideology = democratic
+					popularity = 0.2
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_promise_land_to_the_king
+		prerequisite = { focus = GER_talk_with_thuringinian_sympathizers }
+		icon = GFX_goal_ita_empower_the_king
+		x = 9
+		y = 11
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			SAX = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			SAX = { 
+				country_event = { id = prussia.3 days = 0 } 
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_protect_dresden
+		prerequisite = { focus = GER_promise_land_to_the_king }
+		icon = GFX_focus_Fortify_Dresden
+		x = 9
+		y = 12
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			SAX = {
+				exists = no
+			}
+		}
+
+		select_effect = {
+			give_guarantee = SAX
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_threat = 1
+			annex_country = {
+    			target = SAX
+    			transfer_troops = yes
+			}
+			add_state_core = 65
+			add_state_core = 60
+			SAX = {
+				remove_state_core = 60
+				add_state_core = 814
+				every_unit_leader = {
+					set_nationality = PRS
+				}
+			}
+		}
+	}
+
+		shared_focus = {
+		id = GER_the_issue_of_hannover
+		prerequisite = { focus = GER_the_dream_of_pan_germania }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 11
+		y = 9
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			is_neighbor_of = HAN
+		}
+		
+		bypass = {
+			HAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+
+	shared_focus = {
+		id = GER_reach_out_to_the_extremists
+		prerequisite = { focus = GER_the_issue_of_hannover }
+		icon = GFX_goal_generic_war_with_comintern
+		x = 11
+		y = 10
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			HAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			HAN = {
+				add_popularity = { 
+					ideology = communism
+					popularity = 0.15
+				}
+				add_popularity = { 
+					ideology = fascism
+					popularity = 0.15
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_reach_a_compromise
+		prerequisite = { focus = GER_reach_out_to_the_extremists }
+		icon = GFX_focus_GER_compromiseprussians
+		x = 11
+		y = 11
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			HAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+				add_opinion_modifier = {
+				target = HAN
+				modifier = found_a_compromise
+				}
+		}
+	}
+
+	shared_focus = {
+		id = GER_hannoverian_integration
+		prerequisite = { focus = GER_reach_a_compromise }
+		icon = GFX_focus_GER_Integreate_Hannover
+		x = 11
+		y = 12
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			HAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_threat = 1
+			annex_country = {
+    			target = HAN
+    			transfer_troops = yes
+			}
+			add_state_core = 59
+			add_state_core = 866
+			HAN = {
+			every_unit_leader = {
+				set_nationality = PRS
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_the_matter_of_schleswig_holstein
+		prerequisite = { focus = GER_the_dream_of_pan_germania }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 4
+		y = 9
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			is_neighbor_of = DEN
+		}
+		
+		bypass = {
+			DEN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+
+	shared_focus = {
+		id = GER_reach_a_deal
+		prerequisite = { focus = GER_the_matter_of_schleswig_holstein }
+		icon = GFX_goal_generic_improve_relations
+		x = 4
+		y = 10
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+			DEN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = DEN
+				modifier = reached_a_deal
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_military_compensation
+		prerequisite = { focus = GER_reach_a_deal }
+		mutually_exclusive = { focus = GER_economic_compensation }
+		icon = GFX_goal_generic_small_arms
+		x = 3
+		y = 11
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+			DEN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_command_power = -30
+			DEN = {
+				add_ideas = GER_german_military_staff
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_economic_compensation
+		prerequisite = { focus = GER_reach_a_deal }
+		mutually_exclusive = { focus = GER_military_compensation }
+		icon = GFX_goal_generic_construct_civilian
+		x = 5
+		y = 11
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+			DEN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			DEN = {
+				add_ideas = GER_prussian_investment_plan
+			}
+		}
+	}
+
+
+	shared_focus = {
+		id = GER_danish_minority_protection_laws
+		prerequisite = { focus = GER_economic_compensation focus = GER_military_compensation }
+		icon = GFX_generic_attack_denmark
+		x = 4
+		y = 12
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+			DEN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_threat = 1
+				add_ideas = GER_danish_protection_laws
+				transfer_state = 58
+				58 = {
+					add_core_of = PRS
+				}
+		}
+	}
+
+	shared_focus = {
+		id = GER_a_confederacy
+		prerequisite = { focus = GER_danish_minority_protection_laws }
+		prerequisite = { focus = GER_full_integration }
+		prerequisite = { focus = GER_protect_dresden }
+		prerequisite = { focus = GER_hannoverian_integration }
+		icon = GFX_focus_Pan_Germania
+		x = 8
+		y = 13
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			date > 1938.1.1
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_threat = 2
+		custom_effect_tooltip = GER_NGF
+			hidden_effect = {
+				set_cosmetic_tag = GER_North_German_Confederation
+				news_event = { hours = 3 id = news.351 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_taking_care_of_bavaria
+		prerequisite = { focus = GER_a_confederacy }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 11
+		y = 14
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			is_neighbor_of = BAV
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			BAV = {
+				exists = no
+				}
+			GER = {
+				has_war_with = BAV
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+
+	shared_focus = {
+		id = GER_talking_with_epp
+		prerequisite = { focus = GER_taking_care_of_bavaria }
+		icon = GFX_goal_generic_improve_relations
+		x = 11
+		y = 15
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			BAV = {
+				exists = no
+				}
+			GER = {
+				has_war_with = BAV
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			BAV = {
+				add_country_leader_trait = german_sympathizer
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_contact_the_underground
+		prerequisite = { focus = GER_talking_with_epp }
+		icon = GFX_goal_generic_war_with_comintern
+		x = 11
+		y = 16
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			BAV = {
+				exists = no
+				}
+			GER = {
+				has_war_with = BAV
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			BAV = {
+				add_popularity = { 
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_the_integration
+		prerequisite = { focus = GER_contact_the_underground }
+		icon = GFX_goal_generic_dangerous_deal
+		x = 11
+		y = 17
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			BAV = {
+				exists = no
+				}
+			GER = {
+				has_war_with = BAV
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+				BAV = {
+				every_unit_leader = {
+					set_nationality = PRS
+					}
+				}
+        		annex_country = {
+    			target = BAV
+    			transfer_troops = yes
+			}
+			add_state_core = 52
+			add_state_core = 53
+			add_state_core = 54
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				random_list = {
+					98 = {
+        			country_event = { id = prussia.4 days = 0 }
+					hidden_effect = {
+							add_state_core = 52
+							add_state_core = 53
+							add_state_core = 54
+						}
+					}
+					2 = {
+						BAV = {
+							every_unit_leader = {
+								set_nationality = PRS
+							}
+						}
+        			annex_country = {
+    					target = BAV
+    					transfer_troops = yes
+					}
+					add_state_core = 52
+					add_state_core = 53
+					add_state_core = 54
+				}
+    		}		
+		}
+	}
+}
+
+	shared_focus = {
+		id = GER_the_silent_half_brother
+		prerequisite = { focus = GER_a_confederacy }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 9
+		y = 14
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		available = {
+			is_neighbor_of = WUR
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WUR = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WUR
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+
+	shared_focus = {
+		id = GER_talk_to_the_people
+		prerequisite = { focus = GER_the_silent_half_brother }
+		icon = GFX_goal_generic_national_unity
+		x = 9
+		y = 15
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WUR = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WUR
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		WUR = {
+				add_popularity = { 
+					ideology = democratic
+					popularity = 0.2
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_the_great_compromise
+		prerequisite = { focus = GER_talk_to_the_people }
+		icon = GFX_goal_generic_improve_relations
+		x = 9
+		y = 16
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WUR = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WUR
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		WUR = {
+				country_event = { id = prussia.6 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_another_union
+		prerequisite = { focus = GER_the_great_compromise }
+		icon = GFX_goal_anschluss
+		x = 9
+		y = 17
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 75
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WUR = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WUR
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		WUR = {
+			every_unit_leader = {
+				set_nationality = PRS
+				}
+			}
+		annex_country = {
+    			target = WUR
+    			transfer_troops = yes
+			}
+			add_state_core = 50
+		}
+	}
+
+	shared_focus = {
+		id = GER_the_betraying_brother
+		prerequisite = { focus = GER_a_confederacy }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 7
+		y = 14
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_neighbor_of = BAD
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			BAD = {
+				exists = no
+				}
+			GER = {
+				has_war_with = BAD
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 5
+			add_war_support = 0.025
+		}
+	}
+
+	shared_focus = {
+		id = GER_fake_it_until_we_make_it
+		prerequisite = { focus = GER_the_betraying_brother }
+		icon = GFX_goal_ita_the_kings_coup
+		x = 7
+		y = 15
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			BAD = {
+				exists = no
+				}
+			GER = {
+				has_war_with = BAD
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_opinion_modifier = {
+				target = BAD
+				modifier = secret_cooperation
+			}
+		add_political_power = 10
+		add_war_support = 0.05
+		add_manpower = -1000
+		}
+	}
+
+	shared_focus = {
+		id = GER_another_betrayal
+		prerequisite = { focus = GER_fake_it_until_we_make_it }
+		icon = GFX_goal_poland_goal
+		x = 7
+		y = 16
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			BAD = {
+				exists = no
+				}
+			GER = {
+				has_war_with = BAD
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		will_lead_to_war_with = FRA
+
+		completion_reward = {
+		BAD = {
+				country_event = { id = prussia.6 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_will_it_work
+		prerequisite = { focus = GER_another_betrayal }
+		icon = GFX_goal_generic_propaganda
+		x = 7
+		y = 17
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			BAD = {
+				exists = no
+				}
+			GER = {
+				has_war_with = BAD
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		BAD = {
+			every_unit_leader = {
+				set_nationality = PRS
+				}
+			}
+		annex_country = {
+    			target = BAD
+    			transfer_troops = yes
+			}
+			add_state_core = 50
+		}
+	}
+
+	shared_focus = {
+		id = GER_our_german_rival
+		prerequisite = { focus = GER_a_confederacy }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 4
+		y = 14
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			is_neighbor_of = WST
+			NOT = {
+				has_war = yes
+				GER = {
+				has_war_with = WST
+				}
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WST = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WST
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 5
+		}
+	}
+
+	shared_focus = {
+		id = GER_bon_voyage_trettner
+		prerequisite = { focus = GER_our_german_rival }
+		mutually_exclusive = { focus = GER_rationalize_trettner }
+		icon = GFX_focus_Bomb_boyage_Trettner
+		x = 3
+		y = 15
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WST = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WST
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			WST = {
+				kill_country_leader = yes
+				add_stability = -0.25
+				add_war_support = -0.25
+				create_country_leader = {
+					name = "Marie-Eugène Debeney"
+					desc = "POLITICS_MARIE-EUGENE_DEBENEY_DESC"
+					picture = "Portrait_FRA_GER_Marie-Eugene_Debeney.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+		
+					}
+				}
+				add_ideas = GER_shattered_military
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_talk_with_the_workers
+		prerequisite = { focus = GER_bon_voyage_trettner }
+		icon = GFX_goal_generic_production2
+		x = 3
+		y = 16
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WST = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WST
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			WST = {
+				add_popularity = { 
+					ideology = social_democratic 
+					popularity = 0.2
+				}
+				add_popularity = { 
+					ideology = communism 
+					popularity = 0.2
+				}
+				add_stability = -0.1
+				add_war_support = -0.15
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_strike_now
+		prerequisite = { focus = GER_talk_with_the_workers }
+		icon = GFX_goal_generic_occupy_start_war
+		x = 3
+		y = 17
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WST = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WST
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_threat = 5
+			declare_war_on = {
+   				target = WST
+    			type = annex_everything
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_rationalize_trettner
+		prerequisite = { focus = GER_our_german_rival }
+		mutually_exclusive = { focus = GER_bon_voyage_trettner }
+		icon = GFX_goal_generic_improve_relations
+		x = 5
+		y = 15
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WST = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WST
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			WST = {
+				add_country_leader_trait = german_sympathizer
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_fake_his_death
+		prerequisite = { focus = GER_rationalize_trettner }
+		icon = GFX_goal_generic_secret_weapon
+		x = 5
+		y = 16
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WST = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WST
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			WST = {
+				kill_country_leader = yes
+				add_stability = -0.25
+				add_war_support = -0.25
+				create_country_leader = {
+					name = "Marie-Eugène Debeney"
+					desc = "POLITICS_MARIE-EUGENE_DEBENEY_DESC"
+					picture = "Portrait_FRA_GER_Marie-Eugene_Debeney.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+		
+					}
+				}
+				remove_unit_leader = 1303
+				add_ideas = GER_shattered_military
+			}
+			create_corps_commander = {
+					name = "Heinrich Trettner"
+					picture = "Portrait_Prussia_Heinrich_Trettner.dds"
+					traits = { paratrooper }
+					skill = 2
+					id = 462
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+		}
+	}
+
+	shared_focus = {
+		id = GER_a_country_in_chaos
+		prerequisite = { focus = GER_fake_his_death }
+		icon = GFX_goal_generic_occupy_start_war
+		x = 5
+		y = 17
+
+		cost = 3.6
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+			NOT = {
+				has_war = yes
+			}
+		}
+		
+		bypass = {
+		OR = {
+			WST = {
+				exists = no
+				}
+			GER = {
+				has_war_with = WST
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_threat = 5
+			declare_war_on = {
+   				target = WST
+    			type = annex_everything
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_three_hurrahs_for_germany
+		prerequisite = { focus = GER_a_country_in_chaos focus = GER_strike_now }
+		prerequisite = { focus = GER_will_it_work }
+		prerequisite = { focus = GER_another_union }
+		prerequisite = { focus = GER_the_integration }
+		icon = GFX_focus_GER_three_hurrahs_for_germany
+		x = 8
+		y = 18
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = GER_UNFIIED_GER
+		custom_effect_tooltip = GER_UNLOCKS_FOREIGN_POLICY
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = GER_Unified_Germany
+				news_event = { hours = 3 id = news.354 }
+				set_country_flag = flag_germany_unified
+				country_event = { id = prussia.5 days = 7 }
+			}
+		}
+	}

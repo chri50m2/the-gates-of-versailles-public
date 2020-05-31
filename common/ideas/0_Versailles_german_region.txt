@@ -1,0 +1,83 @@
+ideas = {
+
+	country = { #Common ideas
+		GER_REGION_Disunited_Germany = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = GER_Region_Disunited_Germany
+			
+			modifier = {
+				conscription_factor = -0.1
+				monthly_population = -0.25
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				industrial_capacity_factory = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				fascism_drift = 0.01
+				communism_drift = 0.01
+			}
+		}
+	}
+
+	country = { #Westphalia only
+		WST_Franco_Westphalian_Military_Cooperation = {
+			
+			allowed = {
+				original_tag = WST
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = WST_Franco_Westphalian_Program
+			
+			modifier = {
+				conscription_factor = 0.075
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				army_org_factor = 0.1
+				planning_speed = 0.1
+				max_planning = 0.1
+				defence = 0.05
+				command_power_gain_mult = 0.15
+			}
+		}
+
+		WST_Liberal_Sentiment = {
+			
+			allowed = {
+				original_tag = WST
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = WST_Liberal_Sentiment
+			
+			modifier = {
+				neutrality_acceptance = 50
+				neutrality_drift = -0.01
+				liberal_acceptance = -50
+				liberal_drift = 0.015
+			}
+		}
+	}
+}

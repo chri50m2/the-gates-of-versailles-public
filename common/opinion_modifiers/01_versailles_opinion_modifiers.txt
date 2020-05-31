@@ -1,0 +1,190 @@
+#########################################################################
+# THE GATES OF VERSAILLES - OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+#France
+opinion_modifiers = {
+	ENG_FRA_accusation_of_october_events = { value = -50 }
+}
+
+opinion_modifiers = {
+	FRA_agressive_diplomacy = { value = -25 }
+}
+
+opinion_modifiers = {
+	FRA_passive_diplomacy = { value = 25 }
+}
+
+opinion_modifiers = {
+	FRA_failure_of_deportation = { value = -100 }
+}
+
+opinion_modifiers = {
+	FRA_faction_restructuration = { value = -15 }
+}
+
+opinion_modifiers = {
+	FRA_kept_in_check = { value = -20 }
+}
+
+opinion_modifiers = {
+	FRA_investment_plan = { value = 50 }
+}
+
+opinion_modifiers = {
+	FRA_infiltration_tactics = { value = -50 }
+}
+
+opinion_modifiers = {
+	FRA_expressed_support = { value = 50 }
+}
+
+opinion_modifiers = {
+	FRA_recently_influenced = { value = 30 }
+}
+
+#Switzlerand (that use Belgium tag yeah ik right)
+opinion_modifiers = {
+	BEL_deportation_attempt = { value = -100 }
+}
+
+#Austria
+opinion_modifiers = {
+	vienna_meeting = { value = 30 }                                                
+}
+
+#Italy
+opinion_modifiers = {
+	anti_colonialism_campaign = { value = -45 }                                                
+}
+
+#Ethiopia
+opinion_modifiers = {
+	anti_colonialist = { value = -50 }
+}
+
+#Russia
+opinion_modifiers = {
+	established_embassy = { value = 5 }
+}
+opinion_modifiers = {
+	applied_pressure = { value = -50 }
+}
+opinion_modifiers = {
+	naval_exercise_on_coast = { value = -40 }
+}
+opinion_modifiers = {
+	followed_lead = { value = 35 }
+}
+opinion_modifiers = {
+	sought_advice = { value = 25 }
+}
+opinion_modifiers = {
+	sought_help = { value = 10 }
+}
+#Poland
+opinion_modifiers = {
+	reestablished_relations = { value = 50 }
+}
+opinion_modifiers = {
+	renewed_friendship = { value = 50 }
+}
+
+#Prussia
+
+opinion_modifiers = {
+	met_with_the_king = { value = 25 }
+}
+
+opinion_modifiers = {
+	found_a_compromise = { value = 50 }
+}
+
+opinion_modifiers = {
+	reached_a_deal = { value = 30 }
+}
+
+opinion_modifiers = {
+	secret_cooperation = { value = 40 }
+}
+
+opinion_modifiers = {
+	negative_stance = { value = -50 }
+}
+
+opinion_modifiers = {
+	supported_our_democracy = { value = 50 }
+}
+
+opinion_modifiers = {
+	a_pragmatic_alliance = { value = 50 }
+}
+opinion_modifiers = {
+	no_deal = { value = -20 }
+}
+opinion_modifiers = {
+	great_deal = { value = 20 }
+}
+opinion_modifiers = {
+	MON_traitor = { value = -40 }
+}
+opinion_modifiers = {
+	WST_ENG_positive_relation = { value = 35 }
+}
+opinion_modifiers = {
+	FRA_WST_betrayal = { value = -35 }
+}
+opinion_modifiers = {
+	FRA_bad_wur_unification = { value = -35 }
+}
+opinion_modifiers = {
+	renewed_deal = { value = 30 }
+}
+opinion_modifiers = {
+	good_intentions = { value = 25 }
+}
+opinion_modifiers = {
+	FRA_IRE_positive_relations = { value = 20 }
+}
+opinion_modifiers = {
+	IRE_FRA_positive_relations = { value = 20 }
+}
+opinion_modifiers = {
+	sent_weapons = { value = 15 }
+}
+opinion_modifiers = {
+	didnt_join_faction = { value = -30 }
+}
+opinion_modifiers = {
+	istria_deal_denied = { value = -35 }
+}
+opinion_modifiers = {
+	didnt_allow_south_tyrol = { value = -25 }
+}
+opinion_modifiers = {
+	didnt_allow_to_join_faction = { value = -20 }
+}
+opinion_modifiers = {
+	didnt_accept_deal = { value = -15 }
+}
+opinion_modifiers = {
+	friendship_treaty_accepted = { value = 40 }
+}
+opinion_modifiers = {
+	friendship_treaty_denied = { value = -20 }
+}
+opinion_modifiers = {
+	didnt_allow_maltese_subjugation = { value = -30 }
+}
+opinion_modifiers = {
+	ENG_FRA_speech_against_us = { value = -25 }
+}
+opinion_modifiers = {
+	ENG_WST_positive_relation = { value = 30 }
+}

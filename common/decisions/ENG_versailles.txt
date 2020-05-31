@@ -1,0 +1,258 @@
+ENG_establish_the_protectorate_of_YEM = {
+	ENG_establish_the_protectorate_of_YEM_decision = {
+		available = {
+			original_tag = ENG
+		}
+		allowed = {
+			tag = ENG
+		}
+		available = {
+            YEM = {
+				exists = no
+			}
+			293 = {
+				is_owned_by = ENG
+			}
+			810 = {
+				is_owned_by = ENG
+			}
+			659 = {
+				is_owned_by = ENG
+			}
+        }
+     	visible = {
+     		YEM = {
+				exists = no
+			}
+			293 = {
+				is_owned_by = ENG
+			}
+			810 = {
+				is_owned_by = ENG
+			}
+			659 = {
+				is_owned_by = ENG
+			}
+        }
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+		hidden_effect = {
+			YEM = {
+					add_state_core = 810
+					add_state_core = 659
+			}
+		}
+			release_puppet = YEM
+			hidden_effect = {
+				YEM = {
+					set_cosmetic_tag = ENG_YEM_protectorate
+					add_popularity = { 
+						ideology = neutrality
+						popularity = 0.2
+					}
+					set_politics = {
+						ruling_party = neutrality
+						election_frequency = 50
+						elections_allowed = no
+					}
+				create_country_leader = {
+					name = "Philip Vian"
+					desc = "POLITICS_PHILIP_VIAN_DESC"
+					picture = "ENG_Philip_Vian.dds"
+					expire = "1965.1.1"
+					ideology = military_junta
+					traits = {
+					}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+ENG_expand_the_commonwealth = {
+	ENG_the_luso_british_alliance = {
+		available = {
+			original_tag = ENG
+		}
+		allowed = {
+			tag = ENG
+		}
+		available = {
+            POR = {
+				exists = yes
+				has_war = no
+			}
+			NOT = {
+				ENG = {
+					has_war_with = POR
+				}
+			}
+        }
+     	visible = {
+     		POR = {
+				exists = yes
+			}
+        }
+
+		cost = 75
+
+		fire_only_once = yes
+
+		complete_effect = {
+			POR = {
+				country_event = { id = england.9 days = 0 } 
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_reach_out_to_the_netherlands = {
+		available = {
+			original_tag = ENG
+		}
+		allowed = {
+			tag = ENG
+		}
+		available = {
+            HOL = {
+				exists = yes
+				has_war = no
+			}
+			NOT = {
+				ENG = {
+					has_war_with = HOL
+				}
+			}
+        }
+     	visible = {
+     		HOL = {
+				exists = yes
+			}
+        }
+
+		cost = 75
+
+		fire_only_once = yes
+
+		complete_effect = {
+			HOL = {
+				country_event = { id = england.9 days = 0 } 
+			}
+		}
+	}
+
+	ENG_reunite_the_north_sea_empire = {
+		available = {
+			original_tag = ENG
+		}
+		allowed = {
+			tag = ENG
+		}
+		available = {
+            DEN = {
+				exists = yes
+				has_war = no
+			}
+			NOT = {
+				ENG = {
+					has_war_with = DEN
+				}
+			}
+        }
+     	visible = {
+     		DEN = {
+				exists = yes
+			}
+        }
+
+		cost = 75
+
+		fire_only_once = yes
+
+		complete_effect = {
+			DEN = {
+				country_event = { id = england.9 days = 0 } 
+			}
+		}
+	}
+
+	ENG_contact_greece = {
+		available = {
+			original_tag = ENG
+		}
+		allowed = {
+			tag = ENG
+		}
+		available = {
+            GRE = {
+				exists = yes
+				has_war = no
+			}
+			NOT = {
+				ENG = {
+					has_war_with = GRE
+				}
+			}
+        }
+     	visible = {
+     		GRE = {
+				exists = yes
+			}
+        }
+
+		cost = 75
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GRE = {
+				country_event = { id = england.9 days = 0 } 
+			}
+		}
+	}
+
+	ENG_the_caucasus_are_calling = {
+		available = {
+			original_tag = ENG
+		}
+		allowed = {
+			tag = ENG
+		}
+		available = {
+            GEO = {
+				exists = yes
+				has_war = no
+			}
+			NOT = {
+				ENG = {
+					has_war_with = GEO
+				}
+			}
+        }
+     	visible = {
+     		GEO = {
+				exists = yes
+			}
+        }
+
+		cost = 75
+
+		fire_only_once = yes
+
+		complete_effect = {
+			GEO = {
+				country_event = { id = england.9 days = 0 } 
+			}
+		}
+	}
+}

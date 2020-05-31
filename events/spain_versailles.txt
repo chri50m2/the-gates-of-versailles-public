@@ -1,0 +1,104 @@
+﻿################################################
+# Spannish Events - Gates to Versailles Edition#
+################################################
+
+add_namespace = spain.versailles
+
+country_event = { #France want to buy Catalonia
+	id = spain.versailles.1
+	title = spain.versailles.1.t
+	desc = spain.versailles.1.d
+#	picture = GFX_report_event_france_indochinese_independence
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spain.versailles.1.a #We accept
+		SPR = {
+		FRA = { transfer_state = 165 }
+		add_war_support = -0.03
+		add_stability = -0.05
+		add_timed_idea = {
+           idea = SPR_pay_for_catalonia
+           days = 1095
+			}
+		}
+		FRA = {
+			add_timed_idea = {
+				idea = FRA_pay_for_catalonia
+           		days = 1095
+			}
+		}
+	}
+	option = {
+		name = spain.versailles.1.b #We refuse
+		SPR = {
+		add_war_support = 0.05
+		add_stability = 0.07
+		}
+		FRA = {
+			country_event = { days = 1 id = france.43 }
+		}
+	}
+}
+
+country_event = { #France decide to let us Catalonia
+	id = spain.versailles.2
+	title = spain.versailles.2.t
+	desc = spain.versailles.2.d
+#	picture = GFX_report_event_france_indochinese_independence
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spain.versailles.2.a #Great News!
+	}
+}
+
+country_event = { #France declare war on us for not giving Catalonia
+	id = spain.versailles.3
+	title = spain.versailles.3.t
+	desc = spain.versailles.3.d
+#	picture = GFX_report_event_france_indochinese_independence
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = spain.versailles.3.a #Finally!
+	}
+}
+
+country_event = { #France sends us a peace agreement
+	id = spain.versailles.4
+	title = spain.versailles.4.t
+	desc = spain.versailles.4.d
+#	picture = GFX_report_event_france_indochinese_independence
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = spain.versailles.4.a #Fianlly...
+		FRA = {
+		white_peace = SPR
+		FRA = { transfer_state = 165 }
+		}
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}
+
+country_event = { #Franco-Spanish War - France Surrender
+	id = spain.versailles.5
+	title = spain.versailles.5.t
+	desc = spain.versailles.5.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Wise move!
+		name = spain.versailles.5.a
+		add_stability = 0.1
+		add_war_support = 0.1
+}

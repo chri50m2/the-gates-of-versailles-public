@@ -1,0 +1,31 @@
+###########################
+# British Raj Events
+###########################
+
+add_namespace = lichtenstein
+
+#Franz Joseph II time baby
+country_event = {
+	id = lichtenstein.1
+	title = lichtenstein.1.t
+	desc = lichtenstein.1.d
+	#picture =#
+
+	fire_only_once = yes
+
+	hidden = yes
+	
+	option = { #
+		name = lichtenstein.1.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Franz Joseph II"
+			desc = "POLITICS_FRANZ_JOSEPH_II_DESC"
+			picture = "franz_joseph_II_lichtenstein.dds"
+			expire = "1965.1.1"
+			ideology = constitutional_monarchy  
+			traits = {
+				}
+			}
+	}
+}

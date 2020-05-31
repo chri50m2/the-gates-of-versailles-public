@@ -1,0 +1,94 @@
+ideas = {
+
+	country = {
+		BEL_flemmish_famine_1 = {
+			
+			allowed = {
+				original_tag = BEL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = BEL_Flemish_Famine_1
+			
+			modifier = {
+				conscription_factor = -0.15
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				industrial_capacity_factory = -0.15
+				production_speed_arms_factory_factor = -0.15
+				production_speed_industrial_complex_factor = -0.15
+				training_time_army_factor = 0.10
+				army_org_Factor = -0.10
+				planning_speed = -0.10
+				industrial_capacity_dockyard = -0.15
+				monthly_population = -2.0
+			}
+		}
+
+		BEL_flemmish_famine_2 = {
+			
+			allowed = {
+				original_tag = BEL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = BEL_Flemish_Famine_2
+			
+			modifier = {
+				conscription_factor = -0.30
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				industrial_capacity_factory = -0.30
+				production_speed_arms_factory_factor = -0.30
+				production_speed_industrial_complex_factor = -0.30
+				training_time_army_factor = 0.20
+				army_org_Factor = -0.20
+				planning_speed = -0.20
+				industrial_capacity_dockyard = -0.30
+				monthly_population = -4.0
+			}
+		}
+
+		BEL_flemmish_famine_3 = {
+			
+			allowed = {
+				original_tag = BEL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = BEL_Flemish_Famine_3
+			
+			modifier = {
+				conscription_factor = -0.60
+				stability_factor = -0.4
+				war_support_factor = -0.4
+				industrial_capacity_factory = -0.60
+				production_speed_arms_factory_factor = -0.60
+				production_speed_industrial_complex_factor = -0.60
+				training_time_army_factor = 0.40
+				army_org_Factor = -0.40
+				planning_speed = -0.40
+				industrial_capacity_dockyard = -0.60
+				monthly_population = -8.0
+			}
+		}
+	}
+}

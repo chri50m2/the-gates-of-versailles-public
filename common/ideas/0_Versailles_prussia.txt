@@ -1,0 +1,1032 @@
+ideas = {
+	
+	country = {
+
+	
+		GER_okh = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = german_advisors
+
+				removal_cost = -1
+
+				modifier = {
+					command_power_gain_mult = 0.15
+					max_planning = 0.1
+					army_org_factor = 0.1
+					supply_consumption_factor = 0.15
+					military_leader_cost_factor = 1
+					training_time_army_factor = 0.1
+			}
+		}
+
+		GER_golden_century = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+					date < 1940.01.01
+					NOT = {
+						PRS = {
+							has_war_with = FRA
+						}
+					}
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_democratic_drift_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					stability_factor = 0.1
+					war_support_factor = -0.05
+					justify_war_goal_time = 0.5
+					mobilization_speed = -0.1
+			}
+		}
+
+		GER_high_seas_fleet = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_navy_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					navy_capital_ship_attack_factor = 0.1
+					navy_capital_ship_defence_factor = 0.1
+					naval_hit_chance = 0.1
+			}
+		}
+
+		GER_admiral_schools = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_coastal_defense_ships2
+
+				removal_cost = -1
+
+				modifier = {
+					experience_gain_navy_factor = 0.1
+			}
+		}
+
+		GER_submarine_focus = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = the_long_lance
+
+				removal_cost = -1
+
+				modifier = {
+					navy_submarine_attack_factor = 0.1
+					navy_submarine_defence_factor = 0.1
+					navy_max_range_factor = 0.1
+			}
+		}
+
+		GER_submarine_focus2 = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = the_long_lance
+
+				removal_cost = -1
+
+				modifier = {
+					navy_submarine_attack_factor = 0.1
+					navy_submarine_defence_factor = 0.1
+					navy_max_range_factor = 0.1
+			}
+			equipment_bonus = {
+                submarine  = {
+                    build_cost_ic = -0.1 instant = yes
+                }
+            }
+		}
+
+		GER_submarine_focus3 = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = the_long_lance
+
+				removal_cost = -1
+
+				modifier = {
+					navy_submarine_attack_factor = 0.1
+					navy_submarine_defence_factor = 0.1
+					navy_max_range_factor = 0.1
+			}
+			equipment_bonus = {
+                submarine  = {
+                    build_cost_ic = -0.15 instant = yes
+                	}
+            	}
+		}
+
+		GER_air_tree1 = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = strategic_bombing_focus
+
+				removal_cost = -1
+
+				modifier = {
+					air_close_air_support_attack_factor = 0.05
+					air_close_air_support_defence_factor = 0.05
+			}
+		}
+
+		GER_air_tree2 = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = strategic_bombing_focus
+
+				removal_cost = -1
+
+				modifier = {
+					air_close_air_support_attack_factor = 0.05
+					air_close_air_support_defence_factor = 0.05
+					air_strategic_bomber_attack_factor = 0.05
+					air_strategic_bomber_defence_factor = 0.05
+			}
+		}
+
+		GER_air_tree3 = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = strategic_bombing_focus
+
+				removal_cost = -1
+
+				modifier = {
+					air_strategic_bomber_attack_factor = 0.05
+					air_strategic_bomber_defence_factor = 0.05
+			}
+		}
+
+		GER_cult_of_speed_idea = {
+
+				allowed = {
+					original_tag = PRS
+					always = yes
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = FRA_motorized_focus
+
+				removal_cost = -1
+
+				modifier = {
+					army_speed_factor = 0.1
+			}
+		}
+
+		GER_the_stormtrooper = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = chi_army_corruption3
+
+				removal_cost = -1
+
+				modifier = {
+					recon_factor = 0.1
+					army_infantry_attack_factor = 0.1
+					army_infantry_defence_factor = 0.1
+			}
+		}
+
+		GER_both_mil_ideas = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = chi_army_corruption
+
+				removal_cost = -1
+
+				modifier = {
+					recon_factor = 0.1
+					army_infantry_attack_factor = 0.1
+					army_infantry_defence_factor = 0.1
+					army_speed_factor = 0.1
+			}
+		}
+
+		GER_german_military_staff = {
+
+				allowed = {
+					original_tag = DEN
+					always = no
+					NOT = {
+						has_war_with = GER
+					}
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = general_staff
+
+				removal_cost = -1
+
+				modifier = {
+					army_org_factor = 0.15
+					planning_speed = 0.1
+					land_reinforce_rate = 0.1
+					max_command_power = 15
+			}
+		}
+
+		GER_prussian_investment_plan = {
+
+				allowed = {
+					original_tag = DEN
+					always = no
+					NOT = {
+						has_war_with = GER
+					}
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = ger_mefo_bills_payment
+
+				removal_cost = -1
+
+				modifier = {
+					consumer_goods_factor = -0.05
+					production_speed_industrial_complex_factor = 0.15
+					production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		GER_danish_protection_laws = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = prc_low_popular_support3
+
+				removal_cost = -1
+
+				modifier = {
+					conscription_factor = 0.01
+					stability_factor = 0.02
+					war_support_factor = 0.02
+			}
+		}
+
+		GER_czech_protection_laws = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = prc_low_popular_support3
+
+				removal_cost = -1
+
+				modifier = {
+					conscription_factor = 0.01
+					stability_factor = 0.02
+					war_support_factor = 0.02
+			}
+		}
+
+		GER_steel_idea_1 = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_local_self_management
+
+				removal_cost = -1
+
+				modifier = {
+					local_resources_factor = 0.05
+					production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+
+		GER_steel_idea_2 = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_local_self_management
+
+				removal_cost = -1
+
+				modifier = {
+					local_resources_factor = 0.1
+					production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		GER_steel_idea_3 = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_local_self_management
+
+				removal_cost = -1
+
+				modifier = {
+					local_resources_factor = 0.15
+					production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		GER_steel_idea_1_2 = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_local_self_management
+
+				removal_cost = -1
+
+				modifier = {
+					local_resources_factor = 0.05
+					production_factory_efficiency_gain_factor = 0.15
+					production_factory_start_efficiency_factor = 0.075
+			}
+		}
+
+		GER_steel_idea_3_1 = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_local_self_management
+
+				removal_cost = -1
+
+				modifier = {
+					local_resources_factor = 0.15
+					production_factory_efficiency_gain_factor = 0.05
+					local_building_slots_factor = 0.075
+			}
+		}
+
+			GER_steel_idea_1_2_1 = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_local_self_management
+
+				removal_cost = -1
+
+				modifier = {
+					local_resources_factor = 0.05
+					production_factory_efficiency_gain_factor = 0.15
+					production_factory_start_efficiency_factor = 0.15
+			}
+		}
+
+		GER_steel_idea_3_1_1 = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_local_self_management
+
+				removal_cost = -1
+
+				modifier = {
+					local_resources_factor = 0.15
+					production_factory_efficiency_gain_factor = 0.05
+					local_building_slots_factor = 0.15
+			}
+		}
+
+		GER_oil_crisis_idea = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_morale_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					production_oil_factor = -0.8
+					local_resources_factor = -0.25
+					fuel_gain_factor = -0.6
+			}
+		}
+
+		GER_improved_trade_deals = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_flexible_foreign_policy2
+
+				removal_cost = -1
+
+				modifier = {
+					trade_opinion_factor = 0.25
+			}
+		}
+
+		GER_even_better_trade_deals = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_flexible_foreign_policy2
+
+				removal_cost = -1
+
+				modifier = {
+					trade_opinion_factor = 0.5
+					min_export = 0.1
+			}
+		}
+
+		GER_local_companies = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_flexible_foreign_policy2
+
+				removal_cost = -1
+
+				modifier = {
+					trade_opinion_factor = 0.25
+					production_oil_factor = 0.1
+					industrial_capacity_factory = 0.05
+			}
+		}
+
+		GER_oil_monopoly = {
+
+				allowed = {
+					original_tag = PRS
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_morale_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					production_oil_factor = 0.2
+					fuel_gain_factor = 0.3
+					trade_opinion_factor = 0.15
+			}
+		}
+
+		GER_shattered_military = {
+
+				allowed = {
+					original_tag = WST
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				picture = generic_morale_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					defence = -0.3
+					offence = -0.1
+					max_command_power = -75
+					land_reinforce_rate = -0.35
+					max_planning = -0.4
+					army_org_factor = -0.2
+			}
+		}
+	}
+
+		#MINISTERS
+
+		head_of_state = {
+			GER_franz_von_papen_hog = {
+
+			picture = GER_minister_franz_von_papen
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_starting_cabinet
+			}
+			
+			traits = {
+				pragmatic_officer
+				conservative
+				}
+			}
+
+		GER_erich_koch_weser_hog = {
+
+			picture = GER_minister_erich_koch_weser
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_DDP_Victory
+			}
+			
+			traits = {
+				founder_of_DDP
+				liberal_trait
+				}
+			}
+
+		GER_alfred_hugenberg_hog = {
+
+			picture = GER_minister_alfred_hugenberg
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_DNVP_Victory
+			}
+			
+			traits = {
+				media_mogul
+				conservative
+				}
+			}
+
+		GER_otto_wels_hog = {
+
+			picture = GER_minister_otto_wels
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_SPD_Victory
+			}
+			
+			traits = {
+				workers_counciler
+				socdem
+				}
+			}
+		}
+
+		econ_minister = {
+			GER_hans_luther_eco = {
+
+			picture = GER_minister_hans_luther
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_starting_cabinet
+			}
+			
+			traits = {
+				head_of_reichsbank
+				conservative
+				}
+			}
+
+		GER_hjalmar_schacht_eco = {
+
+			picture = GER_minister_hjalmar_schacht
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_DDP_Victory
+			}
+			
+			traits = {
+				powerful_economist
+				liberal_trait
+				}
+			}
+
+		GER_carl_friedrich_goerdeler_eco = {
+
+			picture = GER_minister_carl_friedrich_goerdeler
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_DNVP_Victory
+			}
+			
+			traits = {
+				inflation_controller
+				conservative
+				}
+			}
+
+		GER_robert_schmidt_eco = {
+
+			picture = GER_minister_robert_schmidt
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_SPD_Victory
+			}
+			
+			traits = {
+				trade_unionist
+				socdem
+				}
+			}
+		}
+
+		foreign_minister = {
+			GER_julius_curtius_for = {
+
+			picture = GER_minister_julius_curtius
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_starting_cabinet
+			}
+			
+			traits = {
+				economic_opportunist
+				conservative
+				}
+			}
+
+		GER_walther_rathenau_for = {
+
+			picture = GER_minister_walther_rathenau
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_DDP_Victory
+			}
+			
+			traits = {
+				prime_trader
+				liberal_trait
+				}
+			}
+
+		GER_otto_christian_archibald_von_bismarck_for = {
+
+			picture = GER_minister_otto_christian_archibald_von_bismarck
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_DNVP_Victory
+			}
+			
+			traits = {
+				heir_of_bismarck
+				conservative
+				}
+			}
+
+		GER_otto_gessler_for = {
+
+			picture = GER_minister_otto_gessler
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_SPD_Victory
+			}
+			
+			traits = {
+				army_rearmer
+				socdem
+				}
+			}
+		}
+
+		interior_minister = {
+			GER_ernst_scholz_int = {
+
+			picture = GER_minister_ernst_scholz
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_starting_cabinet
+			}
+			
+			traits = {
+				veteran_lawyer
+				liberal_trait
+				}
+			}
+
+		GER_wilhelm_kulz_int = {
+
+			picture = GER_minister_wilhelm_kulz
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_DDP_Victory
+			}
+			
+			traits = {
+				party_establishment
+				liberal_trait
+				}
+			}
+
+		GER_gerhard_von_kanitz_int = {
+
+			picture = GER_minister_gerhard_von_kanitz
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_DNVP_Victory
+			}
+			
+			traits = {
+				food_and_agriculture
+				conservative
+				}
+			}
+
+		GER_gustav_bauer_int = {
+
+			picture = GER_minister_gustav_bauer
+			
+			allowed = {
+				original_tag = PRS
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = GER_SPD_Victory
+			}
+			
+			traits = {
+				national_labourer
+				socdem
+				}
+			}
+		}
+}

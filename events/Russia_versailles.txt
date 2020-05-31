@@ -1,0 +1,589 @@
+add_namespace = russia
+
+##Loads in Battlecruisers
+country_event = {
+	id = russia.1
+	title = russia.1.t
+	desc = russia.1.d
+
+	hidden = yes
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { # 
+		name = russia.1.a
+		load_oob = "SOV_battlecruiser_deal_legacy"
+				}
+			}
+
+country_event = {
+	id = russia.2
+	title = russia.2.t
+	desc = russia.2.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = russia.2.a
+		load_oob = "SOV_battlecruiser_deal_mtg"
+				}
+			}
+
+##Loads in Carrier
+country_event = {
+	id = russia.3
+	title = russia.3.t
+	desc = russia.3.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = russia.3.a
+		load_oob = "SOV_tsar_carrier_legacy"
+				}
+			}
+
+country_event = {
+	id = russia.4
+	title = russia.4.t
+	desc = russia.4.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = russia.4.a
+		load_oob = "SOV_tsar_carrier_mtg"
+				}
+			}
+
+#ARMS EXPORT
+country_event = {
+	id = russia.5
+	title = russia.5.t
+	desc = russia.5.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Make cheap guns, sell to all
+		name = russia.5.a
+			add_timed_idea = {
+    					idea = SOV_arms_exports_1
+    					days = 150
+					}
+				}
+
+	option = { # Make expensive guns to army
+		name = russia.5.b
+			add_timed_idea = {
+    					idea = SOV_arms_exports_2
+    					days = 150
+						}
+					}
+				}
+
+#FIRST FREE ELECTIONS
+country_event = {
+	id = russia.6
+	title = russia.6.t
+	desc = russia.6.d
+	
+	picture = GFX_report_event_emergency_troika
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Let the future be fair and free
+		name = russia.6.a
+			hidden_effect = {
+				set_country_flag = SOV_free_elections
+				}
+			}
+	option = { #Rig it for the winners
+		name = russia.6.b
+			hidden_effect = {
+				set_country_flag = SOV_rig_elections
+					}
+				}
+			}
+
+#FALL OF RUSSIAN ASSEMBLY
+country_event = {
+	id = russia.7
+	title = russia.7.t
+	desc = russia.7.d
+	
+	picture = GFX_report_event_sov_grand_coalition
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #A more liberal Russia
+		name = russia.7.a
+			create_country_leader = {
+			name = "Pavel Ryabushinsky"
+			desc = "POLITICS_PAVEL_RYABUSHINSKY_DESC"
+			picture = "SOV_Pavel_Ryabushinsky.dds"
+			expire = "1965.1.1"
+			ideology = progressive_conservatism
+			traits = {
+					}
+				}
+		add_popularity = { 
+			ideology = democratic
+			popularity = 0.2
+				}
+
+				hidden_effect = {
+					set_party_name = { 
+    					ideology = democratic 
+   						long_name = SOV_democratic_party_17_long
+   						name = SOV_democratic_party_17
+					}
+				}
+
+			}
+		}
+
+#SPIDER'S WEB
+country_event = {
+	id = russia.8
+	title = russia.8.t
+	desc = russia.8.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #We have our rat
+		name = russia.8.a
+			add_war_support = 0.005
+			hidden_effect = {
+				clr_country_flag = SOV_rear_admiral_flag
+				}
+			}
+		}
+
+#A DEAD AGENT
+country_event = {
+	id = russia.9
+	title = russia.9.t
+	desc = russia.9.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Prepare his casket
+		name = russia.9.a
+			add_manpower = -1
+			}
+		}
+
+#SHIP GONE ROGUE
+country_event = {
+	id = russia.10
+	title = russia.10.t
+	desc = russia.10.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #Things are reaching a boiling point
+		name = russia.10.a
+			add_manpower = -4000
+			}
+		}
+
+#CONFRONTIG ABASSOV
+country_event = {
+	id = russia.11
+	title = russia.11.t
+	desc = russia.11.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #A name was all that we needed
+		name = russia.11.a
+		add_war_support = 0.005
+		add_manpower = -1
+		country_event = { id = russia.12 days = 10 }
+			hidden_effect = {
+				clr_country_flag = SOV_secret_police_flag
+				}
+			}
+		}
+
+#CONFRONTING VLASOV
+country_event = {
+	id = russia.12
+	title = russia.12.t
+	desc = russia.12.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { #A name was all that we needed
+		name = russia.12.a
+		add_manpower = -20000
+		652 = {
+			remove_building = {
+    			type = infrastructure
+   				level = 2
+			}
+		}
+			hidden_effect = {
+				clr_country_flag = SOV_secret_police_flag
+				}
+			}
+		}
+
+#MONTHLY REPORT 1
+country_event = {
+	id = russia.13
+	title = russia.13.t
+	desc = russia.13.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.13.a
+		add_political_power = -50
+		add_manpower = -500
+		hidden_effect = {
+		country_event = { id = russia.14 days = 30 }
+			}
+		}
+	}
+
+#MONTHLY REPORT 2
+country_event = {
+	id = russia.14
+	title = russia.14.t
+	desc = russia.14.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.14.a
+		add_stability = 0.025
+		hidden_effect = {
+				clr_country_flag = SOV_influencer_flag
+				}
+			}
+		}
+
+#KOLCHAK IS DEAD
+country_event = {
+	id = russia.15
+	title = russia.15.t
+	desc = russia.15.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.15.a
+		add_stability = 0.1
+			}
+		}
+
+#CAPTURING VONSIATSKY
+country_event = {
+	id = russia.16
+	title = russia.16.t
+	desc = russia.16.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.16.a
+		add_popularity = { 
+			ideology = fascism
+			popularity = 0.075
+				}
+		hidden_effect = {
+				clr_country_flag = SOV_general_secretary_flag
+				}
+			}
+		}
+
+#NAVAL BUDGET
+country_event = {
+	id = russia.17
+	title = russia.17.t
+	desc = russia.17.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.17.a
+		add_ideas = SOV_vasili_altfater
+			hidden_effect = {
+				set_country_flag = vasili_altfater_flag
+				}
+			}
+	option = {
+		name = russia.17.b
+		add_ideas = SOV_eduard_pantserzhanskiy
+			hidden_effect = {
+				set_country_flag = eduard_pantserzhanskiy_flag
+				}
+			}
+		}
+
+#REMEMBERING KERENSKY
+country_event = {
+	id = russia.18
+	title = russia.18.t
+	desc = russia.18.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.18.a
+			add_political_power = 5
+			}
+		}
+
+#BYELORUSSIA REFERENDUM
+country_event = {
+	id = russia.19
+	title = russia.19.t
+	desc = russia.19.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.19.a
+			ai_chance = {
+			factor = 85
+				}
+				add_stability = 0.1
+				add_political_power = 100
+			}
+
+	option = {
+		name = russia.19.b
+			ai_chance = {
+			factor = 15
+				}
+				country_event = { id = russia.20 days = 0 } 	
+			}
+		}
+
+#BYELORUSSIA REFERENDUM
+country_event = {
+	id = russia.20
+	title = russia.20.t
+	desc = russia.20.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.20.a
+			annex_country = {
+    				target = BLR
+    				transfer_troops = yes
+				}
+			}
+		}
+
+#APRROACHING RADICAL GENERALS
+country_event = {
+	id = russia.21
+	title = russia.21.t
+	desc = russia.21.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.21.a
+			add_war_support = 0.01
+			}
+		}
+
+#RUSSIAN REVOLUTION
+country_event = {
+	id = russia.22
+	title = russia.22.t
+	desc = russia.22.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.22.a
+
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.2
+				}
+			set_politics = {
+				ruling_party = communism
+				election_frequency = 50
+				elections_allowed = yes
+				}
+
+				add_war_support = 0.1
+
+				add_stability = -0.3
+
+				custom_effect_tooltip = new_cabinet_tt
+
+				hidden_effect = {
+					news_event = {
+    					id = news.355
+    					days = 1
+					}
+
+					unlock_decision_tooltip = SOV_rename_imperial_cities
+
+					set_cosmetic_tag = SOV_Russian_Soviet_Republic
+
+					add_ideas = {
+						SOV_lazar_kaganovich_hos
+						SOV_grigori_sokolnikov_eco
+						SOV_shalva_eliava_for
+						SOV_lavrentiy_beria_int
+					}
+				}
+			}
+		}
+
+#THE MILITIA QUESTION
+country_event = {
+	id = russia.23
+	title = russia.23.t
+	desc = russia.23.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.23.a
+
+			delete_unit_template_and_units = {
+    				division_template = "Krestyanskiy Militseyskiy Batalon"
+				}
+			add_stability = 0.1
+			add_war_support = -0.1
+			}
+
+	option = {
+		name = russia.23.b
+				add_war_support = 0.05
+			}
+		}
+
+#REMEMBERING PETER THE GREAT
+country_event = {
+	id = russia.24
+	title = russia.24.t
+	desc = russia.24.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.24.a
+				add_war_support = 0.01
+			}
+		}
+
+#END OF THE TSAR
+country_event = {
+	id = russia.25
+	title = russia.25.t
+	desc = russia.25.d
+	
+	#picture =#
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = russia.25.a
+				add_war_support = 0.01
+				add_popularity = { 
+					ideology = monarchist
+					popularity = -1
+				}
+			}
+		}

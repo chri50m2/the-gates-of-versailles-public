@@ -1,0 +1,196 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+france_antagonize_neighbours = {
+	enable = {
+		original_tag = FRA
+	}
+	abort = {
+		ITA = {
+			exists = no
+		}
+		BEL = {
+			exists = no
+		}
+		HOL = {
+			exists = no
+		}
+		HAN = {
+			exists = no
+		}
+		SAX = {
+			exists = no
+		}
+		BAV = {
+			exists = no
+		}
+		WUR = {
+			exists = no
+		}
+		AUS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "AUS"			
+		value = 500
+	}
+	ai_strategy = {
+		type = protect
+		id = "AUS"			
+		value = 250
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "WUR"			
+		value = 500
+	}
+	ai_strategy = {
+		type = protect
+		id = "WUR"			
+		value = 250
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "BAV"			
+		value = 500
+	}
+	ai_strategy = {
+		type = protect
+		id = "BAV"			
+		value = 250
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SAX"			
+		value = 500
+	}
+	ai_strategy = {
+		type = protect
+		id = "SAX"			
+		value = 250
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HAN"			
+		value = 500
+	}
+	ai_strategy = {
+		type = protect
+		id = "HAN"			
+		value = 250
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "HOL"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "HOL"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "HOL"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HOL"			
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ITA"			
+		value = 500
+	}
+	ai_strategy = {
+		type = protect
+		id = "ITA"			
+		value = 250
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "BEL"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "BEL"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "BEL"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "BEL"			
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "PRS"			
+		value = 5000
+	}
+	ai_strategy = {
+		type = protect
+		id = "PRS"			
+		value = 5000
+	}
+
+
+	ai_strategy = {
+		type = antagonize
+		id = "ENG"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "ENG"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "ENG"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ENG"			
+		value = 1000
+	}
+}
+
+FRA_you_should_be_prepared_for_war = {
+
+	enable = {
+		tag = FRA
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+        type = force_build_armies
+        value = 200
+    }
+}

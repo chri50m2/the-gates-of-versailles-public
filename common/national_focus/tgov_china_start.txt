@@ -1,0 +1,680 @@
+########################################
+### China Starting Political Focuses ###
+########################################
+### HS1San/Senku Ishigami ##############
+########################################
+
+focus_tree = {
+	id = tgov_china_start_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = CHI
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 1000 }
+	
+	shared_focus = CHI_shared_continue_land_reform
+	shared_focus = CHI_shared_state_of_the_army
+	shared_focus = CHI_shared_aviation_focus
+	shared_focus = CHI_shared_naval_focus
+	shared_focus = CHI_shared_foreign_policy
+	
+	#focus = {
+	#	id = CHI_start_
+	#	icon = GFX_
+	#	prerequisite = { focus = }
+	#	mutually_exclusive = { focus =  }
+	#	x = -3
+	#	y = 0
+	#	relative_position_id =
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	complete_tooltip = {
+	#
+	#	}
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}
+	
+### Political ###
+
+	focus = {
+
+		id = CHI_start_legacy_of_sun_yat_sen
+		icon = GFX_focus_generic_china1
+		x = 6
+		y = 0
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_focus_on_the_economy
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { 
+			focus = CHI_start_legacy_of_sun_yat_sen 
+		}
+		x = -2
+		y = 1
+		relative_position_id = CHI_start_legacy_of_sun_yat_sen
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			hidden_effect = {
+				set_country_flag = CHI_focus_on_the_economy_picked
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_focus_on_chinese_unification
+		icon = GFX_focus_chi_one_china_policy
+		prerequisite = { 
+			focus = CHI_start_legacy_of_sun_yat_sen 
+		}
+		x = 0
+		y = 1
+		relative_position_id = CHI_start_legacy_of_sun_yat_sen
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_political_power = 100
+			hidden_effect = {
+				set_country_flag = CHI_focus_on_chinese_unification_picked
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_focus_on_the_army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { 
+			focus = CHI_start_legacy_of_sun_yat_sen 
+		}
+		x = 2
+		y = 1
+		relative_position_id = CHI_start_legacy_of_sun_yat_sen
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+		
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			hidden_effect = {
+				set_country_flag = CHI_focus_on_the_army_picked
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_status_of_the_political_tutelage
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { 
+			focus = CHI_start_focus_on_the_economy
+		}
+		prerequisite = { 
+			focus = CHI_start_focus_on_chinese_unification
+		}
+		prerequisite = { 
+			focus = CHI_start_focus_on_the_army
+		}
+		x = 0
+		y = 2
+		relative_position_id = CHI_start_legacy_of_sun_yat_sen
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+			country_event = china_versailles.1
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_start_continue_the_political_tutelage
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { 
+			focus = CHI_start_status_of_the_political_tutelage 
+		}
+		x = 6
+		y = 3
+		cost = 5
+		
+		allow_branch = {
+			has_country_flag = CHI_continue_the_political_tutelage_picked
+		}
+	
+		available = {
+
+		}
+	
+		bypass = {
+			has_country_flag = CHI_continue_the_political_tutelage_picked
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_eliminate_wang_jingwei
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { 
+			focus = CHI_start_continue_the_political_tutelage 
+		}
+		x = -1
+		y = 1
+		relative_position_id = CHI_start_continue_the_political_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			country_event = china_versailles.2
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_eliminate_liao_zhongkai
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { 
+			focus = CHI_start_continue_the_political_tutelage 
+		}
+		x = 1
+		y = 1
+		relative_position_id = CHI_start_continue_the_political_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			country_event = china_versailles.3
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_centralise_kmt_rule
+		icon = GFX_focus_prc_remove_chiang_kai_shek
+		prerequisite = { 
+			focus = CHI_start_eliminate_wang_jingwei 
+		}
+		prerequisite = { 
+			focus = CHI_start_eliminate_liao_zhongkai 
+		}
+		x = 0
+		y = 2
+		relative_position_id = CHI_start_continue_the_political_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.20
+			}
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_start_a_new_china_continue
+		icon = GFX_focus_generic_china1
+		prerequisite = { 
+			focus = CHI_start_centralise_kmt_rule 
+		}
+		x = 0
+		y = 3
+		relative_position_id = CHI_start_continue_the_political_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_a_new_china_idea
+				days = 140
+			}
+			hidden_effect = {
+				load_focus_tree = china_continue_focus
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_start_end_the_political_tutelage
+		icon = GFX_goal_support_democracy
+		prerequisite = { 
+			focus = CHI_start_status_of_the_political_tutelage
+		}
+		x = 6
+		y = 3
+		cost = 5
+		
+		allow_branch = {
+			has_country_flag = CHI_end_the_political_tutelage_picked 
+		}
+	
+		available = {
+
+		}
+	
+		bypass = {
+			has_country_flag = CHI_end_the_political_tutelage_picked 
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_the_new_constitution
+		icon = GFX_focus_generic_treaty
+		prerequisite = { 
+			focus = CHI_start_end_the_political_tutelage 
+		}
+		x = 0
+		y = 1
+		relative_position_id = CHI_start_end_the_political_tutelage
+		cost = 10
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			country_event = china_versailles.4
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_hold_free_elections
+		icon = GFX_focus_usa_voter_registration_act
+		prerequisite = { 
+			focus = CHI_start_the_new_constitution 
+		}
+		x = -1
+		y = 2
+		relative_position_id = CHI_start_end_the_political_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			country_event = china_versailles.5
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_hold_rigged_elections
+		icon = GFX_focus_usa_voter_registration_act
+		prerequisite = { 
+			focus = CHI_start_the_new_constitution 
+		}
+		x = 1
+		y = 2
+		relative_position_id = CHI_start_end_the_political_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			country_event = china_versailles.6
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+
+	focus = {
+
+		id = CHI_start_a_new_china_end
+		icon = GFX_focus_generic_china1
+		prerequisite = { 
+			focus = CHI_start_hold_free_elections 
+			focus = CHI_start_hold_rigged_elections
+		}
+		x = 0
+		y = 3
+		relative_position_id = CHI_start_end_the_political_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_a_new_china_idea
+				days = 140
+			}
+			hidden_effect = {
+				load_focus_tree = china_end_focus
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+
+}

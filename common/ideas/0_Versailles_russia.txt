@@ -1,0 +1,1200 @@
+ideas = {
+	
+		country = {
+			
+		SOV_disorganised_army = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_purge
+
+				removal_cost = -1
+
+				modifier = {
+					army_org_factor = -0.3
+					supply_consumption_factor = 0.2
+					land_reinforce_rate = -0.1
+					experience_gain_army_factor = 0.1
+					max_command_power = -25
+					command_power_gain_mult = -0.5
+					}
+					research_bonus = {
+						land_doctrine = -0.5
+				}
+		}
+
+		SOV_disorganised_army0 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_purge
+
+				removal_cost = -1
+
+				modifier = {
+					army_org_factor = -0.3
+					supply_consumption_factor = 0.2
+					land_reinforce_rate = -0.1
+					experience_gain_army_factor = 0.1
+					max_command_power = -25
+					command_power_gain_mult = -0.5
+					acclimatization_cold_climate_gain_factor = 0.1
+					winter_attrition_factor = -0.25
+					}
+					research_bonus = {
+						land_doctrine = -0.5
+				}
+		}
+
+		SOV_disorganised_army1 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_purge
+
+				removal_cost = -1
+
+				modifier = {
+					army_org_factor = -0.3
+					supply_consumption_factor = 0.2
+					land_reinforce_rate = -0.1
+					experience_gain_army_factor = 0.1
+					max_command_power = -25
+					command_power_gain_mult = -0.5
+					acclimatization_cold_climate_gain_factor = 0.1
+					winter_attrition_factor = -0.25
+					recon_factor = 0.03
+					}
+					research_bonus = {
+						land_doctrine = -0.5
+				}
+		}
+
+		SOV_disorganised_army2 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_purge
+
+				removal_cost = -1
+
+				modifier = {
+					army_org_factor = -0.3
+					land_reinforce_rate = -0.1
+					experience_gain_army_factor = 0.1
+					max_command_power = -25
+					command_power_gain_mult = -0.5
+					}
+					research_bonus = {
+						land_doctrine = -0.5
+				}
+		}
+
+		SOV_disorganised_army3 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_purge
+
+				removal_cost = -1
+
+				modifier = {
+					army_org_factor = -0.3
+					supply_consumption_factor = 0.2
+					land_reinforce_rate = -0.1
+					experience_gain_army_factor = 0.1
+					max_command_power = -25
+					command_power_gain_mult = -0.5
+					defence = 0.1
+					}
+					research_bonus = {
+						land_doctrine = -0.5
+				}
+		}
+
+		SOV_disorganised_army4 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_purge
+
+				removal_cost = -1
+
+				modifier = {
+					army_org_factor = -0.3
+					supply_consumption_factor = 0.2
+					land_reinforce_rate = -0.1
+					experience_gain_army_factor = 0.1
+					max_command_power = -25
+					command_power_gain_mult = -0.5
+					defence = 0.1
+					no_supply_grace = 48
+					}
+					research_bonus = {
+						land_doctrine = -0.5
+				}
+		}
+
+		SOV_unmatched_airforce = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_fighter_production_diverted
+
+				removal_cost = -1
+
+				modifier = {
+					air_accidents_factor = 0.2
+					air_range_factor = -0.15
+					air_ace_generation_chance_factor = -0.1
+					}
+					research_bonus = {
+						air_doctrine = -0.5
+				}
+		}
+
+		SOV_unmatched_navy = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_navy_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					navy_max_range_factor = -0.3
+					naval_hit_chance = -0.2
+					naval_coordination = -0.1
+					naval_speed_factor = -0.1
+					}
+					research_bonus = {
+						naval_doctrine = -0.5
+				}
+		}
+
+		SOV_outplayed_in_every_corner = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = FRA_scw_intervention_republicans_focus
+
+				removal_cost = -1
+
+				modifier = {
+					consumer_goods_factor = 0.1
+					army_core_defence_factor = 0.15
+					max_dig_in = 2
+			}
+		}
+
+		SOV_agricultural_economy = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_agrarian_reform
+
+				removal_cost = -1
+
+				modifier = {
+					production_speed_arms_factory_factor = -0.1
+					production_speed_industrial_complex_factor = -0.1
+					min_export = 0.1
+			}
+		}
+
+		SOV_unmatched_navy_uppen_morale = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_navy_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					navy_max_range_factor = -0.3
+					naval_hit_chance = -0.1
+					naval_coordination = -0.1
+					naval_speed_factor = -0.1
+					}
+					research_bonus = {
+						naval_doctrine = -0.5
+				}
+		}
+
+		SOV_unmathced_airforce_airbonus0 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_fighter_production_diverted
+
+				removal_cost = -1
+
+				modifier = {
+					air_accidents_factor = 0.2
+					air_range_factor = -0.05
+					air_ace_generation_chance_factor = -0.1
+					}
+					research_bonus = {
+						air_doctrine = -0.5
+				}
+		}
+
+		SOV_unmathced_airforce_airbonus_thinktank = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_fighter_production_diverted
+
+				removal_cost = -1
+
+				modifier = {
+					air_accidents_factor = 0.2
+					air_range_factor = -0.15
+					air_ace_generation_chance_factor = -0.1
+					}
+					research_bonus = {
+						air_doctrine = -0.2
+				}
+		}
+
+		SOV_unmathced_airforce_night_bonus = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_fighter_production_diverted
+
+				removal_cost = -1
+
+				modifier = {
+					air_accidents_factor = 0.2
+					air_range_factor = -0.05
+					air_ace_generation_chance_factor = -0.1
+					air_night_penalty = -0.1
+					}
+					research_bonus = {
+						air_doctrine = -0.5
+				}
+		}
+
+		SOV_legalized_unions = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_production_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					industrial_capacity_factory = 0.1
+					}
+		}
+
+		SOV_workers_rights = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_production_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					industrial_capacity_factory = 0.12
+					}
+		}
+
+		SOV_workers_rights1 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_production_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					industrial_capacity_factory = 0.15
+					consumer_goods_factor = 0.05
+					}
+		}
+
+		SOV_privatised_fortification_companies_idea = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = FRA_fortification_focus
+
+				removal_cost = -1
+
+				modifier = {
+					production_speed_bunker_factor = 0.05
+					production_speed_coastal_bunker_factor = 0.05
+		}
+	}
+
+		SOV_nationalized_resource_industry_idea = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_exploit_mines
+
+				removal_cost = -1
+
+				modifier = {
+					production_factory_efficiency_gain_factor = 0.05
+					local_resources_factor = 0.05
+		}
+	}
+
+	SOV_rusminkon = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_exploit_mines
+
+				removal_cost = -1
+
+				modifier = {
+					production_factory_efficiency_gain_factor = 0.1
+					production_speed_buildings_factor = 0.1
+					local_resources_factor = 0.1
+		}
+	}
+
+	SOV_arms_exports_1 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = MEX_politicised_army
+
+				removal_cost = -1
+
+				modifier = {
+					min_export = -0.1
+					}
+			equipment_bonus = {
+                infantry_weapons1 = {
+                    build_cost_ic = -0.1 instant = yes
+                }
+            }
+	}
+
+	SOV_arms_exports_2 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = MEX_politicised_army
+
+				removal_cost = -1
+
+				modifier = {
+					army_morale_factor = 0.1
+					industrial_capacity_factory = -0.1
+		}
+	}
+
+	SOV_efficient_assembly_line = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_goods_red_bonus
+
+				removal_cost = -1
+
+				modifier = {
+					production_factory_max_efficiency_factor = 0.1
+		}
+	}
+
+	SOV_shipbuilding_speedy = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = generic_sea_focused_navy
+
+				removal_cost = -1
+
+				modifier = {
+					industrial_capacity_dockyard = 0.1
+		}
+	}
+
+	SOV_all_workers_equal1 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = radical_socialist_influence
+
+				removal_cost = -1
+
+				modifier = {
+					industrial_capacity_factory = 0.1
+					industrial_capacity_dockyard = 0.1
+		}
+	}
+	SOV_all_workers_equal2 = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = radical_socialist_influence
+
+				removal_cost = -1
+
+				modifier = {
+					industrial_capacity_factory = 0.1
+					industrial_capacity_dockyard = 0.1
+					local_building_slots_factor = 0.2
+		}
+	}
+
+	SOV_defense_ministry_IDEA = {
+
+				removal_cost = -1
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+				}
+
+				picture = ast_volunteer_defence_corps
+
+				removal_cost = -1
+
+				modifier = {
+					defensive_war_stability_factor = 0.1
+					offensive_war_stability_factor = 0.1
+					surrender_limit = 0.2
+					production_speed_arms_factory_factor = 0.1
+		}
+	}
+}
+
+	econ_minister = {
+		SOV_alexander_chayanov_eco = {
+
+			picture = SOV_minister_alexander_chayanov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = SOV_alexei_khvostov_hos_flag
+			}
+			
+			traits = {
+				radical_agrarian
+				socdem
+				}
+			}
+
+		SOV_grigori_sokolnikov_eco = {
+
+			picture = SOV_minister_grigori_sokolnikov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = russian_revolution_flag
+			}
+			
+			traits = {
+				industrial_renewalist
+				revjac
+				}
+			}
+
+		SOV_nikolai_ivanovich_nikiforov_eco = {
+
+			picture = SOV_minister_nikolai_ivanovich_nikiforov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = russian_fascism_flag
+			}
+			
+			traits = {
+				economic_historian
+				fascist
+				}
+			}
+
+		SOV_pavel_ryabuchinsky_eco = {
+
+			picture = SOV_minister_pavel_ryabushinsky
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = SOV_conversative_win_election_flag
+			}
+			
+			traits = {
+				factory_owner
+				conservative
+				}
+			}
+
+		SOV_alexander_samoilovich_lokerman_eco = {
+
+			picture = SOV_minister_alexander_samoilovich_lokerman
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = menshevik_in_charge
+			}
+			
+			traits = {
+				menshevik_unionist
+				socdem
+				}
+			}
+
+		SOV_alexander_konovalov_eco = {
+
+			picture = SOV_minister_alexander_konovalov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = liberals_won_election
+			}
+			
+			traits = {
+				liberal_businessman
+				liberal_trait
+				}
+			}
+	}
+
+	interior_minister = {
+		SOV_pyotr_nikolaevich_apraksinv_int = {
+
+			picture = SOV_minister_pyotr_nikolaevich_apraksinv
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = SOV_alexei_khvostov_hos_flag
+			}
+			
+			traits = {
+				efficient_count
+				conservative
+				}
+			}
+
+		SOV_lavrentiy_beria_int = {
+
+			picture = SOV_minister_lavrentiy_beria
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = russian_revolution_flag
+			}
+			
+			traits = {
+				king_of_terror
+				revjac
+				}
+			}
+
+		SOV_anastasy_vonsiatsky_int = {
+
+			picture = SOV_minister_anastasy_vonsiatsky
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = russian_fascism_flag
+			}
+			
+			traits = {
+				militarist_fascist
+				fascist
+				}
+			}
+
+		SOV_stepan_petrovich_beletsky_int = {
+
+			picture = SOV_minister_stepan_petrovich_beletsky
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = SOV_conversative_win_election_flag
+			}
+			
+			traits = {
+				police_governor
+				conservative
+				}
+			}
+
+		SOV_vladimir_dmitrivich_vilensky_sibiryakov_int = {
+
+			picture = SOV_minister_vladimir_dmitrivich_vilensky_sibiryakov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = menshevik_in_charge
+			}
+			
+			traits = {
+				siberian_general
+				socdem
+				}
+			}
+		
+		SOV_vasily_maklakov_int = {
+
+			picture = SOV_minister_vasily_maklakov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = liberals_won_election
+			}
+			
+			traits = {
+				progressive_reformer
+				liberal_trait
+				}
+			}
+	}
+
+	foreign_minister = {
+		SOV_vladimir_mitrofanovich_purishkevich_for = {
+
+			picture = SOV_minister_vladimir_mitrofanovich_purishkevich
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = SOV_alexei_khvostov_hos_flag
+			}
+			
+			traits = {
+				staunch_problem_solver
+				conservative
+				}
+			}
+		SOV_shalva_eliava_for = {
+
+			picture = SOV_minister_shalva_eliava
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = russian_revolution_flag
+			}
+			
+			traits = {
+				revolutionary_commissar
+				revjac
+				}
+			}
+
+		SOV_anna_nikolaevna_volkova_for = {
+
+			picture = SOV_minister_anna_nikolaevna_volkova
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = russian_fascism_flag
+			}
+			
+			traits = {
+				fascist_cryptographer
+				fascist
+				}
+			}
+		
+		SOV_pavel_galaktionovich_smelov_for = {
+
+			picture = SOV_minister_pavel_galaktionovich_smelov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = SOV_conversative_win_election_flag
+			}
+			
+			traits = {
+				everyday_russian
+				conservative
+				}
+			}
+
+		SOV_pyotr_lazarevich_voikov_for = {
+
+			picture = SOV_minister_pyotr_lazarevich_voikov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = menshevik_in_charge
+			}
+			
+			traits = {
+				treaty_abider
+				socdem
+				}
+			}
+
+		SOV_alexander_nikolaevich_mortars_for = {
+
+			picture = SOV_minister_alexander_nikolaevich_mortars
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = liberals_won_election
+			}
+			
+			traits = {
+				inexperienced_diplomat
+				liberal_trait
+				}
+			}
+
+		SOV_mikhail_ivanovich_maslennikov_for = {
+
+			picture = SOV_minister_mikhail_ivanovich_maslennikov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = liberals_won_election
+				has_completed_focus = SOV_reshuffling_cabinet_positions
+			}
+			
+			traits = {
+				diplomatic_reformer
+				liberal_trait
+				}
+			}
+	}
+
+	head_of_state = {
+		SOV_alexei_hvostov_hos = {
+
+			picture = SOV_minister_alexei_khvostov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = SOV_alexei_khvostov_hos_flag
+			}
+			
+			traits = {
+				decadent_pig
+				conservative
+				}
+			}
+
+		SOV_lazar_kaganovich_hos = {
+
+			picture = SOV_minister_lazar_kaganovich
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = russian_revolution_flag
+			}
+			
+			traits = {
+				bolshevik_hardliner
+				revjac
+				}
+			}
+
+		SOV_boris_petrovich_tedley_hos = {
+
+			picture = SOV_minister_boris_petrovich_tedley
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = russian_fascism_flag
+			}
+			
+			traits = {
+				antisemitic_monarchist
+				fascist
+				}
+			}
+
+		SOV_vasily_vasilievich_kochubey_hos = {
+
+			picture = SOV_minister_vasily_vasilievich_kochubey
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = SOV_conversative_win_election_flag
+			}
+			
+			traits = {
+				zemstvo_manager
+				conservative
+				}
+			}
+
+		SOV_julius_martov_hog = {
+
+			picture = SOV_minister_julius_martov
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = menshevik_in_charge
+			}
+			
+			traits = {
+				menshevik_veteran
+				socdem
+				}
+			}
+
+			SOV_mikhail_tereschenko_hog = {
+
+			picture = SOV_minister_mikhail_tereschenko
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = liberals_won_election
+			}
+			
+			traits = {
+				liberal_guardian
+				liberal_trait
+				}
+			}
+		}
+
+			navy_chief = {
+		SOV_vasili_altfater = {
+
+			picture = SOV_minister_vasili_altfater
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = vasili_altfater_flag
+			}
+			
+			traits = { 
+				navy_coordinator
+				socdem
+			}
+		}
+		SOV_eduard_pantserzhanskiy = {
+
+			picture = SOV_minister_eduard_pantserzhanskiy
+			
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_country_flag = eduard_pantserzhanskiy_flag
+			}
+			
+			traits = { 
+				naval_strongman
+				conservative
+			}
+		}
+	}
+}

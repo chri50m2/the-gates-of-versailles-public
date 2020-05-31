@@ -1,0 +1,1335 @@
+ideas = {
+
+	country = {
+
+		FRA_constant_barrage = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_artillery_regiments
+			
+			modifier = {
+				army_artillery_attack_factor = 0.05
+			}
+		}
+		
+		FRA_constant_barrage2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_artillery_regiments
+			
+			modifier = {
+				army_artillery_attack_factor = 0.10
+			}
+		}
+
+		FRA_pay_for_catalonia = {
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_france_pay_catalonia
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+				production_speed_industrial_complex_factor = -0.05
+			}
+				
+		}
+
+		FRA_tanks_first = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				army_armor_attack_factor = 0.1
+			}
+		}
+		FRA_tanks_first2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				army_armor_attack_factor = 0.12
+				army_infantry_attack_factor = -0.03
+			}
+		}
+
+		FRA_expanded_carlingue = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_intel
+			
+			modifier = {
+				resistance_growth_on_our_occupied_states = -0.2
+				decryption_factor = 0.05
+				encryption_factor = 0.05
+			}
+		}
+
+		FRA_french_military_experts = {
+			
+			allowed = {
+				always = no
+				tag = SAX
+				tag = BAD
+				tag = WST
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = german_advisors
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+				max_planning = 0.15
+				army_leader_start_planning_level = 1
+			}
+		}
+
+		FRA_blocked_prussia_from_kiel_canal = {
+			
+			allowed = {
+				original_tag = DEN
+				always = no
+				58 = {
+					is_owned_by = DEN
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_sea_focused_navy
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		FRA_blocked_from_kiel_canal = {
+			
+			allowed = {
+				original_tag = GER
+				always = no
+				58 = {
+					is_owned_by = DEN
+				}
+				NOT = {
+					58 = {
+					is_owned_by = GER
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_sea_focused_navy
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.02
+			}
+		}
+
+		FRA_long_term_investment_plan = {
+			
+			allowed = {
+				original_tag = NHO
+				always = no
+				FRA  = {
+					exists = yes
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = can_wartime_prices_and_trade_board
+			
+			modifier = {
+				production_speed_buildings_factor  = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+
+		FRA_low_interest_loans = {
+			
+			allowed = {
+				original_tag = NHO
+				always = no
+				FRA  = {
+					exists = yes
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		FRA_low_interest_loans2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		FRA_newly_created_jobs = {
+			
+			allowed = {
+				original_tag = NHO
+				always = no
+				FRA  = {
+					exists = yes
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				weekly_manpower = 200
+				MONTHLY_POPULATION = 0.2
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		FRA_large_investment = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation3
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		FRA_inflated_economy = {
+			
+			allowed = {
+				original_tag = WEI
+				always = no
+				FRA  = {
+					exists = yes
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = chi_hyper_inflation5
+			
+			modifier = {
+				production_speed_buildings_factor = -0.5
+				industrial_capacity_factory = -0.5
+			}
+		}
+
+		FRA_economic_sector_idea = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_central_management
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+			}
+		}
+
+		FRA_economic_sector_idea1 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_central_management
+			
+			modifier = {
+				industrial_capacity_factory = 0.3
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		FRA_economic_sector_idea2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_central_management
+			
+			modifier = {
+				industrial_capacity_factory = 0.4
+				production_factory_max_efficiency_factor = -0.2
+			}
+		}
+
+		FRA_administrative_sector_idea = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+
+		FRA_administrative_sector_idea1 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.25
+			}
+		}
+
+		FRA_administrative_sector_idea2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.5
+			}
+		}
+
+		FRA_an_agricultural_economy_idea = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.8
+				production_speed_arms_factory_factor = -0.8
+				consumer_goods_factor = 0.8
+			}
+		}
+
+		FRA_an_agricultural_economy_idea2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -1
+				production_speed_arms_factory_factor = -1
+				consumer_goods_factor = 0.8
+			}
+		}
+
+		FRA_workers_rights1 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		FRA_workers_rights2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+
+		FRA_constitution0 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+
+		FRA_constitution1 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				resistance_growth = -0.1
+			}
+		}
+
+		FRA_constitution2 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				resistance_growth = -0.1
+				liberal_acceptance = 50
+				democratic_acceptance = 50
+				social_democratic_acceptance = 50
+			}
+		}
+
+		FRA_constitution3 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				resistance_growth = -0.1
+				liberal_acceptance = 50
+				democratic_acceptance = 50
+				social_democratic_acceptance = 50
+				theocracy_acceptance = 50
+			}
+		}
+
+		FRA_constitution4 = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.05
+				resistance_growth = -0.1
+				liberal_acceptance = 50
+				democratic_acceptance = 50
+				social_democratic_acceptance = 50
+				theocracy_acceptance = 50
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+
+		FRA_victors_of_wwi_versailles = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+			
+			research_bonus = {
+				land_doctrine = 0.33
+				air_doctrine = 0.25
+				naval_doctrine = 0.25
+			}
+			modifier = {
+				conscription = -0.005
+				conscription_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+
+		FRA_fear_of_democratic_coup = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_Fear_Of_Democratic_Coup
+			
+			modifier = {
+				democratic_acceptance = -85
+				democratic_drift = -0.01
+				liberal_acceptance = -85
+				liberal_drift = -0.01
+				social_democratic_acceptance = -85
+				social_democratic_drift = -0.01
+			}
+		}
+		
+		FRA_anti_british_propaganda = {
+			
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			#picture = 
+			
+			modifier = {
+				stability_factor = 0.005
+				war_support_factor = 0.005
+			}
+		}
+		
+		FRA_germanic_ethnicity_problems = {
+		
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = FRA_German_Ethnicity_Problems
+
+			modifier = {
+				conscription_factor = -0.1
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.1
+				production_speed_arms_factory_factor = -0.10
+				production_speed_industrial_complex_factor = -0.1
+				}
+			}
+		
+		FRA_naval_competition_boost = {
+
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			picture = FRA_Naval_Competition_Boost
+
+			modifier = {
+				production_speed_dockyard_factor = 0.15
+				industrial_capacity_dockyard = 0.1
+				production_speed_naval_base_factor = 0.15
+				}
+			}
+		
+		FRA_preparing_for_war = {
+		
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_Preparing_For_War
+			
+			modifier = {
+			political_power_gain = 0.3
+			training_time_army_factor = -0.2
+			army_org_Factor = 0.1
+			planning_speed = 0.25
+			}
+		}
+		
+		FRA_undecided_way_of_ruling_idea = {
+		
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_Undecided_Way_Ruling
+
+			modifier = {
+			political_power_gain = -0.2
+			stability_factor = -0.05
+			production_speed_arms_factory_factor = -0.05
+			production_speed_industrial_complex_factor = -0.02			
+			}
+		}
+
+		FRA_iron_fist_rule = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_Iron_Fist_Rule
+
+			research_bonus = {
+				land_doctrine = 0.25
+				air_doctrine = 0.25
+				naval_doctrine = 0.25
+			}
+
+			modifier = {
+			political_power_gain = -0.1
+			production_speed_arms_factory_factor = 0.10
+			production_speed_industrial_complex_factor = -0.05
+			training_time_army_factor = -0.05
+			army_org_Factor = 0.05
+			planning_speed = 0.20
+			stability_factor = 0.05
+			war_support_factor = 0.15
+			}
+		}
+
+		FRA_parliamentary_rule = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_Parliamentary_Rule
+
+			research_bonus = {
+				land_doctrine = 0.10
+				air_doctrine = 0.10
+				naval_doctrine = 0.10
+			}
+
+			modifier = {
+			political_power_gain = 0.10
+			production_speed_arms_factory_factor = -0.05
+			production_speed_industrial_complex_factor = 0.10
+			training_time_army_factor = 0.05
+			army_org_Factor = -0.05
+			planning_speed = 0.10
+			stability_factor = 0.15
+			war_support_factor = 0.05
+			}
+		}
+	}
+
+		#MINISTERS
+
+		head_of_state = {
+			FRA_pierre_laval_hog = {
+
+			picture = FRA_minister_pierre_laval
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_napoleon_in_charge
+			}
+			
+			traits = {
+				political_veteran
+				socdem
+				}
+			}
+
+		FRA_marcel_mauss_hog = {
+
+			picture = FRA_minister_marcel_mauss
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_jacobin_in_charge
+			}
+			
+			traits = {
+				paranoid_schemer
+				revjac
+				}
+			}
+
+		FRA_camille_cheautemps_hog = {
+
+			picture = FRA_minister_camille_cheautemps
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_daladier_conservative
+			}
+			
+			traits = {
+				railroad_nationaliser
+				conservative
+				}
+			}
+
+		FRA_leon_blum_hog = {
+
+			picture = FRA_minister_leon_blum
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_socdem_victory
+			}
+			
+			traits = {
+				popular_frontist
+				socdem
+				}
+			}
+
+		FRA_philippe_petain_hog = {
+
+			picture = FRA_minister_philippe_petain
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_petain_in_charge
+			}
+			
+			traits = {
+				lion_of_verdun
+				conservative
+				}
+			}
+		}
+
+		econ_minister = {
+			FRA_paul_reynaud_eco = {
+
+			picture = FRA_minister_paul_reunayd
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_napoleon_in_charge
+			}
+			
+			traits = {
+				economic_reformer
+				liberal_trait
+				}
+			}
+
+		FRA_charles_tillon_eco = {
+
+			picture = FRA_minister_charles_tillon
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_jacobin_in_charge
+			}
+			
+			traits = {
+				steel_and_jacobinism
+				revjac
+				}
+			}
+
+		FRA_paul_reynaud_1_eco = {
+
+			picture = FRA_minister_paul_reunayd
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_daladier_conservative
+			}
+			
+			traits = {
+				economic_reformer
+				conservative
+				}
+			}
+
+		FRA_leon_blum_eco = {
+
+			picture = FRA_minister_leon_blum
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_socdem_victory
+			}
+			
+			traits = {
+				labor_rightist
+				socdem
+				}
+			}
+
+		FRA_pierre_caziot_eco = {
+
+			picture = FRA_minister_pierre_caziot
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_petain_in_charge
+			}
+			
+			traits = {
+				back_to_the_land
+				conservative
+				}
+			}
+		}
+
+		foreign_minister = {
+			FRA_paul_baudouin_for = {
+
+			picture = FRA_minister_paul_baudouin_tgov
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_napoleon_in_charge
+			}
+			
+			traits = {
+				spineless_pacifist
+				conservative
+				}
+			}
+
+		FRA_jacques_doriot_for = {
+
+			picture = FRA_minister_jacques_doriot
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_jacobin_in_charge
+			}
+			
+			traits = {
+				violent_anti_fascist
+				revjac
+				}
+			}
+
+		FRA_george_bonnet_for = {
+
+			picture = FRA_minister_george_bonnet
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_daladier_conservative
+			}
+			
+			traits = {
+				pacifist_appeaser
+				conservative
+				}
+			}
+
+		FRA_yvon_delbos_for = {
+
+			picture = FRA_minister_yvon_delbos
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_socdem_victory
+			}
+			
+			traits = {
+				economic_opportunist
+				conservative
+				}
+			}
+
+		FRA_raoul_cautry_for = {
+
+			picture = FRA_mnister_raoul_dautry
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_petain_in_charge
+			}
+			
+			traits = {
+				the_old_weapons
+				conservative
+				}
+			}
+		}
+
+		interior_minister = {
+			FRA_henri_roy_int = {
+
+			picture = FRA_minister_henri_roy
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_napoleon_in_charge
+			}
+			
+			traits = {
+				constitutional_appeaser
+				liberal_trait
+				}
+			}
+
+		FRA_albert_ouzoulias_int = {
+
+			picture = FRA_minister_albert_ouzoulia
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_jacobin_in_charge
+			}
+			
+			traits = {
+				public_armer
+				revjac
+				}
+			}
+
+		FRA_eugene_frot_int = {
+
+			picture = FRA_minister_eugene_frot
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_daladier_conservative
+			}
+			
+			traits = {
+				merchant_mariner
+				socdem
+				}
+			}
+
+		FRA_marx_dormoy_int = {
+
+			picture = FRA_minister_marx_dormoy
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_socdem_victory
+			}
+			
+			traits = {
+				radical_centrist
+				socdem
+				}
+			}
+
+		FRA_albert_dalimier_int = {
+
+			picture = FRA_minister_albert_dalimier
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = FRA_petain_in_charge
+			}
+			
+			traits = {
+				social_aider
+				conservative
+				}
+			}
+		}
+}

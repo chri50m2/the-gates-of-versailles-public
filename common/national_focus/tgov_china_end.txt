@@ -1,0 +1,538 @@
+############################################
+### China End Tutelage Political Focuses ###
+############################################
+### HS1San/Senku Ishigami ##################
+############################################
+
+focus_tree = {
+	id = china_end_focus
+	country = {
+		factor = 0
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 1000 }
+	
+	shared_focus = CHI_shared_continue_land_reform
+	shared_focus = CHI_shared_state_of_the_army
+	shared_focus = CHI_shared_aviation_focus
+	shared_focus = CHI_shared_naval_focus
+	shared_focus = CHI_shared_foreign_policy
+	
+	#focus = {
+	#	id = CHI_end_
+	#	icon = GFX_
+	#	prerequisite = { focus = }
+	#	mutually_exclusive = { focus =  }
+	#	x = -3
+	#	y = 0
+	#	relative_position_id =
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	complete_tooltip = {
+	#
+	#	}
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}
+	
+#################
+### Political ###
+#################
+
+	focus = {
+
+		id = CHI_end_into_democracy
+		icon = GFX_goal_support_democracy
+		x = 6
+		y = 0
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_conservative_victory
+		icon = GFX_goal_support_democracy
+		prerequisite = { 
+			focus = CHI_end_into_democracy 
+		}
+		x = -1
+		y = 1
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+			has_government = democratic
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_new_life_movement
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { 
+			focus = CHI_end_conservative_victory
+		}
+		x = -3
+		y = 2
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+			has_government = democratic
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_new_life_movement_idea
+				days = 140
+			}
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_enforce_the_four_virtues
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { 
+			focus = CHI_end_new_life_movement
+		}
+		x = -4
+		y = 3
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+			has_government = democratic
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.20
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_reject_western_imperialism
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { 
+			focus = CHI_end_new_life_movement
+		}
+		x = -2
+		y = 3
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+			has_government = democratic
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_leftist_victory
+		icon = GFX_goal_support_democracy
+		prerequisite = { 
+			focus = CHI_end_into_democracy 
+		}
+		x = 1
+		y = 1
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+			has_government = social_democratic
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_new_culture_movement
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { 
+			focus = CHI_end_leftist_victory
+		}
+		x = 3
+		y = 2
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+			has_government = social_democratic
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_new_culture_movement_idea
+				days = 140
+			} 
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_adopt_western_influences
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { 
+			focus = CHI_end_new_culture_movement
+		}
+		x = 2
+		y = 3
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+			has_government = social_democratic
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_freedom_of_speech
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { 
+			focus = CHI_end_new_culture_movement
+		}
+		x = 4
+		y = 3
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+			has_government = social_democratic
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democratic
+				popularity = 0.20
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_pass_governmental_reforms
+		icon = GFX_focus_generic_self_management
+		prerequisite = { 
+			focus = CHI_end_conservative_victory 
+			focus = CHI_end_leftist_victory
+		}
+		x = 0
+		y = 2
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_stability = 0.25
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_reinforced_government
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { 
+			focus = CHI_end_pass_governmental_reforms 
+		}
+		x = 0
+		y = 3
+		relative_position_id = CHI_end_into_democracy
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			remove_ideas = CHI_factionalism
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_end_the_new_republic
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { 
+			focus = CHI_end_reinforced_government 
+		}
+		prerequisite = { 
+			focus = CHI_end_freedom_of_speech
+			focus = CHI_end_enforce_the_four_virtues
+		}
+		prerequisite = { 
+			focus = CHI_end_adopt_western_influences
+			focus = CHI_end_reject_western_imperialism
+		}
+		x = 0
+		y = 4
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_new_republic_idea
+				days = 140
+			}
+		}
+	
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	
+}

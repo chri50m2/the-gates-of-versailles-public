@@ -1,0 +1,1015 @@
+﻿###################################
+#News Events - Gates of Versailles#
+###################################
+
+add_namespace = news
+
+news_event = { #October Events in France
+	id = news.340
+	title = news.340.t
+	desc = news.340.desc
+	picture = GFX_news_event_france_october_events
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.340.a
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.340.b
+		trigger = {
+			is_in_faction_with = FRA
+			NOT = { TAG = FRA}
+		}
+	}
+	option = {
+		name = news.340.c
+		trigger = {
+			TAG = ENG
+		}
+	}
+	option = {
+		name = news.340.d
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = news.340.e
+		trigger = {
+			NOT = { TAG = ENG }
+			NOT = { TAG = GER }
+			NOT = { TAG = FRA }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #Mussolini Assassinated
+	id = news.338
+	title = news.338.t
+	desc = news.338.desc
+	picture = GFX_news_event_ita_mussolini_assasinated
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.338.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.338.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.338.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.338.d
+		trigger = {
+			TAG = ENG
+		}
+	}
+	option = {
+		name = news.338.e
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = news.338.f
+		trigger = {
+			is_in_faction_with = FRA 
+		}
+	}
+	option = {
+		name = news.338.g
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = GER }
+			NOT = { TAG = FRA }
+			NOT = { TAG = ENG }
+			NOT = { is_in_faction_with = AUS }
+		}
+	}
+}
+
+news_event = { #Aostan Revolt
+	id = news.341
+	title = news.341.t
+	desc = news.341.desc
+	picture = GFX_news_event_016
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.341.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.341.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.341.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.341.d
+		trigger = {
+			is_in_faction_with = ITA
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+		}
+	}
+	option = {
+		name = news.341.e
+		trigger = {
+			is_in_faction_with = FRA 
+		}
+	}
+	option = {
+		name = news.341.f
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = GER }
+			NOT = { TAG = FRA }
+			NOT = { TAG = ENG }
+			NOT = { is_in_faction_with = ITA }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #Ciano comes to power
+	id = news.342
+	title = news.342.t
+	desc = news.342.desc
+	picture = GFX_news_event_ciano_comes_to_power
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.342.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.342.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.342.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.342.d
+		trigger = {
+			is_in_faction_with = ITA
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+		}
+	}
+	option = {
+		name = news.342.e
+		trigger = {
+			has_government = democratic
+			has_government = social_democratic
+			has_government = liberal
+		}
+	}
+	option = {
+		name = news.342.f
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { has_government = democratic }
+			NOT = { has_government = social_democratic }
+			NOT = { has_government = liberal }
+			NOT = { is_in_faction_with = ITA }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #New leader in Italy Balbo
+    id = news.343
+	title = news.343.t
+	desc = news.343.desc
+	picture = GFX_news_event_balbo_comes_to_power
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.343.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.343.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.343.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.343.d
+		trigger = {
+			is_in_faction_with = ITA
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+		}
+	}
+	option = {
+		name = news.343.e
+		trigger = {
+			has_government = democratic
+			has_government = social_democratic
+			has_government = liberal
+		}
+	}
+	option = {
+		name = news.343.f
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { has_government = democratic }
+			NOT = { has_government = social_democratic }
+			NOT = { has_government = liberal }
+			NOT = { is_in_faction_with = ITA }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #New leader in Luigi Federzoni
+    id = news.344
+	title = news.344.t
+	desc = news.344.desc
+	picture = GFX_news_event_federzoni_comes_to_power
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.344.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.344.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.344.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.344.d
+		trigger = {
+			is_in_faction_with = ITA
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+		}
+	}
+	option = {
+		name = news.344.e
+		trigger = {
+			has_government = democratic
+			has_government = social_democratic
+			has_government = liberal
+		}
+	}
+	option = {
+		name = news.344.f
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { has_government = democratic }
+			NOT = { has_government = social_democratic }
+			NOT = { has_government = liberal }
+			NOT = { is_in_faction_with = ITA }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #Swiss Partition Denied
+    id = news.345
+	title = news.345.t
+	desc = news.345.desc
+	picture = GFX_news_event_swiss_partition_italy_fails
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.345.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.345.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.345.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.345.d
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+		}
+	}
+}
+
+news_event = { #Swiss Partition Accepted
+    id = news.346
+	title = news.346.t
+	desc = news.346.desc
+	picture = GFX_news_event_swiss_partition_italy_success
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.346.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.346.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.346.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.346.d
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+		}
+	}
+}
+
+news_event = { #Swiss Revolt
+    id = news.347
+	title = news.347.t
+	desc = news.347.desc
+	picture = GFX_news_event_swiss_revolt
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.347.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.347.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.347.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.347.d
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+		}
+	}
+}
+
+news_event = { #Italian Unification
+    id = news.348
+	title = news.348.t
+	desc = news.348.desc
+	picture = GFX_news_event_italian_unfication
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.348.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.348.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.348.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.348.d
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = news.348.e
+		trigger = {
+			TAG = ENG
+		}
+	}
+	option = {
+		name = news.348.f
+		trigger = {
+			TAG = SOV
+		}
+	}
+	option = {
+		name = news.348.g
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { TAG = GER }
+			NOT = { TAG = ENG }
+			NOT = { TAG = SOV }
+		}
+	}
+}
+
+news_event = { # Victor Emmanuel III Coup
+    id = news.349
+	title = news.349.t
+	desc = news.349.desc
+	picture = GFX_news_event_victor_emmanuel_coup
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.349.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.349.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.349.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.349.d
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = news.349.e
+		trigger = {
+			TAG = ENG
+		}
+	}
+	option = {
+		name = news.349.f
+		trigger = {
+			TAG = SOV
+		}
+	}
+	option = {
+		name = news.349.g
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { TAG = GER }
+			NOT = { TAG = ENG }
+			NOT = { TAG = SOV }
+		}
+	}
+}
+
+news_event = { #Mongol Khanate 
+	id = news.361
+	title = news.361.title
+	desc = news.361.desc
+	picture = GFX_news_event_003
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.361.a
+		trigger = {
+			TAG = MON
+		}
+	}
+	option = {
+		name = news.361.b
+		trigger = {
+			NOT = {
+				TAG = MON
+			}
+		}
+	}
+}
+
+news_event = { #Mongolia supports japan
+	id = news.362
+	title = news.362.title
+	desc = news.362.desc
+	picture = GFX_news_event_003
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.362.a
+		trigger = {
+			TAG = MON
+		}
+	}
+	option = {
+		name = news.362.b
+		trigger = {
+			NOT = {
+				TAG = MON
+			}
+		}
+	}
+}
+
+news_event = { #North German Confederation
+	id = news.351
+	title = news.351.title
+	desc = news.351.desc
+	picture = GFX_news_event_ngf
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.351.a
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = news.351.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.351.c
+		trigger = {
+		NOT = {
+			TAG = FRA
+			TAG = GER
+			}
+		}
+	}
+}
+
+news_event = { #Bavarian War
+	id = news.352
+	title = news.352.title
+	desc = news.352.desc
+	picture = GFX_news_event_bavaria_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.352.a
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = news.352.b
+		trigger = {
+			TAG = BAV
+		}
+	}
+	option = {
+		name = news.352.c
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.352.d
+		trigger = {
+		NOT = {
+			TAG = FRA
+			TAG = GER
+			TAG = BAV
+			}
+		}
+	}
+}
+
+#Franco-German War
+
+news_event = {
+	id = news.353
+	title = news.353.title
+	desc = news.353.desc
+	picture = GFX_news_event_franco_german_war
+	
+	major = yes
+	
+	trigger = {
+		FRA = { has_war_with = GER }
+		NOT = { has_global_flag = franco_german_war_GER }
+	}
+	
+	immediate = {
+		set_global_flag = franco_german_war_GER
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = news.353.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = FRA
+			}
+		}
+	}
+	option = {
+		name = news.353.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = news.353.c
+		trigger = { TAG = FRA }
+	}
+}
+
+#Germany is United
+
+news_event = {
+	id = news.354
+	title = news.354.title
+	desc = news.354.desc
+	picture = GFX_news_event_united_germany
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	immediate = {
+		set_global_flag = united_germany
+	}
+	
+	option = {
+		name = news.354.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = FRA
+				TAG = ENG
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = news.354.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = news.354.c
+		trigger = { TAG = FRA }
+	}
+	option = {
+		name = news.354.d
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = news.354.e
+		trigger = { TAG = SOV }
+	}
+}
+
+#Russian Revolution
+
+news_event = {
+	id = news.355
+	title = news.355.title
+	desc = news.355.desc
+	picture = GFX_news_event_russian_revolution
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	immediate = {
+		set_global_flag = soviet_russia_FLAG
+	}
+	
+	option = {
+		name = news.355.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = FRA
+				TAG = JAP
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = news.355.b
+		trigger = { TAG = SOV }
+	}
+	option = {
+		name = news.355.c
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = news.355.d
+		trigger = { TAG = FRA }
+	}
+	option = {
+		name = news.355.e
+		trigger = { TAG = GER }
+	}
+}
+
+news_event = {
+	id = news.356
+	title = news.356.title
+	desc = news.356.desc
+	picture = GFX_news_event_operation_bagration
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	immediate = {
+		set_global_flag = operation_bagration_FLAG
+	}
+	
+	option = {
+		name = news.356.a
+		trigger = {
+			NOT = {
+				TAG = SOV
+				TAG = BLR
+				TAG = UKR
+			}
+		}
+	}
+	option = {
+		name = news.356.b
+		trigger = { TAG = SOV }
+	}
+	option = {
+		name = news.356.c
+		trigger = { TAG = BLR }
+	}
+	option = {
+		name = news.356.d
+		trigger = { TAG = UKR }
+	}
+}
+
+news_event = {
+	id = news.357
+	title = news.357.title
+	desc = news.357.desc
+	picture = GFX_news_event_sardinian_revolt
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	immediate = {
+		set_global_flag = sardinian_revolt_FLAG
+	}
+	
+	option = {
+		name = news.357.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = SAR
+				TAG = FRA
+			}
+		}
+	}
+	option = {
+		name = news.357.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = news.357.c
+		trigger = { TAG = SAR }
+	}
+	option = {
+		name = news.357.d
+		trigger = { TAG = FRA }
+	}
+}
+
+news_event = {
+	id = news.358
+	title = news.358.title
+	desc = news.358.desc
+	picture = GFX_news_event_british_naval_junta
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.358.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				TAG = FRA
+			}
+		}
+	}
+	option = {
+		name = news.358.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = news.358.c
+		trigger = { TAG = FRA }
+	}
+}
+
+news_event = {
+	id = news.359
+	title = news.359.title
+	desc = news.359.desc
+	picture = GFX_news_event_exile_of_monarchy
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.359.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				TAG = NSW
+				TAG = SAF
+				TAG = RAJ 
+				TAG = WIN 
+				TAG = MAL
+				TAG = WEI
+				TAG = BSU
+				TAG = BEA
+				TAG = BRH
+				TAG = BWA
+				TAG = GEX
+			}
+		}
+	}
+	option = {
+		name = news.359.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = news.359.c
+		trigger = { TAG = NSW }
+	}
+	option = {
+		name = news.359.d
+		trigger = { 
+			TAG = SAF
+			TAG = RAJ 
+			TAG = WIN 
+			TAG = MAL
+			TAG = WEI
+			TAG = BSU
+			TAG = BEA
+			TAG = BRH
+			TAG = BWA
+			TAG = GEX
+		}
+	}
+}
+
+news_event = {
+	id = news.360
+	title = news.360.title
+	desc = news.360.desc
+	picture = GFX_news_event_fascism_in_russia
+
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = news.360.a
+		trigger = {
+			NOT = {
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = news.360.b
+		trigger = { TAG = SOV }
+	}
+}

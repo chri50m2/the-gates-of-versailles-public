@@ -1,0 +1,1956 @@
+#	#shared_focus = {
+#		#id = GER_
+#		#icon =#
+#		#prerequisite = { #focus =# }
+#		#mutually_exclusive = { #focus =  }
+#		#x = -3
+#		#y = 0
+#		#relative_position_id =#
+#
+#		#cost = 10
+#
+#		#ai_will_do = {
+#			#factor = 1
+#		#}
+#
+#		#available = {
+#
+#		#}
+#		
+#		#bypass = {
+#
+#		#}
+#
+#		#cancel_if_invalid = yes
+#		#continue_if_invalid = no
+#		#available_if_capitulated = no
+#
+#		#complete_tooltip = {
+#
+#		#}
+#
+#		#completion_reward = {
+#
+#		#}
+#	#}
+
+	shared_focus = {
+		id = GER_create_the_OKW
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 15
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 25
+			air_experience = 25
+			navy_experience = 25
+		}
+	}
+
+	shared_focus = {
+		id = GER_the_marine
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = GER_create_the_OKW }
+		x = 8
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+			add_command_power = -25
+
+			navy_experience = 25
+		}
+	}
+
+	shared_focus = {
+		id = GER_treaties_with_britain
+		icon = GFX_focus_eng_the_sun_never_sets
+		prerequisite = { focus = GER_the_marine }
+		x = 8
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = naval_doctrine
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_exercise_together
+		icon = GFX_focus_ger_accept_british_naval_dominance
+		prerequisite = { focus = GER_treaties_with_britain }
+		x = 8
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 50	
+		}
+	}
+
+	shared_focus = {
+		id = GER_meet_with_the_king
+		icon = GFX_focus_eng_god_save_the_king
+		prerequisite = { focus = GER_exercise_together }
+		x = 8
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+			target = ENG
+			modifier = met_with_the_king
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_reconstruct_the_hochseeflotte
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = GER_the_marine }
+		mutually_exclusive = { focus = GER_rely_on_submarines }
+		x = 5
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = GER_high_seas_fleet
+			62 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard 
+						level = 2
+							instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_promote_raeder
+		icon = GFX_goal_raeder
+		prerequisite = { focus = GER_reconstruct_the_hochseeflotte }
+		x = 4
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		navy_experience = 15
+			}
+	}
+
+	shared_focus = {
+		id = GER_honour_tirpitz
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = GER_promote_raeder }
+		x = 4
+		y = 4
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = naval_doctrine
+					} 	
+				}
+			}
+
+	shared_focus = {
+		id = GER_admiral_schools_focus
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = GER_honour_tirpitz }
+		x = 4
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = GER_admiral_schools
+				}
+			}
+
+	shared_focus = {
+		id = GER_plan_z0
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = GER_reconstruct_the_hochseeflotte }
+		x = 6
+		y = 3
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = bb_tech
+					} 
+		add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = bc_tech
+					} 
+			}
+		}
+
+	shared_focus = {
+		id = GER_carrier_construction
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = GER_plan_z0 }
+		x = 6
+		y = 4
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = cv_tech
+					} 	
+				}
+			}
+
+	shared_focus = {
+		id = GER_the_new_dreadnoughts
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = GER_carrier_construction }
+		x = 6
+		y = 5
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = shbb_tech
+					}
+				}
+			}
+
+shared_focus = {
+		id = GER_rely_on_submarines
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = GER_the_marine }
+		mutually_exclusive = { focus = GER_reconstruct_the_hochseeflotte }
+		x = 11
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = GER_submarine_focus
+			62 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = dockyard 
+						level = 2
+							instant_build = yes
+				}
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_mass_modular_construction
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = GER_rely_on_submarines }
+		x = 10
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+					remove_idea = GER_submarine_focus
+					add_idea = GER_submarine_focus2
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_daily_construction
+		icon = GFX_goal_continuous_naval_production
+		prerequisite = { focus = GER_mass_modular_construction }
+		x = 10
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+					remove_idea = GER_submarine_focus2
+					add_idea = GER_submarine_focus3
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_prussian_engineering
+		icon = GFX_focus_research2
+		prerequisite = { focus = GER_daily_construction }
+		x = 10
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = naval_minelaying
+					} 
+		}
+	}
+
+shared_focus = {
+		id = GER_promote_doenitz
+		icon = GFX_goal_doenitz
+		prerequisite = { focus = GER_rely_on_submarines }
+		x = 12
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 15
+		}
+	}
+
+shared_focus = {
+		id = GER_young_blood
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = GER_promote_doenitz }
+		x = 12
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_manpower = 7500
+		}
+	}
+
+shared_focus = {
+		id = GER_the_brightest_generation
+		icon = GFX_poland_bright_minds
+		prerequisite = { focus = GER_young_blood }
+		x = 12
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = naval_doctrine
+					} 
+		}
+	}
+
+shared_focus = {
+		id = GER_die_maechtigste_koenig_im_luftrevier
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = GER_the_brightest_generation focus = GER_prussian_engineering }
+		prerequisite = { focus = GER_the_new_dreadnoughts focus = GER_admiral_schools_focus }
+		prerequisite = { focus = GER_meet_with_the_king }
+		x = 8
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 2
+        		category = naval_doctrine
+					} 
+		}
+	}
+
+	shared_focus = {
+		id = GER_the_luftwaffe
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = GER_create_the_OKW }
+		x = 16
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_command_power = -25
+
+			air_experience = 25
+		}
+	}
+
+	shared_focus = {
+		id = GER_aid_in_the_war
+		icon = GFX_goal_poland_goal
+		prerequisite = { focus = GER_the_luftwaffe }
+		x = 15
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = cas_bomber
+					} 
+		}
+	}
+
+	shared_focus = {
+		id = GER_tank_penetration
+		icon = GFX_focus_CZE_military_aeronautical_institute
+		prerequisite = { focus = GER_aid_in_the_war }
+		x = 15
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+   				limit = {
+        			has_idea = GER_air_tree3
+    			}
+   			swap_ideas = {
+					remove_idea = GER_air_tree3
+					add_idea = GER_air_tree2
+				}
+			}
+			else = {
+				add_ideas = GER_air_tree1
+				}
+		}
+	}
+
+	shared_focus = {
+		id = GER_aid_the_kriegsmarine
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = GER_tank_penetration }
+		x = 15
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = naval_bomber
+					}
+		}
+	}
+
+	shared_focus = {
+		id = GER_keep_the_skies_clear
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = GER_the_luftwaffe }
+		x = 17
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = light_fighter
+					}
+		}
+	}
+
+	shared_focus = {
+		id = GER_bombing_enemy_HQ
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = { focus = GER_keep_the_skies_clear }
+		x = 17
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = tactical_bomber
+					}
+		}
+	}
+
+	shared_focus = {
+		id = GER_morale_bombing
+		icon = GFX_focus_usa_escort_fighters
+		prerequisite = { focus = GER_bombing_enemy_HQ }
+		x = 17
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		if = {
+   			limit = {
+        		has_idea = GER_air_tree1
+    		}
+   			swap_ideas = {
+					remove_idea = GER_air_tree1
+					add_idea = GER_air_tree2
+				}
+			}
+			else = {
+				add_ideas = GER_air_tree3
+				}
+		}
+	}
+
+	shared_focus = {
+		id = GER_the_best_aces
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = GER_morale_bombing }
+		prerequisite = { focus = GER_aid_the_kriegsmarine }
+		x = 16
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_ace = {
+    		name = "Wolfgang"
+    		surname = "Schenck"
+    		callsign = "Winnetou"
+    		type = fighter_unique
+    		is_female = no
+			}
+		add_ace = {
+    		name = "Hans-Ulrich"
+    		surname = "Rudel"
+    		callsign = "Goliath"
+    		type = support_genius
+    		is_female = no
+			}
+		add_ace = {
+    		name = "Heinrich"
+    		surname = "Bär"
+    		callsign = "Survivor"
+    		type = fighter_unique
+    		is_female = no
+			}
+		add_ace = {
+    		name = "Johannes"
+    		surname = "Steinhoff"
+    		callsign = "Monster"
+    		type = fighter_genius
+    		is_female = no
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_the_heer
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = GER_create_the_OKW }
+		x = 27
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_command_power = -35
+		}
+	}
+
+shared_focus = {
+		id = GER_create_the_abwehr
+		icon = GFX_focus_German_Abwhere
+		prerequisite = { focus = GER_the_heer }
+		x = 27
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			command_power > 15
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+			add_command_power = -15
+
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = encryption_tech
+					}
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = decryption_tech
+					}
+		}
+	}
+
+shared_focus = {
+		id = GER_install_canaris
+		icon = GFX_focus_Install_Canaris
+		prerequisite = { focus = GER_create_the_abwehr }
+		x = 27
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_tech_bonus = {
+       			bonus = 0.5
+       			uses = 1
+        		category = encryption_tech
+					}
+		}
+	}
+
+shared_focus = {
+		id = GER_the_enigma
+		icon = GFX_focus_Engima
+		prerequisite = { focus = GER_install_canaris }
+		x = 27
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = computing_tech
+					}
+		}
+	}
+
+
+shared_focus = {
+		id = GER_radar_stations
+		icon = GFX_focus_Prussia_Radio2
+		prerequisite = { focus = GER_the_enigma }
+		x = 27
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			64 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+							instant_build = yes
+				}
+			}
+			62 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+							instant_build = yes
+				}
+			}
+			86 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+							instant_build = yes
+				}
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_create_the_OKR
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = GER_the_heer }
+		x = 30
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			command_power > 20
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		add_command_power = -20
+
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = land_doctrine
+			} 
+		}
+	}
+
+shared_focus = {
+		id = GER_the_modern_art_of_war
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = GER_create_the_OKR }
+		x = 30
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = cat_mobile_warfare
+			} 
+		}
+	}
+
+shared_focus = {
+		id = GER_cult_of_speed
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = GER_the_modern_art_of_war }
+		x = 29
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+   				limit = {
+        			has_idea = GER_the_stormtrooper
+    			}
+   			swap_ideas = {
+					remove_idea = GER_the_stormtrooper
+					add_idea = GER_both_mil_ideas
+				}
+			}
+			else = {
+				add_ideas = GER_cult_of_speed_idea
+				}
+		}
+	}
+
+shared_focus = {
+		id = GER_update_the_stormtroopers
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = GER_the_modern_art_of_war }
+		x = 31
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+   				limit = {
+        			has_idea = GER_cult_of_speed_idea
+    			}
+   			swap_ideas = {
+					remove_idea = GER_cult_of_speed_idea
+					add_idea = GER_both_mil_ideas
+				}
+			}
+			else = {
+				add_ideas = GER_the_stormtrooper
+				}
+		}
+	}
+
+shared_focus = {
+		id = GER_the_ancient_generals
+		icon = GFX_focus_ger_return_of_the_kaiser
+		prerequisite = { focus = GER_update_the_stormtroopers }
+		prerequisite = { focus = GER_cult_of_speed }
+		x = 30
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 2
+        	category = cat_mobile_warfare
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_achtung_panzer
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = GER_the_ancient_generals }
+		x = 30
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = cat_mobile_warfare
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_radio_commanders
+		icon = GFX_focus_Prussia_Radio2
+		prerequisite = { focus = GER_achtung_panzer }
+		x = 30
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = signal_company_tech
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_new_equipment
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = GER_the_heer }
+		x = 22
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+shared_focus = {
+		id = GER_new_and_exciting
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = GER_new_equipment }
+		mutually_exclusive = { focus = GER_old_and_reliable }
+		x = 24
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = new_and_exciting
+		}
+	}
+
+shared_focus = {
+		id = GER_tank_contracts
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = GER_new_and_exciting }
+		x = 25
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = armor
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_mass_mechanization
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = GER_new_and_exciting }
+		x = 23
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = cat_mechanized_equipment
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_the_MAUS
+		icon = GFX_focus_generic_army_tanks2
+		prerequisite = { focus = GER_mass_mechanization }
+		prerequisite = { focus = GER_tank_contracts }
+		x = 24
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = cat_heavy_armor
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_old_and_reliable
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = GER_new_equipment }
+		mutually_exclusive = { focus = GER_new_and_exciting }
+		x = 20
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = old_and_reliable
+		}
+	}
+
+shared_focus = {
+		id = GER_anti_tank_weapons
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = GER_old_and_reliable }
+		x = 21
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = cat_anti_tank
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_arms_contracts
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = GER_old_and_reliable }
+		x = 19
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = infantry_weapons
+			}
+		}
+	}
+
+shared_focus = {
+		id = GER_railway_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = GER_arms_contracts }
+		prerequisite = { focus = GER_anti_tank_weapons }
+		x = 20
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = artillery
+			}
+		}
+	}

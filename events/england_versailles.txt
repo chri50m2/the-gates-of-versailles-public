@@ -1,0 +1,454 @@
+###############################################
+# England Events - Gates to Versailles Edition#
+###############################################
+
+add_namespace = england
+
+country_event = { #March on Whitehall
+	id = england.1
+	title = england.1.t
+	desc = england.1.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.1.a
+			hidden_effect = {
+
+				set_party_name = { 
+					ideology = neutrality 
+					long_name = ENG_neutrality_party_Naval_Authority_long 
+					name = ENG_neutrality_party_Naval_Authority
+				}
+
+				set_country_flag = FLAG_noble_letter
+			}
+		}
+
+		option = {
+		name = england.1.b
+			hidden_effect = {
+
+				set_party_name = { 
+					ideology = neutrality 
+					long_name = ENG_neutrality_party_Naval_Authority_long 
+					name = ENG_neutrality_party_Naval_Authority
+				}
+
+				set_country_flag = FLAG_arbuthnot_letter
+			}
+		}
+	}
+
+country_event = { #The Noble Letter
+	id = england.2
+	title = england.2.t
+	desc = england.2.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.2.a
+			set_politics = {
+				ruling_party = neutrality
+				election_frequency = 50
+				elections_allowed = no
+			}
+			custom_effect_tooltip = new_cabinet_tt
+			add_stability = -0.2
+			add_war_support = -0.1
+			hidden_effect = {
+				add_popularity = { 
+					ideology = neutrality
+					popularity = 0.2
+				}
+				clr_country_flag = ENG_liberal_in_charge
+				set_country_flag = ENG_naval_junta_in_charge
+				set_cosmetic_tag = ENG_British_Naval_Authority
+				create_country_leader = {
+					name = "Arthur Power"
+					desc = "POLITICS_ARTHUR_POWER_DESC"
+					picture = "ENG_Arthur_Power.dds"
+					expire = "1965.1.1"
+					ideology = military_junta
+					traits = {
+					}
+				}
+
+				news_event = {
+    					id = news.358
+    					days = 1
+					}
+				add_ideas = {
+					ENG_percy_noble_hog
+					ENG_matthew_slattery_eco
+					ENG_william_boyle_for
+					ENG_henry_blagrove_int
+				}
+			}
+		}
+	}
+
+country_event = { #The Arbuthnot Memorandum
+	id = england.3
+	title = england.3.t
+	desc = england.3.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.3.a
+			set_politics = {
+				ruling_party = neutrality
+				election_frequency = 50
+				elections_allowed = no
+			}
+			add_stability = -0.2
+			add_war_support = -0.1
+			custom_effect_tooltip = new_cabinet_tt
+			hidden_effect = {
+				add_popularity = { 
+					ideology = neutrality
+					popularity = 0.2
+				}
+				set_country_flag = ENG_naval_junta_in_charge
+				set_cosmetic_tag = ENG_British_Naval_Authority
+				create_country_leader = {
+					name = "Arthur Power"
+					desc = "POLITICS_ARTHUR_POWER_DESC"
+					picture = "ENG_Arthur_Power.dds"
+					expire = "1965.1.1"
+					ideology = military_junta
+					traits = {
+					}
+				}
+				add_stability = -0.2
+				add_war_support = -0.1
+
+				news_event = {
+    					id = news.358
+    					days = 1
+					}
+				add_ideas = {
+					ENG_geoffrey_arbuthnot_hog
+					ENG_matthew_slattery_eco
+					ENG_william_boyle_for
+					ENG_henry_blagrove_int
+				}
+			}
+		}
+	}
+
+country_event = { #Fate of the Royal Family
+	id = england.4
+	title = england.4.t
+	desc = england.4.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.4.a
+		add_popularity = { 
+					ideology = monarchist
+					popularity = -0.2
+				}
+		add_war_support = -0.05
+			hidden_effect = {
+				news_event = {
+    					id = news.359
+    					days = 1
+					}
+			}
+		}
+	}
+
+country_event = { #Fate of the Commonwealth
+	id = england.5
+	title = england.5.t
+	desc = england.5.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.5.a
+		set_faction_name = ENG_internationale
+		custom_effect_tooltip = ENG_colonies_faction_tt
+		add_war_support = 0.025
+			hidden_effect = {
+				GEX = {
+					leave_faction = yes
+					remove_from_tech_sharing_group = commonwealth_research
+					remove_ideas = {
+						NSW_imperial_federation_ALL
+					}
+					ENG = {
+						end_puppet = GEX
+					}
+				}
+					every_country = {
+						limit = {
+							OR = {
+								tag = ENG
+								is_in_faction_with = ENG
+							}
+						}
+						country_event = { id = england.6 days = 0 }
+					}
+			}
+		}
+	}
+
+country_event = { #Our Status with the Commonwealth
+	id = england.6
+	title = england.6.t
+	desc = england.6.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.6.a
+			ai_chance = {
+				factor = 90
+			}
+			leave_faction = yes
+			remove_from_tech_sharing_group = commonwealth_research
+			remove_ideas = {
+				NSW_imperial_federation_ALL
+			}
+			ENG = {
+				end_puppet = ROOT
+			}
+		}
+	option = {
+		name = england.6.b
+			add_popularity = { 
+					ideology = communism
+					popularity = 0.1
+				}
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+	
+country_event = { #The Dying King
+	id = england.7
+	title = england.7.t
+	desc = england.7.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.7.a
+			add_political_power = -5
+		}
+	}
+
+country_event = { #A Sombre Funeral
+	id = england.8
+	title = england.8.t
+	desc = england.8.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.8.a
+			add_political_power = -10
+			create_country_leader = {
+				name = "Parliament"
+				desc = "POLITICS_PARLIAMENT_DESC"
+				picture = "portrait_eng_fallen_government.dds"
+				expire = "1965.1.1"
+				ideology = classical_liberalism
+				traits = {
+				}
+			}
+			country_event = { id = england.12 days = 1 } 
+			hidden_effect = {
+				create_country_leader = {
+				name = "Parliament"
+				desc = "POLITICS_PARLIAMENT_DESC"
+				picture = "portrait_eng_fallen_government.dds"
+				expire = "1965.1.1"
+				ideology = national_conservatism
+				traits = {
+					}
+				}
+				create_country_leader = {
+				name = "Parliament"
+				desc = "POLITICS_PARLIAMENT_DESC"
+				picture = "portrait_eng_fallen_government.dds"
+				expire = "1965.1.1"
+				ideology = labourism
+				traits = {
+					}
+				}
+				create_country_leader = {
+				name = "Parliament"
+				desc = "POLITICS_PARLIAMENT_DESC"
+				picture = "portrait_eng_fallen_government.dds"
+				expire = "1965.1.1"
+				ideology = constitutional_monarchy
+				traits = {
+					}
+				}
+				create_country_leader = {
+				name = "Parliament"
+				desc = "POLITICS_PARLIAMENT_DESC"
+				picture = "portrait_eng_fallen_government.dds"
+				expire = "1965.1.1"
+				ideology = dictatorship
+				traits = {
+					}
+				}
+				create_country_leader = {
+				name = "Parliament"
+				desc = "POLITICS_PARLIAMENT_DESC"
+				picture = "portrait_eng_fallen_government.dds"
+				expire = "1965.1.1"
+				ideology = national_socialism
+				traits = {
+					}
+				}
+				create_country_leader = {
+				name = "Parliament"
+				desc = "POLITICS_PARLIAMENT_DESC"
+				picture = "portrait_eng_fallen_government.dds"
+				expire = "1965.1.1"
+				ideology = catholic_theocracts
+				traits = {
+					}
+				}
+			}
+		}
+	}
+
+country_event = { #Joining the Commonwealth Alliance
+	id = england.9
+	title = england.9.t
+	desc = england.9.d
+#	picture =
+
+	is_triggered_only = yes
+	
+	option = {
+		name = england.9.a
+		ENG = {
+			add_to_faction = ROOT
+			}
+		add_political_power = -10
+		hidden_effect = {
+			ENG = {
+				country_event = { id = england.10 days = 1 } 
+			}
+		}
+		ai_chance = {
+				factor = 85
+			}
+		}
+	option = {
+		name = england.9.b
+			add_political_power = -15
+			hidden_effect = {
+			ENG = {
+				country_event = { id = england.11 days = 1 } 
+				}
+			}
+			ai_chance = {
+				factor = 15
+			}
+		}
+	}
+
+country_event = { #Reply Yes
+	id = england.10
+	title = england.10.t
+	desc = england.10.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.10.a
+		}
+	}
+
+country_event = { #Reply No
+	id = england.11
+	title = england.11.t
+	desc = england.11.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.11.a
+		}
+	}
+
+country_event = { #End of the King
+	id = england.12
+	title = england.12.t
+	desc = england.12.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = england.12.a
+		}
+	}
+
+##Loads in Carrier
+country_event = {
+	id = england.13
+	title = england.13.t
+	desc = england.13.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = england.13.a
+		load_oob = "ENG_3_year_carrier_deal_legay"
+				}
+			}
+
+country_event = {
+	id = england.14
+	title = england.14.t
+	desc = england.14.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { # 
+		name = england.14.a
+		load_oob = "ENG_3_year_carrier_deal_mtg"
+				}
+			}

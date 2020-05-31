@@ -1,0 +1,66 @@
+﻿###################################################
+# Switzerland Events - Gates to Versailles Edition#
+###################################################
+
+add_namespace = switzerland
+
+country_event = { #Switzerland Civil War
+	id = switzerland.1
+	title = switzerland.1.t
+	desc = switzerland.1.d
+#	picture =
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	trigger = {
+		tag = SWI
+		NOT = { has_government = liberal }
+		date > 1937.6.1
+		has_country_flag = swi_cdg_liberal
+	}
+	
+	option = {
+		name = switzerland.1.a
+		hidden_effect = {
+		start_civil_war = {
+		ideology = democratic
+		size = 0.6
+			}
+		}
+	set_global_flag = swi_swiss_civilwar
+	}
+}
+
+country_event = { #Switzerland leave the continental Alliance
+	id = switzerland.2
+	title = switzerland.2.t
+	desc = switzerland.2.d
+#	picture =
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+	days = 15
+	}
+	
+	trigger = {
+		tag = SWI
+		NOT = { has_government = liberal }
+		date > 1937.1.1
+		has_country_flag = swi_cdg_liberal
+	}
+	
+	option = {
+		name = switzerland.2.a
+		hidden_effect = {
+			FRA = {
+			remove_from_faction = SWI 
+			}
+		}
+		set_global_flag = swi_quit_faction
+	}
+}	

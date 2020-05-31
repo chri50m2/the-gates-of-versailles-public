@@ -1,0 +1,116 @@
+ideas = {
+			country = {
+
+				NSW_imperial_federation_ALL = {
+					picture = ENG_imperial_federation
+
+					allowed = {
+						always = yes
+					}
+
+					allowed_civil_war = {
+						always = no
+					}
+
+					removal_cost = -1
+
+					modifier = {
+						stability_factor = 0.15
+						war_support_factor = 0.1
+						consumer_goods_factor = -0.05
+					}
+				}
+
+				NSW_responsible_for_the_pacific = {
+					picture = ita_global_navy
+
+					allowed = {
+						always = yes
+					}
+
+					allowed_civil_war = {
+						always = no
+					}
+
+					removal_cost = -1
+
+					modifier = {
+						naval_speed_factor = 0.05
+						industrial_capacity_dockyard = 0.1
+						production_speed_dockyard_factor = 0.1
+						army_core_defence_factor = 0.05
+					}
+					research_bonus = {
+						naval_doctrine = 0.05
+					}
+				}
+
+				NSW_skeptical_of_our_surroundings = {
+					picture = generic_spy_intel
+
+					allowed = {
+						always = yes
+					}
+
+					allowed_civil_war = {
+						always = no
+					}
+
+					removal_cost = -1
+
+					modifier = {
+						stability_factor = -0.1
+						war_support_factor = 0.1
+						production_speed_bunker_factor = 0.05
+						production_speed_coastal_bunker_factor = 0.05
+						research_speed_factor = -0.1
+					}
+				}
+
+				NSW_a_stagnant_economy = {
+					picture = great_depression
+
+					allowed = {
+						always = yes
+					}
+
+					allowed_civil_war = {
+						always = no
+					}
+
+					removal_cost = -1
+
+					modifier = {
+						consumer_goods_factor = 0.2
+						stability_factor = -0.1
+						production_speed_buildings_factor = -0.1
+						production_factory_max_efficiency_factor = -0.05
+					}
+					research_bonus = {
+						industry = -0.1
+					}
+				}
+
+				NSW_memories_of_monash = {
+					picture = NSW_memories_of_monash
+
+					allowed = {
+						always = yes
+					}
+
+					allowed_civil_war = {
+						always = no
+					}
+
+					removal_cost = -1
+
+					modifier = {
+						offence = 0.05
+						defence = 0.05
+						army_org_factor = 0.05
+						army_morale_factor = 0.05
+						supply_consumption_factor = 0.1
+					}
+				}
+			}
+}

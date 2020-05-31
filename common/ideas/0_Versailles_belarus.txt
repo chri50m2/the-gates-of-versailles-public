@@ -1,0 +1,92 @@
+ideas = {
+
+    #MINISTERS
+
+		head_of_state = {
+			BLR_vaclau_lastouski_hos = {
+
+			picture = BLR_minister_vaclau_lastouski
+			
+			allowed = {
+				original_tag = BLR
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+			}
+			
+			traits = {
+				intellectual_nationalist
+				socdem
+				}
+			}
+		}
+
+		econ_minister = {
+			BLR_anton_luckievich_eco = {
+
+			picture = BLR_minister_anton_luckievich
+			
+			allowed = {
+				original_tag = BLR
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+			}
+			
+			traits = {
+				political_everyman
+				socdem
+				}
+			}
+		}
+
+		foreign_minister = {
+			BLR_branislaw_tarashkyevich_for = {
+
+			picture = BLR_minister_branislaw_tarashkyevich
+			
+			allowed = {
+				original_tag = BLR
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+			}
+			
+			traits = {
+				jacobin_nationalist
+				revjac
+				}
+			}
+		}
+
+		interior_minister = {
+			BLR_michal_vituska_int = {
+
+			picture = BLR_minister_michal_vituska
+			
+			allowed = {
+				original_tag = BLR
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+			}
+			
+			traits = {
+				black_cat
+				authoritarian
+				}
+			}
+		}
+}

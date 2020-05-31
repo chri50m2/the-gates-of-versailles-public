@@ -1,0 +1,79 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+spain_protect_against_france = {
+	enable = {
+		original_tag = SPR
+	}
+	abort = {
+		FRA = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "FRA"			
+		value = 500
+	}
+	ai_strategy = {
+		type = protect
+		id = "SPR"			
+		value = 400
+	}
+	ai_strategy = {
+		type = force_build_armies
+		id = "SPR"			
+		value = 100
+	}
+}
+
+spain_alliance_italy = {
+	enable = {
+		original_tag = SPR
+	}
+	abort = {
+		ITA = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ITA"			
+		value = 5000
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ITA"			
+		value = 500
+	}
+}
+
+turkey_alliance_italy = {
+	enable = {
+		original_tag = TUR
+	}
+	abort = {
+		ITA = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ITA"			
+		value = 5000
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ITA"			
+		value = 500
+	}
+}

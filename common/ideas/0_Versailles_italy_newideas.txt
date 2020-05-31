@@ -1,0 +1,1597 @@
+ideas = {
+	country = {
+		confused_government = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.5
+				max_command_power = -15
+			}
+		}
+		
+		victor_emmanuel_versailles = {
+			
+			
+			allowed = {
+				original_tag = "ITA"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = ITA
+						has_government = fascism
+					}
+				}
+			}
+			
+			removal_cost = -1
+
+			picture = ITA_Victor_Emmanuel_III
+			
+			modifier = {
+				stability_factor = 0.10
+                war_support_factor = 0.05
+                political_power_gain = 0.25				
+			}
+		}
+		
+		novus_imperium_romanum = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                war_support_factor = 0.10
+                army_core_attack_factor = 0.1
+				army_defence_factor = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		
+		unstable_government = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+                war_support_factor = -0.50
+                stability_factor = -0.40
+				political_power_gain = -0.30
+				max_command_power = -30
+				democratic_drift = 0.05
+				liberal_drift = 0.05
+				communism_drift = 0.05
+			}
+		}
+		
+		workers_propaganda = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                production_speed_buildings_factor = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.025
+			}
+		}
+		
+		mussolini_propaganda = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                war_support_factor = 0.02
+                stability_factor = 0.05
+				fascism_drift = 0.10
+				political_power_gain = 0.10
+			}
+		}
+		
+		mussolini_legions = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                non_core_manpower = 0.02
+				conscription_factor = 0.05
+				fascism_drift = 0.02
+			}
+		}
+		
+		keep_loyalists = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                stability_factor = -0.05
+				fascism_drift = 0.20
+				political_power_gain = -0.10
+			}
+		}
+		
+		rid_loyalists = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                stability_factor = 0.05
+				political_power_gain = 0.15
+			}
+		}
+		
+		revolutionary_activity = {     
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.05
+				stability_factor = -0.10
+			}
+		}
+		
+		french_commune_supported = {     
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.05
+				stability_factor = -0.10
+			}
+		}
+		
+		northern_france_communists = {     
+			
+			allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.09
+				political_power_gain = -0.25
+				stability_factor = -0.15
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		
+		ITA_plan_one = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		ITA_trained_workers = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1 
+				industrial_capacity_factory = 0.05		
+			}
+	    }
+		
+		military_based_economy_ita = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				consumer_goods_factor = 0.05
+                production_speed_industrial_complex_factor = -0.15
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+	    }
+		
+		civilian_based_economy_ita = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.15
+				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = -0.05
+				conversion_cost_civ_to_mil_factor = 0.2
+			}
+	    }
+		
+		modern_dockyards = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    industrial_capacity_dockyard = 0.1
+				navy_max_range_factor = 0.15
+			}
+	    }
+		
+		improved_grain_production = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    consumer_goods_factor = -0.05
+			}
+	    }
+		
+		incompetent_generals_fired = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    planning_speed = 0.10
+				army_morale_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+	    }
+		
+		maintained_general_staff = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    planning_speed = -0.10
+				army_morale_factor = -0.1
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				political_power_factor = 0.75
+				justify_war_goal_time = -0.25
+				fascism_drift = 0.10
+			}
+	    }
+		
+		improved_officer_classes = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    planning_speed = 0.05
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 1
+				political_power_factor = -0.05
+			}
+	    }
+		
+		napoleonic_strategy_taught = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    planning_speed = 0.15
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 2
+				army_leader_start_planning_level= 2
+				political_power_factor = -0.05
+			}
+	    }
+		
+		ITA_reformed_army = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.10
+				political_power_factor = 0.05
+			}
+	    }
+		
+		ITA_modernized_trains_idea = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    land_reinforce_rate = 0.1
+			}
+	    }
+		
+		ITA_amphibous_invasion_bonus = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				amphibious_invasion = 0.12
+				invasion_preparation = -0.1
+			}
+	    }
+		
+		ita_global_navy = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_carrier_air_attack_factor = 0.03
+				navy_submarine_attack_factor = 0.1
+				navy_max_range_factor = 0.05
+				convoy_escort_efficiency = -0.10
+			}
+	    }
+		
+		ita_mediterranean_fleet = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			    navy_carrier_air_agility_factor = -0.05
+				navy_capital_ship_attack_factor = 0.05
+				spotting_chance = 0.1
+				convoy_escort_efficiency = 0.25
+			}
+	    }
+		
+		ita_keep_loyalists = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   fascism_drift = -0.05
+			   stability_factor = -0.05
+			   political_power_factor = 0.15	
+			}
+	    }
+		
+		
+		ita_got_rid_of_loyalists = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   fascism_drift = 0.05
+			   stability_factor = 0.05
+			   political_power_factor = -0.15
+			   military_leader_cost_factor = -0.25
+			}
+	    }
+		
+		ita_banished_royalists = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   fascism_drift = 0.05
+			   political_power_factor = 0.15
+			   monarchist_drift = -0.05
+			}
+	    }
+		
+		ita_committe_disbanded = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_factor = 0.15
+			   stability_factor = 0.05
+			   justify_war_goal_time = -0.15
+			}
+	    }
+		
+		ita_fascist_legions = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_factor = 0.05
+			   conscription_factor = 0.1
+			}
+	    }
+		
+		ita_silence_mafia = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_factor = 0.05
+			   stability_factor = 0.05
+			   industrial_capacity_factory = 0.1
+			   consumer_goods_factor = -0.03
+			}
+	    }
+		
+		ita_pregnancy_support = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   conscription_factor = 0.10
+			   MONTHLY_POPULATION = 0.05
+			}
+	    }
+		
+		ita_italian_movies = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_gain = 0.15
+			   consumer_goods_factor = -0.02
+			}
+	    }
+		
+		ita_nation_reborn = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_gain = 0.15
+			   stability_factor = 0.15
+			   war_support_factor = 0.10
+			   send_volunteer_size = 3
+			   	army_core_attack_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+	    }
+		
+		ita_nap_war = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   stability_factor = -0.05
+			    political_power_gain = -0.2
+			  ai_call_ally_desire_factor = -90
+			  ai_join_ally_desire_factor = -90
+			}
+	    }
+		
+		ita_payments_for_south_tyrol = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   stability_factor = -0.05
+			   political_power_gain = -0.1
+			}
+	    }
+		
+		confused_government_1 = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				political_power_gain = -0.7 
+				max_command_power = -40
+			}
+		}
+		
+		ita_democratic_government = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.10
+				liberal_drift = 0.10
+				social_democratic_drift = 0.10
+				democratic_acceptance = 85
+				liberal_acceptance = 85
+				social_democratic_acceptance = 85
+			}
+		}
+		
+		ita_right_to_bear_arms = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.10
+				surrender_limit = 0.15
+				conscription_factor = 0.05
+			}
+		}
+		
+		ita_lower_business_tax = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		ita_increased_individual_freedoms = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.10
+				research_speed_factor = 0.10
+			}
+		}
+		
+		ita_social_welfare = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		ita_business_regulations_increase = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.30
+				liberal_drift = 0.10
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+		
+		ita_equal_rights = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		
+		ita_abolished_private_property = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				social_democratic_drift = 0.10
+			}
+		}
+		
+		ita_government_controlled_economy = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.10
+				global_building_slots_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		ita_high_taxes_rich = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				research_speed_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
+		ita_empowered_king = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				monarchist_drift = 0.15
+			}
+		}
+		
+		ita_kings_guard = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.10
+				monarchist_drift = 0.05
+			}
+		}
+		
+		ita_royal_family_rivalries = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.10
+				monarchist_drift = -0.05
+			}
+		}
+		
+		ita_kings_constitution = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+				war_support_factor = 0.05
+				stability_factor = 0.15
+				monarchist_drift = 0.15
+			}
+		}
+		
+		ita_royal_family_rivalries_1 = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.30
+				stability_factor = -0.15
+				monarchist_drift = -0.10
+			}
+		}
+		
+		ita_royal_family_rivalries_umberto = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.35
+				stability_factor = -0.10
+				monarchist_drift = -0.05
+			}
+		}
+		
+		ita_royal_family_rivalries_prince_aimone = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.20
+				stability_factor = -0.05
+				monarchist_drift = -0.10
+			}
+		}
+		
+		ita_industrilization_help = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.10
+			}
+		}
+		
+		ita_seized_british_assets = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.10
+			}
+		}
+		
+		ita_recognized_naples_minority = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				conscription_factor = 0.15
+			}
+		}
+		
+		ita_banned_fascism = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = -0.40
+			}
+		}
+		
+		ita_freedom_of_religon = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				conscription_factor = 0.05
+			}
+		}
+
+		aus_payments_for_south_tyrol_give = {
+				
+			allowed = {
+				original_tag = ITA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_morale_bonus
+				
+			modifier = {
+				political_power_gain = -0.25
+				war_support_weekly = -0.01
+				production_factory_max_efficiency_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+    }
+
+    #MINISTERS
+
+		head_of_state = {
+			ITA_benito_mussolini_hos = {
+
+			picture = ITA_minister_benito_mussolini
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_mussolini_in_charge_FLAG
+			}
+			
+			traits = {
+				il_duce
+				fascist
+				}
+			}
+
+		ITA_pietro_badoglio_hos = {
+
+			picture = ITA_minister_pietro_badoglio
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_military_junta_in_charge
+			}
+			
+			traits = {
+				slight_republican
+				authoritarian
+				}
+			}
+
+		ITA_benedetto_croce_hog = {
+
+			picture = ITA_minister_benedetto_croce
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_liberal_charge_FLAG
+			}
+			
+			traits = {
+				liberal_philosopher
+				liberal_trait
+			}
+		}
+
+		ITA_alcide_de_gasperi_hog = {
+
+			picture = ITA_minister_alcide_de_gasperi
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_conservative_charge_FLAG
+			}
+			
+			traits = {
+				democratic_founder
+				conservative
+			}
+		}
+
+		ITA_umberto_ii_hog = {
+
+			picture = ITA_minister_umberto_II
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_king_in_charge_FLAG
+			}
+			
+			traits = {
+				son_of_the_king
+				monarchist
+			}
+		}
+	}
+
+		econ_minister = {
+			ITA_edmondo_rossoni_eco = {
+
+			picture = ITA_minister_edmondo_rossoni
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_mussolini_in_charge_FLAG
+			}
+			
+			traits = {
+				proletarian_syndicalist
+				fascist
+				}
+			}
+
+		ITA_giovanni_messe_eco = {
+
+			picture = ITA_minister_giovanni_messe
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_military_junta_in_charge
+			}
+			
+			traits = {
+				slight_republican
+				authoritarian
+				}
+			}
+
+		ITA_roberto_lucifero_d_aprigliano_eco = {
+
+			picture = ITA_minister_roberto_lucifero_d_aprigliano
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_liberal_charge_FLAG
+			}
+			
+			traits = {
+				political_everyman
+				liberal_trait
+			}
+		}
+
+		ITA_antonio_segni_eco = {
+
+			picture = ITA_minister_antonio_segni
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_conservative_charge_FLAG
+			}
+			
+			traits = {
+				agricultural_production
+				conservative
+			}
+		}
+
+		ITA_giuseppe_volpi_eco = {
+
+			picture = ITA_minister_giuseppe_volpi
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_king_in_charge_FLAG
+			}
+			
+			traits = {
+				debt_negotiator
+				liberal_trait
+			}
+		}
+	}
+
+		foreign_minister = {
+			ITA_galeazzo_ciano_for = {
+
+			picture = ITA_minister_galeazzo_ciano
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_mussolini_in_charge_FLAG
+			}
+			
+			traits = {
+				pacifist_soldier
+				fascist
+				}
+			}
+
+		ITA_emilio_de_bono_for = {
+
+			picture = ITA_minister_emilio_de_bono
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_military_junta_in_charge
+			}
+			
+			traits = {
+				ancient_general
+				authoritarian
+				}
+			}
+
+		ITA_alessandro_casati_for = {
+
+			picture = ITA_minister_alessandro_casati
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_liberal_charge_FLAG
+			}
+			
+			traits = {
+				former_mountaineer
+				liberal_trait
+			}
+		}
+
+		ITA_bernardo_mattarella_for = {
+
+			picture = ITA_minister_bernardo_mattarella
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_conservative_charge_FLAG
+			}
+			
+			traits = {
+				international_commerce
+				conservative
+			}
+		}
+
+		ITA_tulio_cianetti_for = {
+
+			picture = ITA_minister_tulio_cianetti
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_king_in_charge_FLAG
+			}
+			
+			traits = {
+				former_mussolinst
+				fascist
+			}
+		}
+	}
+
+		interior_minister = {
+			ITA_dino_grandi_int = {
+
+			picture = ITA_minister_dino_grandi
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_mussolini_in_charge_FLAG
+			}
+			
+			traits = {
+				extreme_blackshirt
+				fascist
+				}
+			}
+
+		ITA_rodolfo_graziani_int = {
+
+			picture = ITA_minister_rodolfo_graziani
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_military_junta_in_charge
+			}
+			
+			traits = {
+				dedicated_fascist
+				fascist
+			}
+		}
+
+		ITA_giovanni_porzio_int = {
+
+			picture = ITA_minister_giovanni_porzio
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_liberal_charge_FLAG
+			}
+			
+			traits = {
+				criminal_lawyer
+				liberal_trait
+			}
+		}
+
+		ITA_mario_cingolani_int = {
+
+			picture = ITA_minister_mario_cingolani
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_conservative_charge_FLAG
+			}
+			
+			traits = {
+				military_rearmer
+				conservative
+			}
+		}
+
+		ITA_rita_levi_montalcini_int = {
+
+			picture = ITA_minister_rita_levi_montalcini
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_country_flag = can_replace_minister
+				has_country_flag = ITA_king_in_charge_FLAG
+			}
+			
+			traits = {
+				brilliant_doctor
+				monarchist
+			}
+		}
+	}
+}

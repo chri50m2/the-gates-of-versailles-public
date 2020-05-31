@@ -1,0 +1,168 @@
+SPR_second_peninsula_war = {
+	SPR_destroy_local_infrastructure = {
+		allowed = {
+			original_tag = SPR
+		}
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		available = {
+            FRA = {
+				has_war_with = SPR
+			}
+			any_owned_state = {
+				is_controlled_by = FRA
+			}
+        }
+     	visible = {
+            FRA = {
+				has_war_with = SPR
+			}
+        }
+
+		cost = 15
+
+		days_re_enable = 12
+
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					infrastructure > 0
+					any_neighbor_state = {
+						NOT = { is_fully_controlled_by = ROOT }
+						controller = { has_war_with = CHI }
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 3
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_spread_propaganda = {
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+            FRA = {
+				has_war_with = SPR
+			}
+        }
+
+		icon = GFX_decision_eng_propaganda_campaigns
+
+     	visible = {
+            FRA = {
+				has_war_with = SPR
+			}
+        }
+
+		cost = 50
+
+		days_remove = 365
+
+		modifier = {
+               surrender_limit = 0.25
+			   defensive_war_stability_factor = 0.2
+			   mobilization_speed = 0.2
+			   war_support_weekly = 0.02
+          }
+		targeted_modifier = {
+				tag = FRA
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.05
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_lower_training_standards = {
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+            FRA = {
+				has_war_with = SPR
+			}
+        }
+
+		icon = GFX_decision_generic_prepare_civil_war
+
+     	visible = {
+            FRA = {
+				has_war_with = SPR
+			}
+        }
+
+		cost = 25
+
+		days_remove = 365
+
+		modifier = {
+               training_time_army_factor = -0.2
+			   weekly_manpower = 4500
+			   minimum_training_level = -0.05
+          }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_buy_foreign_planes = {
+		allowed = {
+			original_tag = SPR
+		}
+		available = {
+            FRA = {
+				has_war_with = SPR
+			}
+			NOT = {
+				SPR = {
+					has_war_with = ENG
+					has_war_with = USA
+				}
+				ENG = {
+					has_war_together_with = FRA
+				}
+				USA = {
+					has_war_together_with = FRA
+				}
+			}
+        }
+
+		icon = GFX_decision_generic_air
+
+     	visible = {
+            FRA = {
+				has_war_with = SPR
+			}
+        }
+
+		cost = 30
+
+		days_remove = 1
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+    			type = CAS_equipment_1
+    			amount = 150
+    			producer = ENG
+			}
+			add_equipment_to_stockpile = {
+    			type = tac_bomber_equipment_0
+    			amount = 150
+    			producer = USA
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

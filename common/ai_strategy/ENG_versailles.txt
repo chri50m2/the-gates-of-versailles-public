@@ -1,0 +1,192 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+england_antagonize_france = {
+	enable = {
+		original_tag = ENG
+	}
+	abort = {
+		FRA = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "FRA"			
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "FRA"			
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "FRA"			
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "FRA"			
+		value = 100
+	}
+}
+
+england_defend_home_islands = {
+	enable = {
+		original_tag = ENG
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ENG"			
+		value = 500
+	}
+	ai_strategy = {
+		type = protect
+		id = "ENG"			
+		value = 500
+	}
+}
+
+england_defend_overseas_territory = {
+	enable = {
+		original_tag = ENG
+	}
+	abort_when_not_enabled = yes
+	abort = {
+		MAL = {
+			exists = no
+		}
+		WEI = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = protect
+		id = "MAL"			
+		value = 200
+	}
+	ai_strategy = {
+		type = protect
+		id = "WEI"			
+		value = 200
+	}
+}
+
+ENG_you_should_be_prepared_for_war = {
+
+	enable = {
+		tag = ENG
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+        type = force_build_armies
+        value = 200
+    }
+}
+
+portugal_stay_in_faction = {
+	enable = {
+		tag = POR
+		ENG = {
+			has_completed_focus = ENG_new_alliances
+		}
+	}
+	abort = {
+		ENG = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ENG"			
+		value = 5000
+	}
+}
+
+netherlands_stay_in_faction = {
+	enable = {
+		tag = HOL
+		ENG = {
+			has_completed_focus = ENG_new_alliances
+		}
+	}
+	abort = {
+		ENG = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ENG"			
+		value = 5000
+	}
+}
+
+denmark_stay_in_faction = {
+	enable = {
+		tag = DEN
+		ENG = {
+			has_completed_focus = ENG_new_alliances
+		}
+	}
+	abort = {
+		ENG = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ENG"			
+		value = 5000
+	}
+}
+
+greece_stay_in_faction = {
+	enable = {
+		tag = GRE
+		ENG = {
+			has_completed_focus = ENG_new_alliances
+		}
+	}
+	abort = {
+		ENG = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ENG"			
+		value = 5000
+	}
+}
+
+gerogia_stay_in_commonwealth = {
+	enable = {
+		tag = GEO
+		ENG = {
+			has_completed_focus = ENG_new_alliances
+		}
+	}
+	abort = {
+		ENG = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ENG"			
+		value = 5000
+	}
+}

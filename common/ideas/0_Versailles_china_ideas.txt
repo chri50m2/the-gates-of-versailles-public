@@ -1,0 +1,720 @@
+ideas = {
+	country = {
+		CHI_austrian_advisors = {
+		
+			picture = german_advisors
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+					}
+				}
+			}
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		}
+
+		CHI_inefficient_military = {
+
+			picture = generic_army_problems
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = -0.2
+				army_attack_factor = -0.30
+				army_defence_factor = -0.30
+			}
+
+		}
+		
+		CHI_factionalism = {
+
+			picture = generic_morale_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.10
+			}
+
+		}
+		
+		CHI_nanjing_decade = {
+
+			picture = generic_goods_red_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.20
+			}
+
+		}
+		
+		#####################
+		##### Corruption ####
+		#####################
+		
+		CHI_corruption_1 = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				local_resources_factor = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		
+		CHI_corruption_2 = {
+
+			picture = chi_hyper_inflation2
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.10
+				local_resources_factor = -0.10
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		
+		CHI_corruption_3 = {
+
+			picture = chi_hyper_inflation3
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.15
+				local_resources_factor = -0.15
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		
+		CHI_corruption_4 = {
+
+			picture = chi_hyper_inflation4
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.20
+				local_resources_factor = -0.20
+				production_speed_buildings_factor = -0.20
+			}
+		}
+
+		CHI_corruption_5 = {
+
+			picture = chi_hyper_inflation5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.25
+				local_resources_factor = -0.25
+				production_speed_buildings_factor = -0.25
+			}
+		}
+
+		
+		#####################
+		##### From focus ####
+		#####################
+
+		CHI_a_new_china_idea = {
+
+			picture = chi_chinese_support
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+				war_support_factor = 0.005
+			}
+		}
+
+		CHI_new_public_schools_idea = {
+
+			picture = generic_research_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05 
+			}
+		}
+		
+		CHI_building_great_national_network = {
+		
+			picture = generic_build_infrastructure
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05 
+			}
+			
+		}
+		
+		CHI_building_great_national_network_warlords = {
+		
+			picture = generic_build_infrastructure
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05 
+			}
+			
+		}
+		
+		CHI_increase_industrial_output_idea = {
+
+			picture = man_five_year_plan_industry
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		CHI_increase_country_exports_idea = {
+
+			picture = can_wartime_prices_and_trade_board	
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.10
+				local_resources_factor = 0.05
+			}
+		}
+
+		CHI_attritional_warfare_idea = {
+
+			picture = idea_chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.10
+				max_dig_in = 5
+			}
+		}
+
+		CHI_mass_production_lines_idea = {
+
+			picture = generic_production_bonus			
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 
+					instant = yes
+				}
+			}
+		}
+
+		CHI_reform_whampoa_military_academy_idea = {
+
+			picture = chi_whampoa_military_academy		
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_cost_factor = -0.50
+				training_time_army_factor = -0.10
+			}
+		}
+
+		CHI_bureau_of_intelligence_and_statistics_idea = {
+
+			picture = generic_spy_intel
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				encryption = 1.0
+				decryption = 1.0
+			}
+		}
+		
+		CHI_complete_the_60_divisions_plan_idea = {
+
+			picture = mex_politicised_army		
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				offence = 0.05
+				defence = 0.05
+				minimum_training_level = -0.10
+			}
+		}
+		
+		CHI_chinese_flying_tigers = {
+
+			picture = air_war_plans_division_focus			
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_air_factor = 0.50
+			}
+		}
+		
+		CHI_convoy_production_idea = {
+
+			picture = escort_effort_focus			
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10 
+					instant = yes
+				}
+			}
+		}
+		
+		CHI_fabian_strategy_idea = {
+
+			picture = yug_federal_defense_council		
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = -0.10
+				attrition = -0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+		
+		CHI_local_resistance_idea = {
+
+			picture = chi_war_of_resistance3			
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_growth = 0.50
+				army_core_defence_factor = 0.15
+			}
+		}
+		
+		CHI_war_against_japan_idea = {
+
+			picture = chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.20
+				army_core_defence_factor = 0.20
+				surrender_limit = 0.20
+			}
+		}
+		
+		CHI_new_life_movement_idea = {
+
+			picture = idea_chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		
+		}
+		
+		CHI_new_culture_movement_idea = {
+
+			picture = idea_chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			
+		}
+		
+		CHI_new_republic_idea = {
+
+			picture = idea_chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+			}
+			
+		}
+		
+		CHI_secret_police_force_idea = {
+
+			picture = idea_chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.10
+			}
+			
+		}
+		
+		CHI_loyal_military_officers_idea = {
+
+			picture = idea_chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.10
+			}
+			
+		}
+		
+		CHI_rule_of_one_man_idea = {
+
+			picture = idea_chi_war_of_resistance3
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+			}
+			
+		}
+		
+	}
+	
+    #####################
+	##### Advisors ######
+	#####################
+
+	head_of_state = {
+
+		CHI_liu_shangqing = { #new sourced from HOI2: DH
+
+			picture = generic_political_advisor_asia_1 #gfx needed
+
+			available = {
+				has_completed_focus = CHI_bureau_of_investigation_and_statistics				
+			}
+
+			visible = { always = no }
+			
+			allowed = {
+				original_tag = CHI
+			}
+			
+			traits = { prince_of_terror }
+		}
+
+		CHI_hu_hanmin = { #new
+
+			picture = generic_political_advisor_asia_1 #gfx needed
+			
+			allowed = {
+				original_tag = CHI
+			}
+
+			visible = { always = no }
+			
+			traits = { popular_figurehead }
+		}
+		CHI_wang_zhengting = {  #new sourced from HOI2: DH
+
+			picture = generic_political_advisor_asia_1 #gfx needed
+			
+			allowed = {
+				original_tag = CHI
+			}
+
+			visible = { always = no }
+			
+			traits = { backroom_backstabber }
+		}
+
+	}	
+
+	industrial_concern = {
+
+		CHI_kailan_mining_administration = { #new
+
+			picture = generic_industrial_concern_3		
+
+			allowed = {
+				original_tag = CHI
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+	}
+}

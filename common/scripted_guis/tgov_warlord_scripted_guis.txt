@@ -1,0 +1,44 @@
+scripted_gui = {
+	tgov_warlord_script = {
+		window_name = "tgov_warlord_state_view_container"
+        context_type = selected_state_context
+        parent_window_token = top_bar
+		
+		visible = {
+			has_state_flag = tgov_warlord_state
+			ROOT = {
+				has_country_flag = tgov_warlord_is_china
+			}
+        }
+		
+		properties = {
+			tgov_warlord_state_view_pic = {
+				image = "[get_warlord_pic]"
+			}
+		}
+		
+		effects = {
+			tgov_warlord_appease_warlord_click = {
+				CHI = {
+					add_political_power = -100
+					warlord_anger_level_down = yes
+				}
+			}
+		}
+		
+		triggers = {
+				political_power > 99
+				check_variable = {
+    					var = warlord_pol_var
+    					value = 0
+    					compare = greater_than
+					}
+		}
+		
+		ai_enabled = {
+			always = yes
+        }
+		
+		ai_test_interval = 1200
+	}
+}

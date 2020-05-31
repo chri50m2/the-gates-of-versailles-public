@@ -1,0 +1,210 @@
+bookmarks = {
+	bookmark = {
+		name = "THE_GATES_OF_VERSAILLES_NAME"
+		desc = "THE_GATES_OF_VERSAILLES_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "FRA"
+		default = yes
+		
+		"FRA"={
+			history = "FRA_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = neutrality
+			available = { NOT = { has_dlc = "La Resistance" } }
+			ideas = {
+				FRA_victors_of_wwi_versailles
+				FRA_fear_of_democratic_coup
+				FRA_germanic_ethnicity_problems
+			}
+			focuses = {
+				FRA_thenewdream
+				FRA_democratictransition
+				FRA_vive_la_republique
+			}
+		}
+		"FRA"={
+			history = "FRA_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = neutrality
+			available = { has_dlc = "La Resistance" } 
+			ideas = {
+				FRA_victors_of_wwi_versailles
+				FRA_fear_of_democratic_coup
+				FRA_germanic_ethnicity_problems
+			}
+			focuses = {
+				FRA_thenewdream
+				FRA_democratictransition
+				FRA_vive_la_republique
+			}
+		}
+		"USA"={
+			history = "USA_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"ENG"={
+			history = "ENG_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = liberal
+			available = { has_dlc = "Man the Guns" }
+			ideas = {
+				ENG_rule_britannia
+				ENG_the_shame_of_quebec
+				ENG_the_louche_prince
+				NSW_imperial_federation_ALL
+			}
+			focuses = {
+				ENG_the_drunken_king
+				ENG_liberation_of_the_workers
+				ENG_march_on_whitehall
+			}
+		}
+		"ENG"={
+			history = "ENG_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = liberal
+			available = { NOT = { has_dlc = "Man the Guns" } }
+			ideas = {
+				ENG_rule_britannia
+				ENG_the_shame_of_quebec
+				ENG_the_louche_prince
+				NSW_imperial_federation_ALL
+			}
+			focuses = {
+				ENG_the_drunken_king
+				ENG_liberation_of_the_workers
+				ENG_march_on_whitehall
+			}
+		}
+		"PRS"={
+			history = "PRS_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = democratic
+			available = { has_dlc = "Waking the Tiger" }
+			ideas = {
+				GER_okh
+				GER_golden_century
+			}
+			focuses = {
+				GER_munich_conference
+				GER_dealing_with_austria
+				GER_three_hurrahs_for_germany
+			}
+		}
+		"PRS"={
+			history = "PRS_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = democratic
+			available = { NOT = { has_dlc = "Waking the Tiger" } }
+			ideas = {
+				GER_okh
+				GER_golden_century
+			}
+			focuses = {
+				GER_munich_conference
+				GER_dealing_with_austria
+				GER_three_hurrahs_for_germany
+			}
+		}
+		"ITA"={
+			history = "ITA_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = fascism
+			ideas = {
+				confused_government
+				victor_emmanuel_versailles
+				novus_imperium_romanum
+			}	
+			focuses = {
+				ITA_strenghten_mussolinis_power
+				ITA_form_the_italian_middle_east
+				ITA_unification_of_italy
+			}		
+		}
+		"JAP"={
+			history = "JAP_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = monarchist
+			ideas = {
+				
+			}	
+			focuses = {
+				
+			}			
+		}
+		"SOV"={
+			history = "SOV_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = democratic
+			ideas = {
+				SOV_disorganised_army
+				SOV_unmatched_airforce
+				SOV_unmatched_navy
+				SOV_outplayed_in_every_corner
+				SOV_agricultural_economy
+			}
+			focuses = {
+				SOV_putting_pressure_on_the_lost_territories
+				SOV_starting_the_revolution
+				SOV_nothing_but_a_figurehead
+			}	
+		}
+
+		"---"={
+			history = "OTHER_THE_GATES_OF_VERSAILLES_DESC"
+		}
+
+
+		# minors that have a focus tree ####
+		"CHI"={
+			minor = yes
+			history = "CHI_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_austrian_advisors
+				CHI_inefficient_military
+				CHI_nanjing_decade
+			}
+			focuses = {
+				CHI_shared_overturn_the_uneven_treaties
+				CHI_shared_the_great_leap_forward
+				CHI_shared_complete_the_60_divisions_plan
+			}
+		}
+		
+		"AUS"={
+			minor = yes
+			history = "AUS_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = fascism
+			ideas = {
+				
+			}
+			focuses = {
+				AUS_agermandream
+				AUS_legacyofaustria
+				AUS_newaustrianman
+			}
+		}
+
+		"MON"={
+			minor = yes
+			history = "MON_THE_GATES_OF_VERSAILLES_DESC"
+			ideology = communism
+			ideas = {
+				MON_bastard_of_russia
+				MON_communist_junta
+				MON_unstable_government
+				MON_revolutionary
+				MON_poor_industry
+			}
+			focuses = {
+				MON_industryinthesteppes
+				MON_theyellowrivercrisis
+				MON_dawnoftheglobalsocialistconfederation
+			}
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

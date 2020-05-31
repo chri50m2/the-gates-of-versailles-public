@@ -1,0 +1,97 @@
+﻿################################################
+# Flanders Events - Gates to Versailles Edition#
+################################################
+
+add_namespace = flanders
+
+country_event = { #The Flemmish Famine
+	id = flanders.1
+	title = flanders.1.t
+	desc = flanders.1.d
+#	picture =
+
+	trigger = {
+		tag = BEL
+		BEL =  { is_puppet_of = FRA }
+		FRA = {
+		has_completed_focus = FRA_breachofbelgianneutrality
+		}
+		NOT = {
+			BEL = { exists = no }
+		}
+		date > 1937.1.1
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Oh no
+		name = flanders.1.a
+			set_global_flag = flanders_requested_help
+			add_ideas = BEL_flemmish_famine_2
+		}
+	}
+
+country_event = { #The Flemmish Famine (Getting worse (Stage 2 -> Stage 3))
+	id = flanders.2
+	title = flanders.2.t
+	desc = flanders.2.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Oh my god...
+		name = flanders.2.a
+			remove_ideas = BEL_flemmish_famine_2
+			add_ideas = BEL_flemmish_famine_3
+		}
+	}
+
+country_event = { #The Flemmish Famine (Getting Better after getting worse (Stage 3 -> Stage 2))
+	id = flanders.3
+	title = flanders.3.t
+	desc = flanders.3.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #A Little Better
+		name = flanders.3.a
+			remove_ideas = BEL_flemmish_famine_3
+			add_ideas = BEL_flemmish_famine_2
+		}
+	}
+
+country_event = { #The Flemmish Famine (Getting Better (Stage 2 -> Stage 1))
+	id = flanders.4
+	title = flanders.4.t
+	desc = flanders.4.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #A Little Better
+		name = flanders.4.a
+			remove_ideas = BEL_flemmish_famine_2
+			add_ideas = BEL_flemmish_famine_1
+		}
+	}
+
+country_event = { #The Flemmish Famine (The Famine is Eradicated (Stage 1 -> No more famine))
+	id = flanders.5
+	title = flanders.5.t
+	desc = flanders.5.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #A Little Better
+		name = flanders.5.a
+			remove_ideas = BEL_flemmish_famine_1
+		}
+	}

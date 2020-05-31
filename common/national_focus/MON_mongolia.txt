@@ -1,0 +1,3580 @@
+focus_tree = {
+	id = mongolia
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MON
+		}
+	}
+	continuous_focus_position = { x = 0 y = 2000 }
+	#Focus for A Change Of Course
+	focus = {
+		id = MON_achangeofcourse
+		icon = GFX_goal_generic_dangerous_deal
+		x = 38
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = MON_therightchoice }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= -15
+		}
+	}
+
+	#Focus for The Qing Empire
+	focus = {
+		id = MON_theqingempire
+		icon = GFX_focus_jap_manchurian_project
+		x = 50
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_supportjapaneseexpansion }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+JAP = {
+controls_state= 328
+controls_state= 717
+controls_state= 714
+controls_state= 761
+controls_state= 715
+controls_state= 610
+controls_state= 716
+controls_state= 609
+controls_state= 608
+controls_state= 611
+}
+MAN = {
+is_puppet_of = JAP
+}
+}
+		}
+		completion_reward = {
+			JAP = {
+country_event= {
+days = 1 
+id = mongolia.59
+}
+}
+		}
+	}
+
+	#Focus for The Freedom Exchange
+	focus = {
+		id = MON_thefreedomexchange
+		icon = GFX_goal_generic_major_alliance
+		x = 41
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_containthebeast }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CHI = {
+set_equipment_fraction = -0.50
+ add_popularity = { 
+  ideology = democratic
+  popularity = 0.05
+ }
+}
+MON = {
+set_equipment_fraction = 0.50
+}
+give_guarantee = CHI
+MON = {
+ transfer_state = 616
+ transfer_state = 621
+ transfer_state = 746
+}
+		}
+	}
+
+	#Focus for Prepare For Intervention
+	focus = {
+		id = MON_prepareforintervention
+		icon = GFX_goal_generic_small_arms
+		x = 41
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_thefreedomexchange }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support= 0.05
+add_manpower = 5000
+		}
+	}
+
+	#Focus for Preserve The Region
+	focus = {
+		id = MON_preservetheregion
+		icon = GFX_goal_generic_political_pressure
+		x = 42
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_prepareforintervention }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			give_guarantee= MAN
+give_guarantee= SIK
+give_guarantee= GXC
+give_guarantee= TIB
+give_guarantee= KOR
+		}
+	}
+
+	#Focus for Contain The Beast
+	focus = {
+		id = MON_containthebeast
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = 41
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_bastionofasiandemocracy }
+		mutually_exclusive = { focus = MON_acommonenemy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = {
+add_opinion_modifier= { 
+target = MON 
+modifier = pact_against_us
+}
+}
+		}
+	}
+
+	#Focus for A Common Enemy
+	focus = {
+		id = MON_acommonenemy
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 45
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_bastionofasiandemocracy }
+		mutually_exclusive = { focus = MON_containthebeast }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CHI = {
+add_opinion_modifier= { 
+target = MON
+modifier = pact_against_us
+}
+}
+		}
+	}
+
+	#Focus for Japanese Mongolian Serenity Pact
+	focus = {
+		id = MON_japanesemongolianserenitypact
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 47
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_sanctionthechinese }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			give_guarantee= JAP
+JAP = {
+give_guarantee= MON
+}
+		}
+	}
+
+	#Focus for Support Japanese Expansion
+	focus = {
+		id = MON_supportjapaneseexpansion
+		icon = GFX_goal_generic_political_pressure
+		x = 48
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_japanesemongolianserenitypact }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			news_event= news.362
+army_experience = 30
+		}
+	}
+
+	#Focus for Preemptive Strike
+	focus = {
+		id = MON_preemptivestrike
+		icon = GFX_focus_AST_war_japan
+		x = 44
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_preservetheregion }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = JAP
+}
+		}
+	}
+
+	#Focus for Sanction The Chinese
+	focus = {
+		id = MON_sanctionthechinese
+		icon = GFX_goal_generic_trade
+		x = 45
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_acommonenemy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+CHI = {
+add_opinion_modifier= { 
+target = MON
+modifier = embargo
+}
+}
+		}
+	}
+
+	#Focus for The Anti-Japanese Pact
+	focus = {
+		id = MON_theantijapanesepact
+		icon = GFX_goal_generic_alliance
+		x = 40
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_preservetheregion }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CHI = {
+ country_event= {
+  days = 1 
+  id = mongolia.50
+ }
+}
+
+SIK = {
+ country_event= {
+  days = 1 
+  id = mongolia.50
+ }
+}
+
+TIB = {
+ country_event= {
+  days = 1 
+  id = mongolia.50
+ }
+}
+
+KOR = {
+ country_event= {
+  days = 1 
+  id = mongolia.50
+ }
+}
+
+GXC = {
+ country_event= {
+  days = 1 
+  id = mongolia.50
+ }
+}
+
+MAN = {
+ country_event= {
+  days = 1 
+  id = mongolia.50
+ }
+}
+		}
+	}
+
+	#Focus for A Second Investment
+	focus = {
+		id = MON_asecondinvestment
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 25
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_frenchmen }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+
+	#Focus for Light Investment
+	focus = {
+		id = MON_lightinvestment
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 25
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_frenchbases 
+		}
+		prerequisite = { 
+			focus = MON_frenchequipment 
+		}
+		prerequisite = { 
+			focus = MON_frenchprotection 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	#Focus for French Protection
+	focus = {
+		id = MON_frenchprotection
+		icon = GFX_goal_generic_fortify_city
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_ashallowinvestment }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 12557
+   }
+}
+330 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 1743
+   }
+}
+330 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 4792
+   }
+}
+
+612 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 1811
+   }
+}
+612 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 7578
+   }
+}
+612 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 10363
+
+   }
+}
+612 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 12348
+
+   }
+}
+612 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 1743
+
+   }
+}
+612 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 1743
+   }
+}
+612 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 1608
+   }
+}
+612 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 12488
+   }
+}
+		}
+	}
+
+	#Focus for French Equipment
+	focus = {
+		id = MON_frenchequipment
+		icon = GFX_goal_generic_small_arms
+		x = 25
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_ashallowinvestment }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 800
+    producer = FRA
+}
+		}
+	}
+
+	#Focus for An Expensive Compromise
+	focus = {
+		id = MON_anexpensivecompromise
+		icon = GFX_goal_generic_improve_relations
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_calltothebonapartes }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = mongolia.5
+}
+		}
+	}
+
+	#Focus for French Bases
+	focus = {
+		id = MON_frenchbases
+		icon = GFX_goal_generic_air_fighter2
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_ashallowinvestment }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+add_building_construction= { 
+type = air_base 
+level = 1 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for A Shallow Investment
+	focus = {
+		id = MON_ashallowinvestment
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 25
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_calltothebonapartes }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+		}
+	}
+
+	#Focus for Begin The New Deal
+	focus = {
+		id = MON_beginthenewdeal
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 7
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_hireeducatedjapaneseworkers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = {
+add_opinion_modifier= { 
+target = MON
+modifier = renewed_deal
+}
+add_political_power= 25
+}
+add_political_power= 25
+		}
+	}
+
+	#Focus for French Men
+	focus = {
+		id = MON_frenchmen
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 25
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_lightinvestment }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= MON_french_men
+		}
+	}
+
+	#Focus for Industry In The Steppes
+	focus = {
+		id = MON_industryinthesteppes
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 10
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			date > 1936.6.6
+		}
+		completion_reward = {
+			330 = {
+ add_extra_state_shared_building_slots = 1 
+}
+swap_ideas = {
+ remove_idea = MON_poor_industry
+add_idea = MON_poor_industry_recovery_1 
+}
+		}
+	}
+
+	#Focus for The Russian Worker
+	focus = {
+		id = MON_therussianworker
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 2
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_industryinthesteppes }
+		mutually_exclusive = { 
+			focus = MON_empireofthepacific 
+		}
+		mutually_exclusive = { 
+			focus = MON_calltothebonapartes 
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			country_exists= SOV
+		}
+		completion_reward = {
+			add_political_power= 50
+add_ideas= MON_russian_worker
+		}
+	}
+
+	#Focus for Empire Of The Pacific
+	focus = {
+		id = MON_empireofthepacific
+		icon = GFX_focus_jap_strike_south
+		x = 10
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_industryinthesteppes }
+		mutually_exclusive = { 
+			focus = MON_therussianworker 
+		}
+		mutually_exclusive = { 
+			focus = MON_calltothebonapartes 
+		}
+		ai_will_do = {
+			factor = 70
+		}
+		available = {
+			country_exists= JAP
+		}
+		completion_reward = {
+			add_political_power = 15
+add_ideas= MON_pacific_king
+		}
+	}
+
+	#Focus for Russian Machinery Deal
+	focus = {
+		id = MON_russianmachinerydeal
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 6
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_highways }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus= MON_reviewthedeal
+		}
+		completion_reward = {
+			add_opinion_modifier= { 
+target = MON
+modifier = renewed_deal
+}
+add_tech_bonus= {
+ bonus = 0.5
+uses = 1 
+category = industry
+}
+		}
+	}
+
+	#Focus for Dig Sites
+	focus = {
+		id = MON_digsites
+		icon = GFX_goal_generic_construction2
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_easeoftravel }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_resource= { 
+type = steel 
+amount = 5
+state = 329 
+}
+
+add_resource= { 
+type = steel 
+amount = 15
+state = 330 
+}
+		}
+	}
+
+	#Focus for Progress The Russian Relationship
+	focus = {
+		id = MON_progresstherussianrelationship
+		icon = GFX_goal_generic_scientific_exchange
+		x = 3
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_newjobs 
+		}
+		prerequisite = { 
+			focus = MON_modernizetheprovinces 
+		}
+		prerequisite = { 
+			focus = MON_therussiancompromise 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= MON_russian_scientists
+		}
+	}
+
+	#Focus for Industrialize Mongolia
+	focus = {
+		id = MON_industrializemongolia
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 6
+		cost = 13
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_newjobs }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus= MON_roomtowork
+		}
+		completion_reward = {
+			330 = {
+add_building_construction= { 
+type = industrial_complex
+level = 2 
+instant_build = yes }
+ add_extra_state_shared_building_slots = 2
+}
+329 = {
+add_building_construction= { 
+type = industrial_complex
+level = 1 
+instant_build = yes }
+ add_extra_state_shared_building_slots = 1
+}
+612 = {
+add_building_construction= { 
+type = industrial_complex
+level = 1 
+instant_build = yes }
+ add_extra_state_shared_building_slots = 1
+}
+		}
+	}
+
+	#Focus for Modernize The Provinces
+	focus = {
+		id = MON_modernizetheprovinces
+		icon = GFX_goal_generic_construction2
+		x = 6
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_therussiancompromise }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			329 = {
+
+ add_extra_state_shared_building_slots = 2 
+
+}
+
+612 = {
+
+ add_extra_state_shared_building_slots = 2 
+
+}
+		}
+	}
+
+	#Focus for A Revitalized Industry
+	focus = {
+		id = MON_arevitalizedindustry
+		icon = GFX_focus_generic_industry_3
+		x = 19
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_thefinalpush 
+			focus = MON_russianmachinerydeal 
+			focus = MON_thelastpush 
+			focus = MON_aviationbreakthroughs 
+			focus = MON_thelaststretch 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = MON_poor_industry
+add_timed_idea = {
+idea = MON_booming_industry
+days = 360
+}
+		}
+	}
+
+	#Focus for Highways!
+	focus = {
+		id = MON_highways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 6
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_modernizetheprovinces }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			329 = {
+add_building_construction= { 
+type = infrastructure 
+level = 2 
+instant_build = yes }
+}
+
+612 = {
+add_building_construction= { 
+type = infrastructure 
+level = 2 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for New Jobs
+	focus = {
+		id = MON_newjobs
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_therussiancompromise }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+add_building_construction= { 
+type = industrial_complex
+level = 2 
+instant_build = yes }
+ add_extra_state_shared_building_slots = 2
+}
+		}
+	}
+
+	#Focus for Review The Deal
+	focus = {
+		id = MON_reviewthedeal
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 3
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_therussianworker }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 25
+SOV = {
+add_opinion_modifier= { 
+target = MON
+modifier = renewed_deal
+}
+}
+		}
+	}
+
+	#Focus for Ease Of Travel
+	focus = {
+		id = MON_easeoftravel
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_therussianworker }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+add_building_construction= { 
+type = infrastructure
+level = 2 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Room To Work
+	focus = {
+		id = MON_roomtowork
+		icon = GFX_goal_generic_construction2
+		x = 1
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_therussianworker }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+ add_extra_state_shared_building_slots = 1 
+}
+612 = {
+ add_extra_state_shared_building_slots = 1 
+}
+329 = {
+ add_extra_state_shared_building_slots = 1 
+}
+		}
+	}
+
+	#Focus for Call To The Bonapartes
+	focus = {
+		id = MON_calltothebonapartes
+		icon = GFX_focus_focus_fra_third_empire
+		x = 20
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_industryinthesteppes }
+		mutually_exclusive = { 
+			focus = MON_therussianworker 
+		}
+		mutually_exclusive = { 
+			focus = MON_empireofthepacific 
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		available = {
+			country_exists= FRA
+		}
+		completion_reward = {
+			add_political_power= -50
+add_ideas= MON_bonaparte_friends
+		}
+	}
+
+	#Focus for The Russian Compromise
+	focus = {
+		id = MON_therussiancompromise
+		icon = GFX_goal_generic_forceful_treaty
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_easeoftravel }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -15
+swap_ideas= {
+ remove_idea = MON_russian_worker 
+add_idea = MON_russian_worker_2
+}
+		}
+	}
+
+	#Focus for The Final Push
+	focus = {
+		id = MON_thefinalpush
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 7
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_industrializemongolia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+add_building_construction= { 
+type = industrial_complex
+level = 2 
+instant_build = yes }
+add_extra_state_shared_building_slots = 2
+}
+329 = {
+add_building_construction= { 
+type = industrial_complex
+level = 2 
+instant_build = yes }
+add_extra_state_shared_building_slots = 2
+}
+612 = {
+add_building_construction= { 
+type = industrial_complex
+level = 2 
+instant_build = yes }
+add_extra_state_shared_building_slots = 2
+}
+		}
+	}
+
+	#Focus for Hire Educated Japanese Workers
+	focus = {
+		id = MON_hireeducatedjapaneseworkers
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_empireofthepacific }
+		mutually_exclusive = { focus = MON_hirejapanesemilitaryspecialists }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= -10
+add_ideas= MON_japanese_workers
+add_stability= 0.05
+		}
+	}
+
+	#Focus for French Investment
+	focus = {
+		id = MON_frenchinvestment
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_meetingofthehighcommand }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+
+	#Focus for A Two Way Deal
+	focus = {
+		id = MON_atwowaydeal
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_discovertradegoods }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			MON = {
+country_event= {
+days = 1 
+id = mongolia.1 
+  }
+}
+		}
+	}
+
+	#Focus for Discover Trade Goods
+	focus = {
+		id = MON_discovertradegoods
+		icon = GFX_goal_generic_construction2
+		x = 11
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_empireofthepacific }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+add_resource= { 
+type = oil 
+amount = 5 
+}
+}
+
+329 = {
+add_resource= { 
+type = steel 
+amount = 5 
+}
+}
+		}
+	}
+
+	#Focus for Hire Japanese Military Specialists
+	focus = {
+		id = MON_hirejapanesemilitaryspecialists
+		icon = GFX_goal_generic_military_deal
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_empireofthepacific }
+		mutually_exclusive = { focus = MON_hireeducatedjapaneseworkers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= MON_japanese_military_workers
+add_war_support = 0.05
+		}
+	}
+
+	#Focus for Bomber Production
+	focus = {
+		id = MON_bomberproduction
+		icon = GFX_goal_generic_air_bomber
+		x = 18
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_aviationspecialists }
+		mutually_exclusive = { 
+			focus = MON_lightaviationproduction 
+		}
+		mutually_exclusive = { 
+			focus = MON_heavyaviationproduction 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus= MON_airbaseproduction
+		}
+		completion_reward = {
+			add_ideas= MON_bomber_production
+		}
+	}
+
+	#Focus for International Airports
+	focus = {
+		id = MON_internationalairports
+		icon = GFX_goal_generic_air_production
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_beginthenewdeal }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+add_building_construction= { 
+type = air_base 
+level = 3 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for National Funding
+	focus = {
+		id = MON_nationalfunding
+		icon = GFX_goal_generic_scientific_exchange
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_beginthenewdeal }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas= {
+ remove_idea = MON_japanese_workers 
+add_idea = MON_japanese_workers_funded
+}
+		}
+	}
+
+	#Focus for A Breakthrough!
+	focus = {
+		id = MON_abreakthrough
+		icon = GFX_goal_generic_demand_territory
+		x = 9
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_nationalfunding }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 1 
+category = radar_tech 
+}
+
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 1 
+category = electronics 
+}
+		}
+	}
+
+	#Focus for Japanese Investment
+	focus = {
+		id = MON_japaneseinvestment
+		icon = GFX_goal_generic_consumer_goods
+		x = 10
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_internationalairports }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	#Focus for The Last Push
+	focus = {
+		id = MON_thelastpush
+		icon = GFX_goal_generic_propaganda
+		x = 9
+		y = 8
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_abreakthrough }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = MON_japaneseinvestment
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 2
+category = electronics
+}
+		}
+	}
+
+	#Focus for Begin A New Deal
+	focus = {
+		id = MON_beginanewdeal
+		icon = GFX_goal_generic_major_alliance
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_hirejapanesemilitaryspecialists }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = {
+add_opinion_modifier= { 
+target = MON
+modifier = renewed_deal
+}
+}
+add_political_power= 25
+		}
+	}
+
+	#Focus for Aviation Specialists
+	focus = {
+		id = MON_aviationspecialists
+		icon = GFX_goal_generic_air_fighter2
+		x = 11
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_beginanewdeal }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 1 
+category = air_equipment 
+}
+add_political_power= -40
+		}
+	}
+
+	#Focus for Airbase Production
+	focus = {
+		id = MON_airbaseproduction
+		icon = GFX_goal_generic_air_production
+		x = 13
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_beginanewdeal }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= MON_airbase_expansion
+330 = {
+add_building_construction= { 
+type = air_base 
+level = 2 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Light Aviation Production
+	focus = {
+		id = MON_lightaviationproduction
+		icon = GFX_goal_generic_air_fighter2
+		x = 12
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_aviationspecialists }
+		mutually_exclusive = { 
+			focus = MON_heavyaviationproduction 
+		}
+		mutually_exclusive = { 
+			focus = MON_bomberproduction 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= MON_light_production
+		}
+	}
+
+	#Focus for Heavy Aviation Production
+	focus = {
+		id = MON_heavyaviationproduction
+		icon = GFX_goal_generic_CAS
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_aviationspecialists }
+		mutually_exclusive = { 
+			focus = MON_lightaviationproduction 
+		}
+		mutually_exclusive = { 
+			focus = MON_bomberproduction 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= MON_heavy_production
+		}
+	}
+
+	#Focus for Aviation Breakthroughs
+	focus = {
+		id = MON_aviationbreakthroughs
+		icon = GFX_goal_generic_air_doctrine
+		x = 11
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_aviationspecialists }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 2 
+category = air_equipment
+}
+		}
+	}
+
+	#Focus for A Doctrine Of Choice
+	focus = {
+		id = MON_adoctrineofchoice
+		icon = GFX_goal_generic_army_doctrines
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_lightaviationproduction 
+			focus = MON_heavyaviationproduction 
+			focus = MON_bomberproduction 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 1.0 
+uses = 1 
+category = strategic_destruction_tree
+}
+add_tech_bonus= {
+ bonus = 1.0 
+uses = 1 
+category = battlefield_support_tree
+}
+add_tech_bonus= {
+ bonus = 1.0 
+uses = 1 
+category = operational_integrity_tree
+}
+		}
+	}
+
+	#Focus for Defense Tactics
+	focus = {
+		id = MON_defensetactics
+		icon = GFX_goal_generic_fortify_city
+		x = 21
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_meetingofthehighcommand }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= MON_fra_defense
+		}
+	}
+	
+	#Focus for Meeting Of The High Command
+	focus = {
+		id = MON_meetingofthehighcommand
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_anexpensivecompromise }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			hidden_trigger = {
+MON = {
+has_country_flag= mon_fra_compromise_pass
+}
+}
+		}
+		completion_reward = {
+			air_experience= 5
+
+army_experience= 10
+
+navy_experience= 5
+		}
+	}
+
+	#Focus for Our Own Creation
+	focus = {
+		id = MON_ourowncreation
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 15
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_frenchinvestment }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			330 = {
+add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+add_extra_state_shared_building_slots = 1
+}
+
+612 = {
+add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+add_extra_state_shared_building_slots = 1
+}
+		}
+	}
+
+	#Focus for Infantry Secrets
+	focus = {
+		id = MON_infantrysecrets
+		icon = GFX_goal_generic_small_arms
+		x = 20
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_defensetactics }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 1 
+category = infantry_weapons
+}
+
+
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 1 
+category = support_tech
+}
+		}
+	}
+
+	#Focus for Guns Factories
+	focus = {
+		id = MON_gunsfactories
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 20
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_infantrysecrets }
+		mutually_exclusive = { focus = MON_artilleryfactories }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			329 = {
+add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+add_extra_state_shared_building_slots = 1
+}
+add_ideas = MON_gun_factories
+		}
+	}
+
+	#Focus for Artillery Secrets
+	focus = {
+		id = MON_artillerysecrets
+		icon = GFX_goal_generic_army_artillery2
+		x = 22
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_defensetactics }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = artillery 
+}
+		}
+	}
+
+	#Focus for Artillery Factories
+	focus = {
+		id = MON_artilleryfactories
+		icon = GFX_goal_generic_army_artillery2
+		x = 22
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_artillerysecrets }
+		mutually_exclusive = { focus = MON_gunsfactories }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			329 = {
+add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+add_extra_state_shared_building_slots = 1
+}
+add_ideas = MON_artillery_factories
+		}
+	}
+
+	#Focus for The Last Stretch
+	focus = {
+		id = MON_thelaststretch
+		icon = GFX_goal_generic_production
+		x = 21
+		y = 8
+		cost = 13
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_gunsfactories 
+			focus = MON_artilleryfactories 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+330 = {
+add_building_construction= { 
+type = arms_factory
+level = 2 
+instant_build = yes }
+add_extra_state_shared_building_slots = 2
+}
+329 = {
+add_building_construction= { 
+type = arms_factory 
+level = 1 
+instant_build = yes }
+add_extra_state_shared_building_slots = 1
+}
+612 = {
+add_building_construction= { 
+type = arms_factory 
+level = 2 
+instant_build = yes }
+add_extra_state_shared_building_slots = 2
+}
+		}
+	}
+
+	#Focus for Shared Military Research
+	focus = {
+		id = MON_sharedmilitaryresearch
+		icon = GFX_goal_generic_scientific_exchange
+		x = 18
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_meetingofthehighcommand }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot= 1
+		}
+	}
+
+	#Focus for A Deal Of A Lifetime
+	focus = {
+		id = MON_adealofalifetime
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 18
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_sharedmilitaryresearch }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus= MON_asecondinvestment
+num_of_factories > 40
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Sway The People
+	focus = {
+		id = MON_swaythepeople
+		icon = GFX_goal_generic_propaganda
+		x = 34
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_thenewempire }
+		mutually_exclusive = { focus = MON_pressurethepeople }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.05
+add_war_support = 0.05
+		}
+	}
+
+	#Focus for The Right Choice
+	focus = {
+		id = MON_therightchoice
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 47
+		y = 0
+		cost = 15
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = MON_achangeofcourse }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 15
+		}
+	}
+
+	#Focus for Threaten The Military
+	focus = {
+		id = MON_threatenthemilitary
+		icon = GFX_goal_generic_dangerous_deal
+		x = 38
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_pressurethepeople 
+			focus = MON_swaythepeople 
+		}
+		mutually_exclusive = { focus = MON_bribethemilitary }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = -0.05
+add_stability = 0.05
+
+set_country_flag = MON_military_threatened
+		}
+	}
+
+	#Focus for Bribe The Military
+	focus = {
+		id = MON_bribethemilitary
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 34
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_pressurethepeople 
+			focus = MON_swaythepeople 
+		}
+		mutually_exclusive = { focus = MON_threatenthemilitary }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= -50
+add_war_support = 0.05
+		}
+	}
+
+	#Focus for The New Empire
+	focus = {
+		id = MON_thenewempire
+		icon = GFX_focus_ger_reichskommisariats
+		x = 36
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_achangeofcourse }
+		mutually_exclusive = { focus = MON_thesaferoption }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = fascism 
+popularity = 0.15 
+}
+remove_ideas = MON_revolutionary
+		}
+	}
+
+	#Focus for Pressure The People
+	focus = {
+		id = MON_pressurethepeople
+		icon = GFX_focus_CZE_german_puppet
+		x = 38
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_thenewempire }
+		mutually_exclusive = { focus = MON_swaythepeople }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+add_war_support = -0.05
+
+set_country_flag = MON_people_pressured
+		}
+	}
+
+	#Focus for Sinkiang Subjugation
+	focus = {
+		id = MON_sinkiangsubjugation
+		icon = GFX_goal_generic_military_deal
+		x = 33
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_demandjiuquan }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SIK = {
+country_event= {
+days = 1 
+id = mongolia.38
+}
+}
+		}
+	}
+
+	#Focus for Qing Subjugation
+	focus = {
+		id = MON_qingsubjugation
+		icon = GFX_goal_generic_military_deal
+		x = 39
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_demandchahar }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			MAN = {
+country_event= {
+days = 1 
+id = mongolia.44
+}
+}
+		}
+	}
+
+	#Focus for Demand Chahar
+	focus = {
+		id = MON_demandchahar
+		icon = GFX_goal_generic_forceful_treaty
+		x = 38
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_theeasternpass }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			MAN = {
+country_event= {
+days = 1 
+id = mongolia.41
+}
+}
+		}
+	}
+
+	#Focus for Stick With Tradition
+	focus = {
+		id = MON_stickwithtradition
+		icon = GFX_goal_generic_small_arms
+		x = 38
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolambitions }
+		mutually_exclusive = { focus = MON_amodernmilitary }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = land_doctrine
+}
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = infantry_weapons
+}
+army_experience = 15
+		}
+	}
+
+	#Focus for The Western Path
+	focus = {
+		id = MON_thewesternpath
+		icon = GFX_goal_generic_political_pressure
+		x = 35
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolambitions }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim= 618
+add_state_claim= 617
+add_state_claim= 760
+add_state_claim= 756
+add_state_claim= 755
+add_state_claim= 759
+add_state_claim= 619
+add_state_claim= 287
+add_state_claim= 322
+add_state_claim= 758
+add_state_claim= 847
+add_state_claim= 757
+add_state_claim= 604
+add_state_claim= 601
+add_state_claim= 434
+		}
+	}
+
+	#Focus for Found The Airforce
+	focus = {
+		id = MON_foundtheairforce
+		icon = GFX_goal_generic_air_fighter2
+		x = 34
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_amodernmilitary 
+			focus = MON_stickwithtradition 
+		}
+		mutually_exclusive = { focus = MON_astrongerarmy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = light_fighter
+}
+air_experience = 15
+		}
+	}
+
+	#Focus for A Stronger Army
+	focus = {
+		id = MON_astrongerarmy
+		icon = GFX_focus_generic_tank_production
+		x = 38
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_amodernmilitary }
+		mutually_exclusive = { focus = MON_foundtheairforce }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = armor
+}
+army_experience = 15
+		}
+	}
+
+	#Focus for Down The Center
+	focus = {
+		id = MON_downthecenter
+		icon = GFX_goal_generic_improve_relations
+		x = 36
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolambitions }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim= 746
+add_state_claim= 621
+add_state_claim= 616
+		}
+	}
+
+	#Focus for The Eastern Pass
+	focus = {
+		id = MON_theeasternpass
+		icon = GFX_goal_generic_position_armies
+		x = 37
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolambitions }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim= 761
+add_state_claim= 715
+add_state_claim= 611
+		}
+	}
+
+	#Focus for Demand Jiuquan
+	focus = {
+		id = MON_demandjiuquan
+		icon = GFX_goal_generic_forceful_treaty
+		x = 34
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_thewesternpath }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SIK = {
+country_event= {
+days = 1 
+id = mongolia.35 
+}
+}
+		}
+	}
+
+	#Focus for Mongol Ambitions
+	focus = {
+		id = MON_mongolambitions
+		icon = GFX_goal_generic_political_pressure
+		x = 36
+		y = 5
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_thecoupdtat }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= fascism
+		}
+		completion_reward = {
+			news_event= news.361
+		}
+	}
+
+	#Focus for A Modern Military
+	focus = {
+		id = MON_amodernmilitary
+		icon = GFX_focus_generic_military_mission
+		x = 34
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolambitions }
+		mutually_exclusive = { focus = MON_stickwithtradition }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = artillery
+}
+		}
+	}
+
+	#Focus for The Coup d'état
+	focus = {
+		id = MON_thecoupdtat
+		icon = GFX_goal_support_fascism
+		x = 36
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_bribethemilitary 
+			focus = MON_threatenthemilitary 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = mongolia.32
+}
+		}
+	}
+
+	#Focus for The Yellow River Crisis
+	focus = {
+		id = MON_theyellowrivercrisis
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 36
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_downthecenter }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CHI = {
+country_event= {
+days = 1 
+id = mongolia.47
+}
+}
+		}
+	}
+
+	#Focus for The Safer Option
+	focus = {
+		id = MON_thesaferoption
+		icon = GFX_goal_support_democracy
+		x = 40
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_achangeofcourse }
+		mutually_exclusive = { focus = MON_thenewempire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+add_ideas = democratic_influence
+		}
+	}
+
+	#Focus for Integrate New Lands
+	focus = {
+		id = MON_integratenewlands
+		icon = GFX_goal_generic_position_armies
+		x = 36
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_theyellowrivercrisis 
+		}
+		prerequisite = { 
+			focus = MON_sinkiangsubjugation 
+		}
+		prerequisite = { 
+			focus = MON_qingsubjugation 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			owns_state= 746
+owns_state= 621
+owns_state= 618
+owns_state= 617
+owns_state= 760
+owns_state= 756
+owns_state= 755
+owns_state= 759
+owns_state= 619
+owns_state= 287
+		}
+		completion_reward = {
+			add_state_core= 746
+add_state_core= 621
+add_state_core= 618
+add_state_core= 617
+add_state_core= 760
+add_state_core= 756
+add_state_core= 755
+add_state_core= 759
+add_state_core= 619
+add_state_core= 287
+		}
+	}
+
+	#Focus for Integrate The People
+	focus = {
+		id = MON_integratethepeople
+		icon = GFX_focus_generic_military_mission
+		x = 36
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_integratenewlands }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower= 50000
+add_stability = 0.10
+		}
+	}
+
+	#Focus for The New China
+	focus = {
+		id = MON_thenewchina
+		icon = GFX_focus_generic_china1
+		x = 34
+		y = 13
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_integratethepeople }
+		mutually_exclusive = { focus = MON_greatermongolempire }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			CHI = {
+exists= no
+}
+		}
+		completion_reward = {
+			add_stability= -0.15
+add_war_support= -0.15
+add_state_core= 615
+add_state_core= 614
+add_state_core= 622
+add_state_core= 283
+add_state_core= 754
+add_state_core= 752
+add_state_core= 753
+add_state_core= 605
+add_state_core= 744
+add_state_core= 607
+add_state_core= 615
+add_state_core= 598
+add_state_core= 871
+add_state_core= 613
+add_state_core= 620
+add_state_core= 750
+add_state_core= 748
+add_state_core= 615
+add_state_core= 603
+add_state_core= 602
+add_state_core= 600
+add_state_core= 596
+add_state_core= 595
+add_state_core= 593
+add_state_core= 846
+add_state_core= 592
+add_state_core= 615
+		}
+	}
+
+	#Focus for Greater Mongol Empire
+	focus = {
+		id = MON_greatermongolempire
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 38
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_integratethepeople }
+		mutually_exclusive = { focus = MON_thenewchina }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			CHI = {
+exists= no
+}
+		}
+		completion_reward = {
+			add_ideas= MON_only_forward
+add_stability= 0.10
+add_war_support= 0.10
+		}
+	}
+
+	#Focus for Democratic Campaigns
+	focus = {
+		id = MON_democraticcampaigns
+		icon = GFX_goal_generic_propaganda
+		x = 41
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_thesaferoption }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = democratic
+popularity = 0.1 
+}
+remove_ideas = MON_bastard_of_russia
+		}
+	}
+
+	#Focus for Preemptive Coup
+	focus = {
+		id = MON_preemptivecoup
+		icon = GFX_goal_generic_forceful_treaty
+		x = 42
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_democraticcampaigns }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_government= democratic
+		}
+		available = {
+			democratic > 0.25
+		}
+		completion_reward = {
+			start_civil_war= {
+ ideology = communism
+size = 0.5 
+}
+remove_ideas = MON_revolutionary
+add_popularity = {
+ideology = democratic
+popularity = 0.2
+}
+		}
+	}
+
+	#Focus for Emergency Military Procedures
+	focus = {
+		id = MON_emergencymilitaryprocedures
+		icon = GFX_focus_generic_military_mission
+		x = 40
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_preemptivecoup }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_civil_war= yes
+has_government= democratic
+		}
+		completion_reward = {
+			add_manpower= 10000
+add_war_support= 0.10
+add_stability = 0.05
+		}
+	}
+
+	#Focus for Our Due
+	focus = {
+		id = MON_ourdue
+		icon = GFX_goal_generic_military_deal
+		x = 48
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_theqingempire 
+		}
+		prerequisite = { 
+			focus = MON_thekoreanpeninsula 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			OR = {
+KOR = {
+is_puppet_of= MON
+}
+MAN = {
+is_puppet_of= MON
+}
+
+}
+		}
+		available = {
+			OR = {
+KOR = {
+ NOT = {
+  is_puppet_of= MON
+  }
+}
+MAN = {
+ NOT = {
+  is_puppet_of= MON
+  }
+}
+
+}
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = puppet_wargoal_focus 
+target = MAN
+}
+create_wargoal= { 
+type = puppet_wargoal_focus 
+target = KOR
+}
+		}
+	}
+
+	#Focus for Contain The Chinese
+	focus = {
+		id = MON_containthechinese
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = 47
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_ourdue }
+		mutually_exclusive = { focus = MON_subduethechinese }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = puppet_wargoal_focus 
+target = CHI
+}
+		}
+	}
+
+	#Focus for Subdue The Chinese
+	focus = {
+		id = MON_subduethechinese
+		icon = GFX_focus_CZE_german_puppet ##Unfortunately, the tool could not find your icon in the game's files
+		x = 49
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_ourdue }
+		mutually_exclusive = { focus = MON_containthechinese }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+type = annex_everything 
+target = CHI
+}
+		}
+	}
+
+	#Focus for Bastion Of Asian Democracy
+	focus = {
+		id = MON_bastionofasiandemocracy
+		icon = GFX_goal_generic_military_sphere
+		x = 43
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_democraticsecurity }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas= MON_bastion_of_democracy
+		}
+	}
+
+	#Focus for Democratic Security
+	focus = {
+		id = MON_democraticsecurity
+		icon = GFX_goal_generic_fortify_city
+		x = 43
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_buildupthenation }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= democratic
+		}
+		completion_reward = {
+			330 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 1723
+   }
+}
+330 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 1853
+   }
+}
+330 = {
+add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 7752
+   }
+}
+
+330 = {
+add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 4801
+   }
+}
+		}
+	}
+
+	#Focus for Build Up The Nation
+	focus = {
+		id = MON_buildupthenation
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 43
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_preemptivecoup }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_civil_war= no
+		}
+		completion_reward = {
+			330 = {
+add_building_construction= { 
+type = infrastructure 
+level = 2 
+instant_build = yes }
+}
+612 = {
+add_building_construction= { 
+type = infrastructure 
+level = 2 
+instant_build = yes }
+}
+329 = {
+add_building_construction= { 
+type = infrastructure 
+level = 2 
+instant_build = yes }
+}
+		}
+	}
+
+	#Focus for Russian Research Treaty
+	focus = {
+		id = MON_russianresearchtreaty
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = 41
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_buildupthenation }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= democratic
+		}
+		completion_reward = {
+			add_research_slot= 1
+		}
+	}
+
+	#Focus for Ask For World Support
+	focus = {
+		id = MON_askforworldsupport
+		icon = GFX_goal_support_democracy
+		x = 42
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_preemptivestrike 
+			focus = MON_theantijapanesepact 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			ENG = {
+  country_event= {
+  days = 1 
+  id = mongolia.53
+ }
+}
+SOV = {
+  country_event= {
+  days = 1 
+  id = mongolia.53
+ }
+}
+KOR = {
+  country_event= {
+  days = 1 
+  id = mongolia.53
+ }
+}
+SWE = {
+  country_event= {
+  days = 1 
+  id = mongolia.53
+ }
+}
+BEL = {
+  country_event= {
+  days = 1 
+  id = mongolia.53
+ }
+}
+		}
+	}
+
+	#Focus for The Korean Peninsula
+	focus = {
+		id = MON_thekoreanpeninsula
+		icon = GFX_goal_generic_amphibious_assault
+		x = 46
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_supportjapaneseexpansion }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+JAP = {
+controls_state= 525
+controls_state= 527
+}
+KOR = {
+is_puppet_of = JAP
+}
+}
+		}
+		completion_reward = {
+			JAP = {
+country_event= {
+days = 1 
+id = mongolia.56
+}
+}
+		}
+	}
+
+	#Focus for The Great Shuffle
+	focus = {
+		id = MON_thegreatshuffle
+		icon = GFX_goal_generic_national_unity
+		x = 46
+		y = 3
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_internalaffairs }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas= MON_unstable_government
+		}
+	}
+
+	#Focus for Internal Affairs
+	focus = {
+		id = MON_internalaffairs
+		icon = GFX_goal_tripartite_pact
+		x = 45
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_therightchoice }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 15
+		}
+	}
+
+	#Focus for Foreign Affairs
+	focus = {
+		id = MON_foreignaffairs
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 49
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_therightchoice }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 15
+		}
+	}
+
+	#Focus for Socialist Science
+	focus = {
+		id = MON_socialistscience
+		icon = GFX_focus_generic_socialist_science
+		x = 44
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_internalaffairs }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot= 1
+		}
+	}
+
+	#Focus for The Light Of Communism
+	focus = {
+		id = MON_thelightofcommunism
+		icon = GFX_goal_generic_war_with_comintern
+		x = 51
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_foreignaffairs }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity= { 
+ideology = communism
+popularity = 0.25 
+}
+add_war_support = 0.05
+add_stability = 0.05
+		}
+	}
+
+	#Focus for Socialist Friends
+	focus = {
+		id = MON_socialistfriends
+		icon = GFX_goal_generic_major_alliance
+		x = 50
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_foreignaffairs }
+		mutually_exclusive = { focus = MON_againsttheworld }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = MON_peaceful_socialist_tt
+		}
+	}
+
+	#Focus for Against The World
+	focus = {
+		id = MON_againsttheworld
+		icon = GFX_goal_generic_major_war
+		x = 48
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_foreignaffairs }
+		mutually_exclusive = { focus = MON_socialistfriends }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = MON_against_the_world_tt
+		}
+	}
+
+	#Focus for Facing Forward
+	focus = {
+		id = MON_facingforward
+		icon = GFX_goal_generic_political_pressure
+		x = 49
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_thegreatshuffle 
+			focus = MON_againsttheworld 
+			focus = MON_socialistfriends 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			Or = {
+ AND = {
+has_completed_focus = MON_thegreatshuffle
+has_completed_focus = MON_againsttheworld
+ }
+ AND = {
+has_completed_focus = MON_thegreatshuffle
+has_completed_focus = MON_socialistfriends
+ }
+}
+		}
+		completion_reward = {
+			custom_effect_tooltip = MON_facing_Forward_tt
+		}
+	}
+
+	#Focus for Strike A Deal
+	focus = {
+		id = MON_strikeadeal
+		icon = GFX_goal_generic_dangerous_deal
+		x = 53
+		y = 6
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_theasianpowers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = {
+add_opinion_modifier= { 
+target = MON
+modifier = good_intentions 
+}
+}
+
+CHI = {
+add_opinion_modifier= { 
+target = MON
+modifier = good_intentions 
+}
+}
+		}
+	}
+
+	#Focus for Influence Europe
+	focus = {
+		id = MON_influenceeurope
+		icon = GFX_goal_generic_territory_or_war
+		x = 47
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_facingforward }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+has_completed_focus= MON_againsttheworld
+}
+		}
+		completion_reward = {
+			add_political_power= 50
+		}
+	}
+
+	#Focus for Support Indochina
+	focus = {
+		id = MON_supportindochina
+		icon = GFX_goal_support_fourth_int
+		x = 50
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_facingforward }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+has_completed_focus= MON_socialistfriends
+}
+		}
+		completion_reward = {
+			SIA = {
+add_opinion_modifier= { 
+target = MON
+modifier = good_intentions
+}
+}
+		}
+	}
+
+	#Focus for The Asian Powers
+	focus = {
+		id = MON_theasianpowers
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 53
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_facingforward }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power= 50
+		}
+	}
+
+	#Focus for With The Empire
+	focus = {
+		id = MON_withtheempire
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 54
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_strikeadeal }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			JAP = {
+add_opinion_modifier= { 
+target = MON 
+modifier = great_deal 
+}
+add_popularity = {
+    ideology = communism
+    popularity = 0.1
+}
+}
+		}
+	}
+
+	#Focus for With The Chinese
+	focus = {
+		id = MON_withthechinese
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = 52
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_strikeadeal }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CHI = {
+add_opinion_modifier= { 
+target = MON 
+modifier = great_deal 
+}
+add_popularity = {
+    ideology = communism
+    popularity = 0.1
+}
+}
+		}
+	}
+
+	#Focus for Through The Back Door
+	focus = {
+		id = MON_throughthebackdoor
+		icon = GFX_focus_generic_soviet_politics
+		x = 53
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_withtheempire 
+		}
+		prerequisite = { 
+			focus = MON_withthechinese 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CHI = {
+add_ideas = MON_communist_influence
+}
+
+JAP = {
+add_ideas = MON_communist_influence
+}
+		}
+	}
+
+	#Focus for Empower Our Influencers
+	focus = {
+		id = MON_empowerourinfluencers
+		icon = GFX_goal_generic_propaganda
+		x = 53
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_throughthebackdoor }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = MON_empower_tt
+
+if = {
+  LIMIT = {
+   CHI = {
+     communism > 0.20
+    }
+  }
+ CHI = {
+   add_popularity = {
+    ideology = communism
+    popularity = 0.20
+    }
+  }
+}
+
+if = {
+  LIMIT = {
+   JAP = {
+     communism > 0.20
+    }
+  }
+ JAP = {
+   add_popularity = {
+    ideology = communism
+    popularity = 0.20
+    }
+  }
+}
+		}
+	}
+
+	#Focus for Into Italy
+	focus = {
+		id = MON_intoitaly
+		icon = GFX_focus_attack_italy
+		x = 46
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_influenceeurope }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			ITA = {
+has_government= communism
+}
+		}
+		completion_reward = {
+			ITA = {
+country_event= {
+days = 1 
+id = mongolia.62
+}
+}
+		}
+	}
+
+	#Focus for Into Austria
+	focus = {
+		id = MON_intoaustria
+		icon = GFX_AUS_austria
+		x = 48
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_influenceeurope }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			AUS = {
+has_government= communism
+}
+		}
+		completion_reward = {
+			country_event= {
+days = 1 
+id = mongolia.62
+}
+		}
+	}
+
+	#Focus for Broadcast Communist Propaganda
+	focus = {
+		id = MON_broadcastcommunistpropaganda
+		icon = GFX_goal_generic_propaganda
+		x = 47
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_intoitaly 
+			focus = MON_intoaustria 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = MON_propaganda_tt
+
+if {
+   LIMIT = { 
+     ITA = { 
+      has_country_flag = communist_influence
+     } 
+   }
+   ITA = {
+    add_popularity= { 
+    ideology = communism
+    popularity = 0.15 
+   }
+  }
+ }
+if {
+   LIMIT = { 
+     AUS = { 
+      has_country_flag = communist_influence
+     } 
+   }
+   AUS = {
+    add_popularity= { 
+    ideology = communism
+    popularity = 0.15
+   }
+  }
+ }
+		}
+	}
+
+	#Focus for Rally Sympathizers
+	focus = {
+		id = MON_rallysympathizers
+		icon = GFX_goal_support_fourth_int
+		x = 48
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_broadcastcommunistpropaganda }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			GER = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+BEL = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+HUN = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+POL = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+TUR = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+NAP = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+SPR = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+SOV = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+DEN = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+SWE = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+NOR = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+
+YUG = {
+country_event= {
+days = 1 
+id = mongolia.63
+ }
+}
+		}
+	}
+
+	#Focus for The Great Revolution
+	focus = {
+		id = MON_thegreatrevolution
+		icon = GFX_goal_support_communism
+		x = 49
+		y = 9
+		cost = 20
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_rallysympathizers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = MON_revolutions_tt
+hidden_effect = {
+if = {
+  limit = {
+   communism > 0.5
+  }
+ ITA = {
+   start_civil_war = {
+
+    ideology = communism
+    size = 0.6
+ 		}
+	}
+}
+
+if = {
+  limit = {
+   communism > 0.5
+  }
+ GER = {
+   start_civil_war = {
+    ideology = communism
+    size = 0.6
+		}
+	}
+}
+
+if = {
+  LIMIT = {
+   communism > 0.5
+  }
+ YUG = {
+   start_civil_war = {
+    ideology = communism
+    size = 0.6
+		}
+	}
+}
+
+if = {
+  limit = {
+   communism > 0.5
+  }
+ POL = {
+   start_civil_war = {
+    ruling_party = neutrality
+    ideology = communism
+    size = 0.6
+  }
+}
+}
+
+if = {
+  LIMIT = {
+   communism > 0.5
+  }
+ HUN = {
+   start_civil_war = {
+    ruling_party = neutrality
+    ideology = communism
+    size = 0.6
+  }
+}
+}
+
+if = {
+  LIMIT = {
+   communism > 0.5
+  }
+ SWE = {
+   start_civil_war = {
+    ruling_party = social_democratic
+    ideology = communism
+    size = 0.6
+  }
+ }
+}
+}
+		}
+	}
+
+	#Focus for Mongolian Equipment
+	focus = {
+		id = MON_mongolianequipment
+		icon = GFX_goal_generic_small_arms
+		x = 50
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_supportindochina }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			send_equipment= {
+ target = SIA
+type = infantry_equipment amount = 1000 
+}
+		}
+	}
+
+	#Focus for Mongolian Manpower
+	focus = {
+		id = MON_mongolianmanpower
+		icon = GFX_focus_generic_military_mission
+		x = 50
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolianequipment }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_manpower > 8000
+		}
+		completion_reward = {
+			SIA = {
+add_manpower= 8000
+}
+MON = {
+add_manpower = -8000
+}
+		}
+	}
+
+	#Focus for Our Southern Friends
+	focus = {
+		id = MON_oursouthernfriends
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 51
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MON_mongolianmanpower }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SIA = {
+add_ideas = MON_communist_influence
+}
+		}
+	}
+
+	#Focus for Dawn Of The Global Socialist Confederation
+	focus = {
+		id = MON_dawnoftheglobalsocialistconfederation
+		icon = GFX_goal_generic_alliance
+		x = 52
+		y = 10
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MON_oursouthernfriends 
+			focus = MON_thegreatrevolution 
+			focus = MON_empowerourinfluencers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government= communism
+		}
+		completion_reward = {
+			create_faction = GLOBAL_SOCIALIST_CONFEDERATION
+
+custom_effect_tooltip = MON_faction_tt
+
+if = {
+  LIMIT = {
+   JAP = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = JAP }
+}
+
+if = {
+  LIMIT = {
+   GER = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = GER }
+}
+
+if = {
+  LIMIT = {
+   SWE = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = SWE }
+}
+
+if = {
+  LIMIT = {
+   ITA = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = ITA }
+}
+
+if = {
+  LIMIT = {
+   DEN = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = DEN }
+}
+
+if = {
+  LIMIT = {
+   BEL = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = BEL }
+}
+
+if = {
+  LIMIT = {
+   TUR = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = TUR }
+}
+
+if = {
+  LIMIT = {
+   POL = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = POL }
+}
+if = {
+  LIMIT = {
+   YUG = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = YUG }
+}
+
+if = {
+  LIMIT = {
+   HUN = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = HUN }
+}
+
+if = {
+  LIMIT = {
+   NOR = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = NOR }
+}
+
+if = {
+  LIMIT = {
+   SIA = {
+    has_government = communism
+     }
+    }
+   MON = { add_to_faction = SIA }
+}
+		}
+	}
+
+#End of focuses 
+ }

@@ -1,0 +1,29 @@
+#####United Kingdom
+
+ENG_establish_the_protectorate_of_YEM = {
+
+    allowed = {
+        original_tag = ENG
+    }
+
+    visible = {
+       AND = {
+           has_completed_focus = ENG_mission_to_civilize
+           owns_state = 293
+           owns_state = 810
+           owns_state = 659
+       }
+    }
+}
+
+ENG_expand_the_commonwealth = {
+    allowed = {
+      original_tag = ENG
+    }
+
+    visible = {
+      AND = {
+        has_completed_focus = ENG_new_alliances
+      }
+    }
+}

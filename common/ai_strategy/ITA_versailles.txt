@@ -1,0 +1,79 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+italy_hostile_to_france = {
+	enable = {
+		original_tag = ITA
+	}
+	abort = {
+		NAP = {
+			exists = no
+		}
+		FRA = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NAP"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "NAP"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "NAP"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "NAP"			
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "FRA"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "FRA"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "FRA"			
+		value = 1000
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "FRA"			
+		value = 1000
+	}
+}
+
+ITA_you_should_be_prepared_for_war = {
+
+	enable = {
+		tag = ITA
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+        type = force_build_armies
+        value = 300
+    }
+}

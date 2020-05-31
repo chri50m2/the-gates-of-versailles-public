@@ -1,0 +1,1305 @@
+#	#shared_focus = {
+#		#id = SOV_
+#		#icon =#
+#		#prerequisite = { #focus =# }
+#		#mutually_exclusive = { #focus =  }
+#		#x = -3
+#		#y = 0
+#		#relative_position_id =#
+#
+#		#cost = 10
+#
+#		#ai_will_do = {
+#			#factor = 1
+#		#}
+#
+#		#available = {
+#
+#		#}
+#		
+#		#bypass = {
+#
+#		#}
+#
+#		#cancel_if_invalid = yes
+#		#continue_if_invalid = no
+#		#available_if_capitulated = no
+#
+#		#complete_tooltip = {
+#
+#		#}
+#
+#		#completion_reward = {
+#
+#		#}
+#	#}
+
+	shared_focus = {
+		id = SOV_the_russian_army
+		icon = GFX_goal_rhineland
+		x = 42
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	shared_focus = {
+		id = SOV_like_an_atheist_in_a_coffin
+		prerequisite = { focus = SOV_the_russian_army }
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = 41
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.005
+		}
+	}
+
+	shared_focus = {
+		id = SOV_all_dressed_up_with_no_place_to_go
+		prerequisite = { focus = SOV_the_russian_army }
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 43
+		y = 1
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_completed_focus = SOV_like_an_atheist_in_a_coffin
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.005
+		}
+	}
+
+	shared_focus = {
+		id = SOV_artillery_and_armored_cooperation
+		prerequisite = { focus = SOV_timoshenkos_saturation_bombardements focus = SOV_rokossovskys_mobile_warfare_doctrine }
+		icon = GFX_goal_generic_army_artillery2
+		x = 40
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_infantry_support_tank_models
+		prerequisite = { focus = SOV_zhukovs_human_wave_tactics focus = SOV_rokossovskys_mobile_warfare_doctrine }
+		icon = GFX_goal_generic_army_tanks
+		x = 44
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_heavy_armor
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_zhukovs_human_wave_tactics
+		prerequisite = { focus = SOV_like_an_atheist_in_a_coffin }
+		prerequisite = { focus = SOV_all_dressed_up_with_no_place_to_go }
+		mutually_exclusive = { focus = SOV_rokossovskys_mobile_warfare_doctrine focus = SOV_timoshenkos_saturation_bombardements }
+		icon = GFX_focus_generic_little_entente
+		x = 46
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_defence_in_depth
+		prerequisite = { focus = SOV_zhukovs_human_wave_tactics }
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 46
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_disorganised_army
+    			add_idea = SOV_disorganised_army3
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_mass_assault_strategy
+		prerequisite = { focus = SOV_defence_in_depth }
+		icon = GFX_goal_generic_position_armies
+		x = 45
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_a_new_submachinegun_for_our_troops
+		prerequisite = { focus = SOV_defence_in_depth }
+		icon = GFX_focus_secret_rearmament
+		x = 47
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_movement_tactics_in_mountains_and_forests
+		prerequisite = { focus = SOV_mass_assault_strategy }
+		icon = GFX_focus_prc_infiltration
+		x = 45
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_disorganised_army3
+    			add_idea = SOV_disorganised_army4
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_expanding_rifle_production_in_moscow
+		prerequisite = { focus = SOV_a_new_submachinegun_for_our_troops }
+		icon = GFX_focus_secret_rearmament
+		x = 47
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			219 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+    				type = arms_factory
+   					level = 3
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_expanded_vodka_ration
+		prerequisite = { focus = SOV_movement_tactics_in_mountains_and_forests }
+		prerequisite = { focus = SOV_expanding_rifle_production_in_moscow }
+		icon = GFX_goal_generic_consumer_goods
+		x = 46
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			400 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = industrial_complex
+   					level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_russian_army_fears_no_one
+		prerequisite = { focus = SOV_the_expanded_vodka_ration }
+		icon = GFX_focus_usa_focus_on_europe
+		x = 45
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.2
+		}
+	}
+
+	shared_focus = {
+		id = SOV_an_effective_experienced_fighting_force
+		prerequisite = { focus = SOV_the_expanded_vodka_ration }
+		icon = GFX_focus_generic_military_mission
+		x = 47
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 75
+		}
+	}
+
+
+	shared_focus = {
+		id = SOV_rokossovskys_mobile_warfare_doctrine
+		prerequisite = { focus = SOV_all_dressed_up_with_no_place_to_go }
+		prerequisite = { focus = SOV_like_an_atheist_in_a_coffin }
+		mutually_exclusive = { focus = SOV_zhukovs_human_wave_tactics focus = SOV_timoshenkos_saturation_bombardements }
+		icon = GFX_focus_generic_army_tanks2
+		x = 42
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_upping_our_armoured_game
+		prerequisite = { focus = SOV_rokossovskys_mobile_warfare_doctrine }
+		icon = GFX_focus_generic_tank_production
+		x = 42
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_kubinka_armoured_doctrine_complex
+		prerequisite = { focus = SOV_upping_our_armoured_game }
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 41
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			219 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = arms_factory
+   					level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_configuring_tanks_to_our_terrain
+		prerequisite = { focus = SOV_upping_our_armoured_game }
+		icon = GFX_goal_generic_cavalry
+		x = 43
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_disorganised_army
+    			add_idea = SOV_disorganised_army0
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_light_medium_and_heavy_models
+		prerequisite = { focus = SOV_configuring_tanks_to_our_terrain }
+		prerequisite = { focus = SOV_kubinka_armoured_doctrine_complex }
+		icon = GFX_goal_generic_army_tanks
+		x = 41
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_light_armor
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_medium_armor
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_heavy_armor
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_mechanized_reconnaissance_batallions
+		prerequisite = { focus = SOV_configuring_tanks_to_our_terrain }
+		prerequisite = { focus = SOV_kubinka_armoured_doctrine_complex }
+		icon = GFX_focus_por_luso_tropicalism
+		x = 43
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_disorganised_army0
+    			add_idea = SOV_disorganised_army1
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_combined_offensive_exercises
+		prerequisite = { focus = SOV_mechanized_reconnaissance_batallions }
+		prerequisite = { focus = SOV_light_medium_and_heavy_models }
+		icon = GFX_goal_generic_major_war
+		x = 41
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_command_power = -30
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_mechanized_theory_groups
+		prerequisite = { focus = SOV_mechanized_reconnaissance_batallions }
+		prerequisite = { focus = SOV_light_medium_and_heavy_models }
+		icon = GFX_goal_generic_army_motorized
+		x = 43
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_pushing_through_the_troubles
+		prerequisite = { focus = SOV_combined_offensive_exercises }
+		prerequisite = { focus = SOV_mechanized_theory_groups }
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 42
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_timoshenkos_saturation_bombardements
+		prerequisite = { focus = SOV_all_dressed_up_with_no_place_to_go }
+		prerequisite = { focus = SOV_like_an_atheist_in_a_coffin }
+		mutually_exclusive = { focus = SOV_zhukovs_human_wave_tactics focus = SOV_rokossovskys_mobile_warfare_doctrine }
+		icon = GFX_goal_generic_army_artillery
+		x = 38
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_coordination_with_the_forward_units
+		prerequisite = { focus = SOV_timoshenkos_saturation_bombardements }
+		icon = GFX_focus_prc_infiltration
+		x = 38
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_complete_devastation_of_our_enemies
+		prerequisite = { focus = SOV_coordination_with_the_forward_units }
+		icon = GFX_goal_generic_occupy_start_war
+		x = 37
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_every_man_a_rifle
+		prerequisite = { focus = SOV_complete_devastation_of_our_enemies }
+		icon = GFX_focus_secret_rearmament
+		x = 37
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = 2500
+    			producer = SOV
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_new_artillery_equipment
+		prerequisite = { focus = SOV_coordination_with_the_forward_units }
+		icon = GFX_goal_generic_army_artillery2
+		x = 39
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_katyusha_rocket_tubes
+		prerequisite = { focus = SOV_new_artillery_equipment }
+		icon = GFX_focus_SOV_katyusha_rocket_tubes
+		x = 39
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = mot_rockets
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_russian_fighting_spirit
+		prerequisite = { focus = SOV_katyusha_rocket_tubes }
+		prerequisite = { focus = SOV_every_man_a_rifle }
+		icon = GFX_focus_generic_manpower
+		x = 38
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_thundering_guns
+		prerequisite = { focus = SOV_the_russian_fighting_spirit }
+		icon = GFX_goal_generic_occupy_start_war
+		x = 37
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+    			type = artillery_equipment
+    			amount = 1000
+    			producer = SOV
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_breaking_the_shackles_of_budget_cuts
+		prerequisite = { focus = SOV_the_russian_fighting_spirit }
+		icon = GFX_focus_mex_privatisation
+		x = 39
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_disorganised_army
+    			add_idea = SOV_disorganised_army2
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_no_longer_a_laughing_stock
+		prerequisite = { focus = SOV_the_russian_army_fears_no_one focus = SOV_an_effective_experienced_fighting_force focus = SOV_pushing_through_the_troubles}
+		prerequisite = { focus = SOV_the_thundering_guns focus = SOV_breaking_the_shackles_of_budget_cuts focus = SOV_pushing_through_the_troubles }
+		icon = GFX_goal_rhineland
+		x = 42
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_remove_bad_army_tt
+			hidden_effect = {
+				remove_ideas = {
+					SOV_disorganised_army1
+					SOV_disorganised_army2
+					SOV_disorganised_army4
+				}
+			}
+		}
+	}

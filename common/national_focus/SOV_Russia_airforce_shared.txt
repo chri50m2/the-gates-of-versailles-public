@@ -1,0 +1,1249 @@
+#	#shared_focus = {
+#		#id = SOV_
+#		#icon =#
+#		#prerequisite = { #focus =# }
+#		#mutually_exclusive = { #focus =  }
+#		#x = -3
+#		#y = 0
+#		#relative_position_id =#
+#
+#		#cost = 10
+#
+#		#ai_will_do = {
+#			#factor = 1
+#		#}
+#
+#		#available = {
+#
+#		#}
+#		
+#		#bypass = {
+#
+#		#}
+#
+#		#cancel_if_invalid = yes
+#		#continue_if_invalid = no
+#		#available_if_capitulated = no
+#
+#		#complete_tooltip = {
+#
+#		#}
+#
+#		#completion_reward = {
+#
+#		#}
+#	#}
+
+	shared_focus = {
+		id = SOV_the_russian_air_force
+		icon = GFX_goal_generic_air_doctrine
+		x = 54
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+
+	shared_focus = {
+		id = SOV_novikovs_infantry_support_doctrine
+		prerequisite = { focus = SOV_the_russian_air_force }
+		mutually_exclusive = { focus = SOV_krasavins_aerial_superiority_tactics }
+		icon = GFX_goal_generic_CAS
+		x = 52
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = battlefield_support_tree
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_krasavins_aerial_superiority_tactics
+		prerequisite = { focus = SOV_the_russian_air_force }
+		mutually_exclusive = { focus = SOV_novikovs_infantry_support_doctrine }
+		icon = GFX_goal_generic_air_fighter
+		x = 56
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = operational_integrity_tree
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_focusing_on_close_air_support
+		prerequisite = { focus = SOV_novikovs_infantry_support_doctrine }
+		icon = GFX_goal_generic_CAS
+		x = 50
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_russian_close_air_support_competition
+		prerequisite = { focus = SOV_focusing_on_close_air_support }
+		icon = GFX_goal_generic_CAS
+		x = 50
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			252 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_expanding_the_existing_squadrons
+		prerequisite = { focus = SOV_novikovs_infantry_support_doctrine }
+		icon = GFX_goal_generic_air_fighter2
+		x = 53
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = SOV_expand_squadronies
+		hidden_effect = {
+			load_oob = "SOV_Expand_squadrons"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_communication_between_the_branches
+		prerequisite = { focus = SOV_expanding_the_existing_squadrons }
+		icon = GFX_goal_generic_build_airforce
+		x = 53
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 25
+			army_experience = 15
+			navy_experience = 10
+		}
+	}
+
+	shared_focus = {
+		id = SOV_advanced_fighter_training
+		prerequisite = { focus = SOV_krasavins_aerial_superiority_tactics }
+		icon = GFX_goal_generic_air_fighter
+		x = 55
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 25
+		}
+	}
+
+	shared_focus = {
+		id = SOV_expanded_fighter_ace_programs
+		prerequisite = { focus = SOV_advanced_fighter_training }
+		icon = GFX_goal_generic_air_fighter2
+		x = 55
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ace = {
+    			name = "Amet-khan"
+    			surname = "Sultan"
+    			callsign = "Eagle"
+   	 			type = fighter_unique
+    			is_female = no
+			}
+			add_ace = {
+    			name = "Nikolai"
+    			surname = "Skomorokhov"
+    			callsign = "Winner"
+    			type = fighter_unique
+    			is_female = no
+			}
+			add_ace = {
+    			name = "Aleksei"
+    			surname = "Khlobystov"
+    			callsign = "Fighter"
+    			type = fighter_unique
+    			is_female = no
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_offensive_aircraft_strategems
+		prerequisite = { focus = SOV_krasavins_aerial_superiority_tactics }
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 58
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_new_fighter_bomber_prototypes
+		prerequisite = { focus = SOV_offensive_aircraft_strategems }
+		icon = GFX_focus_usa_escort_fighters
+		x = 58
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_investing_in_early_warning_systems
+		prerequisite = { focus = SOV_expanded_fighter_ace_programs focus = SOV_communication_between_the_branches }
+		icon = GFX_goal_generic_radar
+		x = 54
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = radar_tech
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_russian_radar_ring
+		prerequisite = { focus = SOV_investing_in_early_warning_systems }
+		icon = GFX_goal_generic_radar
+		x = 54
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			219 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+						instant_build = yes
+				}
+			}
+			223 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+						instant_build = yes
+				}
+			}
+			222 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+						instant_build = yes
+				}
+			}
+			224 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+						instant_build = yes
+				}
+			}
+			243 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+						instant_build = yes
+				}
+			}
+			242 = {
+				add_building_construction = {
+						type = radar_station 
+						level = 1
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_american_simplicity
+		prerequisite = { focus = SOV_russian_close_air_support_competition }
+		mutually_exclusive = { focus = SOV_prussian_ingenuity }
+		icon = GFX_focus_usa_recruit_the_free_corps
+		x = 49
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_american_russian_aircraft_think_tank
+		prerequisite = { focus = SOV_american_simplicity }
+		icon = GFX_goal_generic_military_deal
+		x = 49
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_unmatched_airforce
+    			add_idea = SOV_unmathced_airforce_airbonus_thinktank
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_fighter_bomber_wolf_packs
+		prerequisite = { focus = SOV_american_russian_aircraft_think_tank focus = SOV_importing_more_foreign_designs }
+		icon = GFX_focus_usa_escort_fighters
+		x = 49
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			load_oob = "SOV_fighter_bomber_wolf_packs"
+		}
+	}
+
+	shared_focus = {
+		id = SOV_russia_rules_the_skies
+		prerequisite = { focus = SOV_american_russian_aircraft_think_tank focus = SOV_importing_more_foreign_designs }
+		icon = GFX_goal_generic_territory_or_war
+		x = 51
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			load_oob = "SOV_russia_rules_the_skies"
+		}
+	}
+
+	shared_focus = {
+		id = SOV_prussian_ingenuity
+		prerequisite = { focus = SOV_russian_close_air_support_competition }
+		mutually_exclusive = { focus = SOV_american_simplicity }
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 51
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = medium_air
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_importing_more_foreign_designs
+		prerequisite = { focus = SOV_prussian_ingenuity }
+		icon = GFX_focus_generic_license_production
+		x = 51
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			PRS = {
+				create_production_license = {
+    				target = SOV
+    				equipment = {
+        				type = fighter_equipment_1
+    				}
+    			cost_factor = 0
+				}
+			}
+			PRS = {
+				create_production_license = {
+    				target = SOV
+    				equipment = {
+        				type = CAS_equipment_1
+    				}
+    			cost_factor = 0
+				}
+			}
+		add_war_support = 0.01
+	}
+}
+
+	shared_focus = {
+		id = SOV_yakolevs_all_purpose_aircraft
+		prerequisite = { focus = SOV_new_fighter_bomber_prototypes }
+		mutually_exclusive = { focus = SOV_MiG_design_bureaus_specified_models }
+		icon = GFX_goal_generic_air_bomber
+		x = 57
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_MiG_design_bureaus_specified_models
+		prerequisite = { focus = SOV_new_fighter_bomber_prototypes }
+		mutually_exclusive = { focus = SOV_yakolevs_all_purpose_aircraft }
+		icon = GFX_goal_generic_air_fighter
+		x = 59
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_unlock_MiG
+		}
+	}
+
+	shared_focus = {
+		id = SOV_dedicated_weapons_contractors
+		prerequisite = { focus = SOV_MiG_design_bureaus_specified_models }
+		icon = GFX_goal_generic_small_arms
+		x = 59
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			252 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+    				type = arms_factory
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_achieving_aircraft_standardization
+		prerequisite = { focus = SOV_yakolevs_all_purpose_aircraft }
+		icon = GFX_goal_generic_build_airforce
+		x = 57
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+   				type = fighter_equipment_1
+    			amount = 100
+   				producer = PRS
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_specifically_designed_fighter_assemblies
+		prerequisite = { focus = SOV_achieving_aircraft_standardization }
+		prerequisite = { focus = SOV_dedicated_weapons_contractors }
+		icon = GFX_goal_generic_air_fighter2
+		x = 58
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_unmatched_airforce
+    			add_idea = SOV_unmathced_airforce_airbonus0
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_adapting_fighters_for_night_operations
+		prerequisite = { focus = SOV_specifically_designed_fighter_assemblies }
+		icon = GFX_focus_usa_escort_fighters
+		x = 58
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_unmathced_airforce_airbonus0
+    			add_idea = SOV_unmathced_airforce_night_bonus
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_constructing_new_aircraft_depots
+		prerequisite = { focus = SOV_the_russian_radar_ring }
+		icon = GFX_goal_generic_build_airforce
+		x = 56
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+    			type = fighter_equipment_0
+    			amount = 100
+    			producer = SOV
+			}
+			add_equipment_to_stockpile = {
+    			type = tac_bomber_equipment_0
+    			amount = 100
+    			producer = SOV
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_communication_with_the_radio_operators
+		prerequisite = { focus = SOV_the_russian_radar_ring }
+		icon = GFX_goal_generic_radar
+		x = 54
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = signal_company_tech
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_expand_the_western_airfields
+		prerequisite = { focus = SOV_the_russian_radar_ring }
+		icon = GFX_goal_generic_build_airforce
+		x = 52
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			242 = {
+				add_building_construction = {
+    				type = air_base 
+    				level = 3
+    				instant_build = yes
+				}
+			}
+			224 = {
+				add_building_construction = {
+    				type = air_base 
+    				level = 3
+    				instant_build = yes
+				}
+			}
+			246 = {
+				add_building_construction = {
+    				type = air_base 
+    				level = 3
+    				instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_ilyushin_il-2_sturmovik
+		prerequisite = { focus = SOV_russia_rules_the_skies }
+		prerequisite = { focus = SOV_fighter_bomber_wolf_packs }
+		icon = GFX_focus_generic_air_defense
+		x = 50
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_technology = {
+    			CAS2 = 1
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_the_russian_air_force_stands_strong
+		prerequisite = { focus = SOV_the_ilyushin_il-2_sturmovik }
+		prerequisite = { focus = SOV_communication_with_the_radio_operators }
+		prerequisite = { focus = SOV_adapting_fighters_for_night_operations }
+		icon = GFX_goal_generic_air_doctrine
+		x = 54
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = {
+				SOV_unmathced_airforce_airbonus_thinktank
+				SOV_unmathced_airforce_night_bonus
+			}
+		}
+	}

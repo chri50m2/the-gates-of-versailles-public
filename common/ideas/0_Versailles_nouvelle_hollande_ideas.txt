@@ -1,0 +1,58 @@
+ideas = {
+	country = {
+		NHO_animal_exhibits = {
+			
+			allowed = {
+				original_tag = NHO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				consumer_goods_factor = -0.10
+			}
+		}
+		
+		NHO_illegal_hotbed = {
+			
+			allowed = {
+				original_tag = NHO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		
+		NHO_reliance_on_france = {
+			
+			allowed = {
+				original_tag = NHO
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.15
+				line_change_production_efficiency_factor = -0.2
+			}
+		}
+    }
+}

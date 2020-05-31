@@ -1,0 +1,542 @@
+#################################################
+### China Continue Tutelage Political Focuses ###
+#################################################
+### HS1San/Senku Ishigami #######################
+#################################################
+
+focus_tree = {
+	id = china_continue_focus
+	country = {
+		factor = 0
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 1000 }
+	
+	shared_focus = CHI_shared_continue_land_reform
+	shared_focus = CHI_shared_state_of_the_army
+	shared_focus = CHI_shared_aviation_focus
+	shared_focus = CHI_shared_naval_focus
+	shared_focus = CHI_shared_foreign_policy
+	
+	#focus = {
+	#	id = CHI_continue_
+	#	icon = GFX_
+	#	prerequisite = { focus = }
+	#	mutually_exclusive = { focus =  }
+	#	x = -3
+	#	y = 0
+	#	relative_position_id =
+	#
+	#	cost = 10
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	complete_tooltip = {
+	#
+	#	}
+	#
+	#	completion_reward = {
+	#
+	#	}
+	#}
+	
+#################
+### Political ###
+#################
+
+	focus = {
+
+		id = CHI_continue_eternal_tutelage
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 6
+		y = 0
+		cost = 5
+
+		available = {
+	
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+
+		}
+	
+		completion_reward = {
+			add_stability = 0.05
+			hidden_effect = {
+				country_event = china_versailles.23
+			}
+		}
+	
+		ai_will_do = {
+			factor = 100
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_the_generalissimo_retains_control
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { 
+			focus = CHI_continue_eternal_tutelage 
+		}
+		x = -1
+		y = 1
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			has_government = neutrality
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_strengthen_the_whampoa_clique 
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { 
+			focus = CHI_continue_the_generalissimo_retains_control
+		}
+		x = -3
+		y = 2
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			has_government = neutrality
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_cult_of_personality
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { 
+			focus = CHI_continue_strengthen_the_whampoa_clique
+		}
+		x = -4
+		y = 3
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			has_government = neutrality
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.20
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_secret_police_force
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { 
+			focus = CHI_continue_strengthen_the_whampoa_clique
+		}
+		x = -2
+		y = 3
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			has_government = neutrality
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_secret_police_force_idea
+				days = 140
+			} 
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_blueshirts_coup
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { 
+			focus = CHI_continue_eternal_tutelage 
+		}
+		x = 1
+		y = 1
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_strengthen_the_blueshirts_society
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { 
+			focus = CHI_continue_blueshirts_coup
+		}
+		x = 3
+		y = 2
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_loyal_military_officers
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { 
+			focus = CHI_continue_strengthen_the_blueshirts_society
+		}
+		x = 2
+		y = 3
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_loyal_military_officers_idea
+				days = 140
+			} 
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_political_indoctrination
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { 
+			focus = CHI_continue_strengthen_the_blueshirts_society
+		}
+		x = 4
+		y = 3
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			has_government = fascism
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.20
+			}
+		}
+	
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_declare_martial_law
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { 
+			focus = CHI_continue_the_generalissimo_retains_control
+			focus = CHI_continue_blueshirts_coup
+		}
+		x = 0
+		y = 2
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+			
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_political_power = 150
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_eliminate_political_parties
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { 
+			focus = CHI_continue_declare_martial_law 
+		}
+		x = 0
+		y = 3
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			remove_ideas = CHI_factionalism
+		}
+	
+		ai_will_do = {
+			factor = 5
+		}
+
+	}
+	
+	focus = {
+
+		id = CHI_continue_the_rule_of_one_man
+		icon = GFX_goal_support_fascism
+		prerequisite = { 
+			focus = CHI_continue_eliminate_political_parties 
+		}
+		prerequisite = { 
+			focus = CHI_continue_political_indoctrination 
+			focus = CHI_continue_cult_of_personality
+		}
+		prerequisite = { 
+			focus = CHI_continue_loyal_military_officers 
+			focus = CHI_continue_secret_police_force
+		}
+		x = 0
+		y = 4
+		relative_position_id = CHI_continue_eternal_tutelage
+		cost = 5
+
+		available = {
+
+		}
+	
+		bypass = {
+	
+		}
+	
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		complete_tooltip = {
+	
+		}
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = CHI_rule_of_one_man_idea
+				days = 140
+			}
+		}
+	
+		ai_will_do = {
+			factor = 20
+		}
+
+	}
+	
+}
+	

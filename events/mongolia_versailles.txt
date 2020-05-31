@@ -1,0 +1,2955 @@
+﻿add_namespace = mongolia
+
+##Event: A Two Way Deal
+country_event = {
+	id = mongolia.1
+
+	title = mongolia.1.title
+
+	desc = mongolia.1.desc
+
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+		trigger = {
+			tag = MON
+		}
+
+	fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # Money Payment
+
+				name = mongolia.1.a
+
+				ai_chance = { factor = 75 }
+
+				JAP = {
+					country_event= {
+					days = 1 
+					id = mongolia.2 # A Two Way Deal - Money Payment
+					}
+				}
+			}
+			option = { # Don't Pay
+
+				name = mongolia.1.b
+
+				ai_chance = { factor = 25 }
+
+				JAP = {
+					add_opinion_modifier= { 
+					target = MON
+					modifier = no_deal 
+						}
+					}
+			}
+}
+
+##Event: A Two Way Deal - Money Payment
+country_event = {
+	id = mongolia.2
+
+	title = mongolia.2.title
+
+	desc = mongolia.2.desc
+
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = JAP
+		}
+
+
+	fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # Accept Payment
+
+				name = mongolia.2.a
+
+				ai_chance = { factor = 90 }
+
+					MON={
+						country_event= {
+						days = 1 
+						id = mongolia.3 # A Two Way Deal - Success
+						}
+					}
+			}
+
+	option = { # Deny Payment
+
+		name = mongolia.2.b
+
+		ai_chance = { factor = 10 }
+
+			country_event= {
+				days = 1 
+				id = mongolia.4 # A Two Way Deal - Failure
+			}
+		}
+}
+
+##Event: A Two Way Deal - Success
+country_event = {
+	id = mongolia.3
+
+	title = mongolia.3.title
+
+	desc = mongolia.3.desc
+
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+	fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # "Great News!"
+
+				name = mongolia.3.a
+
+				ai_chance = { factor = 100 }
+
+				add_political_power= -150
+					JAP = {
+						add_opinion_modifier= { 
+						target = MON 
+						modifier = great_deal 
+						}
+					}
+
+					MON = {
+						add_opinion_modifier= { 
+						target = JAP
+						modifier = great_deal
+						}
+					}
+			
+			}
+}
+
+##Event: A Two Way Deal - Failure
+country_event = {
+	id = mongolia.4
+
+	title = mongolia.4.title
+
+	desc = mongolia.4.desc
+
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # "Damn It!"
+
+			name = mongolia.4.a
+
+			ai_chance = { factor = 100 }
+
+				JAP = {
+					add_opinion_modifier= { 
+					target = MON 
+					modifier = no_deal
+					}
+				}
+				add_stability= -0.05
+			}
+}
+
+##Event: An Expensive Compromise
+country_event = {
+	id = mongolia.5
+
+	title = mongolia.5.title
+
+	desc = mongolia.5.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # Money Payment
+
+			name = mongolia.5.a
+
+			ai_chance = { factor = 40 }
+
+				custom_effect_tooltip = MON_money_payment_tt
+
+				FRA = {
+					country_event= {
+					days = 1 
+					id = mongolia.6 # An Expensive Compromise - Money Payment
+					}
+				}
+			}
+
+			option = { # Gun Payment
+
+			name = mongolia.5.b
+
+			ai_chance = { factor = 50 }
+
+				custom_effect_tooltip = MON_gun_payment_tt
+
+				FRA = {
+					country_event= {
+					days = 1 
+					id = mongolia.7 # An Expensive Compromise - Gun Payment
+					}
+				}
+			}
+
+			option = { # Investment Payment
+
+			name = mongolia.5.c
+
+			ai_chance = { factor = 60 }
+
+				custom_effect_tooltip = MON_investment_payment_tt
+
+				FRA = {
+					country_event= {
+					days = 1 
+					id = mongolia.8 # An Expensive Compromise - Investment Payment
+					}
+				}
+			}
+}
+
+##Event: An Expensive Compromise - Money Payment
+country_event = {
+	id = mongolia.6
+
+	title = mongolia.6.title
+
+	desc = mongolia.6.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = FRA
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # Accept
+
+			name = mongolia.6.a
+
+			ai_chance = { factor = 50 }
+
+				custom_effect_tooltip = MON_money_payment_tt
+
+				MON = {
+					country_event= {
+					days = 1 
+					id = mongolia.9 # An Expensive Compromise - Money Success
+					}
+				}
+			}
+
+			option = { # Deny
+
+			name = mongolia.6.b
+
+			ai_chance = { factor = 50 }
+
+				custom_effect_tooltip = MON_gun_payment_tt
+
+				MON = {
+					country_event= {
+					days = 1 
+					id = mongolia.10 # An Expensive Compromise - Money Failure
+					}
+				}
+			}
+}
+
+##Event: An Expensive Compromise - Gun Payment
+country_event = {
+	id = mongolia.7
+
+	title = mongolia.7.title
+
+	desc = mongolia.7.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = FRA
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # Accept
+
+			name = mongolia.7.a
+
+			ai_chance = { factor = 70 }
+
+				MON = {
+					country_event= {
+					days = 1 
+					id = mongolia.11 # An Expensive Compromise - Guns Success
+					}
+				}
+			}
+
+			option = { # Deny
+
+			name = mongolia.7.b
+
+			ai_chance = { factor = 30 }
+
+				MON = {
+					country_event= {
+					days = 1 
+					id = mongolia.12 # An Expensive Compromise - Guns Failure
+					}
+				}
+			}
+}
+
+##Event: An Expensive Compromise - Investment Payment
+country_event = {
+	id = mongolia.8
+
+	title = mongolia.8.title
+
+	desc = mongolia.8.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = FRA
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # Accept
+
+			name = mongolia.8.a
+
+			ai_chance = { factor = 90 }
+
+				MON = {
+					country_event= {
+					days = 1 
+					id = mongolia.11 # An Expensive Compromise - Investment Success
+					}
+				}
+			}
+
+			option = { # Deny
+
+			name = mongolia.8.b
+
+			ai_chance = { factor = 10 }
+
+				MON = {
+					country_event= {
+					days = 1 
+					id = mongolia.12 # An Expensive Compromise - Investment Failure
+					}
+				}
+			}
+}
+
+##Event: An Expensive Compromise - Money Payment Success
+country_event = {
+	id = mongolia.9
+
+	title = mongolia.9.title
+
+	desc = mongolia.9.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # "Great!"
+
+			name = mongolia.9.a
+
+			ai_chance = { factor = 100 }
+
+				hidden_effect = {
+					set_country_flag = mon_fra_compromise_pass
+				}
+
+				add_political_power = -150
+			}
+}
+
+##Event: An Expensive Compromise - Money Payment Failure
+country_event = {
+	id = mongolia.10
+
+	title = mongolia.10.title
+
+	desc = mongolia.10.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # "Damnit!"
+
+			name = mongolia.10.a
+
+			ai_chance = { factor = 100 }
+				hidden_effect = {
+					set_country_flag = mon_fra_compromise_fail
+				}
+				FRA = {
+						add_opinion_modifier = {
+    					target = MON
+    					modifier = no_deal 
+						}
+					}
+					add_opinion_modifier = {
+    					target = FRA
+    					modifier = no_deal 
+						}
+			}
+}
+
+##Event: An Expensive Compromise - Gun Success
+country_event = {
+	id = mongolia.11
+
+	title = mongolia.11.title
+
+	desc = mongolia.11.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # "Great!"
+
+			name = mongolia.11.a
+
+			ai_chance = { factor = 100 }
+				hidden_effect = {
+					set_country_flag = mon_fra_compromise_pass
+				}
+
+				send_equipment = {
+   					 equipment = infantry_equipment
+    				 amount = 750
+    			     target = FRA
+					}
+			}
+}
+
+##Event: An Expensive Compromise - Gun Failure
+country_event = {
+	id = mongolia.12
+
+	title = mongolia.12.title
+
+	desc = mongolia.12.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # "Damnit!"
+
+			name = mongolia.12.a
+
+			ai_chance = { factor = 100 }
+				hidden_effect = {
+					set_country_flag = mon_fra_compromise_fail
+				}
+					FRA = {
+						add_opinion_modifier = {
+    					target = MON
+    					modifier = no_deal 
+						}
+					}
+					add_opinion_modifier = {
+    					target = FRA
+    					modifier = no_deal 
+						}
+
+			}
+}
+
+##Event: An Expensive Compromise - Investment Success
+country_event = {
+	id = mongolia.13
+
+	title = mongolia.13.title
+
+	desc = mongolia.13.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # "Great!"
+
+			name = mongolia.13.a
+
+			ai_chance = { factor = 100 }
+				hidden_effect = {
+					set_country_flag = mon_fra_compromise_pass
+				}
+
+				add_ideas = MON_investing
+			}
+}
+
+##Event: An Expensive Compromise - Investment Failure
+country_event = {
+	id = mongolia.14
+
+	title = mongolia.14.title
+
+	desc = mongolia.14.desc
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+			trigger = {
+			tag = MON
+		}
+
+
+		mean_time_to_happen = {
+			days = 1
+		}
+			option = { # "Damnit!"
+
+			name = mongolia.14.a
+
+			ai_chance = { factor = 100 }
+				hidden_effect = {
+					set_country_flag = mon_fra_compromise_fail
+				}
+					FRA = {
+						add_opinion_modifier = {
+    					target = MON
+    					modifier = no_deal 
+						}
+					}
+					add_opinion_modifier = {
+    					target = FRA
+    					modifier = no_deal 
+						}
+
+			}
+}
+
+##Event: Shuffle Begin
+country_event = {
+	id = mongolia.15
+
+	title = mongolia.15.title
+
+	desc = mongolia.15.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+			trigger = {
+			tag = MON
+			NOT = { has_completed_focus = MON_thegreatshuffle }			
+			focus_progress = {
+    		focus = MON_thegreatshuffle
+    		progress > 0
+				}
+		}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+			
+			option = { # "Let It Begin!"
+
+			name = mongolia.15.a
+
+			ai_chance = { factor = 100 }
+
+			set_country_flag = shuffle_begin
+
+			}
+}
+
+##Event: Shuffle Stage 1
+country_event = {
+	id = mongolia.16
+
+	title = mongolia.16.title
+
+	desc = mongolia.16.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+			trigger = {
+			has_country_flag = shuffle_begin
+			tag = MON
+			NOT = { has_completed_focus = MON_thegreatshuffle }			
+			focus_progress = {
+    		focus = MON_thegreatshuffle
+    		progress > 0.25
+				}
+		}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "The Military Cabinet First"
+
+			name = mongolia.16.a
+
+			ai_chance = { factor = 33 }
+
+				add_ideas = { MON_military_rearranged }
+
+					hidden_effect = {
+					set_country_flag = MON_military_rearrange_1
+					set_country_flag = shuffle_stage_1
+					}
+
+			}
+
+			option = { # "The Government First"
+
+			name = mongolia.16.b
+
+			ai_chance = { factor = 33 }
+
+				add_ideas = { MON_government_rearranged }
+
+					hidden_effect = {
+					set_country_flag = MON_gov_rearrange_1
+					set_country_flag = shuffle_stage_1
+					}
+			}
+
+			option = { # "The Airforce First"
+
+			name = mongolia.16.c
+
+			ai_chance = { factor = 33 }
+
+				add_ideas = { MON_airforce_rearranged }
+
+					hidden_effect = {
+					set_country_flag = MON_airforce_rearrange_1
+					set_country_flag = shuffle_stage_1
+					}
+			}
+}
+
+##Event: Shuffle Stage 2
+country_event = {
+	id = mongolia.17
+
+	title = mongolia.17.title
+
+	desc = mongolia.17.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+			trigger = {
+			has_country_flag = shuffle_stage_1
+			tag = MON
+			NOT = { has_completed_focus = MON_thegreatshuffle }			
+			focus_progress = {
+    		focus = MON_thegreatshuffle
+    		progress > 0.50
+				}
+		}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "The Military Cabinet First"
+
+			name = mongolia.17.a
+
+			ai_chance = { factor = 33 }
+
+				if = {
+					LIMIT = {
+						has_country_flag = MON_military_rearrange_1
+					}
+					swap_ideas = { 
+					remove_idea = MON_military_rearranged
+					add_idea = MON_military_rearranged_2 
+					}
+							hidden_effect = {
+							 	set_country_flag = shuffle_stage_2
+								set_country_flag = MON_military_rearrange_2
+							}
+
+					else = {
+						add_ideas = { MON_military_rearranged }	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_2
+									set_country_flag = MON_military_rearrange_1
+								}
+					}
+				}
+
+			}
+
+			option = { # "The Government First"
+
+			name = mongolia.17.b
+
+			ai_chance = { factor = 33 }
+
+				if = {
+				    LIMIT = {
+				    has_country_flag = MON_gov_rearrange_1
+				    }
+					swap_ideas = {
+					remove_idea = MON_government_rearranged
+					add_idea = MON_government_rearranged_2 
+					}
+							hidden_effect = {
+								set_country_flag = shuffle_stage_2
+								set_country_flag = MON_gov_rearrange_2
+							}
+
+					else = {
+						add_ideas = { MON_government_rearranged }	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_2
+									set_country_flag = MON_gov_rearrange_1
+								}
+					}
+				}
+
+			}
+
+			option = { # "The Airforce First"
+
+			name = mongolia.17.c
+
+			ai_chance = { factor = 33 }
+
+				if = {
+					LIMIT = { has_country_flag = MON_airforce_rearrange_1 }
+
+					swap_ideas = { 
+					remove_idea = MON_airforce_rearranged
+					add_idea = MON_airforce_rearranged_2 
+					}
+							hidden_effect = {
+								set_country_flag = shuffle_stage_2
+								set_country_flag = MON_airforce_rearrange_2
+							}
+
+					else = {
+						add_ideas = { MON_airforce_rearranged }	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_2
+									set_country_flag = MON_airforce_rearrange_1
+								}
+					}
+				}
+
+			}
+}
+
+##Event: Shuffle Stage 3
+country_event = {
+	id = mongolia.18
+
+	title = mongolia.18.title
+
+	desc = mongolia.18.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+			trigger = {
+			has_country_flag = shuffle_stage_2
+			tag = MON
+			NOT = { has_completed_focus = MON_thegreatshuffle }			
+			focus_progress = {
+    		focus = MON_thegreatshuffle
+    		progress > 0.75
+				}
+		}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "The Military Cabinet First"
+
+			name = mongolia.18.a
+
+			ai_chance = { factor = 33 }
+
+				if = {
+					LIMIT = { has_country_flag = MON_military_rearrange_2 }
+
+					swap_ideas = { 
+					remove_idea = MON_military_rearranged_2
+					add_idea = MON_military_rearranged_3 
+					}
+							hidden_effect = {
+								set_country_flag = shuffle_stage_3
+								set_country_flag = MON_military_rearrange_3
+							}
+
+					else = {
+					LIMIT = { has_country_flag = MON_military_rearrange_1 }
+
+						swap_ideas = {
+						remove_idea = MON_military_rearranged
+						add_idea = MON_military_rearranged_2 
+						}	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_3
+									set_country_flag = MON_military_rearrange_2
+								}
+					}
+
+					else = {
+						add_ideas = { MON_military_rearranged }	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_3
+									set_country_flag = MON_military_rearrange_1
+								}					
+					}
+				}
+
+			}
+
+			option = { # "The Government First"
+
+			name = mongolia.18.b
+
+			ai_chance = { factor = 33 }
+
+				if = {
+					LIMIT = { has_country_flag = MON_gov_rearrange_2 }
+
+					swap_ideas = { 
+					remove_idea = MON_government_rearranged_2
+					add_idea = MON_government_rearranged_3 
+					}
+							hidden_effect = {
+								set_country_flag = shuffle_stage_3
+								set_country_flag = MON_military_rearrange_3
+							}
+
+					else = {
+					LIMIT = { has_country_flag = MON_gov_rearrange_1 }
+
+						swap_ideas = { 
+						remove_idea = MON_government_rearranged
+						add_idea = MON_government_rearranged_2 
+						}	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_3
+									set_country_flag = MON_military_rearrange_2
+								}
+					}
+
+					else = {
+						add_ideas = { MON_government_rearranged }	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_3
+									set_country_flag = MON_gov_rearrange_1
+								}					
+					}
+				}
+
+			}
+
+			option = { # "The Airforce First"
+
+			name = mongolia.18.c
+
+			ai_chance = { factor = 33 }
+
+				if = {
+					LIMIT = { has_country_flag = MON_airforce_rearrange_2 }
+
+					swap_ideas = { 
+					remove_idea = MON_airforce_rearranged_2
+					add_idea = MON_airforce_rearranged_3 
+					}
+							hidden_effect = {
+								set_country_flag = shuffle_stage_3
+								set_country_flag = MON_airforce_rearrange_3
+							}
+
+					else = {
+					LIMIT = { has_country_flag = MON_airforce_rearrange_1 }
+
+						swap_ideas = { 
+						remove_idea = MON_airforce_rearranged
+						add_idea = MON_airforce_rearranged_2 
+						}	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_3
+									set_country_flag = MON_airforce_rearrange_2
+								}
+					}
+
+					else = {
+						add_ideas = { MON_airforce_rearranged }	
+								hidden_effect = {
+									set_country_flag = shuffle_stage_3
+									set_country_flag = MON_airforce_rearrange_1
+								}					
+					}
+				}
+
+			}
+}
+
+##Event: Discussion Start
+country_event = {
+	id = mongolia.19
+
+	title = mongolia.19.title
+
+	desc = mongolia.19.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Fingers Crossed"
+
+			name = mongolia.19.a
+
+			ai_chance = { factor = 100 }
+
+			ITA = {
+				country_event = {
+    				id = mongolia.20
+    				days = 1
+				}
+			}
+
+			GER = {
+				country_event = {
+					id = mongolia.21
+					days = 1
+				}
+			}
+
+			AUS = {
+				country_event = {
+					id = mongolia.22
+					days = 1
+				}
+			}
+
+			}
+}
+
+##Event: Italy - Discussion Of The Bear
+country_event = {
+	id = mongolia.20
+
+	title = mongolia.20.title
+
+	desc = mongolia.20.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = ITA
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "We're On Board"
+
+			name = mongolia.20.a
+
+			ai_chance = { factor = 20 }
+
+			MON = {
+				country_event = {
+    				id = mongolia.23
+    				days = 1
+				}
+			}
+
+			}
+
+
+			option = { # "They Stand Alone"
+
+			name = mongolia.20.b
+
+			ai_chance = { factor = 80 }
+
+			MON = {
+				country_event = {
+    				id = mongolia.24
+    				days = 1
+				}
+			}
+
+			}
+}
+
+##Event: Prussia - Discussion Of The Bear
+country_event = {
+	id = mongolia.21
+
+	title = mongolia.21.title
+
+	desc = mongolia.21.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = GER
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "We're On Board"
+
+			name = mongolia.21.a
+
+			ai_chance = { factor = 40 }
+
+			MON = {
+				country_event = {
+    				id = mongolia.25
+    				days = 1
+				}
+			}
+
+			}
+
+
+			option = { # "They Stand Alone"
+
+			name = mongolia.21.b
+
+			ai_chance = { factor = 60 }
+
+			MON = {
+				country_event = {
+    				id = mongolia.26
+    				days = 1
+				}
+			}
+
+			}
+}
+
+##Event: Austria - Discussion Of The Bear
+country_event = {
+	id = mongolia.22
+
+	title = mongolia.21.title
+
+	desc = mongolia.21.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = AUS
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "We're On Board"
+
+			name = mongolia.21.a
+
+			ai_chance = { factor = 20 }
+
+			MON = {
+				country_event = {
+    				id = mongolia.27
+    				days = 1
+				}
+			}
+
+			}
+
+
+			option = { # "They Stand Alone"
+
+			name = mongolia.21.b
+
+			ai_chance = { factor = 80 }
+
+			MON = {
+				country_event = {
+    				id = mongolia.28
+    				days = 1
+				}
+			}
+
+			}
+}
+
+##Event: Mongolia - Italy (Yes) - Discussion Of The Bear
+country_event = {
+	id = mongolia.23
+
+	title = mongolia.23.title
+
+	desc = mongolia.23.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Great News!"
+
+			name = mongolia.23.a
+
+			ai_chance = { factor = 100 }
+
+			custom_effect_tooltip = MON_italy_discuss_yes_tt
+
+			set_country_flag =  MON_italy_with_us 
+
+			}
+}
+
+##Event: Mongolia - Italy (No) - Discussion Of The Bear
+country_event = {
+	id = mongolia.24
+
+	title = mongolia.24.title
+
+	desc = mongolia.24.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Damn!"
+
+			name = mongolia.24.a
+
+			ai_chance = { factor = 100 }
+
+			add_opinion_modifier = {
+    		target = ITA
+    		modifier = MON_traitor
+			}
+
+			}
+}
+
+##Event: Mongolia - Prussia (Yes) - Discussion Of The Bear
+country_event = {
+	id = mongolia.25
+
+	title = mongolia.25.title
+
+	desc = mongolia.25.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Great News!"
+
+			name = mongolia.25.a
+
+			ai_chance = { factor = 100 }
+
+			custom_effect_tooltip = MON_italy_discuss_yes_tt
+
+			set_country_flag =  MON_prussia_with_us 
+
+			}
+}
+
+##Event: Mongolia - Prussia (No) - Discussion Of The Bear
+country_event = {
+	id = mongolia.26
+
+	title = mongolia.26.title
+
+	desc = mongolia.26.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Damn!"
+
+			name = mongolia.26.a
+
+			ai_chance = { factor = 100 }
+
+			add_opinion_modifier = {
+    		target = GER
+    		modifier = MON_traitor
+			}
+
+			}
+}
+
+##Event: Mongolia - Austria (Yes) - Discussion Of The Bear
+country_event = {
+	id = mongolia.27
+
+	title = mongolia.27.title
+
+	desc = mongolia.27.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Great!"
+
+			name = mongolia.27.a
+
+			ai_chance = { factor = 100 }
+
+			custom_effect_tooltip = MON_italy_discuss_yes_tt
+
+			set_country_flag =  MON_austria_with_us 
+
+			}
+}
+
+##Event: Mongolia - Austria (No) - Discussion Of The Bear
+country_event = {
+	id = mongolia.28
+
+	title = mongolia.28.title
+
+	desc = mongolia.28.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Damn!"
+
+			name = mongolia.28.a
+
+			ai_chance = { factor = 100 }
+
+			add_opinion_modifier = {
+    		target = AUS
+    		modifier = MON_traitor
+			}
+
+			}
+}
+
+##Event: Japan - Ask Japan
+country_event = {
+	id = mongolia.29
+
+	title = mongolia.29.title
+
+	desc = mongolia.29.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = JAP
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "We Are With Them!"
+
+			name = mongolia.29.a
+
+			ai_chance = { factor = 50 }
+
+			MON = {
+				country_event = {
+  					id = mongolia.30
+   					days = 1
+				}
+			}
+
+			}
+
+			option = { # "They Are Alone"
+
+			name = mongolia.29.b
+
+			ai_chance = { factor = 50 }
+
+			MON = {
+				country_event = {
+  					id = mongolia.31
+   					days = 1
+				}
+			}
+
+			}			
+}
+
+##Event: Mongolia - Ask Japan (yes)
+country_event = {
+	id = mongolia.30
+
+	title = mongolia.30.title
+
+	desc = mongolia.30.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Great!"
+
+			name = mongolia.30.a
+
+			ai_chance = { factor = 100 }
+
+			custom_effect_tooltip = MON_italy_discuss_yes_tt
+
+			set_country_flag =  MON_japan_with_us 
+
+			}		
+}
+
+##Event: Mongolia - Ask Japan (no)
+country_event = {
+	id = mongolia.31
+
+	title = mongolia.31.title
+
+	desc = mongolia.31.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Damn Them!"
+
+			name = mongolia.31.a
+
+			ai_chance = { factor = 100 }
+
+			add_opinion_modifier = {
+    		target = JAP
+    		modifier = MON_traitor
+			}
+			set_country_flag =  MON_japan_against_us 
+
+
+			}		
+}
+
+##Event: Coup d'etat Begin
+country_event = {
+	id = mongolia.32
+
+	title = mongolia.32.title
+
+	desc = mongolia.32.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Let it begin!"
+
+			name = mongolia.32.a
+
+			ai_chance = { factor = 100 }
+
+			set_country_flag =  MON_coup_begin
+
+
+			}		
+}
+
+##Event: Coup d'etat Successful
+country_event = {
+	id = mongolia.33
+
+	title = mongolia.33.title
+
+	desc = mongolia.33.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_coup_begin
+		NOT = {
+			has_country_flag = MON_military_threatened
+			has_country_flag = MON_people_pressured
+		}
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "Aldar!"
+
+			name = mongolia.33.a
+
+			ai_chance = { factor = 100 }
+
+			add_political_power = 100
+			add_war_support = 0.10
+			add_stability = 0.10
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			remove_ideas = MON_unstable_government
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.75
+			}
+
+			}		
+}
+
+##Event: Coup d'etat Successful With Problems
+country_event = {
+	id = mongolia.34
+
+	title = mongolia.34.title
+
+	desc = mongolia.34.desc
+
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_coup_begin
+		OR = {
+			has_country_flag = MON_military_threatened
+			has_country_flag = MON_people_pressured
+		}
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+			option = { # "A Small Price To Pay..."
+
+			name = mongolia.34.a
+
+			ai_chance = { factor = 100 }
+
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.4
+			}
+
+			remove_ideas = MON_unstable_government
+
+			add_political_power = -10
+			add_war_support = 0.05
+			add_stability = 0.05
+
+			}		
+}
+
+##Event: Demand Jiuquan - Sinkiang
+country_event = {
+	id = mongolia.35
+
+	title = mongolia.35.title
+
+	desc = mongolia.35.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SIK
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "It's for the best"
+
+		name = mongolia.35.a
+
+			ai_chance = {
+				base = 40
+				modifier = {
+					add = -40
+					MON = { has_army_size = { size < 5 } }
+				}
+				modifier = {
+					add = 60
+					MON = { has_army_size = { size > 7 } }
+				}
+			}
+			MON = {
+			set_country_flag = MON_sik_demand_accept
+				country_event= {
+					days = 1 
+					id = mongolia.36 
+				}
+			}
+
+		}		
+
+		option = { # "Never!"
+
+		name = mongolia.35.b
+
+			ai_chance = {
+				base = 10
+				modifier = {
+					add = 90
+					MON = { has_army_size = { size < 5 } }
+				}
+				modifier = {
+					add = -10
+					MON = { has_army_size = { size > 7 } }
+				}
+			}
+			MON = {
+			set_country_flag = MON_sik_demand_deny
+				country_event= {
+					days = 1 
+					id = mongolia.37 
+				}
+			}
+
+		}	
+}
+
+##Event: Demand Jiuquan - Mongolia Accept
+country_event = {
+	id = mongolia.36
+
+	title = mongolia.36.title
+
+	desc = mongolia.36.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_sik_demand_aceept
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Aldar!"
+
+		name = mongolia.36.a
+
+			ai_chance = {
+				base = 100
+			}
+
+			set_state_owner = 756
+
+		}		
+}
+
+##Event: Demand Jiuquan - Mongolia Deny
+country_event = {
+	id = mongolia.37
+
+	title = mongolia.37.title
+
+	desc = mongolia.37.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_sik_demand_deny
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Damn!"
+
+		name = mongolia.37.a
+
+			ai_chance = {
+				base = 100
+			}
+
+			create_wargoal = {
+    			type = annex_everything
+    			target = SIK
+			}
+
+		}		
+}
+
+##Event: Demand Subjugation - Sinkiang
+country_event = {
+	id = mongolia.38
+
+	title = mongolia.38.title
+
+	desc = mongolia.38.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = SIK
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Very well"
+
+		name = mongolia.38.a
+
+			ai_chance = {
+				base = 20
+				modifier = {
+					add = -20
+					MON = { has_army_size = { size < 8 } }
+				}
+				modifier = {
+					add = 80
+					MON = { has_army_size = { size > 12 } }
+				}
+			}
+
+			MON = {
+			set_country_flag = MON_sik_annex_accept
+				country_event= {
+					days = 1 
+					id = mongolia.39
+				}
+			}
+
+		}	
+
+		option = { # "nope bitch"
+
+		name = mongolia.38.b
+
+			ai_chance = {
+				base = 10
+				modifier = {
+					add = 90
+					MON = { has_army_size = { size < 8 } }
+				}
+				modifier = {
+					add = -10
+					MON = { has_army_size = { size > 12 } }
+				}
+			}
+
+			MON = {
+			set_country_flag = MON_sik_annex_deny
+				country_event= {
+					days = 1 
+					id = mongolia.40
+				}
+			}
+
+		}		
+}
+
+##Event: Demand Subjugation SIK Yes - Mongolia
+country_event = {
+	id = mongolia.39
+
+	title = mongolia.39.title
+
+	desc = mongolia.39.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_sik_annex_accept
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "great"
+
+		name = mongolia.38.a
+
+			ai_chance = {
+				base = 100
+			}
+
+				annex_country = {
+    			target = SIK
+    			transfer_troops = no
+				}
+
+		}		
+}
+
+##Event: Demand Subjugation SIK No - Mongolia
+country_event = {
+	id = mongolia.40
+
+	title = mongolia.40.title
+
+	desc = mongolia.40.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_sik_annex_deny
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "damn"
+
+		name = mongolia.38.a
+
+			ai_chance = {
+				base = 100
+			}
+
+
+			create_wargoal = {
+    			type = annex_everything
+    			target = SIK
+			}
+
+		}		
+}
+
+##Event: Demand Chahar - Qing
+country_event = {
+	id = mongolia.41
+
+	title = mongolia.41.title
+
+	desc = mongolia.41.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MAN
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "It's for the best"
+
+		name = mongolia.41.a
+
+			ai_chance = {
+				base = 40
+				modifier = {
+					add = -40
+					MON = { has_army_size = { size < 8 } }
+				}
+				modifier = {
+					add = 60
+					MON = { has_army_size = { size > 11 } }
+				}
+			}
+			MON = {
+			set_country_flag = MON_qing_demand_accept
+				country_event= {
+					days = 1 
+					id = mongolia.42 
+				}
+			}
+
+		}		
+
+		option = { # "Never!"
+
+		name = mongolia.41.b
+
+			ai_chance = {
+				base = 10
+				modifier = {
+					add = 90
+					MON = { has_army_size = { size < 8 } }
+				}
+				modifier = {
+					add = -10
+					MON = { has_army_size = { size > 11 } }
+				}
+			}
+			MON = {
+			set_country_flag = MON_qing_demand_deny
+				country_event= {
+					days = 1 
+					id = mongolia.43 
+				}
+			}
+
+		}	
+}
+
+##Event: Demand Chahar Accept - Mongolia
+country_event = {
+	id = mongolia.42
+
+	title = mongolia.42.title
+
+	desc = mongolia.42.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_qing_demand_aceept
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Aldar!"
+
+		name = mongolia.42.a
+
+			ai_chance = {
+				base = 100
+			}
+
+			set_state_owner = 611
+
+		}		
+}
+
+##Event: Demand Chahar Deny - Mongolia
+country_event = {
+	id = mongolia.43
+
+	title = mongolia.43.title
+
+	desc = mongolia.43.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_qing_demand_deny
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Damn!"
+
+		name = mongolia.43.a
+
+			ai_chance = {
+				base = 100
+			}
+
+			create_wargoal = {
+    			type = annex_everything
+    			target = MAN
+			}
+
+		}		
+}
+
+##Event: Demand Subjugation - Mongolia
+country_event = {
+	id = mongolia.44
+
+	title = mongolia.44.title
+
+	desc = mongolia.44.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MAN
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Very well"
+
+		name = mongolia.44.a
+
+			ai_chance = {
+				base = 20
+				modifier = {
+					add = -20
+					MON = { has_army_size = { size < 12 } }
+				}
+				modifier = {
+					add = 80
+					MON = { has_army_size = { size > 15 } }
+				}
+			}
+
+			MON = {
+			set_country_flag = MON_qing_annex_accept
+				country_event= {
+					days = 1 
+					id = mongolia.45
+				}
+			}
+
+		}	
+
+		option = { # "nope bitch"
+
+		name = mongolia.44.b
+
+			ai_chance = {
+				base = 10
+				modifier = {
+					add = 90
+					MON = { has_army_size = { size < 12 } }
+				}
+				modifier = {
+					add = -10
+					MON = { has_army_size = { size > 15 } }
+				}
+			}
+
+			MON = {
+			set_country_flag = MON_qing_annex_deny
+				country_event= {
+					days = 1 
+					id = mongolia.46
+				}
+			}
+
+		}		
+}
+
+##Event: Demand Subjugation QING Yes - Mongolia
+country_event = {
+	id = mongolia.45
+
+	title = mongolia.45.title
+
+	desc = mongolia.45.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_qing_annex_accept
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "great"
+
+		name = mongolia.45.a
+
+			ai_chance = {
+				base = 100
+			}
+
+				annex_country = {
+    			target = MAN
+    			transfer_troops = no
+				}
+
+		}		
+}
+
+##Event: Demand Subjugation QING No - Mongolia
+country_event = {
+	id = mongolia.46
+
+	title = mongolia.46.title
+
+	desc = mongolia.46.desc
+
+	picture = GFX_report_event_soviet_invasion_map
+
+	fire_only_once = yes
+
+	is_triggered_only = no
+
+	trigger = {
+		tag = MON
+		has_country_flag = MON_qing_annex_deny
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "damn"
+
+		name = mongolia.46.a
+
+			ai_chance = {
+				base = 100
+			}
+
+
+			create_wargoal = {
+    			type = annex_everything
+    			target = MAN
+			}
+
+		}		
+}
+
+##Event: Yellow River Crisis - China
+country_event = {
+	id = mongolia.47
+
+	title = mongolia.47.title
+
+	desc = mongolia.47.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = CHI
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Escalate"
+
+		name = mongolia.47.a
+
+			ai_chance = {
+				base = 30
+				modifier = {
+					add = 70
+					MON = { has_army_size = { size < 50 } }
+				}
+				modifier = {
+					add = -30
+					MON = { has_army_size = { size > 65 } }
+				}
+			}
+
+			add_timed_idea = {
+			idea = MON_china_escalated
+			days = 180
+			}
+
+			MON = {
+			country_event= {
+				days = 1 
+				id = mongolia.49
+			}
+
+			}
+
+		}		
+
+		option = { # "Give In"
+
+		name = mongolia.47.b
+
+			ai_chance = {
+				base = 70
+				modifier = {
+					add = -70
+					MON = { has_army_size = { size < 50 } }
+				}
+				modifier = {
+					add = 30
+					MON = { has_army_size = { size > 65 } }
+				}
+			}
+
+
+			MON = {
+			country_event= {
+				days = 1 
+				id = mongolia.48
+			}
+
+			}
+
+		}		
+}
+
+##Event: Yellow River Crisis Escalate- Mongolia
+country_event = {
+	id = mongolia.49
+
+	title = mongolia.49.title
+
+	desc = mongolia.49.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.49.a
+
+			ai_chance = {
+				base = 100
+			}
+
+
+			declare_war_on = {
+    			target = CHI
+    			type = annex_everything
+			}
+			add_threat = 5
+			add_timed_idea = {
+			idea = MON_china_war
+			days = 180
+			}
+
+		}				
+}
+
+##Event: Yellow River Crisis Give In- Mongolia
+country_event = {
+	id = mongolia.48
+
+	title = mongolia.48.title
+
+	desc = mongolia.48.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = MON
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.48.a
+			set_state_owner = 616
+			set_state_owner = 621
+			set_state_owner = 746
+			ai_chance = {
+				base = 100
+			}
+
+		}				
+}
+
+##Event: Anti-Japanese Pact - Asking
+country_event = {
+	id = mongolia.50
+
+	title = mongolia.50.title
+
+	desc = mongolia.50.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		MON = {
+			has_completed_focus = MON_theantijapanesepact
+		}
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Join"
+
+		name = mongolia.50.a
+		MON = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = MR_pact
+				}
+			}
+			add_ideas = MON_anti_japanese_pact_member
+		MON = {
+			country_event = {
+    		id = mongolia.51
+    		days = 1
+				}
+			}
+			ai_chance = {
+				base = 75
+			}
+
+		}		
+
+		option = { # "Refuse"
+
+		name = mongolia.50.b
+		MON = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = refused_MR_pact
+				}
+				add_ideas = MON_anti_japanese_pact_member
+			country_event = {
+    		id = mongolia.52
+    		days = 1
+				}				
+			}
+			ai_chance = {
+				base = 25
+			}
+
+		}		
+}
+
+##Event: Ask For World Support - Asking
+country_event = {
+	id = mongolia.53
+
+	title = mongolia.53.title
+
+	desc = mongolia.53.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		MON = {
+		has_completed_focus = MON_askforworldsupport
+		}
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.53.a
+			ai_chance = {
+				base = 10
+				modifier = {
+				factor = 90
+					if {
+						LIMIT = { has_government = democratic }
+						fascism > 0.25
+					}
+
+				}
+			}
+
+			MON = {
+			country_event = {
+    		id = mongolia.57
+    		days = 1
+				}
+			}
+
+		}		
+
+		option = { # "No"
+
+		name = mongolia.53.b
+			ai_chance = {
+				base = 10
+				modifier = {
+				factor = 90
+					if {
+						LIMIT = { has_government = democratic }
+						fascism < 0.25
+					}
+
+				}
+			}
+
+			MON = {
+			country_event = {
+    		id = mongolia.55
+    		days = 1
+				}
+			}
+
+		}		
+}
+
+##Event: Transfer Korea To Mongolia - Asking Japan
+country_event = {
+	id = mongolia.56
+
+	title = mongolia.56.title
+
+	desc = mongolia.56.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = JAP
+		has_completed_focus = MON_thekoreanpeninsula
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.56.a
+			ai_chance = {
+				base = 60
+			}
+			MON = {
+			country_event = {
+    		id = mongolia.57
+    		days = 1
+				}
+			}
+		}		
+
+		option = { # "No"
+
+		name = mongolia.56.b
+			ai_chance = {
+				base = 40
+			}
+			MON = {
+			country_event = {
+    		id = mongolia.58
+    		days = 1
+				}
+			}
+		}		
+}
+
+##Event: Transfer Korea To Mongolia - Yes
+country_event = {
+	id = mongolia.57
+
+	title = mongolia.57.title
+
+	desc = mongolia.57.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.57.a
+			ai_chance = {
+				base = 100
+			}
+			MON = {
+			puppet = KOR
+			}
+		}				
+}
+
+##Event: Transfer Korea To Mongolia - No
+country_event = {
+	id = mongolia.58
+
+	title = mongolia.58.title
+
+	desc = mongolia.58.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.58.a
+			ai_chance = {
+				base = 100
+			}
+		}				
+}
+
+##Event: Transfer Qing To Mongolia - Asking Japan
+country_event = {
+	id = mongolia.59
+
+	title = mongolia.59.title
+
+	desc = mongolia.59.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = JAP
+		has_completed_focus = MON_thekoreanpeninsula
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.59.a
+			ai_chance = {
+				base = 60
+			}
+			MON = {
+			country_event = {
+    		id = mongolia.60
+    		days = 1
+				}
+			}
+		}		
+
+		option = { # "No"
+
+		name = mongolia.59.b
+			ai_chance = {
+				base = 40
+			}
+			MON = {
+			country_event = {
+    		id = mongolia.61
+    		days = 1
+				}
+			}
+		}		
+}
+
+##Event: Transfer Qing To Mongolia - Yes
+country_event = {
+	id = mongolia.60
+
+	title = mongolia.60.title
+
+	desc = mongolia.60.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.60.a
+			ai_chance = {
+				base = 100
+			}
+			MON = {
+			puppet = MAN
+			}
+		}				
+}
+
+##Event: Transfer Qing To Mongolia - No
+country_event = {
+	id = mongolia.61
+
+	title = mongolia.61.title
+
+	desc = mongolia.61.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.61.a
+			ai_chance = {
+				base = 100
+			}
+		}				
+}
+
+##Event: Into country (Austria / Italy)
+country_event = {
+	id = mongolia.62
+
+	title = mongolia.62.title
+
+	desc = mongolia.62.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			tag = ITA
+			tag = AUS
+		}
+	}
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.62.a
+			ai_chance = {
+				base = 20
+			}
+			ROOT = {
+			 add_ideas = {
+				 MON_communist_influence
+			 }
+			 set_country_flag = communist_influence
+			}
+		}	
+
+		option = { # "No"
+
+		name = mongolia.62.b
+			ai_chance = {
+				base = 80
+			}
+		}				
+}
+
+##Event: Rally Sympathizers
+country_event = {
+	id = mongolia.63
+
+	title = mongolia.63.title
+
+	desc = mongolia.63.desc
+
+	picture = GFX_report_event_generic_battle
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+		option = { # "Okay"
+
+		name = mongolia.63.a
+			ai_chance = {
+				base = 40
+			}
+			ROOT = {
+			 add_ideas = {
+				 MON_communist_influence
+			 }
+			 set_country_flag = communist_influence
+			}
+		}	
+
+		option = { # "No"
+
+		name = mongolia.63.b
+			ai_chance = {
+				base = 60
+			}
+		}				
+}

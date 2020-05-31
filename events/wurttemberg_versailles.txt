@@ -1,0 +1,71 @@
+﻿###################################################
+# Wurttemberg Events - Gates to Versailles Edition#
+###################################################
+
+add_namespace = wurttemberg
+
+country_event = { #related to baden.1 - Baden ask Wurttemberg to unify the country
+	id = wurttemberg.1
+	title = wurttemberg.1.t
+	desc = wurttemberg.1.d
+#	picture =
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = wurttemberg.1.a #We accept
+		hidden_effect = {
+		BAD = {
+			WUR = { transfer_state = 854 }
+			}
+		}
+		set_cosmetic_tag = BAD_WUR_UNION
+		set_global_flag = bad_approches_wurtemburg
+		set_global_flag = bad_wur_one_country
+			FRA = {
+			add_opinion_modifier = {
+			target = WUR
+			modifier = FRA_bad_wur_unification
+			}
+		}
+		hidden_effect = {
+		load_oob = "BAD_WUR_Union_Common_Army"
+		}
+		custom_effect_tooltip = bad_wur_unification_tt
+	}
+	
+	option = {
+		name = wurttemberg.1.b #We refuse	
+	}
+}
+
+country_event = { #related to baden.1 - Baden ask them to create a temporary union (faction)
+	id = wurttemberg.2
+	title = wurttemberg.2.t
+	desc = wurttemberg.2.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = wurttemberg.2.a #We accept
+		create_faction = "bad_wur_union"
+		WUR = { add_to_faction = BAD }
+		set_global_flag = bad_approches_wurtemburg
+		FRA = {
+			add_opinion_modifier = {
+			target = WUR
+			modifier = FRA_bad_wur_unification
+			}
+		}
+		BAV = {
+		country_event = { days = 1 id = bavaria.1 }
+		}
+	}
+	
+	option = { #We refuse
+		name = wurttemberg.2.b
+	}
+}

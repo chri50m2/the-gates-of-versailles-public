@@ -1,0 +1,1363 @@
+#	#shared_focus = {
+#		#id = GER_
+#		#icon =#
+#		#prerequisite = { #focus =# }
+#		#mutually_exclusive = { #focus =  }
+#		#x = 0
+#		#y = 0
+#		#relative_position_id =#
+#
+#		#cost = 10
+#
+#		#ai_will_do = {
+#			#factor = 1
+#		#}
+#
+#		#available = {
+#
+#		#}
+#		
+#		#bypass = {
+#
+#		#}
+#
+#		#cancel_if_invalid = yes
+#		#continue_if_invalid = no
+#		#available_if_capitulated = no
+#
+#		#complete_tooltip = {
+#
+#		#}
+#
+#		#completion_reward = {
+#
+#		#}
+#	#}
+
+	shared_focus = {
+		id = GER_germany_on_the_world_stage
+		icon = GFX_focus_Pan_Germania
+		x = 26
+		y = 8
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = flag_germany_unified
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_faction = GER_EUROPA_PAKT
+		}
+	}
+
+	shared_focus = {
+		id = GER_central_european_diplomacy
+		prerequisite = { focus = GER_germany_on_the_world_stage }
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		x = 20
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = GER_dealing_with_austria
+		prerequisite = { focus = GER_central_european_diplomacy }
+		icon = GFX_AUS_legacy
+		x = 23
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = AUS
+				modifier = negative_stance
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_operation_albrecht
+		prerequisite = { focus = GER_dealing_with_austria }
+		icon = GFX_goal_generic_position_armies
+		x = 23
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		will_lead_to_war_with = AUS
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			declare_war_on = {
+   				target = AUS
+    			type = annex_everything
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_linz_trials
+		prerequisite = { focus = GER_operation_albrecht }
+		icon = GFX_goal_generic_propaganda
+		x = 23
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = { id = prussia.10 days = 0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_denazification
+		prerequisite = { focus = GER_linz_trials }
+		mutually_exclusive = { focus = GER_integration }
+		icon = GFX_goal_ita_invade_austria
+		x = 24
+		y = 13
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			AUS = {
+				exists = no
+			}
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = { 
+			ideology = fascism
+			popularity = -0.05
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_keep_austrian_identity
+		prerequisite = { focus = GER_denazification }
+		icon = GFX_AUS_patriotism
+		x = 24
+		y = 14
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			AUS = {
+				exists = no
+			}
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+			add_manpower = 350000
+		}
+	}
+
+	shared_focus = {
+		id = GER_calm_NSDAP
+		prerequisite = { focus = GER_keep_austrian_identity }
+		icon = GFX_goal_ita_invade_austria
+		x = 24
+		y = 15
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			AUS = {
+				exists = no
+			}
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.07
+			}
+			add_political_power = 100
+		}
+	}
+
+	shared_focus = {
+		id = GER_integration
+		prerequisite = { focus = GER_linz_trials }
+		mutually_exclusive = { focus = GER_denazification }
+		icon = GFX_focus_generic_support_the_left_right
+		x = 22
+		y = 13
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			AUS = {
+				exists = no
+			}
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+
+	shared_focus = {
+		id = GER_we_are_all_germans
+		prerequisite = { focus = GER_integration }
+		icon = GFX_focus_Pan_Germania
+		x = 22
+		y = 14
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_state_core = 815
+			add_state_core = 152
+			add_state_core = 4
+			add_state_core = 102
+			add_state_core = 736
+			add_state_core = 153
+			add_state_core = 39
+		}
+	}
+
+	shared_focus = {
+		id = GER_political_freedom
+		prerequisite = { focus = GER_we_are_all_germans }
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 22
+		y = 15
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			AUS = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = GER_the_sudetens
+		prerequisite = { focus = GER_central_european_diplomacy }
+		icon = GFX_focus_generic_attack_czechia
+		x = 19
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			CZE = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = CZE
+				modifier = negative_stance
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_munich_conference
+		prerequisite = { focus = GER_the_sudetens }
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 19
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			CZE = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = { id = prussia.11 days = 0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_fall_grun
+		prerequisite = { focus = GER_munich_conference }
+		mutually_exclusive = { focus = GER_establishing_friendship }
+		icon = GFX_focus_generic_attack_czechia
+		x = 20
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_country_flag = GER_Attack_Czech
+		}
+		
+		bypass = {
+			CZE = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			declare_war_on = {
+   				target = CZE
+    			type = annex_everything
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_czech_minority_laws
+		prerequisite = { focus = GER_fall_grun }
+		icon = GFX_focus_generic_self_management
+		x = 20
+		y = 13
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			AND = {
+				9 = {
+					is_owned_by = GER
+				}
+				75 = {
+					is_owned_by = GER
+				}
+				72 = {
+					is_owned_by = GER
+				}
+			}
+		}
+		
+		bypass = {
+			NOT = {
+				AND = {
+				9 = {
+					is_owned_by = GER
+				}
+				75 = {
+					is_owned_by = GER
+				}
+				72 = {
+						is_owned_by = GER
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = GER_czech_protection_laws
+		}
+	}
+
+	shared_focus = {
+		id = GER_establishing_friendship
+		prerequisite = { focus = GER_munich_conference }
+		mutually_exclusive = { focus = GER_fall_grun }
+		icon = GFX_goal_generic_improve_relations
+		x = 18
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			CZE = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			CZE = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = CZE
+				modifier = renewed_friendship
+			}
+			country_event = { id = prussia.13 days = 0 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_population_exchange
+		prerequisite = { focus = GER_establishing_friendship }
+		icon = GFX_focus_generic_parliament_elections
+		x = 18
+		y = 13
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			CZE = {
+				exists = yes
+				owns_state = 74
+				owns_state = 69
+			}
+			GER = {
+				owns_state = 64
+			}
+		}
+		
+		bypass = {
+			CZE = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = GER_population_exchange_tt
+			69 = {
+				add_manpower = -2000000
+			}
+			74 = {
+				add_manpower = -600000
+			}
+			64 = {
+				add_manpower = 1300000
+			}
+			866 = {
+				add_manpower = 1300000
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_burgenland_issue
+		prerequisite = { focus = GER_calm_NSDAP focus = GER_political_freedom }
+		prerequisite = { focus = GER_czech_minority_laws focus = GER_population_exchange }
+		mutually_exclusive = { focus = GER_ally_HUN }
+		icon = GFX_goal_generic_territory_or_war
+		x = 22
+		y = 16
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			HUN = {
+				exists = yes
+			}
+			is_neighbor_of = HUN
+		}
+		
+		bypass = {
+			HUN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			HUN = {
+				country_event = { id = prussia.15 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_ally_HUN
+		prerequisite = { focus = GER_calm_NSDAP focus = GER_political_freedom }
+		prerequisite = { focus = GER_czech_minority_laws focus = GER_population_exchange }
+		mutually_exclusive = { focus = GER_burgenland_issue }
+		icon = GFX_goal_generic_improve_relations
+		x = 20
+		y = 16
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			HUN = {
+				exists = yes
+			}
+			is_neighbor_of = HUN
+		}
+		
+		bypass = {
+			HUN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			HUN = {
+				country_event = { id = prussia.13 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_ally_SLO
+		prerequisite = { focus = GER_ally_HUN focus = GER_burgenland_issue }
+		icon = GFX_generic_ally_slovakia
+		x = 21
+		y = 17
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			SLO = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			SLO = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			SLO = {
+				country_event = { id = prussia.13 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_eastern_european_diplomacy
+		prerequisite = { focus = GER_germany_on_the_world_stage }
+		icon = GFX_focus_ger_strike_at_the_source
+		x = 32
+		y = 9
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = GER_lithuanian_membership
+		prerequisite = { focus = GER_eastern_european_diplomacy }
+		icon = GFX_generic_ally_lithuania
+		x = 32
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			LIT = {
+				country_event = { id = prussia.13 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_invite_the_baltics
+		prerequisite = { focus = GER_lithuanian_membership }
+		mutually_exclusive = { focus = GER_protect_the_baltics }
+		icon = GFX_goal_generic_improve_relations
+		x = 31
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			LAT = {
+				country_event = { id = prussia.13 days = 0 }
+			}
+			EST = {
+				country_event = { id = prussia.13 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_protect_the_baltics
+		prerequisite = { focus = GER_lithuanian_membership }
+		mutually_exclusive = { focus = GER_invite_the_baltics }
+		icon = GFX_focus_generic_coastal_fort
+		x = 33
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			give_guarantee = LAT
+			give_guarantee = EST
+		}
+	}
+
+	shared_focus = {
+		id = GER_caucasus_diplomacy
+		prerequisite = { focus = GER_eastern_european_diplomacy }
+		icon = GFX_goal_anschluss
+		x = 36
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	shared_focus = {
+		id = GER_azerbaijani_membership
+		prerequisite = { focus = GER_caucasus_diplomacy }
+		mutually_exclusive = { focus = GER_georgian_membership }
+		icon = GFX_goal_generic_improve_relations
+		x = 35
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			AZR = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			AZR = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			AZR = {
+				country_event = { id = prussia.13 days = 0 }
+			}
+			add_political_power = -50
+		}
+	}
+
+	shared_focus = {
+		id = GER_georgian_membership
+		prerequisite = { focus = GER_caucasus_diplomacy }
+		mutually_exclusive = { focus = GER_azerbaijani_membership }
+		icon = GFX_goal_generic_improve_relations
+		x = 37
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			GEO = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			GEO = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			GEO = {
+				country_event = { id = prussia.13 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_oil_contracts
+		prerequisite = { focus = GER_azerbaijani_membership }
+		icon = GFX_goal_generic_oil_refinery
+		x = 35
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			AZR = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			AZR = {
+				exists = no
+			}
+		}
+
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			give_resource_rights = { receiver = GER state = 229 }
+		}
+	}
+
+	shared_focus = {
+		id = GER_warm_water_ports
+		prerequisite = { focus = GER_georgian_membership }
+		icon = GFX_focus_hol_prepare_the_inundation_lines
+		x = 37
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			GEO = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			GEO = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			GER = {
+				set_state_owner = 914
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_tgov_polish_membership
+		prerequisite = { focus = GER_eastern_european_diplomacy }
+		icon = GFX_poland_the_military_reborn
+		x = 29
+		y = 10
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			POL = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			POL = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	shared_focus = {
+		id = GER_negotiate_for_kattowitz
+		prerequisite = { focus = GER_tgov_polish_membership }
+		icon = GFX_poland_find_a_compromise
+		x = 29
+		y = 11
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			POL = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			POL = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			POL = {
+				country_event = { id = prussia.10 days = 0 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_invade_poland
+		prerequisite = { focus = GER_negotiate_for_kattowitz }
+		mutually_exclusive = { focus = GER_invite_poland }
+		icon = GFX_poland_the_new_military
+		x = 28
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_global_flag = GER_not_get_kattowitz
+
+			POL = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			POL = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			declare_war_on = {
+   				target = POL
+    			type = annex_everything
+			}
+		}
+	}
+
+	shared_focus = {
+		id = GER_invite_poland
+		prerequisite = { focus = GER_negotiate_for_kattowitz }
+		mutually_exclusive = { focus = GER_invade_poland }
+		icon = GFX_poland_polish_armed_forces
+		x = 30
+		y = 12
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_global_flag = GER_not_get_kattowitz
+
+			POL = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			POL = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			POL = {
+				country_event = { id = prussia.13 days = 0 }
+			}
+		}
+	}

@@ -1,0 +1,1210 @@
+﻿#############################
+### Chinese Events ##########
+#############################
+### HS1San/Senku Ishigami ###
+#############################
+
+add_namespace = china_versailles
+add_namespace = my_stuff
+
+#### National Focus Events ####
+
+# Status of the Political Tutelage
+country_event = {
+	id = china_versailles.1
+	title = china_versailles.1.t
+	desc = china_versailles.1.d
+	picture = GFX_report_event_china_chiang_kai_shek
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { #Continue the Political Tutelage!
+		name = china_versailles.1.a
+		set_country_flag = CHI_continue_the_political_tutelage_picked
+		hidden_effect = {
+			load_focus_tree = tgov_china_start_focus
+		}
+	}
+	
+	option = { #End the Political Tutelage!
+		name = china_versailles.2.a
+		set_country_flag = CHI_end_the_political_tutelage_picked
+		hidden_effect = {
+			load_focus_tree = tgov_china_start_focus
+		}
+	}
+}
+
+# Assassinate Wang Jingwei
+country_event = {
+	id = china_versailles.2
+	title = china_versailles.2.t
+	desc = china_versailles.2.d
+	
+	is_triggered_only = yes
+	
+	option = { #RIP Wang Jingwei (Liao Zhongkai becomes new leader of SocDems)
+		name = china_versailles.2.a
+		trigger = {
+			NOT = {
+				has_country_flag = CHI_liao_zhongkai_dead
+			}
+		}
+		create_country_leader = {
+			name = "Liao Zhongkai"
+			desc = "POLITICS_LIAO_ZHONGKAI_DESC"
+			picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+			expire = "1965.1.1"
+			ideology = state_socialism
+			traits = {}
+		}
+		set_country_flag = CHI_wang_jingwei_dead
+	}
+	
+	option = { #RIP Wang Jingwei (Soong Ching-ling becomes new leader of SocDems since Liao is ded)
+		name = china_versailles.2.b
+		trigger = {
+			has_country_flag = CHI_liao_zhongkai_dead
+		}
+		create_country_leader = {
+			name = "Soong Ching-ling"
+			desc = "POLITICS_SOONG_CHING-LING_DESC"
+			picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+			expire = "1965.1.1"
+			ideology = state_socialism
+			traits = {}
+		}
+		set_country_flag = CHI_wang_jingwei_dead
+	}
+}
+
+# Assassinate Liao Zhongkai
+country_event = {
+	id = china_versailles.3
+	title = china_versailles.3.t
+	desc = china_versailles.3.d
+	
+	is_triggered_only = yes
+	
+	option = { #RIP Liao Zhongkai
+		name = china_versailles.2.a
+		trigger = {
+			NOT = {
+				has_country_flag = CHI_wang_jingwei_dead
+			}
+		}
+		set_country_flag = CHI_liao_zhongkai_dead
+	}
+	
+	option = { #RIP Liao Zhongkai (Soong Ching-ling becomes new leader of SocDems)
+		name = china_versailles.2.b
+		trigger = {
+			has_country_flag = CHI_wang_jingwei_dead
+		}
+		create_country_leader = {
+			name = "Soong Ching-ling"
+			desc = "POLITICS_SOONG_CHING-LING_DESC"
+			picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+			expire = "1965.1.1"
+			ideology = state_socialism
+			traits = {}
+		}
+		set_country_flag = CHI_liao_zhongkai_dead
+	}
+}
+
+# Debates Begin For New Constitution
+country_event = {
+	id = china_versailles.4
+	title = china_versailles.4.t
+	desc = china_versailles.4.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		tag = CHI
+		focus_progress = {
+			focus = CHI_start_the_new_constitution
+			progress > 0
+		}
+		NOT = {
+			has_completed_focus = CHI_start_the_new_constitution
+		}
+	}
+	
+	option = {
+		name = china_versailles.4.a
+		hidden_effect = {
+			country_event = {
+				id = china_versailles.401
+				days = 20
+			} 
+			country_event = {
+				id = china_versailles.402
+				days = 40
+			} 
+			country_event = {
+				id = china_versailles.403
+				days = 60
+			} 
+		}
+	}
+}
+
+# Chiang Kai-Shek's Participation
+country_event = {
+	id = china_versailles.401
+	title = china_versailles.401.t
+	desc = china_versailles.401.d
+	picture = GFX_report_event_china_chiang_kai_shek
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Chiang will run in elections
+		name = china_versailles.401.a
+		create_country_leader = { 
+			name = "Chiang Kai-Shek"
+			desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+			picture = "Portrait_China_Chiang_Kai_Shek.dds"
+			expire = "1965.1.1"
+			ideology = right_wing_conservatism
+			traits = {
+				generallissimo
+			}
+		}
+	}
+	
+	option = { #Chiang refuses 
+		name = china_versailles.401.b
+
+	}
+	
+}
+
+# Political Parties Allowed?
+country_event = {
+	id = china_versailles.402
+	title = china_versailles.402.t
+	desc = china_versailles.402.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Allow all radical parties
+		name = china_versailles.402.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = monarchist
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = theocracy
+			popularity = 0.02
+		}
+		add_stability = 0.02
+	}
+	
+	option = { #ban all radical parties
+		name = china_versailles.402.b
+		add_popularity = {
+			ideology = fascism
+			popularity = -1
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -1
+		}
+		add_popularity = {
+			ideology = monarchist
+			popularity = -1
+		}
+		add_popularity = {
+			ideology = theocracy
+			popularity = -1
+		}
+		add_stability = -0.05
+	}
+}
+
+# Length of Term?
+country_event = {
+	id = china_versailles.403
+	title = china_versailles.403.t
+	desc = china_versailles.403.d
+	picture = GFX_report_event_china_politicians_captured
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #4 years
+		name = china_versailles.403.a
+		set_country_flag = CHI_four_year_term
+	}
+	
+	option = { #5 years
+		name = china_versailles.403.b
+		set_country_flag = CHI_five_year_term
+	}
+
+}
+
+# Free Elections
+country_event = {
+	id = china_versailles.5
+	title = china_versailles.5.t
+	desc = china_versailles.5.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #conservatives win
+		name = china_versailles.5.a
+		if = {
+			limit = {
+				has_country_flag = CHI_four_year_term
+			}
+			set_politics = {
+				ruling_party = democratic
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = CHI_five_year_term
+			}
+			set_politics = {
+				ruling_party = democratic
+				election_frequency = 60
+				elections_allowed = yes
+			}
+		}
+	}
+	option = { #socdems win
+		name = china_versailles.5.b
+		if = {
+			limit = {
+				has_country_flag = CHI_four_year_term
+			}
+			set_politics = {
+				ruling_party = social_democratic
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = CHI_five_year_term
+			}
+			set_politics = {
+				ruling_party = social_democratic
+				election_frequency = 60
+				elections_allowed = yes
+			}
+		}
+	}
+}
+
+# Rigged Elections
+country_event = {
+	id = china_versailles.6
+	title = china_versailles.6.t
+	desc = china_versailles.6.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #wow the conservatives won
+		name = china_versailles.6.a
+		if = {
+			limit = {
+				has_country_flag = CHI_four_year_term
+			}
+			set_politics = {
+				ruling_party = democratic
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = CHI_five_year_term
+			}
+			set_politics = {
+				ruling_party = democratic
+				election_frequency = 60
+				elections_allowed = yes
+			}
+		}
+	}
+}
+
+# Land Reform Info
+country_event = {
+	id = china_versailles.7
+	title = china_versailles.7.t
+	desc = china_versailles.7.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = china_versailles.7.a
+	}
+}
+
+# Merchants Protest
+country_event = {
+	id = china_versailles.8
+	title = china_versailles.8.t
+	desc = china_versailles.8.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Ignore them
+		name = china_versailles.8.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = china_versailles.801
+		}
+	}
+}
+
+# Merchants Revolt
+country_event = {
+	id = china_versailles.801
+	title = china_versailles.801.t
+	desc = china_versailles.801.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #send in the green gang to deal with them
+		name = china_versailles.801.a
+		add_stability = -0.05
+		add_manpower = -5000
+	}
+}
+
+# Local Elections
+country_event = {
+	id = china_versailles.9
+	title = china_versailles.9.t
+	desc = china_versailles.9.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #allow it
+		name = china_versailles.9.a
+		add_stability = 0.10
+	}
+	option = { #no
+		name = china_versailles.9.b
+		add_political_power = 100
+	}
+}
+
+# Great National Network
+country_event = {
+	id = china_versailles.10
+	title = china_versailles.10.t
+	desc = china_versailles.10.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = china_versailles.10.a
+		add_ideas = CHI_building_great_national_network
+	}
+}
+
+# Warlords Agree
+country_event = {
+	id = china_versailles.11
+	title = china_versailles.11.t
+	desc = china_versailles.11.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = china_versailles.11.a
+		add_ideas = CHI_building_great_national_network_warlords
+	}
+}
+
+# Great National Network Finishes
+country_event = {
+	id = china_versailles.12
+	title = china_versailles.12.t
+	desc = china_versailles.12.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = china_versailles.12.a
+		remove_ideas = CHI_building_great_national_network
+		remove_ideas = CHI_building_great_national_network_warlords
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# Choosing Our Doctrine
+country_event = {
+	id = china_versailles.13
+	title = china_versailles.13.t
+	desc = china_versailles.13.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #mobile warfare
+		name = china_versailles.13.a
+		hidden_effect = {
+			set_country_flag = CHI_mobile_warfare_doctrine
+		}
+	}
+	option = { #grand battleplan
+		name = china_versailles.13.b
+		hidden_effect = {
+			set_country_flag = CHI_grand_battleplan_doctrine
+		}
+	}
+}
+
+# Unifying China Info
+country_event = {
+	id = china_versailles.14
+	title = china_versailles.14.t
+	desc = china_versailles.14.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = china_versailles.14.a
+	}
+}
+
+# Status of Warlords?
+country_event = {
+	id = china_versailles.15
+	title = china_versailles.15.t
+	desc = china_versailles.15.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #negotiate
+		name = china_versailles.15.a
+		hidden_effect = {
+			country_event = china_versailles.1501
+		}
+	}
+	option = { #killem
+		name = china_versailles.15.b
+		hidden_effect = {
+			country_event = china_versailles.1502
+		}
+	}
+}
+
+# Negotiations Successful
+country_event = {
+	id = china_versailles.1501
+	title = china_versailles.1501.t
+	desc = china_versailles.1501.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = china_versailles.1501.a
+		add_stability = 0.05
+	}
+}
+
+# Assassinations Successful
+country_event = {
+	id = china_versailles.1502
+	title = china_versailles.1502.t
+	desc = china_versailles.1502.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = china_versailles.1502.a
+		add_war_support = 0.05
+	}
+}
+
+# China Demands Unification
+country_event = {
+	id = china_versailles.16
+	title = china_versailles.16.t
+	desc = china_versailles.16.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	option = { #yes
+		name = china_versailles.16.a
+		CHI = {
+			annex_country = { 
+				target = PREV
+				transfer_troops = yes 
+			}
+		}
+	}
+	option = { #no
+		name = china_versailles.16.b
+		CHI = {
+			create_wargoal = {
+  				type = annex_everything
+  				target = PREV
+  			}
+		}
+	}
+}
+
+# Port Demanded
+country_event = { 
+	id = china_versailles.17
+	title = china_versailles.17.t
+	desc = china_versailles.17.d
+	
+	is_triggered_only = yes
+
+	option = { #yes HK
+		name = china_versailles.17.a
+		trigger = {
+			tag = ENG
+		}
+		CHI = {
+			set_state_owner = 326
+		}
+		add_political_power = -10
+		CHI = {
+			country_event = china_versailles.1901
+		}
+	}
+	
+	option = { #yes Macau
+		name = china_versailles.17.b
+		trigger = {
+			tag = POR
+		}
+		CHI = {
+			set_state_owner = 729
+		}
+		add_political_power = -10
+		CHI = {
+			country_event = china_versailles.1901
+		}
+	}
+	
+	option = { #yes Guangzhowan
+		name = china_versailles.17.c
+		trigger = {
+			tag = FRA
+		}
+		CHI = {
+			set_state_owner = 728
+		}
+		add_political_power = -10
+		CHI = {
+			country_event = china_versailles.1901
+		}
+	}
+
+	option = { #no
+		name = china_versailles.17.d
+		CHI = {
+			country_event = china_versailles.1902
+		}
+	}
+}
+
+# Agreed
+country_event = { 
+	id = china_versailles.1901
+	title = china_versailles.1901.t
+	desc = china_versailles.1901.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = china_versailles.1901.a
+		add_political_power = 10
+	}
+}
+
+# Refused
+country_event = { 
+	id = china_versailles.1902
+	title = china_versailles.1902.t
+	desc = china_versailles.1902.d
+	
+	is_triggered_only = yes
+
+	option = { #deal with it later
+		name = china_versailles.1902.a 
+		trigger = {
+			ENG = {
+				owns_state = 326
+			}
+		}
+		set_country_flag = CHI_seize_hk
+	}
+	
+	option = { #deal with it later
+		name = china_versailles.1902.b
+		trigger = {
+			POR = {
+				owns_state = 729
+			}
+		}
+		set_country_flag = CHI_seize_mc
+	}
+	
+	option = { #deal with it later
+		name = china_versailles.1902.c
+		trigger = {
+			FRA = {
+				owns_state = 728
+			}
+		}
+		set_country_flag = CHI_seize_gzw
+	}
+}
+
+# Seize HK
+country_event = { 
+	id = china_versailles.1903
+	title = china_versailles.1903.t
+	desc = china_versailles.1903.d
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = CHI_seize_hk
+		ENG = {
+			has_war = yes
+		}
+	}
+
+	option = { #yes
+		name = china_versailles.1903.a 
+		CHI = {
+			set_state_owner = 326
+		}
+	}
+}
+
+# Seize MC
+country_event = { 
+	id = china_versailles.1904
+	title = china_versailles.1904.t
+	desc = china_versailles.1904.d
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = CHI_seize_mc
+		POR = {
+			has_war = yes
+		}
+	}
+
+	option = { #yes
+		name = china_versailles.1904.a 
+		CHI = {
+			set_state_owner = 729
+		}
+	}
+}
+
+# Seize GZW
+country_event = { 
+	id = china_versailles.1905
+	title = china_versailles.1905.t
+	desc = china_versailles.1905.d
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = CHI_seize_gzw
+		FRA = {
+			has_war = yes
+		}
+	}
+
+	option = { #yes
+		name = china_versailles.1905.a 
+		CHI = {
+			set_state_owner = 728
+		}
+	}
+}
+
+# Arunachal Pradesh Demanded
+country_event = { 
+	id = china_versailles.20
+	title = china_versailles.20.t
+	desc = china_versailles.20.d
+	
+	is_triggered_only = yes
+
+	option = { #yes
+		name = china_versailles.20.a 
+		CHI = {
+			set_state_owner = 434
+		}
+		add_stability = -0.05
+		CHI = {
+			country_event = china_versailles.2001
+		}
+	}
+
+	option = { #no
+		name = china_versailles.20.b 
+		CHI = {
+			country_event = china_versailles.2002
+		}
+	}
+}
+
+# Agreed
+country_event = { 
+	id = china_versailles.2001
+	title = china_versailles.2001.t
+	desc = china_versailles.2001.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = china_versailles.2001.a
+		add_stability = 0.05
+	}
+}
+
+# Refused
+country_event = { 
+	id = china_versailles.2002
+	title = china_versailles.2002.t
+	desc = china_versailles.2002.d
+	
+	is_triggered_only = yes
+
+	option = { #deal with it later
+		name = china_versailles.2002.a 
+		set_country_flag = CHI_seize_ap
+	}
+}
+
+# Seize AP
+country_event = { 
+	id = china_versailles.2003
+	title = china_versailles.2003.t
+	desc = china_versailles.2003.d
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = CHI_seize_gzw
+		RAJ = {
+			has_war = yes
+		}
+	}
+
+	option = { #yes
+		name = china_versailles.2003.a 
+		CHI = {
+			set_state_owner = 434
+		}
+	}
+}
+
+# Lushan Declaration
+country_event = { 
+	id = china_versailles.21
+	title = china_versailles.21.t
+	desc = china_versailles.21.d
+	
+	is_triggered_only = yes
+
+	option = { #onwards!
+		name = china_versailles.21.a
+		add_ideas = CHI_war_against_japan_idea
+	}
+}
+
+# Join China's Faction? 
+country_event = { 
+	id = china_versailles.22
+	title = china_versailles.22.t
+	desc = china_versailles.22.d
+	
+	is_triggered_only = yes
+
+	option = { #yes
+		name = china_versailles.22.a 
+		CHI = { 
+			add_to_faction = PREV
+		}
+	}
+	option = { #no
+		name = china_versailles.22.b 
+		CHI = {
+			country_event = china_versailles.2201
+		}
+	}
+}
+
+# Refused
+country_event = { 
+	id = china_versailles.2201
+	title = china_versailles.2201.t
+	desc = china_versailles.2201.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = china_versailles.2201.a 
+		add_political_power = -10
+	}
+}
+
+#COUP
+country_event = {
+	id = china_versailles.23
+	title = china_versailles.23.t
+	desc = china_versailles.23.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #chiang
+		name = china_versailles.23.a
+	}
+	option = { #blueshirts
+		name = china_versailles.23.b
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+	}
+}
+
+# Flavour and Misc.
+
+# Chinese - German Relations Poor, Mission Recalled (no need for localisation)
+country_event = {
+	id = china_versailles.100
+	title = china_versailles.100.t
+	desc = china_versailles.100.d
+	picture = GFX_report_event_chinese_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = china_versailles.100.a
+		remove_ideas = CHI_austrian_advisors
+	}
+}
+
+# End of the Nanjing Decade 
+country_event = {
+	id = china_versailles.110
+	title = china_versailles.110.t
+	desc = china_versailles.110.d
+	picture = GFX_report_event_german_detained_china
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = CHI
+		date > 1938.1.1
+	}
+	
+	option = { #we are at war no development
+		name = china_versailles.110.a
+		trigger = {
+			has_war = yes
+		}
+		remove_ideas = CHI_nanjing_decade
+	}
+	option = { #another 10 years of progress!
+		name = china_versailles.110.b
+		trigger = {
+			has_war = no
+		}
+		add_stability = 0.05
+	}
+}
+
+# Japanese Peace Deal
+country_event = {
+	id = china_versailles.120
+	title = china_versailles.120.t
+	desc = china_versailles.120.d
+	picture = GFX_report_event_german_detained_china
+	
+	is_triggered_only = yes
+	
+	option = { #ok
+		name = china_versailles.120.a
+		white_peace = CHI
+		JAP = {
+			every_owned_state = {
+				limit = {
+					is_core_of = CHI
+				}
+			}
+			CHI = {
+				transfer_state = PREV
+			}
+		}
+	}
+	option = { #no
+		name = china_versailles.120.b
+		add_stability = -0.40
+	}
+}
+
+# Investments
+country_event = {
+	id = china_versailles.130
+	title = china_versailles.130.t
+	desc = china_versailles.130.d
+	picture = GFX_report_event_german_detained_china
+	
+	is_triggered_only = yes
+	
+	option = { #sure
+		name = china_versailles.130.a
+		add_political_power = -50
+		CHI = {
+			CHI_corruption_level_down = yes
+		}
+	}
+	option = { #no
+		name = china_versailles.130.b
+		CHI = {
+			country_event = china_versailles.1310
+		}
+	}
+}
+
+# refused
+country_event = {
+	id = china_versailles.1310
+	title = china_versailles.1310.t
+	desc = china_versailles.1310.d
+	picture = GFX_report_event_german_detained_china
+	
+	is_triggered_only = yes
+	
+	option = { #too bad
+		name = china_versailles.1310.a
+	}
+}
+
+# Conservative Inauguration
+country_event = {
+	id = china_versailles.140
+	title = china_versailles.140.t
+	desc = china_versailles.140.d
+	
+	is_triggered_only = yes
+	
+	option = { #ok
+		name = china_versailles.1310.a
+	}
+		
+}
+
+########## IGNORE ALL BELOW ##########
+
+country_event = {
+
+	id = my_stuff.1 
+    title = my_stuff.1.t 
+    desc = my_stuff.1.d 
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = my_stuff.1.a 
+		set_country_flag = CHI_continue_the_political_tutelage_picked
+		load_focus_tree = tgov_china_start_focus
+	}
+	
+    option = { 
+		name = my_stuff.1.b 
+        clr_country_flag = CHI_continue_the_political_tutelage_picked
+		load_focus_tree = tgov_china_start_focus
+	}
+	
+	option = { 
+		name = my_stuff.1.c
+        set_country_flag = CHI_end_the_political_tutelage_picked
+		load_focus_tree = tgov_china_start_focus
+	}
+	
+	option = { 
+		name = my_stuff.1.d
+        clr_country_flag = CHI_end_the_political_tutelage_picked
+		load_focus_tree = tgov_china_start_focus
+	}
+	
+}
+
+country_event = {
+
+	id = my_stuff.2 
+    title = my_stuff.2.t 
+    desc = my_stuff.2.d 
+
+	is_triggered_only = yes 
+	
+	option = { 
+		name = my_stuff.2.a 
+		load_focus_tree = china_continue_focus
+	}
+	
+    option = { 
+		name = my_stuff.2.b 
+		load_focus_tree = tgov_china_start_focus
+	}
+	
+	option = { 
+		name = my_stuff.2.c
+		load_focus_tree = china_end_focus
+	}
+	
+	option = { 
+		name = my_stuff.2.d
+		load_focus_tree = tgov_china_start_focus
+	}
+	
+} 

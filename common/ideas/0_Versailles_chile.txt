@@ -1,0 +1,92 @@
+ideas = {
+
+    #MINISTERS
+
+		head_of_state = {
+			CHL_juan_esteban_montero_hos = {
+
+			picture = CHL_minister_juan_esteban_montero
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+			}
+			
+			traits = {
+				popular_politician
+				liberal_trait
+				}
+			}
+		}
+
+		econ_minister = {
+			CHL_guillermo_del_pedregal_eco = {
+
+			picture = CHL_minister_guillermo_del_pedregal
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+			}
+			
+			traits = {
+				excellent_economist
+				liberal_trait
+				}
+			}
+		}
+
+		foreign_minister = {
+			CHL_gabriel_gonzales_videla_for = {
+
+			picture = CHL_minister_gabriel_gonzales_videla
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+			}
+			
+			traits = {
+				outspoken_democrat
+				liberal_trait
+				}
+			}
+		}
+
+		interior_minister = {
+			CHL_raul_morales_beltrami_int = {
+
+			picture = CHL_minister_raul_morales_beltrami
+			
+			allowed = {
+				original_tag = CHL
+			}
+
+			cancel_if_invalid = yes
+
+			available = {
+				has_country_flag = can_replace_minister
+			}
+			
+			traits = {
+				brilliant_doctor
+				liberal_trait
+				}
+			}
+		}
+}

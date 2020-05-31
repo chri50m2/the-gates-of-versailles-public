@@ -1,0 +1,891 @@
+ideas = {
+
+	country = {
+		MON_bastard_of_russia = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_russian_bastard
+			
+			modifier = {
+				democratic_acceptance = -48
+				opinion_gain_monthly_factor = -0.25
+			}
+		}
+		MON_communist_junta = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+			date < 1938.01.01
+			}
+
+			removal_cost = -1
+
+			picture = communist_junta
+			
+			modifier = {
+				communism_acceptance = 100
+				experience_gain_army_factor = -0.15
+				military_leader_cost_factor = 0.50
+			}
+		}
+		MON_unstable_government = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = unstable_government
+			
+			modifier = {
+				drift_defence_factor = -0.15
+				political_power_factor = -0.15
+				stability_factor = -0.25
+			}
+		}
+		MON_revolutionary = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = asian_revolutionary
+			
+			modifier = {
+				mobilization_speed = 0.15
+				guarantee_cost = -0.35
+				guarantee_tension = -0.5
+				army_core_defence_factor = 0.15
+			}
+		}
+		MON_poor_industry = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = poor_industry
+			
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.08
+			    production_speed_buildings_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		MON_booming_industry = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				NOT = {
+					has_idea = MON_poor_industry
+				}
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = booming_industry
+			
+			modifier = {
+				political_power_factor = 0.30
+				consumer_goods_factor = -0.08
+			    production_speed_buildings_factor = 0.15
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_arms_factory_factor = 0.25
+			}
+		}
+		MON_poor_industry_recovery_1 = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = poor_industry
+			
+			modifier = {
+				political_power_factor = -0.14
+				consumer_goods_factor = 0.07
+			    production_speed_buildings_factor = -0.2
+				production_speed_industrial_complex_factor = -0.2
+			}
+		}
+		MON_russian_worker = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = SOV
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = russian_worker
+			
+			modifier = {
+				stability_weekly = -0.01
+				political_power_gain = 0.1
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+		MON_russian_worker_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = SOV
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = russian_worker
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				political_power_gain = 0.15
+				production_speed_infrastructure_factor = 0.06
+			}
+		}
+
+		MON_pacific_king = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = JAP
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = pacific_king
+			
+			modifier = {
+				neutrality_acceptance = 35
+				political_power_gain = 0.1
+				production_speed_air_base_factor = 0.05
+			}
+		}
+		MON_bonaparte_friends = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = FRA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = bonaparte_friends
+			
+			modifier = {
+				political_power_gain = 0.1
+				production_speed_bunker_factor = 0.05
+			}
+			research_bonus = { land_doctrine = 0.05 }
+		}
+		MON_russian_scientists = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = SOV
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		MON_japanese_workers = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = JAP
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = japanese_workers
+			
+			modifier = {
+				research_speed_factor = 0.01
+				political_power_gain = -0.03
+
+			}
+		}
+		MON_japanese_workers_funded = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = JAP
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = japanese_workers
+			
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = -0.05
+
+			}
+		}
+		MON_japanese_military_workers = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = JAP
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = japanese_workers
+			
+			modifier = {
+				experience_gain_air = 0.02
+				political_power_gain = -0.03
+
+			}
+		}
+		MON_airbase_expansion = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_air_bonus
+			
+			modifier = {
+				production_speed_air_base_factor = 0.30
+				political_power_gain = -0.03
+
+			}
+		}
+		MON_light_production = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+		
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+			equipment_bonus = {
+				CAS_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		MON_heavy_production = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+		
+			equipment_bonus = {
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+			equipment_bonus = {
+				tac_bomber_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		MON_bomber_production = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+		
+			equipment_bonus = {
+				strat_bomber_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+
+			}
+		}		
+		MON_french_men = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = french_men
+
+			removal_cost = -1
+		
+			modifier = {
+					conscription = 0.01
+					monarchist_acceptance = 45
+			}
+		}		
+
+		MON_investing = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = FRA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = investing
+
+			removal_cost = -1
+		
+			modifier = {
+					consumer_goods_factor = 0.02
+			}
+		}	
+
+		MON_fra_defense = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				country_exists = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = federal_defense_council
+
+			removal_cost = -1
+		
+			modifier = {
+				production_speed_bunker_factor = 0.3
+			}
+		}	
+
+		MON_gun_factories = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = factory_strikes
+
+			removal_cost = -1
+		
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+
+			}
+		}	
+
+		MON_artillery_factories = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_artillery_regiments
+
+			removal_cost = -1
+		
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+
+			}
+		}	
+
+
+		MON_military_rearranged = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_infantry_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+				army_org_factor = 0.02
+			}
+
+		}		
+
+		MON_military_rearranged_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_infantry_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+				army_org_factor = 0.04
+				production_speed_arms_factory_factor = 0.02
+			}
+
+		}			
+
+
+		MON_military_rearranged_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_infantry_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+				army_org_factor = 0.08
+				production_speed_arms_factory_factor = 0.05
+				planning_speed = 0.10
+			}
+
+		}	
+
+		MON_government_rearranged = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_disjointed_gov
+
+			removal_cost = -1
+		
+			modifier = {
+				political_power_gain = 0.05
+			}
+
+		}	
+
+		MON_government_rearranged_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_disjointed_gov
+
+			removal_cost = -1
+		
+			modifier = {
+				political_power_gain = 0.1
+			}
+
+		}			
+
+		MON_government_rearranged_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_disjointed_gov
+
+			removal_cost = -1
+		
+			modifier = {
+				political_power_gain = 0.15
+			}
+
+		}	
+
+		MON_airforce_rearranged = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_air_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+				air_night_penalty = -0.05
+			}
+
+		}		
+
+		MON_airforce_rearranged_2 = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_air_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+				air_night_penalty = -0.1
+				experience_gain_air = 0.01
+			}
+
+		}				
+
+
+		MON_airforce_rearranged_3 = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_air_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+				air_night_penalty = -0.15
+				experience_gain_air = 0.05
+				army_bonus_air_superiority_factor = 0.15
+			}
+
+		}	
+
+		MON_china_escalated = {
+			
+			allowed = {
+				original_tag = CHI
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = chi_war_of_resistance
+
+			removal_cost = -1
+		
+			modifier = {
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = -0.30
+				experience_gain_army = -0.02
+				army_org_factor = -0.15
+				supply_consumption_factor = 0.10
+			}
+
+		}	
+
+		MON_china_war = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = china_war
+
+			removal_cost = -1
+		
+			modifier = {
+				army_org_factor = 0.25
+				supply_consumption_factor = -0.25
+				experience_gain_army_factor = 0.25
+				planning_speed = 0.25
+			}
+
+		}	
+
+
+		MON_only_forward = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = only_forward
+
+			removal_cost = -1
+		
+			modifier = {
+				army_org_factor = 0.10
+				attrition = -0.05
+				supply_consumption_factor = -0.1
+				non_core_manpower = 0.08
+				conscription = 0.02
+				justify_war_goal_time = -0.25
+			}
+
+		}	
+
+		MON_bastion_of_democracy = {
+			
+			allowed = {
+				original_tag = MON
+				always = yes
+				has_government = democratic
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+				army_org_factor = 0.05
+				land_reinforce_rate = 0.1
+				conscription = 0.01
+			    army_core_defence_factor = 0.25
+				democratic_drift = 0.01
+			}
+
+		}	
+
+		MON_communist_influence = {
+			
+			allowed = {
+				always = yes
+				NOT = {
+					has_government = democratic
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+					communism_drift = 0.04
+						communism_acceptance = 35
+			}
+
+		}	
+
+		MON_anti_japanese_pact_member = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+		
+			modifier = {
+			}
+
+		}
+	}
+}

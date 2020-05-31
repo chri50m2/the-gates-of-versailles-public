@@ -1,0 +1,326 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+prussia_military_garrison_minors = {
+	enable = {
+		original_tag = PRS
+	}
+	abort = {
+		MEK = {
+			exists = no
+		}
+		SAX = {
+			exists = no
+		}
+		HAN = {
+			exists = no
+		}
+		DEN = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "MEK"			
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "MEK"			
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SAX"			
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SAX"			
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "HAN"			
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HAN"			
+		value = 200
+	}
+}
+
+prussia_invade_france = {
+	enable = {
+		original_tag = PRS
+		PRS = {
+			is_neighbor_of = WST
+		}
+	}
+	abort = {
+		WST = {
+			exists = no
+		}
+		FRA = {
+			exists = no
+		}
+		BAD = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "WST"			
+		value = 400
+	}
+	ai_strategy = {
+		type = conquer
+		id = "WST"			
+		value = 400
+	}
+	ai_strategy = {
+		type = invade
+		id = "WST"			
+		value = 400
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "WST"			
+		value = 400
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "FRA"			
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "FRA"			
+		value = 100
+	}
+	ai_strategy = {
+		type = invade
+		id = "FRA"			
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "FRA"			
+		value = 100
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "BAD"			
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "BAD"			
+		value = 200
+	}
+	ai_strategy = {
+		type = invade
+		id = "BAD"			
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "BAD"			
+		value = 200
+	}
+}
+
+lithuania_stay_in_faction = {
+	enable = {
+		tag = LIT
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+
+}
+
+poland_stay_in_faction = {
+	enable = {
+		tag = POL
+		POL = {
+			is_neighbor_of = PRS
+		}
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+
+}
+
+estonia_stay_in_faction = {
+	enable = {
+		tag = EST
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+}
+
+latvia_stay_in_faction = {
+	enable = {
+		tag = LAT
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+
+}
+
+azerbaijan_stay_in_faction = {
+	enable = {
+		tag = AZR
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+
+}
+
+georgia_stay_in_faction = {
+	enable = {
+		tag = GEO
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+
+}
+
+czech_stay_in_faction = {
+	enable = {
+		tag = CZE
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+			has_completed_focus = GER_fall_grun
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+
+}
+
+hungary_stay_in_faction = {
+	enable = {
+		tag = HUN
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+
+}
+
+slovakia_stay_in_faction = {
+	enable = {
+		tag = SLO
+		PRS = {
+			has_completed_focus = GER_germany_on_the_world_stage
+		}
+	}
+	abort = {
+		PRS = {
+			exists = no
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "PRS"			
+		value = 5000
+	}
+
+}

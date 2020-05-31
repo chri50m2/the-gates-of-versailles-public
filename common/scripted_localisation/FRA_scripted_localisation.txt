@@ -1,0 +1,107 @@
+defined_text = { #Drift Towards Absolutism
+    name = GetDriftTowardAbsolutism
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_absolutism
+                value = 0
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_absolutism_1
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_absolutism
+                value = 25
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_absolutism_2
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_absolutism
+                value = 50
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_absolutism_3
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_absolutism
+                value = 75
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_absolutism_4
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_absolutism
+                value = 100
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_absolutism_5
+    }
+}
+
+defined_text = { #Drift Towards Parliamentary
+    name = GetDriftTowardParliamentary
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_parliamentary
+                value = 0
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_parliamentary_1
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_parliamentary
+                value = 25
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_parliamentary_2
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_parliamentary
+                value = 50
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_parliamentary_3
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_parliamentary
+                value = 75
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_parliamentary_4
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = drift_toward_parliamentary
+                value = 100
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = drift_toward_parliamentary_5
+    }
+}

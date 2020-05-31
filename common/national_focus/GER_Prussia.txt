@@ -1,0 +1,19 @@
+focus_tree = {
+	id = GER_main_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRS
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 4500 }
+	
+	shared_focus = GER_create_the_OKW
+	shared_focus = GER_the_dream_of_pan_germania
+	shared_focus = GER_germany_on_the_world_stage
+	shared_focus = GER_revitalize_german_steel
+	shared_focus = GER_revitalize_prussian_military_industrial_complex
+}

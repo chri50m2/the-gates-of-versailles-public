@@ -1,0 +1,31 @@
+﻿###########################
+# British Raj Events
+###########################
+
+add_namespace = britishraj
+
+#Freeman Freeman Thomas Retires
+country_event = {
+	id = britishraj.1
+	title = britishraj.1.t
+	desc = britishraj.1.d
+	#picture =#
+
+	fire_only_once = yes
+
+	hidden = yes
+	
+	option = { #
+		name = britishraj.1.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Victor Hope"
+			desc = "POLITICS_VICTOR_HOPE_DESC"
+			picture = "Portrait_British_Raj_Lord_Linlithgow.dds"
+			expire = "1965.1.1"
+			ideology = colonial_government  
+			traits = {
+				}
+			}
+	}
+}

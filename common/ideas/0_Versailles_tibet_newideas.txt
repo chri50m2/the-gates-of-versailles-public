@@ -1,0 +1,70 @@
+ideas = {
+
+	country = {
+		TIB_dalai_lama = {
+			
+			allowed = {
+				original_tag = TIB
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = dalai_lama
+			
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = -0.25
+				research_speed_factor = 0.05
+				opinion_gain_monthly_factor = 0.15
+			}
+		}
+
+		TIB_brother_of_three = {
+			
+			allowed = {
+				original_tag = TIB
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = three_brothers
+			
+			modifier = {
+				enemy_justify_war_goal_time = 0.50
+				army_morale_factor = 0.2
+			}
+		}
+
+		TIB_traitor_of_the_empire = {
+			
+			allowed = {
+				original_tag = TIB
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = traitor_of_the_empire
+			
+			modifier = {
+				conscription = 0.01
+				military_leader_cost_factor = 1.00
+				command_power_gain = -0.45
+			}
+		}
+	}
+}

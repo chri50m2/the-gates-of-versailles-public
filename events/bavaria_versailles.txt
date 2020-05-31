@@ -1,0 +1,20 @@
+﻿###############################################
+# Bavaria Events - Gates to Versailles Edition#
+###############################################
+
+add_namespace = bavaria
+
+country_event = { #related to wurttemberg.1 - Wurttemberg ask them to join the faction
+	id = bavaria.1
+	title = bavaria.1.t
+	desc = bavaria.1.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #We accept (very few chances of Bavaria accepted it)
+		name = bavaria.1.a
+		WUR = { add_to_faction = BAV }
+	}
+}

@@ -1,0 +1,235 @@
+on_actions = {
+on_startup = {
+    effect = {
+        every_country = {
+            IF = {
+                limit = {
+                    exists = yes
+                    is_ai = no
+                }
+                country_event = { hours = 1 id = intro.1 }
+            }
+        }
+        random_country = {
+                limit = {
+                    exists = yes
+                }
+			}
+       }
+	   effect = {
+		FRA = {
+			set_variable = {
+			var = drift_toward_absolutism
+			value = 0
+				}
+			}
+		FRA = {
+			set_variable = {
+			var = drift_toward_parliamentary
+			value = 25
+				}
+			}
+	   }
+        effect = {
+        PRS = {
+            country_event = { id = prussia.1 days = 75 }
+        }
+    }
+        effect = {
+        RAJ = {
+            country_event = { id = britishraj.1 days = 108 }
+        }
+    }
+        effect = {
+        LIC = {
+            country_event = { id = lichtenstein.1 days = 937 }
+        }
+    }
+        effect = {
+            GEX = {
+                country_event = { id = germanexile.1 days = 1982 }
+            }
+        }
+       effect = {
+        random_list = {
+            20 = {
+                FRA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.1
+                        }
+                    }
+                SPR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.1
+                        }
+                    }
+                NAP = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.1
+                        }
+                    }
+                ITA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.1
+                        }
+                    }
+                POR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.1
+                        }
+                    }
+                }
+            20 = {
+                FRA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.2
+                        }
+                    }
+                SPR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.2
+                        }
+                    }
+                NAP = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.2
+                        }
+                    }
+                ITA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.2
+                        }
+                    }
+                POR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.2
+                        }
+                    }
+                }
+            20 = {
+                FRA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.3
+                        }
+                    }
+                SPR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.3
+                        }
+                    }
+                NAP = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.3
+                        }
+                    }
+                ITA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.3
+                        }
+                    }
+                POR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.3
+                        }
+                    }
+                }
+            20 = {
+                FRA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.4
+                        }
+                    }
+                SPR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.4
+                        }
+                    }
+                NAP = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.4
+                        }
+                    }
+                ITA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.4
+                        }
+                    }
+                POR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.4
+                        }
+                    }
+                }
+            20 = {
+                FRA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.5
+                        }
+                    }
+                SPR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.5
+                        }
+                    }
+                NAP = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.5
+                        }
+                    }
+                ITA = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.5
+                        }
+                    }
+                POR = {
+                    country_event = {
+                        days = 186
+                        id = FlavourNews.5
+                        }
+                    }
+                }
+            }
+       }
+	}
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    any_country = {
+                        exists = no
+                        has_country_flag = statistics_1
+                    }
+                }
+                random_country = {
+                    limit = {
+                        exists = yes
+                    }
+                }
+            }
+        }
+    }
+}

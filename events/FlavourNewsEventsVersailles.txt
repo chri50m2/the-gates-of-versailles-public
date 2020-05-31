@@ -1,0 +1,350 @@
+﻿###########################################
+#Flavour News Events - Gates of Versailles#
+###########################################
+
+add_namespace = FlavourNews
+
+news_event = { #Latin Cup 1936 won by France
+	id = FlavourNews.1
+	title = FlavourNews.1.t
+	desc = FlavourNews.1.desc
+	picture = GFX_news_event_latin_cup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FlavourNews.1.a
+		trigger = {
+			TAG = FRA
+		}
+	}
+
+	option = {
+		name = FlavourNews.1.b
+		trigger = {
+		NOT = {
+			TAG = FRA
+			}
+		TAG = SPR
+		}
+	}
+
+	option = {
+		name = FlavourNews.1.c
+		trigger = {
+		NOT = {
+			TAG = FRA
+			}
+		TAG = ITA
+		}
+	}
+
+	option = {
+		name = FlavourNews.1.d
+		trigger = {
+		NOT = {
+			TAG = FRA
+			}
+		TAG = NAP
+		}
+	}
+
+	option = {
+		name = FlavourNews.1.e
+		trigger = {
+		NOT = {
+			TAG = FRA
+			}
+		TAG = POR
+		}
+	}
+
+	option = {
+		name = FlavourNews.1.f
+		trigger = {
+		NOT = {
+			TAG = FRA
+			TAG = SPR
+			TAG = ITA
+			TAG = NAP
+			TAG = POR
+			}
+		}
+	}
+}
+
+news_event = { #Latin Cup 1936 won by Spain
+	id = FlavourNews.2
+	title = FlavourNews.2.t
+	desc = FlavourNews.2.desc
+	picture = GFX_news_event_latin_cup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FlavourNews.2.a
+		trigger = {
+			TAG = SPR
+		}
+	}
+
+	option = {
+		name = FlavourNews.2.b
+		trigger = {
+		NOT = {
+			TAG = SPR
+			}
+		TAG = FRA
+		}
+	}
+
+	option = {
+		name = FlavourNews.2.c
+		trigger = {
+		NOT = {
+			TAG = SPR
+			}
+		TAG = ITA
+		}
+	}
+
+	option = {
+		name = FlavourNews.2.d
+		trigger = {
+		NOT = {
+			TAG = SPR
+			}
+		TAG = NAP
+		}
+	}
+
+	option = {
+		name = FlavourNews.2.e
+		trigger = {
+		NOT = {
+			TAG = SPR
+			}
+		TAG = POR
+		}
+	}
+
+	option = {
+		name = FlavourNews.2.f
+		trigger = {
+		NOT = {
+			TAG = FRA
+			TAG = SPR
+			TAG = ITA
+			TAG = NAP
+			TAG = POR
+			}
+		}
+	}
+}
+
+news_event = { #Latin Cup 1936 won by Portugal
+	id = FlavourNews.3
+	title = FlavourNews.3.t
+	desc = FlavourNews.3.desc
+	picture = GFX_news_event_latin_cup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FlavourNews.3.a
+		trigger = {
+			TAG = POR
+		}
+	}
+
+	option = {
+		name = FlavourNews.3.b
+		trigger = {
+		NOT = {
+			TAG = POR
+			}
+		TAG = FRA
+		}
+	}
+
+	option = {
+		name = FlavourNews.3.c
+		trigger = {
+		NOT = {
+			TAG = POR
+			}
+		TAG = ITA
+		}
+	}
+
+	option = {
+		name = FlavourNews.3.d
+		trigger = {
+		NOT = {
+			TAG = POR
+			}
+		TAG = NAP
+		}
+	}
+
+	option = {
+		name = FlavourNews.3.e
+		trigger = {
+		NOT = {
+			TAG = POR
+			}
+		TAG = SPR
+		}
+	}
+
+	option = {
+		name = FlavourNews.3.f
+		trigger = {
+		NOT = {
+			TAG = FRA
+			TAG = SPR
+			TAG = ITA
+			TAG = NAP
+			TAG = POR
+			}
+		}
+	}
+}
+
+news_event = { #Latin Cup 1936 won by Italy
+	id = FlavourNews.4
+	title = FlavourNews.4.t
+	desc = FlavourNews.4.desc
+	picture = GFX_news_event_latin_cup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FlavourNews.4.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+
+	option = {
+		name = FlavourNews.4.b
+		trigger = {
+		NOT = {
+			TAG = ITA
+			}
+		TAG = FRA
+		}
+	}
+
+	option = {
+		name = FlavourNews.4.c
+		trigger = {
+		NOT = {
+			TAG = ITA
+			}
+		TAG = POR
+		}
+	}
+
+	option = {
+		name = FlavourNews.4.d
+		trigger = {
+		NOT = {
+			TAG = ITA
+			}
+		TAG = NAP
+		}
+	}
+
+	option = {
+		name = FlavourNews.4.e
+		trigger = {
+		NOT = {
+			TAG = ITA
+			}
+		TAG = SPR
+		}
+	}
+
+	option = {
+		name = FlavourNews.4.f
+		trigger = {
+		NOT = {
+			TAG = FRA
+			TAG = SPR
+			TAG = POR
+			TAG = NAP
+			TAG = ITA
+			}
+		}
+	}
+}
+
+news_event = { #Latin Cup 1936 won by Naples
+	id = FlavourNews.5
+	title = FlavourNews.5.t
+	desc = FlavourNews.5.desc
+	picture = GFX_news_event_latin_cup
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FlavourNews.5.a
+		trigger = {
+			TAG = NAP
+		}
+	}
+
+	option = {
+		name = FlavourNews.5.b
+		trigger = {
+		NOT = {
+			TAG = NAP
+			}
+		TAG = FRA
+		}
+	}
+
+	option = {
+		name = FlavourNews.5.c
+		trigger = {
+		NOT = {
+			TAG = NAP
+			}
+		TAG = POR
+		}
+	}
+
+	option = {
+		name = FlavourNews.5.d
+		trigger = {
+		NOT = {
+			TAG = NAP
+			}
+		TAG = ITA
+		}
+	}
+
+	option = {
+		name = FlavourNews.5.e
+		trigger = {
+		NOT = {
+			TAG = NAP
+			}
+		TAG = SPR
+		}
+	}
+
+	option = {
+		name = FlavourNews.5.f
+		trigger = {
+		NOT = {
+			TAG = FRA
+			TAG = SPR
+			TAG = POR
+			TAG = NAP
+			TAG = ITA
+			}
+		}
+	}
+}

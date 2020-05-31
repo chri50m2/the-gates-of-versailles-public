@@ -1,0 +1,92 @@
+ideas = {
+	country = {
+		franco_sanjurjo_rivalry = {
+			
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.35 
+				planning_speed = -0.15
+				army_org_factor = -0.10
+			}
+		}
+		
+		alfonso_xiii = {
+			
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = SPR
+						has_government = neutrality
+					}
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+			}
+		}
+		
+		large_anti_french_british_sentiment = {
+			
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.40
+				justify_war_goal_time = -0.30
+				war_support_factor = 0.10
+			}
+		}
+
+		SPR_pay_for_catalonia = {
+
+			allowed = {
+				original_tag = SPR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_france_pay_catalonia
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}		
+		}
+	}
+}

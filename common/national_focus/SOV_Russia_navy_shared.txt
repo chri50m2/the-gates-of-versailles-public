@@ -1,0 +1,1035 @@
+#	#shared_focus = {
+#		#id = SOV_
+#		#icon =#
+#		#prerequisite = { #focus =# }
+#		#mutually_exclusive = { #focus =  }
+#		#x = -3
+#		#y = 0
+#		#relative_position_id =#
+#
+#		#cost = 10
+#
+#		#ai_will_do = {
+#			#factor = 1
+#		#}
+#
+#		#available = {
+#
+#		#}
+#		
+#		#bypass = {
+#
+#		#}
+#
+#		#cancel_if_invalid = yes
+#		#continue_if_invalid = no
+#		#available_if_capitulated = no
+#
+#		#complete_tooltip = {
+#
+#		#}
+#
+#		#completion_reward = {
+#
+#		#}
+#	#}
+
+	shared_focus = {
+		id = SOV_the_russian_navy
+		icon = GFX_goal_generic_navy_battleship
+		x = 65
+		y = 0
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	shared_focus = {
+		id = SOV_kuznetzovs_scoot_and_shoot_strategy
+		prerequisite = { focus = SOV_the_russian_navy }
+		mutually_exclusive = { focus = SOV_listening_to_kolchaks_ideas }
+		icon = GFX_goal_generic_navy_battleship
+		x = 63
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 2
+        	category = cat_fleet_in_being
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_listening_to_kolchaks_ideas
+		prerequisite = { focus = SOV_the_russian_navy }
+		mutually_exclusive = { focus = SOV_kuznetzovs_scoot_and_shoot_strategy }
+		icon = GFX_goal_generic_navy_cruiser
+		x = 67
+		y = 1
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 3
+        	category = cat_trade_interdiction
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_reviewing_new_destroyer_designs
+		prerequisite = { focus = SOV_kuznetzovs_scoot_and_shoot_strategy }
+		icon = GFX_focus_generic_destroyer
+		x = 62
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = dd_tech
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_focusing_on_uppening_morale
+		prerequisite = { focus = SOV_kuznetzovs_scoot_and_shoot_strategy }
+		icon = GFX_goal_generic_amphibious_assault
+		x = 64
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = SOV_unmatched_navy
+    			add_idea = SOV_unmatched_navy_uppen_morale
+			}
+		}
+	}
+
+	shared_focus = {
+		id = SOV_finding_our_place_in_the_naval_race
+		prerequisite = { focus = SOV_reviewing_new_destroyer_designs }
+		prerequisite = { focus = SOV_focusing_on_uppening_morale }
+		icon = GFX_goal_generic_navy_carrier
+		x = 63
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 25
+
+			random_list = {
+    		25 = {
+        		add_opinion_modifier = {
+				target = PRS
+				modifier = naval_exercise_on_coast
+				}
+    		}
+  			25 = {
+        		add_opinion_modifier = {
+				target = JAP
+				modifier = naval_exercise_on_coast
+				}
+			}
+			25 = {
+        		add_opinion_modifier = {
+				target = USA
+				modifier = naval_exercise_on_coast
+				}
+    		}
+    		25 = {
+        		add_opinion_modifier = {
+				target = ENG
+				modifier = naval_exercise_on_coast
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+		id = SOV_the_three_year_cruiser_deal
+		prerequisite = { focus = SOV_finding_our_place_in_the_naval_race }
+		icon = GFX_focus_generic_cruiser2
+		x = 61
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_battlecruiser_deal_tt
+			hidden_effect = {
+			if = {
+    			limit = {
+        			has_dlc = "Man the Guns"
+    			}   
+    			country_event = { id = russia.2 days = 1095 }
+			}
+				else = {
+   					country_event = { id = russia.1 days = 1095 }
+			}
+		}
+	}
+}
+
+shared_focus = {
+		id = SOV_the_insert_year_naval_review
+		prerequisite = { focus = SOV_the_three_year_cruiser_deal }
+		icon = GFX_focus_generic_navy_battleship2
+		x = 61
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			navy_experience = 50
+	}
+}
+
+shared_focus = {
+		id = SOV_czar_aleksandr_avianostsy
+		prerequisite = { focus = SOV_the_insert_year_naval_review }
+		prerequisite = { focus = SOV_arrest_kolchak }
+		icon = GFX_goal_generic_navy_carrier
+		x = 62
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_czar_aleksandr_avianostsy_tt
+			remove_ideas = SOV_unmatched_navy_uppen_morale
+			hidden_effect = {
+			if = {
+    			limit = {
+        			has_dlc = "Man the Guns"
+    			}   
+    			country_event = { id = russia.4 days = 365 }
+			}
+				else = {
+   					country_event = { id = russia.3 days = 365 }
+			}
+		}
+	}
+}
+
+shared_focus = {
+		id = SOV_deal_with_disloyal_enemies
+		prerequisite = { focus = SOV_finding_our_place_in_the_naval_race }
+		icon = GFX_focus_generic_manpower
+		x = 63
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = SOV_take_stock_of_kolchaks_influence
+			hidden_effect = {
+				set_country_flag = SOV_secret_police_flag
+				set_country_flag = SOV_rear_admiral_flag
+				set_country_flag = SOV_party_deputy_flag
+				set_country_flag = SOV_general_secretary_flag
+				set_country_flag = SOV_strongman_flag
+				set_country_flag = SOV_influencer_flag
+			}
+	}
+}
+
+shared_focus = {
+		id = SOV_arrest_kolchak
+		prerequisite = { focus = SOV_deal_with_disloyal_enemies }
+		icon = GFX_goal_generic_secret_weapon
+		x = 63
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.025
+	}
+}
+
+shared_focus = {
+		id = SOV_investigate_the_kolchak_cult
+		prerequisite = { focus = SOV_listening_to_kolchaks_ideas }
+		icon = GFX_goal_generic_military_deal
+		x = 66
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = SOV_take_stock_of_kolchaks_influence
+			hidden_effect = {
+				set_country_flag = SOV_secret_police_flag
+				set_country_flag = SOV_rear_admiral_flag
+				set_country_flag = SOV_party_deputy_flag
+				set_country_flag = SOV_general_secretary_flag
+				set_country_flag = SOV_strongman_flag
+				set_country_flag = SOV_influencer_flag
+			}
+		}
+	}
+
+shared_focus = {
+		id = SOV_adapting_our_black_and_baltic_fleets
+		prerequisite = { focus = SOV_listening_to_kolchaks_ideas }
+		icon = GFX_goal_generic_navy_battleship
+		x = 68
+		y = 2
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_command_power = -35
+			add_tech_bonus = {
+       		bonus = 1
+       		uses = 1
+        	category = dd_tech
+			}
+		}
+	}
+
+shared_focus = {
+		id = SOV_rooting_out_the_ringleaders
+		prerequisite = { focus = SOV_adapting_our_black_and_baltic_fleets }
+		prerequisite = { focus = SOV_investigate_the_kolchak_cult }
+		icon = GFX_goal_generic_dangerous_deal
+		x = 67
+		y = 3
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			country_event = { id = russia.16 days = 60 }
+		}
+	}
+
+shared_focus = {
+		id = SOV_training_exercises_in_the_black_sea
+		prerequisite = { focus = SOV_finding_our_place_in_the_naval_race focus = SOV_rooting_out_the_ringleaders }
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 65
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			random_list = {
+    		50 = {
+        		add_opinion_modifier = {
+				target = SWE
+				modifier = naval_exercise_on_coast
+				}
+				add_opinion_modifier = {
+				target = FIN
+				modifier = naval_exercise_on_coast
+				}
+    		}
+  			50 = {
+        		add_opinion_modifier = {
+				target = LAT
+				modifier = naval_exercise_on_coast
+				}
+				add_opinion_modifier = {
+				target = EST
+				modifier = naval_exercise_on_coast
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+		id = SOV_expanding_our_black_sea_fleet
+		prerequisite = { focus = SOV_training_exercises_in_the_black_sea }
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 65
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			137 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = dockyard
+   					level = 2
+    				instant_build = yes
+				}
+			}
+	}
+}
+
+shared_focus = {
+		id = SOV_expanding_murmansk_and_vladivostok
+		prerequisite = { focus = SOV_expanding_our_black_sea_fleet }
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 64
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = dockyard
+   					level = 2
+    				instant_build = yes
+				}
+			}
+			213 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+    				type = dockyard
+   					level = 2
+    				instant_build = yes
+				}
+			}
+	}
+}
+
+shared_focus = {
+		id = SOV_submarine_pens_in_vladivostok
+		prerequisite = { focus = SOV_expanding_our_black_sea_fleet }
+		icon = GFX_goal_generic_navy_submarine
+		x = 66
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		408 = {
+			add_building_construction = {
+			type = coastal_bunker
+    		level = 3
+    		instant_build = yes
+    		province = 957
+		}
+		add_building_construction = {
+			type = bunker
+    		level = 1
+    		instant_build = yes
+    		province = 957
+		}
+		}
+	}
+}
+
+shared_focus = {
+		id = SOV_the_port_arthur_naval_base
+		prerequisite = { focus = SOV_submarine_pens_in_vladivostok }
+		prerequisite = { focus = SOV_expanding_murmansk_and_vladivostok }
+		icon = GFX_focus_jap_cast_the_die
+		x = 65
+		y = 7
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			MAN = {
+				exists = yes
+			}
+		}
+		
+		bypass = {
+			MAN = {
+				exists = no
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = MAN
+		}
+		hidden_effect = {
+			add_state_claim = 745
+			add_state_claim = 716
+			add_state_claim = 328
+			add_state_claim = 717
+			add_state_claim = 714
+			add_state_claim = 761
+			add_state_claim = 715
+			add_state_claim = 610
+			add_state_claim = 609
+			add_state_claim = 611
+			add_state_claim = 608
+		}
+	}
+}
+
+shared_focus = {
+		id = SOV_inserting_secret_operatives
+		prerequisite = { focus = SOV_rooting_out_the_ringleaders }
+		icon = GFX_goal_demand_sudetenland
+		x = 67
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+		
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+       			bonus = 0.5
+       			uses = 1
+        		category = decryption_tech
+			}
+	}
+}
+
+shared_focus = {
+		id = SOV_a_navy_for_russia
+		prerequisite = { focus = SOV_inserting_secret_operatives }
+		icon = GFX_goal_generic_navy_battleship
+		x = 67
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+       			bonus = 1
+       			uses = 1
+        		category = naval_doctrine
+			}
+	}
+}
+
+shared_focus = {
+		id = SOV_negotiating_about_the_naval_budget
+		prerequisite = { focus = SOV_rooting_out_the_ringleaders }
+		icon = GFX_goal_generic_military_deal
+		x = 69
+		y = 4
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		country_event = { id = russia.17 days = 1 }
+	}
+}
+
+shared_focus = {
+		id = SOV_a_fanatic_fighting_force
+		prerequisite = { focus = SOV_negotiating_about_the_naval_budget }
+		icon = GFX_goal_generic_navy_carrier
+		x = 69
+		y = 5
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_manpower = 50000
+	}
+}
+
+shared_focus = {
+		id = SOV_glory_to_the_russian_navy
+		prerequisite = { focus = SOV_a_fanatic_fighting_force }
+		prerequisite = { focus = SOV_a_navy_for_russia }
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 68
+		y = 6
+
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = SOV_unmatched_navy
+	}
+}

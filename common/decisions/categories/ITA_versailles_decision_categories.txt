@@ -1,0 +1,72 @@
+################
+##### ITA ######
+################
+
+ITA_general_academy = {
+
+	icon = decision_category_army_reform
+
+	picture = GFX_decision_cat_picture_chi_infiltration
+	
+	allowed = {
+		original_tag = ITA
+	}
+
+	priority = {
+		base = 0
+		modifier = {
+			add = 10
+			has_completed_focus = ITA_hire_new_generals
+		}
+	}
+
+	visible = {
+			has_government = fascism
+			has_completed_focus = ITA_hire_new_generals
+		}
+	}
+
+ITA_teach_general_staff = {
+
+	icon = decision_category_army_reform
+	
+	allowed = {
+		original_tag = ITA
+	}
+
+	priority = {
+		base = 0
+		modifier = {
+			add = 10
+			has_completed_focus = ITA_maintain_general_staff
+		}
+	}
+
+	visible = {
+		has_government = fascism
+		has_completed_focus = ITA_maintain_general_staff
+	}
+}
+
+ITA_develop_italian_middle_east = {
+
+	icon = decision_category_army_reform
+	
+	allowed = {
+		original_tag = ITA
+		has_completed_focus = ITA_form_the_italian_middle_east
+	}
+
+	priority = {
+		base = 0
+		modifier = {
+			add = 10
+			has_completed_focus = ITA_form_the_italian_middle_east
+		}
+	}
+
+	visible = {
+			has_government = fascism
+			has_completed_focus = ITA_form_the_italian_middle_east
+	    }
+}

@@ -1,0 +1,71 @@
+ ideas = {
+
+	#MINISTERS
+
+	head_of_state = {
+		AFG_Mohammed_Hashim_Khan_hos = {
+
+            picture = AFG_minister_Mohammed_Hashim_Khan
+            
+            allowed = {
+                original_tag = AFG
+            }
+
+            cancel_if_invalid = yes
+
+            available = {
+            	has_country_flag = can_replace_minister
+            }
+            
+            traits = {
+                popular_politician
+                monarchist
+            }
+		}
+    }
+
+	foreign_minister = {
+		AFG_Sardar_Shah_Wali_Khan_for = {
+			picture = AFG_minister_Sardar_Shah_Wali_Khan
+            
+            allowed = {
+                original_tag = AFG
+            }
+
+            cancel_if_invalid = yes
+
+            available = {
+            	has_country_flag = can_replace_minister
+            }
+            
+            traits = {
+                popular_politician
+                monarchist
+            }
+		}
+	}
+
+	interior_minister = {
+		AFG_Faiy_Muhammed_Khan_im = {
+			picture = AFG_minister_Faiy_Muhammed_Khan
+            
+            allowed = {
+                original_tag = AFG
+            }
+
+            cancel_if_invalid = yes
+
+            available = {
+            	has_country_flag = can_replace_minister
+            }
+            
+            traits = {
+                popular_politician
+                monarchist
+            }
+		}
+	}
+}		
+
+		
+	

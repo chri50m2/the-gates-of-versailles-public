@@ -1,0 +1,19 @@
+focus_tree = {
+	id = SOV_main_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SOV
+		}
+	}
+	
+	default = no
+	continuous_focus_position = { x = 20 y = 4500 }
+	
+	shared_focus = SOV_the_russian_air_force
+	shared_focus = SOV_the_russian_navy
+	shared_focus = SOV_recovering_from_our_economic_failures
+	shared_focus = SOV_the_first_free_elections
+	shared_focus = SOV_the_russian_army
+}

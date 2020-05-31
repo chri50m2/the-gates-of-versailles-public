@@ -1,0 +1,205 @@
+defined_text = { #Cede to Militarist Control
+    name = GetCedeTowardMilitarists
+    text = {
+        trigger = {
+            check_variable = {
+                var = militarists_power
+                value = 0
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = militarists_control_1
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = militarists_power
+                value = 25
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = militarists_control_2
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = militarists_power
+                value = 50
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = militarists_control_3
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = militarists_power
+                value = 75
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = militarists_control_4
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = militarists_power
+                value = 100
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = militarists_control_5
+    }
+}
+
+defined_text = { #Cede to the Republicans
+    name = GetCedetowardRepublicans
+    text = {
+        trigger = {
+            check_variable = {
+                var = republicans_power
+                value = 0
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = republicans_control_1
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = republicans_power
+                value = 25
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = republicans_control_2
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = republicans_power
+                value = 50
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = republicans_control_3
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = republicans_power
+                value = 75
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = republicans_control_4
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = republicans_power
+                value = 100
+                compare = less_than_or_equals
+            }
+        }
+        localization_key = republicans_control_5
+    }
+}
+
+defined_text = { #Militarist Leader
+    name = GetMilitaristsLeader
+    text = {
+        trigger = {
+            has_country_flag = pol_stanislaw_haller_leader_militarists
+        }
+        localization_key = stanislaw_haller_leader_militarists
+    }
+    text = {
+        trigger = {
+            has_country_flag = pol_jozef_haller_leader
+        }
+        localization_key = jozef_haller_von_hallenburg_leader_militarists
+    }
+	text = {
+        trigger = {
+            has_country_flag = pol_edward_smigly_leader
+        }
+        localization_key = edward_rydz_smigly_leader_militarists
+    }
+}
+
+defined_text = { #Republican Leader
+    name = GetRepublicanLeader
+    text = {
+        trigger = {
+            has_country_flag = pol_wincenty_witos_leader_republicans
+        }
+        localization_key = wincenty_witos_leader_republicans
+    }
+	text = {
+        trigger = {
+            has_country_flag = poland_roman_dmowski_leader
+        }
+        localization_key = roman_dmowski_leader_republicans
+    }
+	text = {
+        trigger = {
+            has_country_flag = poland_alfred_ubanski_republican_leader
+        }
+        localization_key = alfred_ubanski_leader_republicans
+    }
+}
+
+defined_text = { #Republican Faction ideology leader
+    name = GetRepublicanLeaderIdeology
+    text = {
+        trigger = {
+            has_country_flag = pol_wincenty_witos_leader_republicans
+        }
+        localization_key = liberals_in_power
+    }
+	text = {
+        trigger = {
+            has_country_flag = poland_roman_dmowski_leader
+        }
+        localization_key = conservatives_in_power
+    }
+	text = {
+        trigger = {
+            has_country_flag = poland_alfred_ubanski_republican_leader
+        }
+        localization_key = socialists_in_power
+    }
+}
+
+defined_text = { #Poland Guard of Anders
+    name = PolandGuardofAnders
+    text = {
+        trigger = {
+            has_country_flag = POL_king_anders_power
+        }
+        localization_key = poland_guard_of_anders_king
+    }
+	text = {
+        trigger = {
+            has_country_flag = POL_marshal_anders_power
+        }
+        localization_key = poland_guard_of_anders_marshal
+    }
+}
+
+defined_text = { #Poland Guard of Anders
+    name = PolandGuardofAndersNatSpirit
+    text = {
+        trigger = {
+            has_country_flag = POL_king_anders_power
+        }
+        localization_key = poland_guard_of_anders_king_nat_spirit
+    }
+	text = {
+        trigger = {
+            has_country_flag = POL_marshal_anders_power
+        }
+        localization_key = poland_guard_of_anders_marshal_nat_spirit
+    }
+}

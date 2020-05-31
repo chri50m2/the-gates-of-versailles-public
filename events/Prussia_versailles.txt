@@ -1,0 +1,760 @@
+###################################################
+# Wurttemberg Events - Gates to Versailles Edition#
+###################################################
+
+#country_event = { #
+	#id = prussia.n
+	#title = prussia.n.t
+	#desc = prussia.n.d
+	#picture =#
+	
+	#is_triggered_only = yes
+	#fire_only_once = yes
+
+	#option = {
+		#name = prussia.n.a 
+			
+		#}
+	#}
+
+#UNUSED EVENTS
+#prussia.14
+
+add_namespace = prussia
+
+country_event = { #Election Time
+	id = prussia.1
+	title = prussia.1.t
+	desc = prussia.1.d
+#	picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.1.a #SPD Victory
+		hidden_effect = {
+		set_country_flag = GER_SPD_Victory
+		set_country_flag = GER_Election_1936
+		}
+		add_popularity = { 
+			ideology = social_democratic
+			popularity = 0.2
+		}
+		set_politics = {
+				ruling_party = social_democratic
+				election_frequency = 50
+				elections_allowed = yes
+			}
+		custom_effect_tooltip = new_cabinet_tt
+		hidden_effect = {
+			clr_country_flag = GER_starting_cabinet
+			add_ideas = {
+				GER_otto_wels_hog
+				GER_robert_schmidt_eco
+				GER_otto_gessler_for
+				GER_gustav_bauer_int
+			}
+		}
+	}
+	
+	option = {
+		name = prussia.1.b #DNVP Victory
+		hidden_effect = {
+		set_country_flag = GER_DNVP_Victory
+		set_country_flag = GER_Election_1936
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Alfred Hugenberg"
+			desc = "POLITICS_ALFRED_HUGENBERG_DESC"
+			picture = "Portrait_GER_Alfred_Hugenberg.dds"
+			expire = "1965.1.1"
+			ideology = national_conservatism
+			traits = {
+				}
+			}
+		}
+		add_popularity = { 
+			ideology = democratic
+			popularity = 0.05
+		}
+		set_politics = {
+				ruling_party = democratic
+				election_frequency = 50
+				elections_allowed = yes
+			}
+		set_party_name = { 
+			ideology = democratic 
+			long_name = PRS_democratic_party_DNVP_long 
+			name = PRS_democratic_party_DNVP 
+		}
+		custom_effect_tooltip = new_cabinet_tt
+		hidden_effect = {
+			clr_country_flag = GER_starting_cabinet
+			add_ideas = {
+				GER_alfred_hugenberg_hog
+				GER_carl_friedrich_goerdeler_eco
+				GER_otto_christian_archibald_von_bismarck_for
+				GER_gerhard_von_kanitz_int
+			}
+		}
+	}
+	option = {
+		name = prussia.1.c #DDP Victory
+		hidden_effect = {
+		set_country_flag = GER_Election_1936
+		set_country_flag = GER_DDP_Victory
+		}
+		add_popularity = { 
+			ideology = liberal
+			popularity = 0.2
+		}
+		set_politics = {
+				ruling_party = liberal
+				election_frequency = 50
+				elections_allowed = yes
+			}
+		custom_effect_tooltip = new_cabinet_tt
+		hidden_effect = {
+			clr_country_flag = GER_starting_cabinet
+			add_ideas = {
+				GER_erich_koch_weser_hog
+				GER_hjalmar_schacht_eco
+				GER_walther_rathenau_for
+				GER_wilhelm_kulz_int
+			}
+		}
+	}
+}
+
+country_event = { #Mecklenburg Referendum
+	id = prussia.2
+	title = prussia.2.t
+	desc = prussia.2.d
+#	picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.2.a #Yes
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		set_country_flag = MEK_referendum_yes
+		}
+		add_popularity = { 
+			ideology = democratic
+			popularity = -0.05
+		}
+
+	}
+	
+	option = {
+		name = prussia.2.b #No
+		hidden_effect = {
+		set_country_flag = MEK_referendum_no
+		}
+		add_popularity = { 
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { #Promising Land To The King
+	id = prussia.3
+	title = prussia.3.t
+	desc = prussia.3.d
+#	picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.3.a 
+		add_political_power = 50
+		SAX = {
+			add_stability = 0.1
+		}
+	}
+}
+
+country_event = { #Schörner's Coup
+	id = prussia.4
+	title = prussia.4.t
+	desc = prussia.4.d
+	picture = GFX_report_event_GER_schorner
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.4.a #Yes
+		BAV = {
+			retire_country_leader = yes
+		create_country_leader = {
+			name = "Ferdinand Schörner"
+			desc = "POLITICS_FERDINAND_SCHÖRNER_DESC"
+			picture = "Ferdinand_Schorner.dds"
+			expire = "1965.1.1"
+			ideology = military_junta 
+			traits = {
+				}
+			}
+			add_manpower = 100000
+		}
+		declare_war_on = {
+    		target = BAV
+   			type = annex_everything
+		}
+		add_state_core = 52
+		add_state_core = 53
+		add_state_core = 54
+
+		news_event = { hours = 3 id = news.352 }
+		set_global_flag = BAV_NGF_war
+	}
+}
+
+country_event = { #Choosing A National Anthem
+	id = prussia.5
+	title = prussia.5.t
+	desc = prussia.5.d
+	picture = GFX_report_event_GER_national_anthem
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.5.a #Deutschland Über Alles
+			add_war_support = 0.02
+			add_political_power = 25
+		}
+	option = {
+		name = prussia.5.b #Die Wacht Am Rhein
+			add_war_support = 0.04
+			add_political_power = 20
+		}
+	option = {
+		name = prussia.5.c #Des Deutschen Vaterland
+			add_war_support = 0.05
+			add_political_power = 15
+		}
+	option = {
+		name = prussia.5.e #Heil dir im Siegerkranz
+			add_war_support = 0.01
+			add_political_power = 20
+			add_popularity = { 
+				ideology = monarchist 
+				popularity = 0.01
+			}
+		}
+	}
+
+country_event = { #Württemberg Compromise
+	id = prussia.6
+	title = prussia.6.t
+	desc = prussia.6.d
+	#picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.6.a #Agree To Become A Constituency
+		ai_chance = {
+			factor = 0
+		}
+			add_political_power = -50
+			hidden_effect = {
+				set_country_flag = WUR_constituency_yes
+			}
+		}
+	option = {
+		name = prussia.6.b #NEVER!
+		ai_chance = {
+			factor = 100
+		}
+			add_war_support = 0.1
+			add_political_power = 50
+			hidden_effect = {
+				country_event = { id = prussia.7 days = 0 }
+			}
+		}
+	}
+
+country_event = { #Prussian Response
+	id = prussia.7
+	title = prussia.7.t
+	desc = prussia.7.d
+	#picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.7.a #Agree To Become A Constituency
+		declare_war_on = {
+    		target = WUR
+   			type = annex_everything
+			}
+		}
+	}
+
+country_event = { #Baden event
+	id = prussia.8
+	title = prussia.8.t
+	desc = prussia.8.d
+	#picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.8.a #Ask France for Help
+			country_event = { id = prussia.9 days = 0 }
+		}
+	}
+
+country_event = { #Baden Asks for help
+	id = prussia.9
+	title = prussia.9.t
+	desc = prussia.9.d
+	#picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.9.a #They're asking for it!
+		ai_chance = {
+			factor = 100
+		}
+		declare_war_on = {
+    		target = PRS
+   			type = annex_everything
+			}
+		BAD = {
+				declare_war_on = {
+    				target = PRS
+   					type = annex_everything
+				}
+			}
+		}
+	option = {
+		name = prussia.9.b #Back down
+		add_political_power = -100
+		add_stability = -0.05
+		add_war_support = -0.15
+		}
+	}
+
+country_event = { #Linz Trials
+	id = prussia.10
+	title = prussia.10.t
+	desc = prussia.10.d
+	picture = GFX_report_event_GER_linz_trials
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.10.a #End of a chapter
+		add_popularity = { 
+			ideology = fascism
+			popularity = -0.2
+		}
+		add_stability = -0.05
+	}
+}
+
+country_event = { #Münich Conference
+	id = prussia.11
+	title = prussia.11.t
+	desc = prussia.11.desc
+	#picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.11.a #The Greater German Solution is best
+		add_war_support = 0.05
+		custom_effect_tooltip = GER_will_lead_war_CZE
+		hidden_effect = {
+			set_country_flag = GER_Attack_Czech
+		}
+	}
+	option = {
+		name = prussia.11.b #A breach of Czechian sovreignty is unnecessary
+		add_stability = 0.05
+		custom_effect_tooltip = GER_will_befriend_CZE
+		hidden_effect = {
+			set_country_flag = GER_Befriend_Czech
+		}
+	}
+}
+
+country_event = { #Establish Reichsprotektorat Böhmen
+	id = prussia.12
+	title = prussia.12.t
+	desc = prussia.12.desc
+	#picture =#
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = PRS
+		PRS = {
+			owns_state = 69 
+			owns_state = 9
+			owns_state = 74
+			owns_state = 75
+			owns_state = 72
+		}
+		CZE = {
+			exists = no
+		}
+	}
+
+	option = { #Establish it, and rename the cities
+		name = prussia.12.a
+		ai_chance = {
+			base = 100
+		}
+		set_province_name = { id = 11542 name = "Prag"}
+		set_province_name = { id = 6418 name = "Pilsen"}
+		set_province_name = { id = 9569 name = "Tabor"}
+		set_province_name = { id = 3569 name = "Brünn"}
+		set_province_name = { id = 6562 name = "Olmütz"}
+		set_province_name = { id = 3583 name = "Ostrau"}
+
+		CZE = {
+			remove_state_core = 69
+			remove_state_core = 74
+		}
+		release_puppet = CZE
+		CZE = {
+			set_cosmetic_tag = CZE_GER_Reichsprotektorat_Bohmen
+			set_politics = {
+					ruling_party = neutrality
+				}
+			create_country_leader = {
+				name = "Karl Hermann Frank"
+				desc = "POLITICS_KARL_HERMANN_FRANK_DESC"
+				picture = "Portrait_PRU_KarlHermannFrank.dds"
+				expire = "1965.1.1"
+				ideology = military_junta
+			traits = {
+				}
+			}
+		}
+	}
+
+	option = { #rather not
+		name = prussia.12.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { #Invitation To Europapakt
+	id = prussia.13
+	title = prussia.13.t
+	desc = prussia.13.desc
+	#picture =#
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = prussia.13.a #Yes
+		ai_chance = {
+			base = 100
+		}
+		PRS = { 
+			add_to_faction = ROOT 
+		}
+	}
+	option = {
+		name = prussia.13.b #No
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { #UNTAKEN
+	id = prussia.14
+	title = prussia.14.t
+	desc = prussia.14.desc
+	#picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.14.a #Yes
+		
+	}
+}
+
+country_event = { #Prussia Demands We Hand Over Burgenland!
+	id = prussia.15
+	title = prussia.15.t
+	desc = prussia.15.desc
+	#picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.15.a #Yes
+		ai_chance = {
+			base = 20
+		}
+		PRS = {
+			transfer_state = 852
+			transfer_state = 853
+		}
+	}
+	option = {
+		name = prussia.15.b #No
+		ai_chance = {
+			base = 80
+		}
+		country_event = { id = prussia.16 days = 2 }
+	}
+}
+
+country_event = { #Hungary Denies!
+	id = prussia.16
+	title = prussia.16.t
+	desc = prussia.16.desc
+	#picture =#
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = prussia.16.a #Yes
+		add_war_support = 0.05
+		declare_war_on = {
+   				target = HUN
+    			type = annex_everything
+			}
+	}
+}
+
+country_event = { #German-Hungarian War peace offer
+	id = prussia.17
+	title = prussia.17.t
+	desc = prussia.17.desc
+	#picture =#
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = PRS
+		AND = {
+		PRS = {
+			has_war_with = HUN
+			controls_state = 852
+			controls_state = 853
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = { #
+		name = prussia.17.a
+		white_peace = HUN
+		852 = {
+			set_state_name = "Burgenland"
+		}
+		853 = {
+			set_state_name = "Olsnitz"
+		}
+		transfer_state = 852
+		transfer_state = 853
+				852 = {
+					add_core_of = PRS
+				}
+				853 = {
+					add_core_of = PRS
+				}
+		hidden_effect = {
+			set_global_flag = HUN_german_war_defeat
+		}
+	}
+}
+
+country_event = { #Romania attack event
+	id = prussia.18
+	title = prussia.18.t
+	desc = prussia.18.desc
+	#picture =#
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ROM
+		AND = {
+		has_global_flag = HUN_german_war_defeat
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 14
+	}
+
+	option = { #
+		name = prussia.18.a
+		ROM = {
+			declare_war_on = {
+    			target = HUN
+    			type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = { #Romania Peace event
+
+	id = prussia.19
+	title = prussia.19.t
+	desc = prussia.19.desc
+	#picture =#
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ROM
+		AND = {
+		ROM = {
+			has_war_with = HUN
+			controls_state = 154
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 4
+	}
+
+	option = { #
+		name = prussia.19.a
+		ROM = {
+			white_peace = HUN
+		set_province_name = { id = 11659 name = "Debreţin"}
+		ROM = {
+			set_state_owner = 154
+			}
+		}
+	}
+}
+
+country_event = { #Kattowice trade event
+
+	id = prussia.20
+	title = prussia.20.t
+	desc = prussia.20.desc
+	#picture =#
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = prussia.20.a
+		transfer_state = 762
+				762 = {
+					add_core_of = PRS
+				}
+			hidden_effect = {
+				set_global_flag = GER_get_kattowitz
+				set_province_name = { id = 6464 name = "Kattowitz"}
+			}
+			add_political_power = -50
+	}
+	option = { #
+		name = prussia.20.b
+		add_political_power = 50
+		hidden_effect = {
+			set_global_flag = GER_not_get_kattowitz
+		}
+	}
+}
+
+country_event = { #Otto Wels Dies
+
+	id = prussia.21
+	title = prussia.21.t
+	desc = prussia.21.desc
+	#picture =#
+
+	hidden = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = prussia.21.a
+		create_country_leader = {
+			name = "Hans Vogel"
+			desc = "POLITICS_HANS_VOGEL_DESC"
+			picture = "hans_vogel.dds"
+			expire = "1965.1.1"
+			ideology = reformist_socialist
+			traits = {
+				}
+			}
+	}
+}
+
+country_event = { #Oil Crisis
+
+	id = prussia.22
+	title = prussia.22.t
+	desc = prussia.22.desc
+	#picture =#
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = PRS
+		OR = {
+			PRS = {
+				has_war_with = FRA
+			}
+			PRS = {
+				has_war_with = ENG
+			}
+			PRS = {
+				has_war_with = SOV
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+	}
+	option = { #
+		name = prussia.22.a
+		set_country_flag = GER_oil_crisis
+		add_ideas = GER_oil_crisis_idea
+		hidden_effect = {
+			complete_national_focus = GER_solve_the_oil_crisis
+		}
+	}
+}
